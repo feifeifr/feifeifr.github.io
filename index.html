@@ -1,128 +1,88 @@
-<!DOCTYPE html>
-<!-- saved from url=(0025)http://www.51bonjour.com/ -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-		<title>笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台</title>
-		<meta name="keywords" content="笨猪网,法国留学,留学法国,法国院校,法国留学费用,法国留学条件,法国大学排名,法国留学签证,法国留学中介,法语学习,法国高商排名,法国服装学校,法国美术学院,音乐学院,设计学院">
-		<meta name="description" content="笨猪网是由十年专注法国留学的——Edufrance法国学校联盟升级而来，笨猪网深知客户留法申请道路上的种种困难，致力打造一个集合最大法国院校库、最大留法交流问答社区和最大留法智能化平台。通过笨猪网专业、智能化的系统，为客户提供透明和个性化的留法方案。">
-	    <link href="http://www.51bonjour.com/Public/Home/images/ico.ico" rel="shortcut icon">
-		<script src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/jquery.min.js"></script>
-		<script type="text/javascript" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/swiper.min.js"></script>
-        <script src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/bootstrap.min.js"></script>
-		<link href="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/bootstrap.min.css" rel="stylesheet">
-        <link href="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/app.css" rel="stylesheet">
-		<link href="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/swiper.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/common.css">
-		
-	    <style>
-		
-		.gover_search .search_suggest{
-			position: absolute;
-			z-index: 1;
-			left: 115px;
-			top: 55px;
-			width: 405px;
-			overflow: auto;
-			max-height: 150px;
-			border: 1px solid #0055a4;
-			display: none;
-			border-radius: 2px;
-			overflow: auto;
-            display: none;
-			background-color:#FFF;}
-		.gover_search .search_suggest li{
-			height: 24px;
-			overflow: hidden;
-			margin-left:-40px;
-			line-height: 24px;
-			background: #FFFFFF;
-			cursor: default;
-			list-style: none;
-		}
-		.gover_search .search_suggest li:hover{
-		
-			background: #ccc;
-			
-		}
-		.diysc-item1{margin-bottom: 27.5px;text-align: center;}
-		.diysc-item1 .tit{margin-top: 15px;font-size: 20px;color: #515151;margin-bottom: 5px;}
-		.diysc-item1 img{margin-top: 4px;border: 1px #dcdcdc solid;padding: 5px;border-radius: 5px;}
-		
-		
-		.my_fa_top1{ font-size:2.4rem; color:#004aa1; margin-bottom:10px; font-family:'微软雅黑';}
-		.col-sm-6 .bzjt .sy-tit22{ width:100px;}
-		@media (max-width:1600px){
-		.pos{ width:19.8%;}
-		.carousel-indicators{bottom:3%}
-		
-		}
-		@media (max-width:1366px){
-		.pos{ left:7%; width:22%;top:5%}
-		.pos .my_fa .my_fa_top1{ font-size:2.2rem;margin-bottom: 5px; margin-bottom:7px;}
-		.btn-lg{ font-size:1.4rem;}
-		.form-control{font-size: 12px;height: 30px;}
-		.my_fa .fd{ font-size:11px;margin-top:16px;}
-		.my_fa .fd p{ margin:0;}
-		.banner{ margin-top:-30px;margin-bottom:0px;}
-		.carousel-indicators{bottom:8%}
-		}
-		@media (max-width:1024px){
-		.pos{ left:7%; width:22%;top:5%}
-		.pos .my_fa .my_fa_top1{ font-size:2.2rem;margin-bottom: 5px; margin-bottom:7px;}
-		.btn-lg{ font-size:1.4rem;}
-		.form-control{font-size: 12px;height: 30px;}
-		.my_fa .fd{ font-size:11px;margin-top:16px;}
-		.my_fa .fd p{ margin:0;}
-		.banner{ margin-top:-30px;}
-		.carousel-indicators{bottom:8%}
-		}
-		@media (max-width:1280px){
-		.pos{ left:7%; width:21%;top:-15%;}
-		.pos .my_fa .my_fa_top1{ font-size:1.8rem; margin-bottom:2px;}
-		.btn-lg{ font-size:1.0rem;}
-		.form-group{margin-bottom:10px;}
-		.form-control{font-size: 1.2rem;height: 30px;}
-		.my_fa .fd{ font-size:1.1rem;margin-top:14px;}
-		.my_fa .fd p{ margin-bottom:0px;}
-		.col-sm-6 .bzjt .sy-tit22{ width:auto;}
-		.carousel-inner>.item{ height:330px;}
-		.banner{ height:370px;}
-		.carousel-indicators{bottom:3%}
-		}
-		
-		
-		
-		.sy-tit02{color: #0055a4;font-size: 18px;line-height: 32px;padding: 0 10px;}
-		</style>
 
-		<script type="text/javascript">
-			$ (function ()
-			{
-				$ ("#next").click (function ()
-				{
-					if ($('select[name="city"]').val() == '')
-					{
-						alert('请选择城市!');
-						return false;
-					}
-					else if ($('select[name="getout_time"]').val() == '') 
-					{
-						alert('请选择时间!');
-						return false;
-					}
-					else if ($('select[name="schooling"]').val() == '') 
-					{
-						alert('请选择年级!');
-						return false;
-					}
-					$ ("#form1").submit ();
-				});
-			});
-		</script>
-	</head>
+<!-- saved from url=(0053)http://www.51bonjour.com/index.php/Footer/about.shtml -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>笨猪网-关于我们</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./笨猪网-关于我们_files/jquery.min.js"></script>
+<script type="text/javascript" src="./笨猪网-关于我们_files/swiper.min.js"></script>
+<script src="./笨猪网-关于我们_files/bootstrap.min.js"></script>
+<link href="./笨猪网-关于我们_files/bootstrap.min.css" rel="stylesheet">
+<link href="./笨猪网-关于我们_files/app.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./笨猪网-关于我们_files/index.css" type="text/css">
+<link rel="stylesheet" href="./笨猪网-关于我们_files/animate.css" type="text/css">
+
+
+<script type="text/javascript">
+var browser={
+	versions:function(){
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {
+			trident: u.indexOf('Trident') > -1, //IE内核
+			presto: u.indexOf('Presto') > -1, //opera内核
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+			android: u.indexOf('Android') > -1, //android终端或者uc浏览器
+			iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+		};
+	}(),
+	language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+if(browser.versions.mobile || browser.versions.iPhone || browser.versions.android){
+	//document.write("<script src=\"js/phoneIndex.js\">"+"</scr"+"ipt>");
+	//document.write("<script src=\"js/bootstrap.js\">"+"</scr"+"ipt>");
+	//document.write("<link  href='css/bootstrap.css.css' rel='stylesheet' type='text/css' />");
+	window.location.href="/indexPhone/index.html"; 
+}
+else{
+	document.write("<script src=\"/mod/index/index.js\">"+"</scr"+"ipt>"); 
+}
+</script><script src="./笨猪网-关于我们_files/index.js"></script><script src="./笨猪网-关于我们_files/index(1).js"></script>
+
+
+<style>
+
+
+</style>
+</head>
+
 <body>
+<!--  -->
 
-<!---index_head.html  start------>
+
+
+
+
+
+
+
+<!-- -->
+
+<div id="index_pageChose" style="top: 245px;">
+	<div id="1pageChose" class="page1 pageChose adjustAuto active" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+    <div id="2pageChose" class="page2 pageChose adjustAuto" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+    <div id="3pageChose" class="page3 pageChose adjustAuto" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+    <div id="4pageChose" class="page4 pageChose adjustAuto" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+    <div id="5pageChose" class="page5 pageChose adjustAuto" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+    <div id="6pageChose" class="page6 pageChose adjustAuto" style="width: 9.24896px; height: 9.24896px; margin-top: 21.3438px; padding-left: 0px;"></div>
+</div>
+<div id="indexDiv" style="height: 681px;">	
+    <div id="page1" class="indexPage row" style="height: 681px; top: 0px; background-image: url(&quot;/Public/Home/images/about/G.jpg&quot;);">
+    	<!--<div class="page1top adjustAuto" style="width: 1920px; height: 150px; left: 0px; top: 0px; margin-top: 0px; padding-left: 0px;"></div>
+        <div class="page1img1 page1img adjustAuto" style="width: 36px; height: 36px; left: 120px; top: 80px; margin-top: 0px; padding-left: 0px;"><img src="images/1.png"></div>
+        <div class="page1img2 page1img adjustAuto" style="width: 36px; height: 36px; left: 120px; margin-top: 0px; padding-left: 0px;"><img src="images/2.png"></div>
+        <div class="page1img3 page1img adjustAuto" style="width: 36px; height: 36px; top: 80px; margin-top: 0px; padding-left: 0px;"><img src="images/3.png"></div>
+        <div class="page1img4 page1img adjustAuto" style="width: 36px; height: 36px; margin-top: 0px; padding-left: 0px;"><img src="images/4.png"></div>-->
+		<!---index_head.html  start------>
 
 
 
@@ -138,7 +98,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="http://www.51bonjour.com/index.php/"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/logo.png" width="50%"></a>
+					<a class="navbar-brand" href="http://www.51bonjour.com/index.php/"><img src="./笨猪网-关于我们_files/logo.png" width="50%" style="width:50%"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbar">
@@ -160,1940 +120,264 @@
 </div>
 <!---index_head.html  end------>
 
-<!--10秒弹出QQ-->
-<iframe style="display:none;" class="qq_iframe" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/saved_resource.html"></iframe>
-<!--<script>
-$(function(){
-    setTimeout(function(){
-     
-        src = "tencent://message/?uin=2386491835&Site=&menu=yes";
+
+
+
+        <div class="page1Right adjustAuto" style="right: 27%; width: 498.021px; height: 768.375px; top: 251.856px; margin-top: 0px; left: 473.831px; padding-left: 0px;">
+         	<div class="logo adjustAuto" style="opacity: 1; width: 229.801px; height: 93.201px; margin-top: 177.865px; padding-left: 0px;"></div>
+            <!--
+             <div class="page1text2 adjustAutoText"  style="opacity: 1; font-size:40px; width: 520px; height: 100px; margin-top: 10px;text-align:center;" >我们相信与法国有关的一切都从一句<span style=" color:#005098;">Bonjour</span>开始</div>
+             -->
+			 <div class="page1img3 page1img adjustAuto" style="opacity: 1; font-size: 30px; width: 369.958px; height: 71.1458px; margin-top: 7.11458px; text-align: center; left: 0px; top: 56.9167px; padding-left: 0px;">我们相信与法国有关的一切都从一句<span style=" color:#005098;">Bonjour</span>开始</div>
+           
+			
+        </div>
+       <!-- <div class="page1bottom adjustAuto" style="width: 1920px; height: 150px; left: 0px; margin-top: 0px; padding-left: 0px;"></div>-->
+    </div>
+	
+	<!--第2页-->
+    <div id="page2" class="indexPage row" style="height: 681px; top: 0px;">
+   		<div class="page2bg adjustAuto" style="width: 924.896px; height: 594.068px; left: 220.552px; margin-top: 0px; padding-left: 0px; top: 70.4344px;">
+		    <div class="page2img2 pageImg adjustAuto" style="font-size: 36px; width: 320.156px; height: 71.1458px; left: 355.729px; top: -64.0313px; margin-top: 0px; color: rgb(0, 80, 152); padding-left: 0px;">笨猪网发展历程</div>
+        	<div class="page2img7 pageImg adjustAuto" style="width: 320.156px; height: 238.339px; left: 0px; top: 7.11458px; margin-top: 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(117, 118, 120); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(117, 118, 120); text-align: center; padding: 20px 0px; font-family: 微软雅黑; color: rgb(255, 0, 0); font-size: 2.8rem; font-weight: 600;">
+			     <img src="./笨猪网-关于我们_files/5.png" style="width:100px; height:100px; border-radius:50%; "><br>2001年&nbsp;&nbsp;<span style="color:#4D4D4D; font-size:24px;">始于巴黎</span><br>
+				 <p style="color: rgb(77, 77, 77); font-size: 14px; font-weight: normal; margin-top: 7.11458px; margin-bottom: 7.11458px;">团队创始人高中毕业即赴法留学，<br>先后就读巴黎七大、巴黎五大和巴黎高等<br>管理学院，获管理学硕士学历。</p>
+			</div>
+            <div class="page2img5 pageImg adjustAuto" style="width: 320.156px; height: 238.339px; left: 569.167px; top: 7.11458px; margin-top: 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(117, 118, 120); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(117, 118, 120); text-align: center; padding: 20px 0px; font-family: 微软雅黑; color: rgb(255, 0, 0); font-size: 28px; font-weight: 600;">
+				<img src="./笨猪网-关于我们_files/5(3).png" style="width:100px; height:100px; border-radius:50%;"><br>2005年&nbsp;&nbsp;<span style="color:#4D4D4D; font-size:24px;">专业背景</span><br>
+				<p style="color: rgb(77, 77, 77); font-size: 14px; font-weight: normal; margin-top: 7.11458px; margin-bottom: 7.11458px;">团队前身曾经是法国最大境外校方代<br>表机构，专为国内留学机构及学生提<br>供院校申请和接待服务。</p>
+			</div>
+            <div class="page2img1 pageImg adjustAuto" style="width: 320.156px; height: 238.339px; left: 0px; top: 284.583px; margin-top: 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(117, 118, 120); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(117, 118, 120); text-align: center; padding: 20px 0px; font-family: 微软雅黑; color: rgb(255, 0, 0); font-size: 28px; font-weight: 600;">
+				<img src="./笨猪网-关于我们_files/2(1).png" style="width:100px; height:100px; border-radius:50%;"><br>2008年&nbsp;&nbsp;<span style="color:#4D4D4D; font-size:24px;">口碑荣誉</span><br>
+				<p style="color: rgb(77, 77, 77); font-size: 14px; font-weight: normal; margin-top: 7.11458px; margin-bottom: 7.11458px;">成立Edufrance法国学校联盟，国内最多<br>高端留法申请案例，客户遍及全国，致力<br>打造中国留法第一品牌。</p>
+			</div>
+            <div class="page2img8 pageImg adjustAuto" style="width: 320.156px; height: 238.339px; left: 569.167px; top: 284.583px; margin-top: 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(117, 118, 120); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(117, 118, 120); text-align: center; padding: 20px 0px; font-family: 微软雅黑; color: rgb(255, 0, 0); font-size: 28px; font-weight: 600;">
+				<img src="./笨猪网-关于我们_files/2(2).png" style="width:100px; height:100px; border-radius:50%;"><br>2016年&nbsp;&nbsp;<span style="color:#4D4D4D; font-size:24px;">品牌升级</span><br>
+				<p style="color: rgb(77, 77, 77); font-size: 14px; font-weight: normal; margin-top: 7.11458px; margin-bottom: 7.11458px;">获资本青睐，拥抱互联网。全新升级：<br>51bonjour笨猪网，为国内学生提供留学DIY拆分<br>服务，成为国内首家法国留学智能申请平台。</p>
+			</div>
+            <!---
+            <div class="page2img1 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_2.png" /></div>
+            <div class="page2img2 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_3.png" /></div>
+            <div class="page2img3 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_4.png" /></div>
+            <div class="page2img4 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_5.png" /></div>
+            <div class="page2img5 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_6.png" /></div>
+            <div class="page2img6 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_7.png" /></div>
+            <div class="page2img7 pageImg adjustAuto"><img src="http://eyuanku.qiniudn.com/2_8.png" /></div>
+            
+            <div class="page2imgDiv1 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv2 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv3 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv4 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv5 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv6 pageImgDiv adjustAuto"></div>
+            <div class="page2imgDiv7 pageImgDiv adjustAuto"></div>---->
+        </div>
+    </div>
     
-        $('.qq_iframe').attr('src', "tencent://message/?uin=2386491835&Site=&menu=yes")
-    }, 10000)
-})
-</script>-->
-
-
-<!-- content -->
-   <div class="banner">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
-			<li data-target="#carousel-example-generic" data-slide-to="4" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="5" class=""></li>
-		</ol>
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-		
-            <div class="item" style="background: url(/Public/Home/plugins/index/img/G7.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/College/filter.shtml">
-			</a></div>
-			</div>
-            
-		
-		    <div class="item" style="background: url(/Public/Home/plugins/index/img/G5.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/Report/show/id/46.shtml">
-			</a></div>
-			</div>
-			
-			<div class="item" style="background: url(/Public/Home/plugins/index/img/G4.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/Artzone/index.shtml">
-			</a></div>            
-			</div>
-     
-		    <div class="item" style="background: url(/Public/Home/plugins/index/img/G1.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/Case/customer.shtml">
-			</a></div>            
-            </div>
-		
-          
-			
-            <div class="item active" style="background: url(/Public/Home/plugins/index/img/G2.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/Centrance/index.shtml">
-			</a></div><!--/index.php/Project/course/id/15.shtml-->            
-			</div>
-			
-		    <div class="item" style="background: url(/Public/Home/plugins/index/img/G3.png) no-repeat center center; background-size:100%;">
-            <div class="container"><a style="position:absolute; top:0; bottom:0; left:0; right:0;" class="images-datail" href="http://www.51bonjour.com/index.php/Project/course/id/14.shtml">             
-			</a></div>            
-			</div>
-			
-           
-		  
-            
-           
-       
-		</div>
- 
-		<!-- Controls -->
-		<a class=" carousel-control" style="left:45px" href="http://www.51bonjour.com/#carousel-example-generic" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-		</a>
-		<a class=" carousel-control" style="right:45px;" href="http://www.51bonjour.com/#carousel-example-generic" role="button" data-slide="next">
-		<span style="margin-right:-230px;" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-		</a>
-		<div class="pos" style="">
-			<div class="">
-				<div class="my_fa">
-					<div class="my_fa_top1" style="">
-							我的法国留学方案
-					</div>
-					<div class="bd">
-						<form action="http://www.51bonjour.com/index.php/College/online/type/1.shtml?type=reg">
-							<div class="form-group">
-								<label for="exampleInputPassword1">想去的城市：</label>
-								<select class="form-control" name="city" selected="selected">
-									<option value="">城市</option>
-									<option value="赛尔齐">赛尔齐</option><option value="巴黎">巴黎</option><option value="马赛">马赛</option><option value="里昂">里昂</option><option value="图卢兹">图卢兹</option><option value="尼斯">尼斯</option><option value="南特">南特</option><option value="斯特拉斯堡">斯特拉斯堡</option><option value="蒙彼利埃">蒙彼利埃</option><option value="波尔多">波尔多</option><option value="里尔">里尔</option><option value="雷恩">雷恩</option><option value="勒芒市">勒芒市</option><option value="琉森">琉森</option><option value="布鲁士">布鲁士</option><option value="纳沙泰尔">纳沙泰尔</option><option value="布夫雷">布夫雷</option><option value="Caux">Caux</option><option value="蒙特勒">蒙特勒</option><option value="比达尔">比达尔</option><option value="贝桑松">贝桑松</option><option value="特鲁瓦">特鲁瓦</option><option value="南锡">南锡</option><option value="圣艾蒂安">圣艾蒂安</option><option value="瓦朗斯">瓦朗斯</option><option value="格勒">格勒</option><option value="圣艾帝安">圣艾帝安</option><option value="亚眠">亚眠</option><option value="凡尔赛">凡尔赛</option><option value="贝桑松">贝桑松</option><option value="索恩河畔沙隆">索恩河畔沙隆</option><option value="卡昂">卡昂</option><option value="拉罗谢尔">拉罗谢尔</option><option value=" 鲁昂"> 鲁昂</option><option value="第戎">第戎</option><option value="格勒诺布尔">格勒诺布尔</option><option value="昂热">昂热</option><option value="尚贝里">尚贝里</option><option value="克莱蒙费朗">克莱蒙费朗</option><option value="布雷斯特">布雷斯特</option><option value="兰斯">兰斯</option>								</select>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">计划出国时间：</label>
-								<select class="form-control" name="getout_time" id="getout_time" selected="selected">
-									<option value="">选择出国时间</option>
-								<!--	<option value="2015年">2015年</option>-->
-                                    <option value="2016年">2016年</option>
-                                    <option value="2017年">2017年</option>
-                                    <option value="2018年">2018年</option>
-                                    <option value="2019年">2019年</option>
-                                    <option value="2020年">2020年</option>
-                                    <option value="2021年">2021年</option>
-                                    <option value="2022年">2022年</option>
-                                    <option value="2023年">2023年</option>
-                                    <option value="2024年">2024年</option>
-                                    <option value="2025年">2025年</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">目前就读年级：</label>
-								<select class="form-control" name="schooling" id="schooling" selected="selected">
-									<option value="">目前就读年级</option>
-                                    <option value="高一在读">高一在读</option>
-									<option value="高二在读">高二在读</option>
-									<option value="高三在读">高三在读</option>
-									<option value="高中毕业">高中毕业</option>
-									<option value="大一在读">大一在读</option>
-									<option value="大二在读">大二在读</option>
-									<option value="大三在读">大三在读</option>
-									<option value="大四在读">大四在读</option>
-									<option value="本科/专科毕业及以后">本科/专科毕业及以后</option>
-									<option value="其他情况">其他情况</option>
-								</select>
-							</div>
-							<button id="next" type="submit" class="btn btn-primary btn-block btn-lg" style=" width:100%;border-radius: 5px;">注册并获取法国留学方案</button>
-						</form>
-					</div>
-					<div class="fd">
-						<p>
-							已注册用户，可直接进入&gt;&gt;<a href="http://www.51bonjour.com/index.php/College/online/type/1.shtml">《快速申请系统》</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-	</div>
-</div>
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-6 col-lg-4">
-			<div class="yxtj">
-				<div class="sy-tit bb0">
-					法国院校
-				</div>
-				<div class="bd gover_search">
-					<div class="form-group">
-						<form action="http://www.51bonjour.com/index.php/College/filter.shtml" method="get">
-						<input class="form-control js-search" name="name" autocomplete="off" id="search_sh_name">
-						<button class="button glyphicon glyphicon-search" type="submit"></button>
-						</form>
-                        <div class="search_suggest" style="overflow:auto; position:absolute; top:38px; left:0px; width:310px;" id="gov_search_suggest">
-                        <ul>
-                        </ul>
-                    </div>
-					</div>
-					<div class="tt">
-						根据法国院校类型查找：
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/6.shtml">
-								<i class="ico-1"></i>
-										公立大学								</a>
-							</div>
-						</div><div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/7.shtml">
-								<i class="ico-2"></i>
-										高等商学院								</a>
-							</div>
-						</div><div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/19.shtml">
-								<i class="ico-3"></i>
-										美术学院								</a>
-							</div>
-						</div><div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/8.shtml">
-								<i class="ico-4"></i>
-										工程师学校								</a>
-							</div>
-						</div><div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/16.shtml">
-								<i class="ico-5"></i>
-										音乐学院								</a>
-							</div>
-						</div><div class="col-sm-6">
-							<div class="yxtj-item">
-								<a href="http://www.51bonjour.com/index.php/College/filter/class/17.shtml">
-								<i class="ico-6"></i>
-										艺术类学校								</a>
-							</div>
-						</div>					</div>
-				</div>
-			</div>
-		</div>
-        
-        
-          <script type="text/javascript">
-
-//实现搜索输入框的输入提示js类
-function oSearchSuggest(searchFuc){
-	var input = $('#search_sh_name');
-	var suggestWrap = $('#gov_search_suggest');
-	var key = "";
-	var init = function(){
-		input.bind('keyup',sendKeyWord);
-		input.bind('blur',function(){setTimeout(hideSuggest,100);})
-	}
-	var hideSuggest = function(){
-		suggestWrap.hide();
-	}
-	
-	//发送请求，根据关键字到后台查询
-	var sendKeyWord = function(event){
-		
-		//键盘选择下拉项
-		if(suggestWrap.css('display')=='block'&&event.keyCode == 38||event.keyCode == 40){
-			var current = suggestWrap.find('li.hover');
-			if(event.keyCode == 38){
-				if(current.length>0){
-					var prevLi = current.removeClass('hover').prev();
-					if(prevLi.length>0){
-						prevLi.addClass('hover');
-						input.val(prevLi.html());
-					}
-				}else{
-					var last = suggestWrap.find('li:last');
-					last.addClass('hover');
-					input.val(last.html());
-				}
-				
-			}else if(event.keyCode == 40){
-				if(current.length>0){
-					var nextLi = current.removeClass('hover').next();
-					if(nextLi.length>0){
-						nextLi.addClass('hover');
-						input.val(nextLi.html());
-					}
-				}else{
-					var first = suggestWrap.find('li:first');
-					first.addClass('hover');
-					input.val(first.html());
-				}
-			}
-			
-		//输入字符
-		}else{ 
-			var valText = $.trim(input.val());
-			if(valText ==''||valText==key){
-				return;
-			}
-			searchFuc(valText);
-			key = valText;
-		}			
-		
-	}
-	//请求返回后，执行数据展示
-	this.dataDisplay = function(data){
-		if(data.length<=0){
-            suggestWrap.hide();
-			return;
-		}
-		
-		//往搜索框下拉建议显示栏中添加条目并显示
-		var li;
-		var tmpFrag = document.createDocumentFragment();
-		suggestWrap.find('ul').html('');
-		for(var i=0; i<data.length; i++){
-			li = document.createElement('LI');
-			li.innerHTML = data[i];
-			tmpFrag.appendChild(li);
-		}
-		suggestWrap.find('ul').append(tmpFrag);
-		suggestWrap.show();
-		
-		//为下拉选项绑定鼠标事件
-		suggestWrap.find('li').hover(function(){
-				suggestWrap.find('li').removeClass('hover');
-				$(this).addClass('hover');
-		
-			},function(){
-				$(this).removeClass('hover');
-			
-		}).bind('mousedown',function(){
-			input.val(this.innerHTML);
-			suggestWrap.hide();
-			searchsubmit.click(); 
-		});
-	}
-	init();
-};
-
-//实例化输入提示的JS,参数为进行查询操作时要调用的函数名
-var searchSuggest =  new oSearchSuggest(sendKeyWordToBack);
-
-//这是一个模似函数，实现向后台发送ajax查询请求，并返回一个查询结果数据，传递给前台的JS,再由前台JS来展示数据。本函数由程序员进行修改实现查询的请求
-//参数为一个字符串，是搜索输入框中当前的内容
-function sendKeyWordToBack(keyword){
-	     var obj = {
-			    "keyword" : keyword
-			 };
-			 $.ajax({
-					   type: "get",
-					   url: "/index.php/College/search_tip_ajax.shtml",
-					   async:false,
-					   data: obj,
-					   dataType: "json",
-					   success: function(data){
-						 //var json = eval("("+data+")");
-						 var key=data.msg;
-						 
-						 var aData = [];
-						 for(var i=0;i<key.length;i++){
-								//以下为根据输入返回搜索结果的模拟效果代码,实际数据由后台返回
-								aData.push(key[i]['name']);
-						 }
-						//将返回的数据传递给实现搜索输入框的输入提示js类
-						 searchSuggest.dataDisplay(aData);
-					   }
-		 });	  
-			 
-	
-}
-
-</script>
-        
-        
-		<div class="col-sm-6 col-lg-4">
-			<div class="rmxm">
-				<div class="sy-tit">
-					热门项目<a href="http://www.51bonjour.com/index.php/Project/index.shtml" style="font-size:14px; margin-top:2px;" class="more">更多</a>
-				</div>
-                
-				<div class="bd">
-					<div class="row">
-                    <div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/1.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/43a54bc7ffff509202503bf73902cdd7.jpg" alt="SAI_法国高商五校联合招生项目_法国留学">
-								</div>
-								<div class="tit">
-									SAI<br>法国高商五校联合招生项目
-								</div>
-								</a>
-							</div>
-						</div><div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/3.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ae5c345858114895900df50f24f7d141.jpg" alt="Passworld_法国“通路世界”商学院联盟_法国留学">
-								</div>
-								<div class="tit">
-									Passworld<br>法国“通路世界”商学院联盟
-								</div>
-								</a>
-							</div>
-						</div><div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/4.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/421978bc0944fc00aabb6850a5ffbe59.jpg" alt="Dapethorsdap_公立大学直录项目_法国留学">
-								</div>
-								<div class="tit">
-									Dapethorsdap<br>公立大学直录项目
-								</div>
-								</a>
-							</div>
-						</div><div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/5.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/79f0013ac09be2d7adcc0cb116da8394.jpg" alt="N+i_法国工程师学校项目_法国留学">
-								</div>
-								<div class="tit">
-									N+i<br>法国工程师学校项目
-								</div>
-								</a>
-							</div>
-						</div><div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/6.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/6c7f92fd2946c98eac747f5b450a6369.jpg" alt="ISPA_高品质预科项目_法国留学">
-								</div>
-								<div class="tit">
-									ISPA<br>高品质预科项目
-								</div>
-								</a>
-							</div>
-						</div><div class="col-sm-4" style=" width:110px;margin-right:15px;display:block;  height:150px;">
-							<div class="rmxm-item" style="width:110px;">
-                           
-								<a href="http://www.51bonjour.com/index.php/Project/course/id/7.shtml">
-								<div class="pic">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/2326c434b137f7cc708aa62d7b10c1e3.jpg" alt="Polytech_法国综合理工院校联盟_法国留学">
-								</div>
-								<div class="tit">
-									Polytech<br>法国综合理工院校联盟
-								</div>
-								</a>
-							</div>
-						</div>           
-                        
-                        <!--<div class="x">
-					    </div>-->
-						
-					
-					
-					
-				
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-lg-4">
-			<div class="diysc">
-				<div class="sy-tit" style=""><span style="cursor:pointer;">官方代表</span><a class="sy-tit2" href="http://www.51bonjour.com/index.php/Centrance/index.shtml" style="float:right; font-size:14px; color:#515151; ">更多</a></div>
-				
-                <div class="sy-tit1" style="float:right; height:15px; border-left: solid 1px #0055a4;  width:100px; margin-right:168px; padding-left:10px; margin-top:-24px;color: #0055a4;font-size: 16px;line-height: 15px;"><span style="cursor:pointer; color:#797979;">成功案例</span></div>
-                <a class="sy-tita" href="http://www.51bonjour.com/index.php/Case/index.shtml" style="float: right; margin-top: -27px; margin-right: 10px; color: rgb(81, 81, 81); display: none;">更多</a>
-               
-				<div class="bd" style="clear:both;">
-					<div class="row">
-					<div class="col-xs-6">
-							<a href="http://www.51bonjour.com/index.php/Centrance/consultant/id/15777.shtml">
-								<div class="diysc-item1">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/08459a3b0fbed6f2179ca9e334ecf06b.jpg" alt="" width="140" height="95">
-									<div class="tit" style=" width:150px;font-size:16px;margin-top: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
-										法国通路世界PASSWORLD项目									</div>
-								</div>
-							</a>
-						</div><div class="col-xs-6">
-							<a href="http://www.51bonjour.com/index.php/Centrance/consultant/id/15769.shtml">
-								<div class="diysc-item1">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/49493294e6da6c630dbe5459b7f819fd.jpg" alt="" width="140" height="95">
-									<div class="tit" style=" width:150px;font-size:16px;margin-top: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
-										诺欧商学院									</div>
-								</div>
-							</a>
-						</div><div class="col-xs-6">
-							<a href="http://www.51bonjour.com/index.php/Centrance/consultant/id/15767.shtml">
-								<div class="diysc-item1">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/7ad59fd1910f035c2a388bae0b4a2cff.jpg" alt="" width="140" height="95">
-									<div class="tit" style=" width:150px;font-size:16px;margin-top: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
-										SKEMA商学院									</div>
-								</div>
-							</a>
-						</div><div class="col-xs-6">
-							<a href="http://www.51bonjour.com/index.php/Centrance/consultant/id/15766.shtml">
-								<div class="diysc-item1">
-									<img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/6e7b636a34b597717f1ac237e0d9bee6.jpg" alt="" width="140" height="95">
-									<div class="tit" style=" width:150px;font-size:16px;margin-top: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
-										图卢兹商学院									</div>
-								</div>
-							</a>
-						</div>	
-					</div>
-				</div>
-                <div class="bd1" style="clear: both; height: 346px; padding: 25px 10px 0px; display: none;">
-                <div style=" margin-left:-40px;">
-						<ul>
-							<li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/52.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">PW内部考试——省去刷分时间</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/51.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">PW内部考试——英语成绩不佳者的捷径</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/50.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">良好的形象和自信是成功的关键</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/49.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">酿造专业学生，成功申到第戎高商</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/48.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">面试表现良好，GPA偏低也不怕！</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/47.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">成绩优秀，格勒高商offer是囊中之物！</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/46.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">雅思和GMAT失利仍获offer</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/45.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">出色的面试弥补了笔试的不足！</span></a></li><li style="height:36px;list-style-type:none;"><a href="http://www.51bonjour.com/index.php/Case/detail/id/44.shtml" target="_blank"><span style="color:#0255A1">&gt;</span>&nbsp;&nbsp;<span style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:100%;">丰富的实习经验为简历加分</span></a></li>						
-						</ul>
-				</div>
-                </div>
-			</div>
-		</div>
-         <script>
-                    
-                        $(".diysc .bd1").hide()
-						$(".diysc .sy-tita").hide()
-						 $(".diysc .bd").show()
-                        
-                        $(".sy-tit").click(function() {
-                           
-                            $(".sy-tit2").show()
-                            $(".diysc .bd").show()
-							$(".diysc .bd1").hide();
-							$(".diysc .sy-tita").hide()
-							$(".sy-tit1 span").css("color","#797979");
-							$(".sy-tit span").css("color","#0055a4");
-							$(".sy-tit1 span").css("font-size","16px");
-							$(".sy-tit span").css("font-size","18px");
-                        });
-						$(".sy-tit1").click(function() {
-                           
-                          
-						    $(".sy-tit2").hide()
-                            $(".diysc .bd1").show()
-							$(".diysc .bd").hide();
-							$(".diysc .sy-tita").show()
-							$(".sy-tit1 span").css("color","#0055a4");
-							$(".sy-tit span").css("color","#797979");
-							$(".sy-tit1 span").css("font-size","18px");
-							$(".sy-tit span").css("font-size","16px");
-                        });
-                    
-                </script>
-		<div class="col-sm-6 col-lg-4">
-			<div class="wenda" style="margin-top:7px;">
-				<div class="hd">
-					<h4>问答社区</h4>
-				</div>
-				<h2>国内最大留法问答社区</h2>
-				<h3>已经回答</h3>
-				<p>
-					<span>0</span><span>3</span><span>3</span><span>2</span><span class="none">7</span>
-				</p>
-				<h5>个问题</h5>
-				<a href="http://www.51bonjour.com/index.php/Answers/index.shtml"><button class="btn btn-wenda btn-lg btn-block">点击逛逛</button></a>
-			</div>
-		</div>
-		<div class="col-sm-6 col-lg-4">
-			<div class="rmwd">
-				<div class="sy-tit">
-					热门问答<a href="http://www.51bonjour.com/index.php/Answers/index.shtml" class="more">更多</a>
-				</div>
-				<div class="bd">
-					<div class="bd-head">
-						<div class="wen">
-							<span>问</span>师姐好，我想问下DELF怎么报名考试？
-						</div>
-						<div class="da">
-							<span>答</span>在香港或澳门的法盟报名，北外也可以<a href="http://www.51bonjour.com/index.php/Answers/show/id/279.shtml">&nbsp;&nbsp;&nbsp;详细</a>
-						</div>
-					</div>
-					<div class="bd-main">
-						<div class="wen">
-							<span>1</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/279.shtml">师姐好，我想问下DELF怎么报名考试？
-</a>
-						</div><div class="wen">
-							<span>2</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/271.shtml">请问：我们在重庆，我儿子今年6月高考后就想...</a>
-						</div><div class="wen">
-							<span>3</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/273.shtml">请问申请公立大学的话，有毕业证也要高考成绩...</a>
-						</div><div class="wen">
-							<span>4</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/210.shtml">我是一名大五建筑专业的学生，目前已经开始法...</a>
-						</div><div class="wen">
-							<span>5</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/229.shtml">斯特拉斯堡大学招收中国高中毕业生吗？对高考...</a>
-						</div><div class="wen">
-							<span>6</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/213.shtml">请问法国高商的硕士项目有哪些？区别是什么？</a>
-						</div><div class="wen">
-							<span>7</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/256.shtml">老师您好，我本科学的是对外汉语专业，目前工...</a>
-						</div><div class="wen">
-							<span>8</span><a href="http://www.51bonjour.com/index.php/Answers/show/id/281.shtml">请问TCF只考上半年吗？？</a>
-						</div>					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-lg-4">
-			<div class="bzjt">
-			     
-				<!--<div class="sy-tit bb0">
-					笨猪讲堂<a href="/index.php/Yy/index.shtml" style="font-size:14px;" class="more">更多</a>
-				</div>-->
-			  <div class="sy-tit02" style="margin-top: 35px; margin-left: 20px;"><span style="cursor:pointer;border:1px solid #0055a4;padding:10px; color:#FFF; background-color:#0055a4;">最新活动</span>
-			  </div>
-			  <a class="sy02" href="http://www.51bonjour.com/index.php/Report/index/type/3.shtml" style="float:right; font-size:14px; margin-right:50px; color:#FFF;margin-top:-10px; ">更多</a>
-				
-                <div class="sy-tit22" style="float: right; height: 15px; margin-top: -24px; font-size: 16px; line-height: 15px; margin-right: 58px;"><span style="cursor:pointer; color:#0055a4; border:1px solid #0055a4;padding:11.5px; background-color:#FFF;">笨猪讲堂</span>
-				</div>
-                <a class="sy-tita022" href="http://www.51bonjour.com/index.php/Yy/index.shtml" style="float: right; margin-top: -10px; margin-right: 50px; color: rgb(255, 255, 255); display: none;">更多</a>
-				
-				
-				<!--  最新活动开始 -->
-					<div class="bd sy-tita-bd2">
-				
-					
-					<div class="bd-main" style="border-radius:10px;margin-top:-55px;margin-left:10px; background-image:url(/Public/Home/plugins/index/img/zx1.jpg); background-repeat:no-repeat;height:477px; width:100%;">
-						<ul style="margin-top: 160px;">
-							<li style=" margin-bottom:20px;"><span style="color:#EF4135; float:left;font-size: 1.4rem;">07月11日</span><br>
-							<a href="http://www.51bonjour.com/index.php/Report/show/id/38.shtml" target="_blank" style=" float:left;width:85%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; display:block;font-size: 1.4rem;">笨猪法语A1初级班开班啦！ </a>
-							
-							<a href="http://form.mikecrm.com/f.php?t=JKfCPP" style="color:#FFF; border-radius:5px; background-color:#F00;padding:0 5px; float:right;font-size: 1.4rem;" target="_blank">预约</a>
-							
-							</li><li style=" margin-bottom:20px;"><span style="color:#EF4135; float:left;font-size: 1.4rem;">08月01日</span><br>
-							<a href="http://www.51bonjour.com/index.php/Report/show/id/55.shtml" target="_blank" style=" float:left;width:85%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; display:block;font-size: 1.4rem;">笨猪法语多个暑期班齐开班！ </a>
-							
-							<a href="http://form.mikecrm.com/Zi3ffQ" style="color:#FFF; border-radius:5px; background-color:#F00;padding:0 5px; float:right;font-size: 1.4rem;" target="_blank">预约</a>
-							
-							</li>						</ul>
-					</div>
-					</div>
-				<!--  最新活动end-->
-				<!--  笨猪讲堂-->
-				<div class="bd  sy-tita-bd" style="display: none;">
-					<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  
-					  
-					</div>
-					
-					<div class="bd-main" style="border-radius:10px;margin-top:-55px;margin-left:10px; background-image:url(/Public/Home/plugins/index/img/bzjt1.jpg); background-repeat:no-repeat;height:477px;width:100%;">
-						<ul style="margin-top: 160px;">
-							<li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/19.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;笨猪讲堂系列之：法国艺术类院校盘点</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/18.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;笨猪讲堂系列之：法国工程师类院校体制...</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/16.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;笨猪讲堂系列之： 法国高商文凭体系详...</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/17.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;笨猪讲堂系列之： 法国公立大学体系详...</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/9.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;法国各类院校专题分享会</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/14.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;告客户书：笨猪网使用手册——手把手教...</a></li><li style="margin-bottom:-5px;"><a href="http://www.51bonjour.com/index.php/Yy/course/id/15.shtml" target="_blank"><span style="color:#FFF;     padding: 0 5px; background-color:#F00; border-radius:50%">&gt;</span>&nbsp;&nbsp;法国国立音乐学院来华招生安排</a></li>						</ul>
-					</div>
-					</div>
-					<!--  笨猪讲堂end-->
-				
-			
-					   <script>
-                    
-                        $(".sy-tita-bd").hide()
-						$(".sy-tita022").hide()
-						 $(".sy-tita-bd2").show()
-                        $(".sy-tit22").css("margin-right","58px");
-						
-                        $(".sy-tit22").click(function() {
-                           
-                            $(".sy-tita-bd").show()
-                            $(".sy-tita022").show()
-							$(".sy-tita-bd2").hide();
-							$(".sy02").hide()
-							$(".sy-tit02 span").css("background-color","#FFF");
-							$(".sy-tit22 span").css("background-color","#0055a4");
-							
-							$(".sy-tit02 span").css("color","#0055a4");
-							$(".sy-tit22 span").css("color","#FFF");
-							$(".sy-tit22").css("margin-right","138px");
-                        });
-						$(".sy-tit02").click(function() {
-                           
-                          
-						    $(".sy-tita-bd").hide()
-                            $(".sy-tita022").hide()
-							$(".sy-tita-bd2").show();
-							$(".sy02").show()
-							$(".sy-tit22 span").css("background-color","#FFF");
-							$(".sy-tit02 span").css("background-color","#0055a4");
-							
-							$(".sy-tit22 span").css("color","#0055a4");
-							$(".sy-tit02 span").css("color","#FFF");
-							$(".sy-tit22").css("margin-right","58px");
-                        });
-                    
-                </script>
-		
-					
-					
-					
-					
-					
-					
-			</div>
-				
-				
-				
-			</div>
-		</div>
-	
-	<div class="row">
-		<div class="col-sm-12" style="margin-top:15px;">
-			<div class="sy-tit">
-				诸友告白
-			</div>
-		</div>
-		<div class="col-sm-12" style="height:250px; margin-bottom:25px;">
-			<div class="swiper-container swiper-container-horizontal">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide-active" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/334738b55df0aa5d8b58edec250d40ff.jpg" style=" width:204px; height:225px; position:relative" alt="HEC巴黎高等商学院_刘同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">HEC巴黎高等商学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">刘同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">非常感谢笨猪网，在申请过程中给予了我非常大的帮助，无论是文书修改还是面试辅导都很专业，很到位。要特别感谢梁老师，认真负责，业务精炼，功不可没。其实与其说是服务，更觉得是申请路上可以信任的师长和朋友，非常感谢你们的陪伴！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide swiper-slide-next" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/bc82693654e7a238e7a10888ab522da9.jpg" style=" width:204px; height:225px; position:relative" alt="里昂高商_苏同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">里昂高商</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">苏同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">认识你们一年多啦！谢谢你们认真负责不含糊地为我打点出国前的各种复杂的手续，期间我有时会有退缩的想法，但一切都挺顺利。我很感谢笨猪网。</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/c1a760612352882356ef0ea4b855b2af.jpg" style=" width:204px; height:225px; position:relative" alt="格勒诺布尔高商_袁同学">
-                       
-                      <div id="noid" style="position: absolute; width: 204px; margin: 0px auto; height: 100%; left: 0px; top: 195px; opacity: 0.8; background-color: rgb(17, 112, 237);">
-                        <div id="noid1" style="position: absolute; left: 0px; top: 2px; width: 204px;">
-                        
-                        <span style="color: rgb(255, 255, 255); z-index: 1; font-size: 18px; float: right; text-align: right; padding-right: 10px; padding-left: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 73%;">格勒诺布尔高商</span>
-                        <span style="color: rgb(255, 255, 255); z-index: 1; font-size: 14px; float: left; padding-left: 10px; margin-top: 2px; clear: left;">袁同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">来到巴黎已经有半年了，回想起当时从选学校，考雅思到准备面试，面签，annie老师都给了我很大的帮助，每天不厌其烦地回答我各种问题。在此，我要特别感谢annie对我的耐心辅导！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/e2ac02bce48fc0076ec8afcfd506bd30.jpg" style=" width:204px; height:225px; position:relative" alt="第戎高商_魏同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">第戎高商</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">魏同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">作为一名转专业的学生，我对红酒有疯狂的热情!感谢笨猪网的杨老师跟梁老师，不断支持鼓励，告诉我不能放弃.现在在第戎高商，我每天都过得很充实!谢谢你们!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/7e1c9645fc67044da1123f091ec259f1.jpg" style=" width:204px; height:225px; position:relative" alt="拉罗谢尔大学_岳同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">拉罗谢尔大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">岳同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">谢谢笨猪网的梁老师帮我顺利拿到La Rochelle的直录offer!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/67f1ef80e178bba07232f46cf4b039e3.jpg" style=" width:204px; height:225px; position:relative" alt="法国CAFA侍酒师学院_魏同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">法国CAFA侍酒师学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">魏同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">我的背景条件不是非常好，笨猪网杨老师专业的判断，为我选择了CAFA，我现在的生活很精彩!感谢笨猪网!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/1ab856986db461c632795f1afe960001.jpg" style=" width:204px; height:225px; position:relative" alt="MODART_万同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">MODART</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">万同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">在北京经历了拒签，然后找到了笨猪网的杨老师。他们专业的判断，以及梁老师耐心的辅导，让我顺利获签，感谢笨猪网!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/1b715ade799641a2b2dc30f475b7a020.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多美院+波尔多建筑景观学院_唐同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多美院+波尔多建筑景观学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">唐同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">我们应该是笨猪网唯一的一对双胞胎学生吧? 经历过2次拒签,在笨猪网帮助下我们艰苦奋斗,终于顺利拿到了visa!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/fb11409704100a3d5c14f0050ba62f34.jpg" style=" width:204px; height:225px; position:relative" alt="巴黎_黄同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">巴黎</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">黄同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">笨猪网的面试辅导很专业很有耐心,推荐给我很好的学校,谢谢你们!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/4efa69f74d9b7da38ac212f93b7e6a59.jpg" style=" width:204px; height:225px; position:relative" alt="尼斯工程师学院_方同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">尼斯工程师学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">方同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">感谢笨猪网对我的帮助与支持！保持联系~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/5036cc11db5cbef463001c7694338328.jpg" style=" width:204px; height:225px; position:relative" alt="格勒三大_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">格勒三大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">格勒是一个很好的城市,谢谢笨猪网!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/4fff5e9bd4b5e28241c8d6afd04fcc64.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多美院_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多美院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">让我的画家梦在法国实现吧!感谢笨猪网^.^</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/4e48efd1b91bb49247b50b6d66a02a13.jpg" style=" width:204px; height:225px; position:relative" alt="MODART_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">MODART</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">原本要放弃留学梦了,全靠笨猪网的帮助,让我现在梦想成真了!我要做设计师啦!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/fece467506f2d8589819649c6a08297e.jpg" style=" width:204px; height:225px; position:relative" alt="布雷斯特美院_覃同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">布雷斯特美院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">覃同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">怀着一颗艺术的心,我终于来到了法国的美院,感谢笨猪网,希望以后的同学一切顺利!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/2beae37127322a44b0418472fe73aea6.jpg" style=" width:204px; height:225px; position:relative" alt="南特大学_毛同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">南特大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">毛同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">在笨猪网的帮助下,我来到了心仪的学校,顺利跟男朋友团聚了!棒棒哒~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/cde56a26f1235ecc79b9abfc83b15264.jpg" style=" width:204px; height:225px; position:relative" alt="昂热大学_罗同学和王同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">罗同学和王同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">在笨猪网的帮助下顺利出国,谢谢你们!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/5e728173850209b1b54c1e10620f84ea.jpg" style=" width:204px; height:225px; position:relative" alt="蒙彼利埃三大_段同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">蒙彼利埃三大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">段同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">直录刚开始是一个mission，impossible! 感谢杨老师Terry的鼓励和帮助顺利申到学校，还有梁老师Catherine的用心和体贴~棒棒哒！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/45c2d358febde4b42816c9a95dad7eaa.jpg" style=" width:204px; height:225px; position:relative" alt="克莱蒙二大_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">克莱蒙二大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">笨猪网的服务很专业，让我顺利到了法国，能够跟女朋友一起学习了！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/abb275e50e86ded63e958e0ad312eab8.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多三大_刘同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多三大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">刘同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">法语直录不是一条简单的路，但是我做到了！来到了我最喜欢的学校,感谢笨猪网的Terry和Cat~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/09a6a3b9fb6823ed8a83723703b0317f.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多美院_邱同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多美院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">邱同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">转专业并不简单，感谢笨猪网的老师们认真负责，耐心仔细为我做面试辅导，现在顺利到法了!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/e86c256d33797543ed5633aff98a754a.jpg" style=" width:204px; height:225px; position:relative" alt="LAB_张同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">LAB</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">张同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">能够来到法国学习设计真的太棒了！谢谢笨猪网！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/b8c640aa08160981015b260a6a361967.jpg" style=" width:204px; height:225px; position:relative" alt="尼斯大学_王同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">尼斯大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">王同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">笨猪网的直录项目做得很专业很出色，我也推荐了其他同学。</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/f675cc42825c26d307662c104e772746.jpg" style=" width:204px; height:225px; position:relative" alt="格勒三大_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">格勒三大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">经历了一次拒签，我没有放弃，成功的路本来就不简单，谢谢笨猪网！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/7d62152698a13d2ad43d9918ff7605f2.jpg" style=" width:204px; height:225px; position:relative" alt="NEOMA_董同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">NEOMA</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">董同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">谢谢笨猪网的Cat老师耐心的服务，让我顺利来到NEOMA！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/b1e2fd014d79ce4392ef1097c5e78faa.jpg" style=" width:204px; height:225px; position:relative" alt=" EPF_区同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;"> EPF</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">区同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">谢谢笨猪网的帮助，尤其是梁老师，让我跟好朋友一起顺利走N+I项目，到达法国了！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/d112ad320553caf784588be7c61d2d99.jpg" style=" width:204px; height:225px; position:relative" alt="CREAPOLE_胡同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">CREAPOLE</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">胡同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">签证面试真的不简单，付出了很多，笨猪网的面试培训非常专业，老师都很有耐心!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/112dcdfdbc85165d2202ea2598976094.jpg" style=" width:204px; height:225px; position:relative" alt="巴黎_林同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">巴黎</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">林同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">全靠笨猪网的认真负责，我的法国游学梦实现了！希望你们越办越好！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/426852d2abe6917dd6d12ffb1bc50f64.jpg" style=" width:204px; height:225px; position:relative" alt="昂热大学_罗同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">罗同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ef2dd882813a03612bfb9f759025a302.jpg" style=" width:204px; height:225px; position:relative" alt="格勒诺布尔第三大学_张同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">格勒诺布尔第三大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">张同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/4dee970318013515957a0e1ef8b9b728.jpg" style=" width:204px; height:225px; position:relative" alt="昂热大学_王同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">王同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/d94aee864c8c986676e7ffd71be128cd.jpg" style=" width:204px; height:225px; position:relative" alt="勒芒大学_黄同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">勒芒大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">黄同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">笨猪网是一个贴心的导师。法国，我来了！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/3ea381b15f4097b1d2f1a5198fd76f0c.jpg" style=" width:204px; height:225px; position:relative" alt="ESMOD巴黎高级时装学院_陈同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">ESMOD巴黎高级时装学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">陈同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/d13308d19f3713f5f341916aa960e017.jpg" style=" width:204px; height:225px; position:relative" alt="克莱蒙第二大学_徐同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">克莱蒙第二大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">徐同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/9d4caae8706c3b5d23c1bc359e7ccbb1.jpg" style=" width:204px; height:225px; position:relative" alt="昂热大学_梁同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">梁同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">感谢笨猪网，新生活要开始了。</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/1820a8bded3a4d9adc8f4f6ca47102ff.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多国立美术学院_李同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多国立美术学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">李同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">感谢笨猪网，帮助我实现艺术梦想！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/a841f8892a611363b85c4620be753f15.jpg" style=" width:204px; height:225px; position:relative" alt="瓦朗西纳大学_范同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">瓦朗西纳大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">范同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">如果要去法国留学的话，那么就选笨猪网吧~不会让你失望的哦</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/e259cb1e645dd3032b6583f13fb2ffab.jpg" style=" width:204px; height:225px; position:relative" alt="亚眠大学_王同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">亚眠大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">王同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">梦想导师，一定要加油哦！祝一切顺利~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ca332ccec3dd93cdc41b36bda3a1ba61.jpg" style=" width:204px; height:225px; position:relative" alt="英赛克高等商学院_吴同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">英赛克高等商学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">吴同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">认识笨猪网好几年了，今年从英赛克毕业了，一切都很圆满，感谢笨猪网！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/355e0b5e03a0914fa8319252542c7f88.jpg" style=" width:204px; height:225px; position:relative" alt="法国CAFA专业品酒师学院_林同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">法国CAFA专业品酒师学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">林同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">感谢笨猪网为我争取到这个机会，可以去喜欢的地方学习喜欢的专业！希望你们越来越好~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/23057095b7a117bda5bb9342ef1a7c6e.jpg" style=" width:204px; height:225px; position:relative" alt="昂热西部天主教大学_张同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热西部天主教大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">张同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/85ed7273664f2150c7dc13b455e5b150.jpg" style=" width:204px; height:225px; position:relative" alt="MOD&#39;ART国际时尚艺术学院_漆同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">MOD'ART国际时尚艺术学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">漆同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/9e741400ed23efd5167623c7f16715dd.jpg" style=" width:204px; height:225px; position:relative" alt="巴黎高等艺术设计学院_梁同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">巴黎高等艺术设计学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">梁同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/e3b9c3cc715ac02af6cee26e2cf7697d.JPG" style=" width:204px; height:225px; position:relative" alt="法国高级时装学院_周同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">法国高级时装学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">周同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/640a65528951b3c2b0ec54df77e2e5f3.jpg" style=" width:204px; height:225px; position:relative" alt="法国CAFA专业品酒师学院_刘同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">法国CAFA专业品酒师学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">刘同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/862b12ef2cf306291ff47d70dd4b6cc9.jpg" style=" width:204px; height:225px; position:relative" alt="法国巴黎梅登音乐学院_张同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">法国巴黎梅登音乐学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">张同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;"></span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ce0095c07be2a3f4ef4b2a8cac5a612a.jpg" style=" width:204px; height:225px; position:relative" alt="昂热西部天主教大学_林同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热西部天主教大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">林同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">笨猪网真的很高效！没想到这么快就可以来到法国学习！感谢！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/90bae5a43708205dde1ab9c471f29f4a.jpg" style=" width:204px; height:225px; position:relative" alt="波尔多美院_刘同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">波尔多美院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">刘同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">终于来到波尔多了，哈哈！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/78bbb9bcfab84f0c43fe7283d30706aa.jpg" style=" width:204px; height:225px; position:relative" alt="昂热大学_许同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">昂热大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">许同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">留學不易，且行且珍惜。</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/3ecb1d3ba8ee7747ce64bf1192e3b9fc.jpg" style=" width:204px; height:225px; position:relative" alt="里昂二大_关同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">里昂二大</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">关同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">感谢笨猪网！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/9e22a8ee8a9ad581560574406c09c001.jpg" style=" width:204px; height:225px; position:relative" alt="INSA雷恩国立应用科学学院_朱同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">INSA雷恩国立应用科学学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">朱同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">我的留法之路还算是顺利的，从法语学习到申校到签证，都感谢笨猪网的帮助！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ccec291a0e21758deeb742fffa2a1373.jpg" style=" width:204px; height:225px; position:relative" alt="ESCP欧洲管理学院_张同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">ESCP欧洲管理学院</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">张同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">在法国前五的高商学习，是我人生的另一个旅程，谢谢笨猪网！ 大家都来法国吧！</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/87966cada8617d7a9a1b879ca6c4f952.jpg" style=" width:204px; height:225px; position:relative" alt="巴黎艺术化妆造型学校_喻同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">巴黎艺术化妆造型学校</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">喻同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">学习化妆是我一直以来的兴趣，谢谢笨猪网的帮助!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/75a6c3f194b797a7303d88fcd69f2ca4.jpg" style=" width:204px; height:225px; position:relative" alt="MODART_李同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">MODART</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">李同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">我的法语并不是非常好,但是笨猪网的老师都很专业很nice,帮助我一步步顺利出签!</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div><div class="swiper-slide" style="width: 204px; margin-right: 30px;">
-						<a href="http://www.51bonjour.com/index.php/Answers/nice_case.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/cfdd8d1363c040aee2074134f4e6b5c9.jpg" style=" width:204px; height:225px; position:relative" alt="亚眠大学_钟同学">
-                       
-                      <div id="noid" style="position:absolute;width:204px; margin:0 auto;height:100%;background-color: #1170ed;left:0;top:195px;opacity:0.8;">
-                        <div id="noid1" style="position:absolute;left:0;top:2px;width:204px;">
-                        
-                        <span style="color:#FFF; z-index:1;font-size:18px; float:right; text-align:right; padding-right:10px;padding-left:10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; width:73%;">亚眠大学</span>
-                        <span style="color:#FFF; z-index:1; font-size:14px; float:left; padding-left:10px; margin-top:2px;">钟同学</span>
-                        <span style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;color:#FFF; z-index:1;font-size:14px; float:left; text-align:left;padding:0 10px 0 10px;">来到这里已经有一个多月了，很喜欢这个小城市，也喜欢这里的人。谢谢你们的一直帮助和耐心指导！越来越适应这边的生活，祝福你们~</span>
-                        </div>
-                      </div>
-                        
-                        
-                        </a>
-					</div>				</div>
-				
-			</div>	
-        <div class="swiper-button-next">
-	    </div>
-		<div class="swiper-button-prev swiper-button-disabled">
-		</div>
-		</div>
-	
-	</div>
-</div>
-<script>
-
-$(".swiper-slide a").mouseenter(
-	function(){
-		$(this).parent().find("#noid").animate({top:0},70);
-		$(this).parent().find("#noid #noid1").animate({top:50},1);
-		$(this).parent().find("#noid #noid1 span:eq(0)").css("float","left");
-	    $(this).parent().find("#noid #noid1 span:eq(1)").css("clear","both");
-		$(this).parent().find("#noid #noid1 span:eq(0)").css("width","100%");
-		$(this).parent().find("#noid #noid1 span:eq(0)").css("text-align","left");
-	}
-).mouseleave(
-	function(){
-		$(this).parent().find("#noid").animate({top:195},70);
-		$(this).parent().find("#noid #noid1").animate({top:2},1);
-		$(this).parent().find("#noid #noid1 span:eq(0)").css("float","right");
-	    $(this).parent().find("#noid #noid1 span:eq(1)").css("clear","left");
-			$(this).parent().find("#noid #noid1 span:eq(0)").css("width","73%");
-		$(this).parent().find("#noid #noid1 span:eq(0)").css("text-align","right");
-	}
-)
-</script>
-
-
-
-
-<!-- foot end -->
-
-
-<div class="container" style="margin-top:35px;">
-<div class="row">
-		<!-- <div class="col-sm-12">
-			<div class="cc">
-				<div class="c1">
-                 <img src="/Public/Home/plugins/index/img/benzhu.jpg" width="82" height="82">
-                 <p>笨猪网<br>官网微信</p>
-				</div>
-				<div class="c2">
-                 <img src="/Public/Home/plugins/index/img/fggs.jpg" width="82" height="82">
-                 <p>法国高商<br>交流群</p>
-				</div>
-				<div class="c3">
-                 <img src="/Public/Home/plugins/index/img/gl.jpg" width="82" height="82">
-                 <p>公立大学<br>交流群</p>
-				</div>
-				<div class="c4">
-                 <img src="/Public/Home/plugins/index/img/gc.jpg" width="82" height="82">
-                 <p>工程院校<br>交流群</p>
-				</div>
-				<div class="c5">
-                 <img src="/Public/Home/plugins/index/img/yisu.jpg" width="82" height="82">
-                 <p>艺术院校<br>交流群</p>
-				</div>
-			</div>
-		</div> -->
-		<div class="lj">
-			<!-- Nav tabs -->
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active0"><a href="http://www.51bonjour.com/#xuexiao" aria-controls="xuexiao" role="tab" data-toggle="tab">热门学校</a></li>
-				<li role="presentation" class="active1 active"><a href="http://www.51bonjour.com/#zhuanye" aria-controls="zhuanye" role="tab" data-toggle="tab">推荐专业</a></li>
-				
-				<li role="presentation" class="active3"><a style="cursor:pointer; z-index:1" href="http://www.51bonjour.com/index.php/News/lists">申请攻略</a></li>
-                <li role="presentation" class="active2"><a href="http://www.51bonjour.com/#youqing" aria-controls="youqing" role="tab" data-toggle="tab">友情链接</a></li>
-			</ul>
-			<!-- Tab panes -->
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="xuexiao" style="display: none;">
-					<p>
-                    <a href="http://www.51bonjour.com/index.php/College/detail/id/28.shtml">勒芒大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/27.shtml">格勒诺布尔第三大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/23.shtml">昂热西部天主教大学 </a><a href="http://www.51bonjour.com/index.php/College/detail/id/26.shtml">昂热大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/25.shtml">蒙彼利埃第三大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/21.shtml">里昂第二大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/24.shtml">克莱蒙费朗第二大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/103.shtml">亚眠大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/49.shtml">蒙彼利埃高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/57.shtml">巴黎第十三大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/50.shtml">雷恩商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/47.shtml">SKEMA商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/58.shtml">巴黎第十一大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/46.shtml">里尔经济管理学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/45.shtml">KEDGE高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/40.shtml">诺欧商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/62.shtml">巴黎第八大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/56.shtml">巴黎第七大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/31.shtml">南特商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/33.shtml">格勒诺布尔高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/59.shtml">巴黎第五大学</a><a href="http://www.51bonjour.com/index.php/College/detail/id/39.shtml">北方高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/38.shtml">里昂高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/37.shtml">欧洲管理学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/35.shtml">ESSEC高等商学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/93.shtml">巴黎视觉传达艺术学院</a><a href="http://www.51bonjour.com/index.php/College/detail/id/34.shtml">巴黎高等商学院</a>					</p>
-				</div>
-				<div role="tabpanel" class="tab-pane2" id="zhuanye" style="display: block;">
-                <a href="http://www.51bonjour.com/index.php/College/specialty/id/1522.shtml">会展管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1520.shtml">国际商务发展</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1518.shtml">管理与创业</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1501.shtml">供给链及精益管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/253.shtml">工商管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/251.shtml">金融</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/21.shtml">大学校硕士项目</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/155.shtml">大学校硕士项目</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/93.shtml">战略管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/25.shtml">市场营销</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1490.shtml">法律和国际管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/194.shtml">市场营销与传播</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/119.shtml">欧洲商务硕士</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1596.shtml">工程管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1583.shtml">国际餐饮管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1511.shtml">国际人力资源与绩效管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1101.shtml">商务咨询和信息系统管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1096.shtml">会展和旅游战略管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1093.shtml">企业财务管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1084.shtml">策略和组织咨询学</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1082.shtml">创新商务</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1080.shtml">创新和创业</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/1079.shtml"> 金融市场学</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/286.shtml">奢侈品和时尚管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/196.shtml">银行与国际金融</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/157.shtml">国际管理硕士</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/122.shtml">旅游与酒店管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/206.shtml">健康管理</a><a href="http://www.51bonjour.com/index.php/College/specialty/id/207.shtml"> 航空运输管理</a>				</div>
-				<div role="tabpanel" class="tab-pane3" id="youqing" style="display: none;">
-                <a href="http://www.edufrance.org.cn/" target="_blank">Edufrance</a><a href="http://bonjourfrancais.cn/" target="_blank">笨猪法语</a><a href="http://gz.szpxe.com/" target="_blank">神州广州培训网</a><a href="http://www.51bonjour.com/index.php/Project/course/id/14.shtml" target="_blank">瑞士留学</a>				</div>
-				<div role="tabpanel" class="tab-pane4" id="gonglue" style="display: none;">
-                <a href="http://www.51bonjour.com/index.php/News/show/id/8.shtml">法国五所顶尖高等商学院的联合招生项目申请攻略</a><a href="http://www.51bonjour.com/index.php/News/show/id/19.shtml">留学法国，怎样申请最保障？</a><a href="http://www.51bonjour.com/index.php/News/show/id/22.shtml">格勒诺布尔三大面经</a><a href="http://www.51bonjour.com/index.php/News/show/id/27.shtml">亚眠最后两间免面签的学校，别错过！</a><a href="http://www.51bonjour.com/index.php/News/show/id/20.shtml">什么是公立大学直录</a><a href="http://www.51bonjour.com/index.php/News/show/id/25.shtml">分享：我是如何成功申请ESCP的？</a><a href="http://www.51bonjour.com/index.php/News/show/id/29.shtml">两年制奢侈品管理专业学生面经分享（一）</a><a href="http://www.51bonjour.com/index.php/News/show/id/30.shtml">格勒三大视听与多媒体专业面经</a><a href="http://www.51bonjour.com/index.php/News/show/id/34.shtml">为了面签，我背了两万多字的法文</a><a href="http://www.51bonjour.com/index.php/News/show/id/18.shtml">HEC录取学生访谈录</a><a href="http://www.51bonjour.com/index.php/News/show/id/17.shtml">昂热大学面经</a><a href="http://www.51bonjour.com/index.php/News/show/id/16.shtml">法国留学如何规避陷阱？Edufrance给你答案！</a><a href="http://www.51bonjour.com/index.php/News/show/id/11.shtml">除了简历还要动机信，学法语的孩子你伤不起</a><a href="http://www.51bonjour.com/index.php/News/show/id/7.shtml">Edufrance独家春季面经资料分享第一辑</a>				</div>
-			</div>
-		</div>
-  </div>
-</div>
-<script>
-
-	  $('.tab-pane ').show();
-	  	$('.tab-pane2').hide();
-	     $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').hide();
-	//设计案例切换
-	$('.active0').mouseover(function(){
-		$('.tab-pane2').hide();
-		$('.tab-pane').show();
-	    $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').hide();
-	  $('.active0').addClass("active");
-	  	$('.active1').removeClass("active");
-	  	$('.active2').removeClass("active");
-	  	$('.active3').removeClass("active");
-	  
-	})
-	
-		$('.active0').mouseleave(function(){
-		$('.tab-pane2').hide();
-		$('.tab-pane').show();
-	    $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').hide();
-        $('.active0').addClass("active");
-	})
-	
-	
-		
-	
-	
-	$('.active1').mouseover(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane2').show();
-	    $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').hide();
-		  $('.active1').addClass("active");
-      $('.active0').removeClass("active");
-	  	$('.active2').removeClass("active")
-			$('.active3').removeClass("active")
-	})
-	
-	
-	
-		$('.active1').mouseleave(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane2').show();
-	    $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').hide();
-        $('.active1').addClass("active");
-	})
-	
-		$('.active2').mouseover(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane3').show();
-	    $('.tab-pane2 ').hide();
-	    $('.tab-pane4 ').hide();
-		 $('.active2').addClass("active");
-		$('.active1').removeClass("active")
-			$('.active0').removeClass("active")
-				$('.active3').removeClass("active")
-		
-
-	})
-		$('.active2').mouseleave(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane2').hide();
-	    $('.tab-pane3 ').show();
-	    $('.tab-pane4 ').hide();
-	 $('.active2').addClass("active");
-	})
-	
-			$('.active3').mouseover(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane4').show();
-	    $('.tab-pane2 ').hide();
-	    $('.tab-pane3 ').hide();
-		 $('.active3').addClass("active");
-	$('.active2').removeClass("active")
-		$('.active0').removeClass("active")
-			$('.active1').removeClass("active")
-	})
-		$('.active3').mouseleave(function(){
-		$('.tab-pane').hide();
-		$('.tab-pane2').hide();
-	    $('.tab-pane3 ').hide();
-	    $('.tab-pane4 ').show();
- $('.active3').addClass("active");
-	})
-
-</script>
-<div style="text-align: left;background: #F9F9F9;color: #797979;">
-<div class="container cont1">
-		<p style="float:left;color: #797979; padding-bottom:10px; padding-top:20px; margin-right:15px;">媒体报导:</p>
-		<ul style=" display:block; margin-top:20px;">
-	    
-		<li style=" float:left ; display:block;margin-top: -10px;margin-right:13px;">
-				<a style="" href="http://www.51bonjour.com/index.php/Report/show/id/24.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/44fef9760ff961505fb590c8e6e2d691.jpg" width="76" height="40" style=" border-radius:3px;"></a>
-			</li><li style=" float:left ; display:block;margin-top: -10px;margin-right:13px;">
-				<a style="" href="http://www.51bonjour.com/index.php/Report/show/id/50.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/2b5fa6002842572dc313ca86c3d43f74.jpg" width="76" height="40" style=" border-radius:3px;"></a>
-			</li><li style=" float:left ; display:block;margin-top: -10px;margin-right:13px;">
-				<a style="" href="http://www.51bonjour.com/index.php/Report/show/id/49.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ded988f6cee6d8b7444ec62201072fc7.jpg" width="76" height="40" style=" border-radius:3px;"></a>
-			</li><li style=" float:left ; display:block;margin-top: -10px;margin-right:13px;">
-				<a style="" href="http://www.51bonjour.com/index.php/Report/show/id/12.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/7a8f66fdf2f4461c0255591103f70154.jpg" width="76" height="40" style=" border-radius:3px;"></a>
-			</li><li style=" float:left ; display:block;margin-top: -10px;margin-right:13px;">
-				<a style="" href="http://www.51bonjour.com/index.php/Report/show/id/16.shtml"><img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/5c003075b89bc83bd66e338bad250813.jpg" width="76" height="40" style=" border-radius:3px;"></a>
-			</li>		
-			<!-- <li style=" float:left ; display:block;">
-				<a style="" href="http://www.mrpeixun.org/" target="_blank">笨猪法语</a>
-			</li> 
-			<li style=" float:left ; display:block;">
-				<a style="" href="http://www.edufrance.org.cn/" target="_blank">Edufrance</a>
-			</li> -->
-        
+    <!--第3页-->
+    <div id="page3" class="indexPage row" style="height: 681px; top: 0px; background-image: url(&quot;/Public/Home/images/about/G02.jpg&quot;);">   
+    	<div class="page3bg adjustAuto" style="width: 924.896px; height: 594.068px; left: 220.552px; top: 85.375px; margin-top: 0px; padding-left: 0px;">
+        	<div class="page3img5 pageImg adjustAuto" style="font-size: 36px; width: 320.156px; height: 71.1458px; left: 369.958px; top: -71.1458px; margin-top: 0px; color: rgb(0, 80, 152); padding-left: 0px;">笨猪网做什么</div>
          
-		</ul>
-	
-	</div>
- </div> 
-
-<!-- 
-<div class="footer">
-	<div class="container" style=" position: relative;">
-		<h4 style=" margin-top:10px;">
-		
-			<a style="font-size:14px; color:#FFF;" href="/index.php/College/filter.shtml">法国院校</a>&nbsp;|
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Centrance/index.shtml">校代专区</a>&nbsp;|
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Answers/index.shtml">问答社区</a>&nbsp;|
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Footer/recruit.shtml">笨猪招聘</a>&nbsp;|
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Report/index/type/2.shtml">媒体报导</a>&nbsp;|	
-			<a style="font-size:14px; color:#FFF;" href="http://form.mikecrm.com/f.php?t=D7Wz6K" target="_blank">学长入驻</a>&nbsp;|			
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Footer/recruit1.shtml">商务合作</a>&nbsp;|	
-			<a style="font-size:14px; color:#FFF;" href="/index.php/Footer/about.shtml">关于我们</a>
-			
-		</h4>
-		<p style="margin-bottom:10px;">
-			TEL：400-062-5185 / 020-83198969 | E-MAIL：bonjour@51bonjour.com | ADD：广东省广州市越秀区环市东路339号广东国际大厦裙楼三楼
-  
-		</p>
-		<p style=" margin-top:10px;">
-			
-			<span>旗下品牌：</span>
-			<a style="font-size:14px; color:#FFF;" href="http://www.mrpeixun.org/" target="_blank">笨猪法语</a>&nbsp;|
-			<a style="font-size:14px; color:#FFF;" href="http://www.edufrance.org.cn/" target="_blank">Edufrance</a>&nbsp;|
-			
-		</p>	
-			
-		 <img src="/Public/Home/plugins/index/img/benzhu.jpg" width="70" height="70" style=" float:right; position:absolute;right:30px; top:0px;">
-	</div>
-</div>
--->
-
-<div class="navigation">
-	<div class="navigation_c">
-	    <div class="navigation_lelf">
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/College/filter.shtml">法国院校</a>
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Centrance/index.shtml">校代专区</a>
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Answers/index.shtml">问答社区</a>
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Footer/recruit.shtml">笨猪招聘</a>
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Report/index/type/2.shtml">媒体报导</a>
-			<a style="font-size:14px; color:#FFF;" href="http://form.mikecrm.com/f.php?t=D7Wz6K" target="_blank">学长入驻</a>			
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Footer/recruit1.shtml">商务合作</a>	
-			<a style="font-size:14px; color:#FFF;" href="http://www.51bonjour.com/index.php/Footer/about.shtml">关于我们</a>
-		
-		</div>
-		<div class="navigation_right">
-		  <div style="position:relative;">
-		    <img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/p1.png" width="20">
-			<h1 style="margin-top: 5px;">400-062-5185 / 020-83198969</h1>
-		    <img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/e1.png" width="20">
-			<h1 style="margin-top: 5px;">bonjour@51bonjour.com</h1>
-			 <img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/f1.png" width="20">
-			<p>广东省广州市越秀区环市东路339号广东国际大厦裙楼三楼</p>
-		    <img src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/benzhu.jpg" width="120" class="navigation_right_imgs">
-		  </div>
-		
-		
-		</div>
-	</div>
-	</div>
-
-
-<div class="f-tools">
-	<div class="qq">
-		<a onmousemove="xianshi()" href="javascript:;"></a>
-		<div id="qqyincang" style="display: none;">
-			<div>
-				<span class="btn-close" onclick="check_guanbi()">×</span>
-				<p>
-					<img style="float:left;" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/ico-qq.gif" alt="在线咨询">&nbsp;&nbsp;&nbsp;在线咨询
-				</p>
-			<dl>
-					
-					<dd style=" border-bottom:1px #ccc dotted;margin-top: -5px;">
-					 <label style=" padding-top:-8px;">法国留学咨询</label>
-					
-								
-				   						
-					<a style="text-decoration:none;color:#000000;margin-bottom:8px;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3147639890&amp;site=qq&amp;menu=yes" target="_blank">
-                    <img style="float:left;border-radius:3px;" width="17" height="17" border="0" align="absmiddle" title="笨猪网AmelieQQ:3147639890" alt="笨猪网AmelieQQ:3147639890" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/QQ.jpg">&nbsp;笨猪网Amelie</a>
-					
-					
-					
-					<a style=" margin-bottom:8px;text-decoration:none;color:#000000;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2810645805&amp;site=qq&amp;menu=yes" target="_blank">
-                    <img style="float:left;border-radius:3px;" width="17" height="17" border="0" align="absmiddle" title="笨猪网SylviaQQ:2810645805" alt="笨猪网SylviaQQ:2810645805" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/QQ.jpg">&nbsp;笨猪网Sylvia</a> 
-					
-                    
-	                <a style=" margin-bottom:8px;text-decoration:none;color:#000000;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&amp;uin=327547126&amp;site=qq&amp;menu=yes" target="_blank">
-                    <img style="float:left; border-radius:3px;" width="17" height="17" border="0" align="absmiddle" title="笨猪网GinaQQ:327547126" alt="笨猪网GinaQQ:327547126" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/QQ(1).jpg">&nbsp;笨猪网Esther</a> 
-					
-
-					<a style=" margin-bottom:8px;text-decoration:none;color:#000000; font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2916856291&amp;site=qq&amp;menu=yes" target="_blank">
-                    <img width="17" height="17" border="0" align="absmiddle" title="笨猪网AnnieQQ:2916856291" alt="笨猪网AnnieQQ:2916856291" style="float:left;border-radius:3px;" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/QQ.jpg">&nbsp;笨猪网Annie</a>
-
-					<!--
-					<a style=" margin-bottom:8px;text-decoration:none;color:#000000;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin=963448306&site=qq&menu=yes" target="_blank">
-                    <img style="float:left; border-radius:3px;" width="17" height="17" border="0" align="absmiddle" title="笨猪网GinaQQ:963448306" alt="笨猪网GinaQQ:963448306" src="/Public/Home//plugins/index/img/QQ.jpg">&nbsp;笨猪网Gina</a> 
-					
-					<a style="text-decoration:none;color:#000000; margin-bottom:8px;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin=2386491835&site=qq&menu=yes" target="_blank">
-                    <img style="float:left;border-radius:3px;" width="17" height="17" border="0" align="absmiddle" title="笨猪网Terry:2386491835" alt="笨猪网Terry:2386491835" src="/Public/Home/plugins/index/img/QQ.jpg">&nbsp;笨猪网Terry</a>
-					-->
-			
-					
-				     <label>法语培训咨询</label>
-					 <a style=" margin-bottom:5px;text-decoration:none;color:#000000;font-size:12px;" title="点击这里在线咨询" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2916856291&amp;site=qq&amp;menu=yes" target="_blank">
-                    <img width="17" height="17" border="0" align="absmiddle" title="笨猪网AnnieQQ:2916856291" alt="笨猪网AnnieQQ:2916856291" style="float:left;border-radius:3px;" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/QQ.jpg">&nbsp;笨猪法语刘老师</a>
-					
-					
-					</dd>
-				
-					
-				<label style="margin-top: 7px;">法国留学咨询群 </label>
-					<dd style="padding:0px">
-					<a target="_blank" href="http://jq.qq.com/?_wv=1027&amp;k=ZArDvp"><img border="0" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/group.png" alt="" title=""></a>
-					</dd>
-				<label style="margin-top: 7px;">法语培训咨询群</label>
-					<dd style="padding:0px">
-					<a target="_blank" href="http://jq.qq.com/?_wv=1027&amp;k=23i0yPH"><img border="0" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/group.png" alt="" title=""></a>
-					</dd>	
-				</dl>
+			 <!--<div class="page3text1 adjustAutoText" style="font-size: 42px; width: 450px; height: 100px; left: 520px; top: -100px; margin-top: 0px;color:#005098;">笨猪网做什么</div>
+           <div class="page3text2 adjustAutoText" style="font-size: 22px; width: 630px; height: 100px; left: 320px; top: 120px; margin-top: 0px;">搜索你需要的素材，通过拖拉拽即可完成素材的挑选与使用，这一切不需要下载任何插件或文件，让你更专注于自己的创意。</div>-->
+            
+			<div class="page3img1 pageImg adjustAuto" style="width: 419.76px; height: 184.979px; left: 263.24px; top: 99.6042px; margin-top: 0px; padding-left: 0px; text-align: center; z-index: 4;">
+				<h1 style=" color:#ff0000; font-size:22px;">服务学生</h1>
+				<p style="margin-top: 7.11458px; margin-bottom: 7.11458px;">我们为有志赴法求学的学生提供：法语培训，院校申请，面签辅导，签证材料，境外服务，后续升学服务一站式全方位专业服务。</p>
 			</div>
-		</div>
-		<em id="qqyincang1" style="display: none;"></em><i id="qqyincang2" style="display: none;"></i>
-	</div>
-	<div class="wx" style="position:relative;">
-		<a href="http://www.51bonjour.com/#"><img style="margin-right: 50px; position: absolute; top: -50px; left: -100px; width: 100px; height: 100px; display: none;" src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/8cm.jpg"></a>
-		<div>
-
-		</div>
-	</div>
-	<div class="tel">
-		<a href="http://www.51bonjour.com/#"></a>
-		<div>
-		</div>
-	</div>
-	<div class="top">
-		<a href="http://www.51bonjour.com/#" class="go-top"></a>
-	</div>
-</div>
-<!-- end content  -->
-<script>
-	$('.wx img').hide();
-$('.wx').mouseenter(function(){
-	$('.wx img').show();
-
-})
-$('.wx').mouseleave(function(){
-	$('.wx img').hide();
-
-})
-
-</script>                       
-           
-
-<script type="text/javascript">
-$(function() {
-
+            <div class="page3img2 pageImg adjustAuto" style="width: 419.76px; height: 193.517px; left: 263.24px; top: 213.438px; margin-top: 0px; padding-left: 0px; text-align: center; z-index: 4;">
+				<h1 style=" color:#ff0000; font-size:22px;">服务法国院校</h1>
+				<p style="margin-top: 7.11458px; margin-bottom: 7.11458px;">我们和法国广大院校有良好深入合作关系，作为学校在华的招生推广代表，与国内大学促进院校国际交流项目合作。</p>
+			</div>
+            <div class="page3img3 pageImg adjustAuto" style="width: 419.76px; height: 157.232px; left: 263.24px; top: 320.156px; margin-top: 0px; padding-left: 0px; text-align: center; z-index: 4;">
+				<h1 style=" color:#ff0000; font-size:22px;">服务国内机构</h1>
+				<p style="margin-top: 7.11458px; margin-bottom: 7.11458px;">我们欢迎和国内诸多机构广泛合作；为国内机构提供院校支持，申请服务等。</p>
+			</div>
+            <div class="page3img4 pageImg adjustAuto" style="width: 533.594px; height: 325.136px; left: 197.785px; top: 14.2292px; margin-top: 0px; padding-left: 0px;"><img src="./笨猪网-关于我们_files/Y1.png"></div>
+        </div> 	
+    </div>
     
+    <!--第4页-->
+    <div id="page4" class="indexPage row" style="height: 681px; top: 0px;">
+    	<div class="page4bg adjustAuto" style="width: 924.896px; height: 594.068px; left: 220.552px; top: 85.375px; margin-top: 0px; padding-left: 0px;">
+        	<div class="page4img9 pageImg adjustAuto" style="font-size: 36px; width: 320.156px; height: 71.1458px; left: 362.844px; top: -71.1458px; margin-top: 0px; color: rgb(0, 80, 152); padding-left: 0px;">笨猪网怎么做</div>
+            
+			<!--<div class="page4text1 adjustAutoText" style="font-size: 42px; width: 450px; height: 100px; left: 510px; top: -100px; margin-top: 0px; color:#005098;">笨猪网怎么做</div>
+            <div class="page4text2 adjustAutoText" style="font-size: 22px; width: 980px; height: 100px; left: 100px; top: 680px; margin-top: 0px;"></div>
+			-->
+            <div class="page4img1 pageImg adjustAuto" style="width: 320.156px; height: 234.781px; left: -21.3438px; top: 0px; margin-top: 0px; padding-left: 0px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(117, 118, 120); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(117, 118, 120);">
+				<span style=""><span style="width:140px; height:140px; border-radius:50%; background-color:#FF0000;display: block; margin:0 auto; margin-top:-25px;">
+				<h1 style=" color:#FFF; font-size:2.6rem;line-height: 140px;text-align: center;">最干货</h1></span>
+				<p style="padding: 35px; margin-top: 7.11458px; margin-bottom: 7.11458px;">笨猪网院校库汇集史上最全法国院校信息，笨猪讲堂实时分享留法最新干货资讯。</p>
+				</span>
+			</div>
+            <div class="page4img2 pageImg adjustAuto" style="width: 320.156px; height: 234.781px; left: 298.813px; top: 0px; margin-top: 0px; padding-left: 0px; border-left-width: 0px; border-left-style: solid; border-left-color: rgb(117, 118, 120); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(117, 118, 120);">
+				<span style=""><span style="width:140px; height:140px; border-radius:50%; background-color:#FF0000;display: block; margin:0 auto; margin-top:-25px;">
+				<h1 style=" color:#FFF; font-size:2.6rem;line-height: 140px;text-align: center;">最专业</h1></span>
+				<p style="padding: 35px; margin-top: 7.11458px; margin-bottom: 7.11458px;">笨猪网由留法第一品牌Edufrance升级而来，全海归留学团队平均三到五年从业经历。</p>
+				</span>
+			</div>
+            <div class="page4img8 pageImg adjustAuto" style="width: 320.156px; height: 234.781px; left: 618.969px; top: 0px; margin-top: 0px; padding-left: 0px; border-left-width: 0px; border-left-style: solid; border-left-color: rgb(117, 118, 120); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(117, 118, 120);">
+				<span style=""><span style="width:140px; height:140px; border-radius:50%; background-color:#FF0000;display: block; margin:0 auto; margin-top:-25px;">
+				<h1 style=" color:#FFF; font-size:2.6rem;line-height: 140px;text-align: center;">最个性</h1></span>
+				<p style="padding: 35px; margin-top: 7.11458px; margin-bottom: 7.11458px;">我们率先向打包中介服务说NO，拆分服务各选所需，开创你的留法定制时代。</p>
+				</span>
+			</div>
+            <div class="page4img10 pageImg adjustAuto" style="width: 320.156px; height: 234.781px; left: 138.734px; top: 298.813px; margin-top: 0px; padding-left: 0px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(117, 118, 120); border-right-width: 0px; border-right-style: solid; border-right-color: rgb(117, 118, 120);">
+				<span style=""><span style="width:140px; height:140px; border-radius:50%; background-color:#FF0000;display: block; margin:0 auto; margin-top:-25px;">
+				<h1 style=" color:#FFF; font-size:2.6rem;line-height: 140px;text-align: center;">最智能</h1></span>
+				<p style="padding: 35px; margin-top: 7.11458px; margin-bottom: 7.11458px;">笨猪网提供最先进ID进度查询系统，实时查询服务进度，确保全程透明化。</p>
+				</span>
+			</div>
+            <div class="page4img7 pageImg adjustAuto" style="width: 320.156px; height: 234.781px; left: 458.891px; top: 298.813px; margin-top: 0px; padding-left: 0px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(117, 118, 120); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(117, 118, 120);">
+				<span style=""><span style="width:140px; height:140px; border-radius:50%; background-color:#FF0000;display: block; margin:0 auto; margin-top:-25px;">
+				<h1 style=" color:#FFF; font-size:2.6rem;line-height: 140px;text-align: center;">最社交</h1></span>
+				<p style="padding: 35px; margin-top: 7.11458px; margin-bottom: 7.11458px;">笨猪网问答社区汇集法国名校学长学姐，打造最大留法交流问答社区。</p>
+				</span>
+			</div>
+        <!--<div class="page4img8 pageImg adjustAuto" style="width: 401px; height: 332px; left: 310px; top: 60px; margin-top: 0px; padding-left: 0px;"><img src="images/8.png"></div>
+            <div class="page4img9 pageImg adjustAuto" style="width: 315px; height: 118px; left: 321px; top: 73px; margin-top: 0px; padding-left: 0px;"><img src="images/9.png"></div>
+            <div class="page4img10 pageImg adjustAuto" style="width: 525px; height: 525px; left: 770px; top: 10px; margin-top: 0px; padding-left: 0px;"><img src="images/10.png"></div>-->
+        </div>
+    </div>
+    
+    <!--第5页-->
+    <div id="page5" class="indexPage row" style="height: 681px; top: 0px; background-image: url(&quot;/Public/Home/images/about/G03.jpg&quot;);">
+    	<!--<div class="page6bottom adjustAuto" style="width: 1920px; height: 200px; margin-top: 0px; padding-left: 0px;"></div> -->
+    	<!--<div class="page6text1 adjustAutoText" style="font-size: 42px; width: 500px; height: 100px; left: 800px; top: 20px; margin-top: 0px; color:#005098;">笨猪网打破常规
+        </div>-->
+		<div class="page6img5 pageImg adjustAuto" style="font-size: 36px; width: 355.729px; height: 71.1458px; left: 569.167px; top: 14.2292px; margin-top: 0px; color: rgb(0, 80, 152); padding-left: 0px;">笨猪网打破常规
+        </div>
+        <div class="page6text2 adjustAutoText" style="font-size: 14px; width: 156.521px; height: 224.109px; left: 355.729px; top: 99.6042px; margin-top: 0px; line-height: 21px;">
+			<h1 style="padding:5px 15px 5px 15px; background-color:#FFF; border-radius:8px; font-size:24px; letter-spacing:5px;    margin-bottom: 19px;font-weight: 600;text-align: center;">传统机构</h1>
+			<span style="width:0;   height:0;   border-left:20px solid transparent;   border-right:20px solid transparent;   border-top:20px solid #FFF;margin-left: 68px;"></span>			
+        </div> 		
+		 <div class="page6text2 adjustAutoText" style="font-size: 14px; width: 156.521px; height: 224.109px; left: 853.75px; top: 99.6042px; margin-top: 0px; line-height: 21px;">
+			 <h1 style="padding:5px 15px 5px 15px; background-color:#FFF; border-radius:8px; font-size:24px; letter-spacing:5px;    margin-bottom: 19px;font-weight: 600;text-align: center;">笨猪网</h1>
+			 <span style="width:0;   height:0;   border-left:20px solid transparent;   border-right:20px solid transparent;   border-top:20px solid #FFF;margin-left: 68px;"></span>	 
+        </div> 		
+        <div class="page6img1 pageImg adjustAuto" style="width: 677.308px; height: 156.521px; left: 604.74px; top: 49.8021px; margin-top: 0px; padding-left: 0px;"><h1 style=" font-family:&#39;Arial&#39;; font-size:12.5rem; color:#F00;    font-weight: 600;">VS</h1></div>        
+        
+		
+		
+        <div class="page6text2 adjustAutoText" style="width: 960.469px; height: 1286.32px; left: 177.865px; top: 213.438px; padding-left: 0px; margin: 0px auto; font-size: 14px; line-height: 21px;"><span>
+		
+			<table width="100%" border="0" style="">
+			  <tbody><tr style=" margin-bottom:70px;">
+				<td style=" width:50%; font-size:1.5rem; background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;margin-bottom:70px; border-bottom:10px rgba(0, 0, 0, 0) solid;">信息不对称现象依然严重，客户通过传统机构依然很难掌握最新的院校资讯</td>
+			    <td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;margin-bottom:70px;border-bottom:10px rgba(0, 0, 0, 0) solid;">建立国内最全法国院校搜索平台，方便客户查到最新院校咨询</td>
+			  </tr>
+			  <tr>
+				<td style=" width:50%; font-size:1.5rem; background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;border-bottom:10px rgba(0, 0, 0, 0) solid;">服务方案缺乏创新，难以满足客户个性化服务需求</td>
+			<td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;border-bottom:10px rgba(0, 0, 0, 0) solid;">针对服务进行了拆分，客户可针对自身情况进行个性化定制</td>
+			  </tr>
+			  <tr>
+				<td style=" width:50%; font-size:1.5rem;background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;border-bottom:10px rgba(0, 0, 0, 0) solid;">人力行政、市场推广成本很高，从而拉高了留学服务价格。</td>
+			<td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:5px 0px 5px 25px;border-bottom:10px rgba(0, 0, 0, 0) solid;">运用互联网思维和方式，降低人力和市场成本。让利给客户，<br>比传统机构服务费降低20%。部分项目更推出0服务费申请。</td>
+			  </tr>
+			  <tr>
+				<td style=" width:50%; font-size:1.5rem;background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;border-bottom:10px rgba(0, 0, 0, 0) solid;">客户无法及时查询申请进度，只能被动依赖顾问了解申请进度情况。</td>
+			<td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;border-bottom:10px rgba(0, 0, 0, 0) solid;">提供专属会员ID账号，实施查询申请进度。智能化，全透明</td>
+			  </tr>
+			  <tr>
+				<td style=" width:50%; font-size:1.5rem;background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;border-bottom:10px rgba(0, 0, 0, 0) solid;">服务流程过度依赖顾问个人的因素，容易产生疏漏，甚至耽误客户的申请进度。</td>
+			<td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;border-bottom:10px rgba(0, 0, 0, 0) solid;">拥有标准化的服务流程，确保申请成功。</td>
+			  </tr>
+			  <tr>
+				<td style=" width:50%; font-size:1.5rem;background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;border-bottom:10px rgba(0, 0, 0, 0) solid;">传统机构优秀顾问主要集中在美国和英国部门，法国部门缺乏优秀的顾问。</td>
+			<td style=" width:50%; font-size:1.5rem;background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;border-bottom:10px rgba(0, 0, 0, 0) solid;">成立之初就一直专注法国留学领域，有100%留法背景的专业顾问团队。</td>
+			  </tr>
+			</tbody></table></span></div>
+    <!--
+		<table width="1200" border="0" style="">
+		  <tr>
+			<td style=" width:50%; background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;">信息不对称现象依然严重，客户通过传统机构依然很难掌握最新的院校资讯</td>
+			<td style=" width:50%; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">建立国内最全法国院校搜索平台，方便客户查到最新院校咨询</td>
+		  </tr>
+		</table></span></div>  -->
 
-	// banner
-	$(function(){
-	  $("#slider").slidesjs({
-	    width: '100%',
-	    height: 530,
-	    fade: {
-	    	speed: 300,
-	    	crossfade: false
-	    },
-	    // slide: {speed: 200},
-	    pagination: {
-	    	active: true,
-	    	effect: "fade"
-	    },
-	    navigation:{
-	    	effect: "fade",
-	    	active: true
-	    }
-	  });
-	});
+<!--
+		   <div class="page6img3 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 390px; margin-top: 0px; padding-left: 0px;"><span>
+		<table width="1200" border="0" style="">
+		  <tr>
+			<td style=" width:50%; background-color:#DDCFC7;opacity: 0.7;padding:15px 0px 15px 15px;">信息不对称现象依然严重，客户通过传统机构依然很难掌握最新的院校资讯</td>
+			<td style=" width:50%; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">建立国内最全法国院校搜索平台，方便客户查到最新院校咨询</td>
+		  </tr>
+		</table></span></div>  
+        <div class="page6img4 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 460px; margin-top: 0px; padding-left: 0px;"><span >
+			<table width="1200" border="0" style="">
+			  <tr>
+				<td style=" width:600px; background-color:#DDCFC7;opacity: 0.7;padding:10px;padding:15px 0px 15px 15px;">服务方案缺乏创新，难以满足客户个性化服务需求</td>
+				<td style=" width:600px; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">针对服务进行了拆分，客户可针对自身情况进行个性化定制</td>
+			  </tr>
+			</table></span></div>    
+		
+		<div class="page6img3 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 530px; margin-top: 0px; padding-left: 0px;"><span>
+		  <table width="1200" border="0" style="">
+			  <tr>
+				<td style=" width:600px; background-color:#DDCFC7;opacity: 0.7;padding:10px;padding:15px 0px 15px 15px;">人力行政、市场推广成本很高，从而拉高了留学服务价格。</td>
+				<td style=" width:600px; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">运用互联网思维和方式，降低人力和市场成本。让利给客户，比传统机构服务费降低20%。部分项目更推出0服务费申请。</td>
+			  </tr>
+			</table>
+		 </span></div>      
+        <div class="page6img4 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 650px; margin-top: 0px; padding-left: 0px;"><span>
+		    <table width="1200" border="0" style="">
+			  <tr>
+				<td style=" width:600px; background-color:#DDCFC7;opacity: 0.7;padding:10px;padding:15px 0px 15px 15px;">客户无法及时查询申请进度，只能被动依赖顾问了解申请进度情况。</td>
+				<td style=" width:600px; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">提供专属会员ID账号，实施查询申请进度。智能化，全透明</td>
+			  </tr>
+			</table>
+		</span></div>
+		
+		<div class="page6img3 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 670px; margin-top: 0px; padding-left: 0px;"><span>
+		    <table width="1200" border="0" style="">
+			  <tr>
+				<td style=" width:600px; background-color:#DDCFC7;opacity: 0.7;padding:10px;padding:15px 0px 15px 15px;">服务流程过度依赖顾问个人的因素，容易产生疏漏，甚至耽误客户的申请进度。</td>
+				<td style=" width:600px; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">拥有标准化的服务流程，确保申请成功。</td>
+			  </tr>
+			</table>
+		</span></div>      
+    	
+		<div class="page6img3 pageImg adjustAuto" style="width: 800px; height: 188px; left: 250px; top: 740px; margin-top: 0px; padding-left: 0px;"><span>
+		       <table width="1200" border="0" style="">
+			  <tr>
+				<td style=" width:600px; background-color:#DDCFC7;opacity: 0.7;padding:10px;padding:15px 0px 15px 15px;">传统机构优秀顾问主要集中在美国和英国部门，法国部门缺乏优秀的顾问。</td>
+				<td style=" width:600px; background-color:#CE0107; color:#FFF;opacity: 0.7;padding:15px 0px 15px 25px;">成立之初就一直专注法国留学领域，有100%留法背景的专业顾问团队。</td>
+			  </tr>
+			</table>
+		</span></div>      
+        -->
+		
+		<!-- <div class="page6img2 pageImg adjustAuto" style="width: 1000px; height: 188px; left: 300px; top: 200px; margin-top: 0px; padding-left: 0px;"><span style=" background-color:#DDCFC7;padding:10px 30px;">信息不对称现象依然严重，客户通过传统机构依然很难掌握最新的院校资讯</span></div>-->
+	   
+		 <!--<div class="page6img5 pageImg adjustAuto" style="width: 224px; height: 231px; left: 200px; top: 600px; margin-top: 0px; padding-left: 0px;"><img src="images/5(2).png"></div>    -->     		
+    </div>
+	
+	
+	  <!--第6页-->
+    <div id="page6" class="indexPage row" style="height: 681px; top: 0px;">
+    	<!--<div class="page9top adjustAuto" style="width: 1920px; height: 150px; left: 0px; top: 0px; margin-top: 0px; padding-left: 0px;"></div>
+        <div class="page9bottom adjustAuto" style="width: 1920px; height: 150px; left: 0px; margin-top: 0px; padding-left: 0px;"></div>
+        <div class="page9img5 page9img page9img11 adjustAuto" style="width: 366px; height: 366px; left: 755px; top: 255px; margin-top: 0px; padding-left: 0px;"><img src="images/5(3).png"></div>
+        <div class="page9img6 page9img adjustAuto" style="width: 274px; height: 74px; left: 805px; top: 406px; margin-top: 0px; padding-left: 0px;"><img src="images/6(2).png"></div>-->
+        <div class="page9img1 page9img adjustAuto" style="width: 213.438px; height: 71.1458px; left: 355.729px; top: 263.24px; margin-top: 0px; padding-left: 0px;"><span style=" background-color:#F00;padding:3px 40px 25px 40px; border-radius: 120px;color:#FFF;">签证办理</span><br><span style="margin-top: -6px; margin-left: 55px;color:#FFF;">Visa</span></div>
+        <div class="page9img2 page9img adjustAuto" style="width: 163.635px; height: 71.1458px; left: 398.417px; top: 71.1458px; margin-top: 0px; padding-left: 0px;"><span style=" background-color:#F00;padding:3px 40px 25px 40px; border-radius: 120px;color:#FFF;">院校申请</span><br><span style="margin-top: -6px; margin-left: 15px;color:#FFF;">Des demandes</span></div>
+        <div class="page9img3 page9img adjustAuto" style="width: 213.438px; height: 71.1458px; left: 960.469px; top: 320.156px; margin-top: 0px; padding-left: 0px;"><span style=" background-color:#F00;padding:3px 40px 25px 40px; border-radius: 120px;color:#FFF;">预签证办理</span><br><span style="margin-top: -6px; margin-left: 45px;color:#FFF;">Pré - visa</span></div>
+        <div class="page9img4 page9img adjustAuto" style="width: 177.865px; height: 71.1458px; left: 512.25px; top: 426.875px; margin-top: 0px; padding-left: 0px;"><span style=" background-color:#F00;padding:3px 40px 25px 40px; border-radius: 120px;color:#FFF;">境外服务</span><br><span style="margin-top: -6px; margin-left: 15px; font-size:14px;color:#FFF;">Service extérieur</span></div>
+		
+       <!-- <a href="#/index/login.do"><div class="page9img5 page9img adjustAuto" style="width: 366px; height: 366px; left: 755px; top: 255px; margin-top: 0px; padding-left: 0px;"><img src="images/5(3).png"></div></a>-->
+        <div class="page9img6 page9img adjustAuto" style="width: 498.021px; height: 52.6479px; left: 533.594px; top: 7.11458px; margin-top: 0px; padding-left: 0px; color: rgb(0, 80, 152); font-size: 32px;">笨猪网标准化服务流程</div>
+        <div class="page9img7 page9img adjustAuto" style="width: 711.458px; height: 569.167px; left: 320.156px; top: 106.719px; margin-top: 0px; padding-left: 0px;"><img src="./笨猪网-关于我们_files/G8.png"></div>
+       <!-- <a href="#/index/login.do"><div class="page9img7 page9img adjustAuto" style="width: 311px; height: 41px; left: 780px; top: 670px; margin-top: 0px; padding-left: 0px;"><img src="images/7(1).png"></div></a>-->
+       <!-- <div style="position:absolute;bottom:0px;width:100%">
+        <div class="footerText">
+            <span>chuangkit.com?2013-2014</span>
+            <span>京ICP1231232号</span>
+        </div>
+        <div></div>
+    </div>-->
+</div>
 
-	// covers
-	$(window).load(function(){
-		$('#cover0').show();
-		initCover('#cover0');
-		initCover('#cover1');
-		initCover('#cover2');
-		initCover('#cover3');
-		initCover('#cover4');
-		$('.recommend .tabs a').hover(function(event){
-			var $tab = $(this);
-			$tab.siblings().removeClass('selected');
-			$tab.addClass('selected');
-			$('.recommend .tab-content').hide();
-			$('#'+$tab.attr('rel')).show();
-		});
-	});
 
-	// slider case
-	$('.success-case .slider-wrapper').gSlider({
-		// isAuto: true,
-		oneWidth: 261,
-        speed: 3000,
-        btnGo: {left: '.success-case .prev', right: '.success-case .next'},
-        direction: 'left'
-    });
-
-    $('.ranking .tabs a').click(function(event){
-    	$('.ranking .tabs a').removeClass('selected');
-    	$('.ranking .tab-content-wrapper').hide();
-    	$('#'+$(this).attr('rel')).show();
-    	$(this).addClass('selected');
-    });
-
-    // $('.dropdown,.city').easyDropDown();
-
-});
-
-function initCover(coverId){
-	var $cover = $(coverId),
-		$wrapper = $cover.find('.coverflow-wrapper');
-	$wrapper.coverflow({
-		duration: 200,
-		overlap: 0.4,
-		active: 2,
-		angle: 20
-	});
-	$cover.find('.prev').click(function(){
-		$wrapper.coverflow('prev');
-	});
-	$cover.find('.next').click(function(){
-		$wrapper.coverflow('next');
-	});
-}
-</script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 5,
-        spaceBetween: 30,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 40
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            }
-        }
-    });
-    </script>
-<script>
-function check_guanbi(){
-		$('#qqyincang').hide();
-		$('#qqyincang1').hide();
-		$('#qqyincang2').hide();
-}
-function xianshi(){
-		$('#qqyincang').show();
-		$('#qqyincang1').show();
-		$('#qqyincang2').show();
-}
-
-</script>  
-
-<!----所有页面禁止copy----------->
-<!--       -->
-<script language="JavaScript">
-	document.oncontextmenu=new Function("event.returnValue=false;"); //禁止右键功能,单击右键将无任何反应
-	document.onselectstart=new Function("event.returnValue=false;"); //禁止先择,也就是无法复制
-</script>     
-  
-
-<script>
-function stop(){
-return false;
-}
-document.oncontextmenu=stop;
-</script>        
-<!--勿删，统计代码---->
-<span style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257515995'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257515995' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1257515995"><a href="http://www.cnzz.com/stat/website.php?web_id=1257515995" target="_blank" title="站长统计">站长统计</a></span><script src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/z_stat.php" type="text/javascript"></script><script src="./笨猪网-法国留学-法国院校-法国留学机构-法国留学智能申请平台_files/core.php" charset="utf-8" type="text/javascript"></script>     </span>                   
-                        
-<!-- end: BODY -->
-
-</body></html>
+</div></body></html>
