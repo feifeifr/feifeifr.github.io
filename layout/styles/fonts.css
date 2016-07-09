@@ -1,0 +1,24 @@
+ @font-face {
+    font-family: 'sans-thin';
+    src: url('fonts/NotoSansCJKsc-Thin.otf');
+} 
+@font-face {
+    font-family: 'pingfang-light';
+    src: url('fonts/PingFang Light.ttf');
+} 
+@font-face {
+    font-family: 'pingfang-regular';
+    src: url('fonts/PingFang regular.ttf');
+} 
+@font-face {
+    font-family: 'pingfang-exlight';
+    src: url('fonts/PingFang ExtraLight.ttf');
+} 
+ @font-face {
+    font-family: 'sans-ligh';
+    src: url('fonts/NotoSansCJKsc-light.otf');
+}
+ @font-face {
+    font-family: 'sans-demiligh';
+    src: url('fonts/NotoSansCJKsc-demilight.otf');
+}
