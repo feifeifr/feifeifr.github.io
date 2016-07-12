@@ -32,7 +32,7 @@ File: Layout CSS
 
 /* Basic Slider
 --------------------------------------------------------------------------------------------------------------- */
-.txtoverlay{display:block; position:absolute; bottom:0; left:0; width:100%; height:100%; margin:0; padding:0; white-space:normal;}
+.txtoverlay{display:block; position:absolute; bottom:0; left:0; width:100%; height:100%; margin:0; padding:0; white-space:normal;cursor:pointer;}
 .centralise{display:block; max-width:978px; height:100%; margin:0 auto; padding:0;}
 .verticalwrap{display:table; width:100%; height:100%; border:none; text-align:center;}
 .txtoverlay article{font-family:"pingfang-exlight";font-size:25px;display:table-cell; padding:0; border:none; vertical-align:middle;}
@@ -65,13 +65,23 @@ File: Layout CSS
 
 .latest ul li figure{display:block; max-width:100%; border:solid; border-width:0 0 0 1px;}
 .latest ul li figure img{width:100%;}
-.latest ul li figure figcaption *{margin:0; padding:0;}
+.latest ul li figure p.front{position: relative; top: -170px; left: 70px; width: 100%;font-size:30px;color:black;visibility: hidden;margin-bottom: -30px;}
+.latest a.imgp:hover img{
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.6;
+}
+.latest ul li figure a.imgp:hover p.front{visibility: visible;}
 
-.latest a.overlay{display:block; position:relative;}
+.latest ul li figure figcaption *{margin:0; padding:0;}
+/*.latest a.overlay{display:block; position:relative;}
 .latest a.overlay::before{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:"";}
-.latest a.overlay::after{display:block; position:absolute; top:50%; left:50%; width:40px; height:40px; line-height:40px; margin:-18px 0 0 -18px; padding:0; border-radius:50%; font-family:"FontAwesome"; content:"\f0c1"; font-size:18px; text-align:center;}
+.latest a.overlay::after{display:block; position:absolute; top:50%; left:50%; width:40px; height:40px; line-height:40px;font-family:"FontAwesome"; margin:-18px 0 0 -18px; padding:0; border-radius:50%; content:"\f0c1"; font-size:18px; text-align:center;}
 .latest a.overlay::before, .latest a.overlay::after{opacity:0;}
-.latest a.overlay:hover::before, .latest a.overlay:hover::after{opacity:1;}
+.latest a.overlay:hover::before, .latest a.overlay:hover::after{opacity:1;}*/
 
 
 /* Content Area
