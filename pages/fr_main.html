@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+Template Name: Colossus
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+  <!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><img src="../images/logo.jpg"style="width:40px;height:40px;" ><a href="../index.html">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../index.html">首页</a></li>
+        <li><a class="drop" href="#">法国留学指南</a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="full-width.html">Full Width</a></li>
+            <li><a href="sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="basic-grid.html">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">西班牙留学指南</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper">
+  <img src="../images/demo/slides/fr.jpg"  alt="">
+</div>
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sort"> 
+      <!-- ################################################################################################ -->
+      <img class="imgr borderedbox inspace-5" src="../images/demo/fr_page_bg.jpg" style="width:60%;height:60%;"alt="">
+
+      <label style="display:none">申请目标 :</label>
+        <ul id="purpose" style="display:none">
+          <li class="current"  onclick='filter(this)' id="p_total"><a>全部</a></li>
+          <li onclick='filter(this)' id="bachelor"><a>本科</a></li>
+          <li onclick='filter(this)' id="master"><a>硕士</a></li>
+          <li onclick='filter(this)' id="profess"><a>职业类文凭</a></li>
+        </ul>
+      <br>
+      <label>学校类型 :</label>
+        <ul id="type">
+          <li class="current"  onclick='filter(this)' id="t_total"><a>全部</a></li>
+          <li  onclick='filter(this)' id="public"><a>公立大学</a></li>  
+          <li  onclick='filter(this)' id="business"><a>高等商学院</a></li>
+          <li onclick='filter(this)' id="art"><a>艺术院校</a></li>
+          <li onclick='filter(this)' id="engineer"><a>高等工程师学院</a></li>
+        </ul>
+    </div>
+    <div id="gallery">
+      <!-- <figure>
+        <header class="heading">Gallery Title Goes Here</header>
+        <ul class="nospace clear">
+          <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
+          <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
+        </ul>
+        <figcaption>Gallery Description Goes Here</figcaption>
+      </figure> -->
+    </div>
+  </main>
+
+</div>
+      
+
+
+
+<script language="JavaScript">
+///////////////////////////////////////////////////////////////////////
+/////////////            data               ///////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+  var  original_data="亚眠大学-Université de Picardie Jules Verne,UPJV,1;法国13所综合理工学院集团,POLYTECH,4;克莱蒙费朗第二大学-UNIVERSITE DE BLAISE PASCAL,UBP,1;法国蓝带国际厨艺餐旅学院,LCB,2;兰斯大学-UNIVERSITE DE REIMS,UR,1;北巴黎大学（十三大）-Université Paris Nord,UPN,1;卡昂大学-Université de Caen,UC,1;圣埃蒂安大学-Université de Saint-étienne,USE,1;HEC-巴黎高等商学院,HEC,3;尼斯大学-Université Nice Sophia Antipolis,UNSA,1;巴黎七大-Université Paris Diderot-Paris 7,UP7,1;巴黎五大-Université Paris Descartes,UP5,1;巴黎南大学（十一大）-Université Paris-Sud,UPS,1;拉罗谢尔大学-l’Université de La Rochelle,ULR,1;昂热大学-Université d'Angers,UDA,1;昂热西部天主教大学-Université Catholique de l'Ouest,UCO,1;格勒诺布尔第三大学-Université Stendhal,US,1;萨瓦大学-Université Savoie Mont Blanc,USMB,1;蒙彼利埃三大-Université Paul-Valéry Montpellier III,UPVM3,1;里昂二大-UNIVERSITE LUMIERE LYON II,UL2,1;马赛大学-Aix-Marseille Université,AMU,1;CLCF-巴黎自由电影学院,CLCF,2;Ecole Emile Cohl-埃米尔科尔动漫学院,EEC,2;Ec?le Intuit lab-巴黎视觉传达设计学院,EIl,2;MODART国际时尚艺术学院,MODART,2;ECV-法国高等视觉传达艺术设计学院,ECV,2;马兰欧尼时尚学院-巴黎校区,IMp,2;marangoni,marangoni,2;巴黎高等音乐师范学院,enmpac,2;法国ESMOD国际服装设计学院,ESMOD,2;EDHEC-北方高商,EDHEC,3;EM LYON-里昂高商,EM LYON,3;EM Strasbourg Business School -斯特拉斯堡高商,EMSBS,3;ESC AMIENS-亚眠高商,ESCA,3;ESC DIJON-第戎高商,ESC DIJON,3;ESC La Rochelle-拉罗谢尔高商,ESC La Rochelle,3;ESC RENNES-雷恩高商,ESC RENNES,3;Grenoble Ecole de Management-格勒诺布尔高商,GEM,3;ESCP-欧洲管理学院,ESCP,3;ESG-巴黎高等管理学院集团,ESG,3;IESEG管理学院,IESEG,3;ESSEC高商,ESSEC,3;INSEEC高等商学院,INSEEC,3;IPAG高等商学院,IPAG,3;KEDGE高等商学院,KEDGE,3;SKEMA高等商学院,SKEMA,3;SUP DE CO Montpellier-蒙彼利埃高商,SDCM,3;ESIEE-亚眠高等工程师学院,ESIEE,4;ISEP-巴黎高等电子学院,ISEP,4";
+
+///////////////////////////////////////////////////////////////////////
+
+////////data processing
+  var univ=original_data.split(";");
+  for(i=0;i<univ.length;i++){
+    univ[i]=univ[i].split(",");
+  }
+/////////////////
+
+
+
+  function filter(current) {
+    var list= current.parentNode.getElementsByTagName("li");
+    for (i=0;i<list.length;i++){
+      list[i].className="";
+    }
+    current.className="current";
+    var conditions=current.parentNode.parentNode.getElementsByClassName("current");
+    display(conditions[0].id,conditions[1].id);
+  }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////    show sort results    ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  function display(purpose,type){
+    var html="";
+    html+="<figure>\r\n<ul class=\"nospace clear\">\r\n";
+
+    ////////////////encode////////////////////
+    var pur,ty;
+    if(purpose=="p_total"){pur=0;}
+    else if(purpose=="bachelor"){pur=1;}
+    else if(purpose=="master"){pur=2;}
+    else if(purpose=="profess"){pur=3;}
+
+    if(type=="t_total"){ty=0;}
+    else if(type=="public"){ty=1;}
+    else if(type=="business"){ty=3;}
+    else if(type=="art"){ty=2;}
+    else if(type=="engineer"){ty=4;}
+    ///////////////////////////////////////////
+    var selected= new Array() ;
+    for(i=0;i<univ.length;i++){
+
+      if(pur==0 && ty!=0){
+        if(univ[i][2]==ty){
+          selected.push(i);
+        }
+      }
+      else if(pur!=0 && ty==0){
+        if(univ[i][3]==pur){
+          selected.push(i);
+        }
+      }
+      else if(pur!=0 && ty!=0){
+        if(univ[i][3]==pur && univ[i][2]==ty){
+          selected.push(i);
+        }
+      }
+      else{
+        selected.push(i);
+      }
+    }
+    for(i=0;i<selected.length;i++){
+      html+="<li id=\"univ_"+selected[i]+"\" class=\"one_fifth\"><a href=\"#\"><img src=\"../images/univ/fr/"+univ[selected[i]][1]+".jpg\" alt=\"\"><p>"+univ[selected[i]][0]+"</p></a></li>";
+    }
+      
+    $("#gallery").html(html);
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  window.onload = display("p_total","t_total");
+</script>
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="clear"> 
+    <div class="one_quarter first">
+      <h6 class="title">联系我们</h6>
+      <address class="btmspace-15">
+      FE留学<br>
+      </address>
+      <ul class="faico clear">
+        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
+        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
+        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
+
+</body>
+</html>

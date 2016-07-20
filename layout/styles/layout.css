@@ -65,16 +65,16 @@ File: Layout CSS
 
 .latest ul li figure{display:block; max-width:100%; border:solid; border-width:0 0 0 1px;}
 .latest ul li figure img{width:100%;}
-.latest ul li figure p.front{position: relative; top: -170px; left: 70px; width: 100%;font-size:30px;color:black;visibility: hidden;margin-bottom: -30px;}
+.latest ul li figure p.front{position: relative; top: -100px; left: 70px; width: 100%;font-size:30px;color:black;visibility: hidden;margin-bottom: -30px;}
 .latest a.imgp:hover img{
 	-webkit-filter: blur(5px);
 	-moz-filter: blur(5px);
     -ms-filter: blur(5px);
     -o-filter: blur(5px);
     filter: blur(5px);
-    opacity: 0.6;
+    opacity: 0.6;transition:all .3s ease-in-out;
 }
-.latest ul li figure a.imgp:hover p.front{visibility: visible;}
+.latest ul li figure a.imgp:hover p.front{top: -170px;visibility: visible;transition:all .3s ease-in-out;}
 
 .latest ul li figure figcaption *{margin:0; padding:0;}
 /*.latest a.overlay{display:block; position:relative;}
@@ -88,6 +88,12 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 .container{padding:80px 0;}
 .container.nospace{padding-bottom:0}
+
+.sort{display:block; width:100%; text-align:left; clear:both;}
+.sort li{display:inline-block; margin:0 5px 0 0;}
+.sort li:last-child{margin-right:0;}
+.sort label{font-size:18px;}
+.sort a, .sort strong{display:block; padding:8px 11px; border:1px solid; font-weight:normal;cursor:pointer;}
 
 /* Content */
 .container .content{}
@@ -138,7 +144,7 @@ File: Layout CSS
 
 /* Transition Fade
 --------------------------------------------------------------------------------------------------------------- */
-.faico a, #mainav *, .latest ::before, .latest ::after, #backtotop{transition:all .3s ease-in-out;}
+.faico a, #mainav *, .latest ::before, .latest ::after, #backtotop,{transition:all .3s ease-in-out;}
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -221,9 +227,11 @@ td{border-width:0 1px;}
 
 /* Gallery
 --------------------------------------------------------------------------------------------------------------- */
-#gallery{display:block; width:100%; margin-bottom:50px;}
+#gallery{display:block; width:100%; margin-bottom:50px;margin-top:70px;}
 #gallery figure figcaption{display:block; width:100%; clear:both;}
-#gallery li{margin-bottom:30px;}
+#gallery li{height:280px;display:block;border:1px solid;border-color:#D7D7D7;margin-bottom:30px;text-align:center;font-size: 15px;padding: 5px;padding-bottom: 10px}
+#gallery img{vertical-align: middle;width:173px;height:auto;}
+#type li{margin-bottom:10px}
 
 
 /* Font Awesome Social Icons
@@ -310,6 +318,10 @@ h1, h2, h3, h4, h5, h6, .heading{color:#242424; border-color:inherit;}
 
 .pagination a, .pagination strong{border-color:#D7D7D7;}
 .pagination .current{color:#FFFFFF; background-color:#96AFAA;}
+
+.sort a, .sort strong{border-color:#D7D7D7;color:inherit;}
+.sort a:hover{color:#FFFFFF; background-color:#96AFAA;}
+.sort .current{color:#FFFFFF; background-color:#96AFAA;}
 
 #backtotop{color:#FFFFFF; background-color:#96AFAA;}
 

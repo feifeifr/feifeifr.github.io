@@ -79,7 +79,7 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
 
 .first{margin-left:0; clear:left;}
-
+.one_fifth{display:inline-block; float:left; margin:0 0 1% 1%; list-style:none;width:19%;}
 .one_quarter{width:22.69938650306748%;}
 .one_third{width:31.28834355828221%;}
 .one_half, .two_quarter{width:48.46625766871166%;}
