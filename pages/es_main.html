@@ -33,6 +33,36 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    
+    var filterList = {
+    
+      init: function () {
+      
+        // MixItUp plugin
+        // http://mixitup.io
+        $('#gallery').mixItUp({
+          selectors: {
+            target: '.one_fifth',
+            filter: '.filter' 
+          },
+          load: {
+            filter: '.1,.2,.3'  
+          }     
+        });               
+      
+      }
+
+    };
+    
+    // Run the show!
+    filterList.init();
+    
+    
+  }); 
+  </script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -98,10 +128,10 @@ Licence URI: http://www.os-templates.com/template-terms
       <br>
       <label>学校类型 :</label>
         <ul id="type">
-          <li class="current"  onclick='filter(this)' id="t_total"><a>全部</a></li>
-          <li  onclick='filter(this)' id="public"><a>公立大学</a></li>  
-          <li  onclick='filter(this)' id="business"><a>高等商学院</a></li>
-          <li onclick='filter(this)' id="language"><a>语言学校</a></li>
+          <li  id="t_total"><a class="filter active"  data-filter=".1, .2, .3">全部</a></li>
+          <li   id="public"><a class="filter"  data-filter=".1">公立大学</a></li>  
+          <li   id="business"><a class="filter"  data-filter=".3">高等商学院</a></li>
+          <li  id="language"><a  class="filter"  data-filter=".2">语言学校</a></li>
         </ul>
     </div>
     <div id="gallery">
@@ -126,7 +156,7 @@ Licence URI: http://www.os-templates.com/template-terms
 /////////////            data               ///////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;庞培法布拉大学 - La Universidad Pompeu Fabra, pompeu fabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,uizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,巴塞罗那大学,1;康普顿斯大学 - La Universidad Complutense Madrid,康普顿斯大学,1;马德里理工大学 - La Universidad de Madrid,马德里理工大学,1;Hispania,hispania,2;inhispania,INHISPANIA,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,巴塞罗那大学1,2;康普顿斯大学语言课程 - La Universidad Complutense Madrid,康普顿斯大学1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,uizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;ESIC商学院,ESIC,3;IE商学院,IE,3;IESE商学院,IESE,3";
+  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;inhispania,INHISPANIA,2;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;IESE商学院,IESE,3;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;庞培法布拉大学 - La Universidad Pompeu Fabra,pompeu fabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,unizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,巴塞罗那大学,1;康普顿斯大学 - La Universidad Complutense Madrid,康普顿斯大学,1;马德里理工大学 - La Universidad de Madrid,马德里理工大学,1;Hispania,hispania,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,巴塞罗那大学1,2;康普顿斯大学语言课程 - La Universidad Complutense Madrid,康普顿斯大学1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,unizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;ESIC商学院,ESIC,3;IE商学院,IE,3";
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -159,41 +189,42 @@ Licence URI: http://www.os-templates.com/template-terms
     html+="<figure>\r\n<ul class=\"nospace clear\">\r\n";
 
     ////////////////encode////////////////////
-    var pur,ty;
-    if(purpose=="p_total"){pur=0;}
-    else if(purpose=="bachelor"){pur=1;}
-    else if(purpose=="master"){pur=2;}
-    else if(purpose=="profess"){pur=3;}
+    // var pur,ty;
+    // if(purpose=="p_total"){pur=0;}
+    // else if(purpose=="bachelor"){pur=1;}
+    // else if(purpose=="master"){pur=2;}
+    // else if(purpose=="profess"){pur=3;}
 
-    if(type=="t_total"){ty=0;}
-    else if(type=="public"){ty=1;}
-    else if(type=="business"){ty=3;}
-    else if(type=="language"){ty=2;}
+    // if(type=="t_total"){ty=0;}
+    // else if(type=="public"){ty=1;}
+    // else if(type=="business"){ty=3;}
+    // else if(type=="language"){ty=2;}
     ///////////////////////////////////////////
-    var selected= new Array() ;
-    for(i=0;i<univ.length;i++){
+    // var selected= new Array() ;
+    // for(i=0;i<univ.length;i++){
 
-      if(pur==0 && ty!=0){
-        if(univ[i][2]==ty){
-          selected.push(i);
-        }
-      }
-      else if(pur!=0 && ty==0){
-        if(univ[i][3]==pur){
-          selected.push(i);
-        }
-      }
-      else if(pur!=0 && ty!=0){
-        if(univ[i][3]==pur && univ[i][2]==ty){
-          selected.push(i);
-        }
-      }
-      else{
-        selected.push(i);
-      }
-    }
-    for(i=0;i<selected.length;i++){
-      html+="<li id=\"univ_"+selected[i]+"\" class=\"one_fifth\"><a href=\"#\"><img src=\"../images/univ/es/"+univ[selected[i]][1]+".jpg\" alt=\"\"><p>"+univ[selected[i]][0]+"</p></a></li>";
+    //   if(pur==0 && ty!=0){
+    //     if(univ[i][2]==ty){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else if(pur!=0 && ty==0){
+    //     if(univ[i][3]==pur){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else if(pur!=0 && ty!=0){
+    //     if(univ[i][3]==pur && univ[i][2]==ty){
+    //       selected.push(i);
+    //     }
+    //   }
+    //   else{
+    //     selected.push(i);
+    //   }
+    // }
+    for(i=0;i<univ.length;i++){
+      html+="<li class=\"one_fifth "+univ[i][2]+"\" data-cat=\"."+univ[i][2]+"\" id=\"univ_"+i+"\">";
+      html+="<img src=\"../images/univ/es/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></li>";
     }
       
     $("#gallery").html(html);

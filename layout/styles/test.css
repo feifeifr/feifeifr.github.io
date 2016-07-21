@@ -72,7 +72,7 @@ File: Layout CSS
     -ms-filter: blur(5px);
     -o-filter: blur(5px);
     filter: blur(5px);*/
-    transform:scale(1.15);
+    transform:scale(1.25);
     opacity: 0.1;transition:all .4s ease-in-out;
 }
 .latest ul li figure a.imgp:hover p.front{visibility: visible;transition:all .3s ease-in-out;}
@@ -96,6 +96,106 @@ File: Layout CSS
 .sort label{font-size:18px;}
 .sort a, .sort strong{display:block; padding:8px 11px; border:1px solid; font-weight:normal;cursor:pointer;}
 .sort a.active{color:#FFFFFF; background-color:#96AFAA;}
+
+
+/* Gallery
+--------------------------------------------------------------------------------------------------------------- */
+#gallery{display:block; width:100%; margin-bottom:50px;margin-top:70px;}
+#gallery figure figcaption{display:block; width:100%; clear:both;}
+/*#gallery li{height:280px;display:block;border:1px solid;border-color:#D7D7D7;margin-bottom:30px;text-align:center;font-size: 15px;padding: 5px;padding-bottom: 10px}*/
+#gallery li{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	border:1px solid;
+	text-align:center;
+	font-size: 15px;
+	padding: 5px;
+	border-color:#D7D7D7;
+	height:280px;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+/*#gallery img{vertical-align: middle;width:173px;height:auto;}*/
+#gallery img{
+	width:173px;
+	height:auto;
+	position: relative;
+	top:0;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);		
+}
+#type li{margin-bottom:10px}
+
+
+
+#gallery .one_fifth {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width:23%;
+	margin:1%;
+	display:none;
+	float:left;
+	overflow:hidden;
+}
+
+	.portfolio img {
+		max-width:100%;
+		position: relative;
+		top:0;
+    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);		
+	}
+	
+	.portfolio .label {
+		position: absolute;
+		width: 100%;
+		height:40px;
+		bottom:-40px;
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:         all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+
+		.portfolio .label-bg {
+			background: #e95a44;
+			width: 100%;
+			height:100%;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+	
+		.portfolio .label-text {
+			color:#fff;
+			position: relative;
+			z-index:500;
+			padding:5px 8px;
+		}
+			
+			.portfolio .text-category {
+				display:block;
+				font-size:9px;
+			}
+	
+	.portfolio:hover .label {
+    bottom:0;
+  }
+	.portfolio:hover img {
+    top:-30px;
+  }  
+
+
+
+
+
+
+
+
+
+
+
 
 /* Content */
 .container .content{}
@@ -227,54 +327,7 @@ th, td{padding:5px 8px;}
 td{border-width:0 1px;}
 
 
-/* Gallery
---------------------------------------------------------------------------------------------------------------- */
-#gallery{
-	-webkit-column-count: 5;
-    -moz-column-count: 5; 
-	column-count: 5;
-    column-gap: 1em;
-    /*-webkit-column-fill:auto;
-    -moz-column-fill: auto;
-    column-fill: auto;*/
-	display:block; 
-	width:100%; 
-	/*margin-bottom:50px;*/
-	margin-top:30px;}
-#gallery figure figcaption{
-	display:block; 
-	width:100%; 
-	clear:both;}
-/*#gallery li{height:280px;display:block;border:1px solid;border-color:#D7D7D7;margin-bottom:30px;text-align:center;font-size: 15px;padding: 5px;padding-bottom: 10px}
-#gallery img{vertical-align: middle;width:173px;height:auto;}*/
-#type li{margin-bottom:10px}
 
-#gallery li{
-    break-inside: avoid-column;
-    -webkit-column-break-inside: avoid;
-	width: 100%;
-	margin: 0 0 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	border:1px solid;
-	text-align:center;
-	font-size: 15px;
-	padding: 5px;
-	border-color:#D7D7D7;
-	/*height:280px;*/
-	display:none;
-	float:left;
-	overflow:hidden;
-}
-#gallery img{
-	width:100%;
-	height:auto;
-	position: relative;
-	top:0;
-    -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);		
-}
 
 
 /* Font Awesome Social Icons
@@ -365,7 +418,7 @@ h1, h2, h3, h4, h5, h6, .heading{color:#242424; border-color:inherit;}
 
 .sort a, .sort strong{border-color:#D7D7D7;color:inherit;}
 .sort a:hover{color:#FFFFFF; background-color:#96AFAA;}
-.sort .current{color:#FFFFFF; background-color:#96AFAA;}
+.sort .current{}
 
 #backtotop{color:#FFFFFF; background-color:#96AFAA;}
 
