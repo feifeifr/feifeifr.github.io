@@ -35,8 +35,8 @@ File: Layout CSS
 .txtoverlay{display:block; position:absolute; bottom:0; left:0; width:100%; height:100%; margin:0; padding:0; white-space:normal;cursor:pointer;}
 .centralise{display:block; max-width:978px; height:100%; margin:0 auto; padding:0;}
 .verticalwrap{display:table; width:100%; height:100%; border:none; text-align:center;}
-.txtoverlay article{font-family:"pingfang-exlight";font-size:25px;display:table-cell; padding:0; border:none; vertical-align:middle;}
-.txtoverlay .heading{font-family:"pingfang-exlight";font-size:45px; line-height:60px; margin-bottom:30px;}
+.txtoverlay article{font-family:"pingfang-light";font-size:25px;display:table-cell; padding:0; border:none; vertical-align:middle;}
+.txtoverlay .heading{font-family:"pingfang-light";font-size:45px; line-height:60px; margin-bottom:30px;}
 .txtoverlay .btn{display:inline-block; padding:15px 30px; border-radius:8px; text-transform:uppercase; font-weight:bold;}
 .txtoverlay .pushright{margin-right:25px;}
 
@@ -64,7 +64,7 @@ File: Layout CSS
 .latest ul li:first-child, .latest ul li:nth-child(5n+1){margin-left:-1px; clear:left;}
 
 .latest ul li figure{display:block; width:100%; height:268px;overflow: hidden;}
-.latest ul li figure img{width:100%;}
+.latest ul li figure img{width:100%;transition:all .4s ease-in-out;}
 .latest ul li figure p.front{position: relative; top: -170px; left: 85px; width: 100%;font-size:25px;color:black;visibility: hidden;margin-bottom: -30px;}
 .latest a.imgp:hover img{
 	/*-webkit-filter: blur(5px);
@@ -73,9 +73,10 @@ File: Layout CSS
     -o-filter: blur(5px);
     filter: blur(5px);*/
     transform:scale(1.15);
-    opacity: 0.1;transition:all .4s ease-in-out;
+    opacity: 0.1;
+    transition:all .4s ease-in-out;
 }
-.latest ul li figure a.imgp:hover p.front{visibility: visible;transition:all .3s ease-in-out;}
+.latest ul li figure a.imgp:hover p.front{visibility: visible;transition:all .4s ease-in-out;}
 
 .latest ul li figcaption *{margin:0; padding:0;}
 /*.latest a.overlay{display:block; position:relative;}
@@ -226,17 +227,17 @@ table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 8px;}
 td{border-width:0 1px;}
 
-
+#type li{margin-bottom:10px}
 /* Gallery
 --------------------------------------------------------------------------------------------------------------- */
 #gallery{
+
 	-webkit-column-count: 5;
-    -moz-column-count: 5; 
+    -moz-column-count: 5;
+    -ms-column-count: 5; 
+    -o-column-count:5;
 	column-count: 5;
-    column-gap: 1em;
-    /*-webkit-column-fill:auto;
-    -moz-column-fill: auto;
-    column-fill: auto;*/
+    column-gap: 35px;
 	display:block; 
 	width:100%; 
 	/*margin-bottom:50px;*/
@@ -247,25 +248,32 @@ td{border-width:0 1px;}
 	clear:both;}
 /*#gallery li{height:280px;display:block;border:1px solid;border-color:#D7D7D7;margin-bottom:30px;text-align:center;font-size: 15px;padding: 5px;padding-bottom: 10px}
 #gallery img{vertical-align: middle;width:173px;height:auto;}*/
-#type li{margin-bottom:10px}
+
 
 #gallery li{
+	box-shadow: 0 10px 6px -6px #777;
+	background-color: white;
+
     break-inside: avoid-column;
     -webkit-column-break-inside: avoid;
+
 	width: 100%;
-	margin: 0 0 1em;
+	margin: 0 0 35px;
+
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	border:1px solid;
+
 	text-align:center;
 	font-size: 15px;
-	padding: 5px;
+	/*padding: 5px;*/
 	border-color:#D7D7D7;
 	/*height:280px;*/
 	display:none;
-	float:left;
+	/*float:left;*/
 	overflow:hidden;
+	/*transition:transform .2s ease-in-out;*/
+
 }
 #gallery img{
 	width:100%;
@@ -273,7 +281,15 @@ td{border-width:0 1px;}
 	position: relative;
 	top:0;
     -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);		
+    transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#gallery li:hover{
+	transform:scale(0.97);
+	/*top:-30px;*/
+	box-shadow:none ;
+	
+    transition:all .2s ease-in-out;
 }
 
 

@@ -8,7 +8,10 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Framework CSS
 */
 @import url("fonts.css");
-html{overflow-y:scroll; overflow-x:hidden;}
+html{
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
 html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 
 *, *::before, *::after{box-sizing:border-box;}
@@ -47,7 +50,7 @@ img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; l
 /* Fonts
 --------------------------------------------------------------------------------------------------------------- */
 body, input, textarea, select{font-family:"pingfang-regular"}
-h1, h2, h3, h4, h5, h6, .heading{font-family:"pingfang-regular";}
+h1, h2, h3, h4, h5, h6, .heading{font-family:"pingfang-light";}
 
 
 /* Forms

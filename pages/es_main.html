@@ -76,17 +76,17 @@ Licence URI: http://www.os-templates.com/template-terms
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../index.html">首页</a></li>
-        <li><a class="drop" href="fr_main.html">法国留学指南</a>
-          <ul>
+        <li><a href="fr_main.html">法国留学指南</a>
+          <!-- <ul>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="full-width.html">Full Width</a></li>
             <li><a href="sidebar-left.html">Sidebar Left</a></li>
             <li><a href="sidebar-right.html">Sidebar Right</a></li>
             <li><a href="basic-grid.html">Basic Grid</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li><a class="drop" href="#">西班牙留学指南</a>
-          <ul>
+        <li><a  href="#">西班牙留学指南</a>
+          <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
               <ul>
@@ -94,10 +94,10 @@ Licence URI: http://www.os-templates.com/template-terms
                 <li><a href="#">Level 3</a></li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </li>
         <li><a href="#">留学论坛</a></li>
-        <li><a href="#">关于我们</a></li>
+        <li><a href="about.html">关于我们</a></li>
       </ul>
     </nav>
     <!-- ################################################################################################ -->
@@ -156,7 +156,7 @@ Licence URI: http://www.os-templates.com/template-terms
 /////////////            data               ///////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;inhispania,INHISPANIA,2;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;IESE商学院,IESE,3;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;庞培法布拉大学 - La Universidad Pompeu Fabra,pompeu fabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,unizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,巴塞罗那大学,1;康普顿斯大学 - La Universidad Complutense Madrid,康普顿斯大学,1;马德里理工大学 - La Universidad de Madrid,马德里理工大学,1;Hispania,hispania,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,巴塞罗那大学1,2;康普顿斯大学语言课程 - La Universidad Complutense Madrid,康普顿斯大学1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,unizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;ESIC商学院,ESIC,3;IE商学院,IE,3";
+  var  original_data="阿尔卡拉大学 - La Universidad de Alcala,alcala,1;康普顿斯大学语言课程 - La Universidad Complutense Madrid,ucamp1,2;科尔多巴大学 - La Universidad de Cordoba,cordoba,1;格拉纳达大学 - La Universidad de Granada,Granada,1;哈恩大学 - La Universidad de Jaen,Jaen,1;马拉加大学 - La universidad de Malaga,uma,1;ESIC商学院,ESIC,3;庞培法布拉大学 - La Universidad Pompeu Fabra,pompeufabra,1;胡安卡洛斯国王大学 - La Universidad Rey Juan Carlos,ReyJC,1;塞维利亚大学 - La Universidad de Sevilla,sevilla,1;巴塞罗那自治大学 - La Universidad Autonoma de Barcelona,UAB,1;马德里自治大学 - La Universidad Autonoma de Madrid,UAM,1;萨拉戈萨大学 - La Universidad Zaragoza,unizarlogo,1;瓦伦西亚理工大学 - La Universidad Politecnica de Valencia,upvlogo,1;瓦伦西亚大学 - La Universidad de Valencia,uvlogo,1;巴塞罗那大学 - La Universidad de Barcelona,ubar,1;康普顿斯大学 - La Universidad Complutense Madrid,ucamp,1;马德里理工大学 - La Universidad de Madrid,upm,1;Hispania,hispania,2;inhispania,INHISPANIA,2;瓦伦西亚大学语言课程 - La Universidad de Valencia,uvlogo1,2;巴塞罗那大学语言课程 - La Universidad de Barcelona,ubar1,2;阿尔卡拉大学语言课程 - La Universidad de Alcala,alcala1,2;萨拉戈萨大学语言课程 - La Universidad Zaragoza,unizarlogo1,2;瓦伦西亚理工大学语言课程 - La Universidad Politecnica de Valencia,upvlogo1,2;胡安卡洛斯国王大学语言课程 - La Universidad Rey Juan Carlos,ReyJC1,2;IELE,iele,2;ESADE商学院,ESADE,3;IE商学院,IE,3;IESE商学院,IESE,3";
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -224,7 +224,7 @@ Licence URI: http://www.os-templates.com/template-terms
     // }
     for(i=0;i<univ.length;i++){
       html+="<li class=\"one_fifth "+univ[i][2]+"\" data-cat=\"."+univ[i][2]+"\" id=\"univ_"+i+"\">";
-      html+="<img src=\"../images/univ/es/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></li>";
+      html+="<a href=\"es/"+univ[i][1]+".html\"><img src=\"../images/univ/es/"+univ[i][1]+".jpg\" alt=\"\"/><p>"+univ[i][0]+"</p></a></li>";
     }
       
     $("#gallery").html(html);
