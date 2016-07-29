@@ -251,7 +251,7 @@ td{border-width:0 1px;}
 
 
 #gallery li{
-	box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
 	background-color: white;
 
     break-inside: avoid-column;
@@ -293,6 +293,15 @@ td{border-width:0 1px;}
 }
 
 
+/* Introduction
+--------------------------------------------------------------------------------------------------------------- */
+#intro p{
+	font-size:17px;
+	text-indent: 2em;
+}
+
+
+
 /* Font Awesome Social Icons
 --------------------------------------------------------------------------------------------------------------- */
 .faico{margin:0; padding:0; list-style:none;}
@@ -320,6 +329,7 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
+/*#gallery{background-color: #CAEBF2;}*/
 body{color:#888888; background-color:#FFFFFF;}
 a{color:#96AFAA;}
 hr, .borderedbox{border-color:#D7D7D7;}
