@@ -27,7 +27,7 @@ File: Layout CSS
 #header{font-family:"pingfang-light";font-size:20px;}
 
 #header #logo{}
-#header #logo h1{margin:18px 0 0 0; padding:0; font-size:30px; text-transform:uppercase;font-family:"pingfang-light";}
+#header #logo h1{margin:10px 0 0 0; padding:0; font-size:30px; text-transform:uppercase;font-family:"pingfang-light";}
 
 
 /* Basic Slider
@@ -346,7 +346,7 @@ h1, h2, h3, h4, h5, h6, .heading{color:#242424; border-color:inherit;}
 
 
 /* Rows */
-.row1, .row1 a{color:#242424; background-color:#FFFFFF;}
+.row1, .row1 a{color:#242424; background-color:inherit;}
 .row2{color:#888888; background-color:#FFFFFF;}
 .row3{color:#888888; background-color:#F7F7F7; border-color:#EBEBEB;}
 .row4{color:#888888; background-color:#F7F7F7; border-color:#EBEBEB;}
@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6, .heading{color:#242424; border-color:inherit;}
 
 
 /* Navigation */
-#mainav li a{color:inherit;}
+#mainav li a{color:inherit;background-color:inherit;}
 #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#96AFAA; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#96AFAA;}
@@ -424,7 +424,7 @@ table a, #comments a{background-color:inherit;}
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
 
 	#header{text-align:center;}
-	#header #logo h1{margin:0 0 15px 0;}
+	#header #logo h1{margin:0 0 10px 0;}
 
 	#cta{padding-bottom:0;}
 	#footer{padding-bottom:20px;}
