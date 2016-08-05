@@ -279,7 +279,7 @@
     }
 
     // Prepare everything before binding wheel scroll
-
+    var PageNames=["学校简介","城市简介","专业介绍"];
     el.addClass("onepage-wrapper").css("position","relative");
     $.each( sections, function(i) {
       $(this).css({
@@ -305,7 +305,7 @@
 
 
       if(settings.pagination == true) {
-        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'>"+PageNames[i]+"</a></li>"
       }
     });
 

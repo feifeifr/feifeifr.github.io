@@ -7,7 +7,7 @@ Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 File: Framework CSS
 */
-@import url("fonts.css");
+/*@import url("fonts.css");*/
 html{
 	overflow-y:scroll;
 	overflow-x:hidden;
@@ -49,23 +49,36 @@ img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; l
 
 /* Fonts
 --------------------------------------------------------------------------------------------------------------- */
-body, input, textarea, select{font-family:"pingfang-regular"}
-h1, h2, h3, h4, h5, h6, .heading{font-family:"pingfang-light";}
+body, input, textarea, select{
+	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-weight: 200;
+}
+h1, h2, h3, h4, h5, h6, p, .heading{
+	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-weight: 200;
+}
 
 
 /* Forms
 --------------------------------------------------------------------------------------------------------------- */
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
-label, input, textarea, select, button{display:block; resize:none; outline:none; color:inherit; font-size:inherit; font-family:"pingfang-regular"; vertical-align:middle;}
+label, input, textarea, select, button{
+	display:block; 
+	resize:none; 
+	outline:none; 
+	color:inherit; 
+	font-size:inherit; 
+	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif; 
+	vertical-align:middle;}
 label{margin-bottom:5px;}
 
 
 /* Generalise
 --------------------------------------------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:22px; line-height:normal; font-weight:normal;}
+h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:22px; line-height:normal; font-weight:200;}
 
-address{font-style:normal; font-weight:normal;}
+address{font-style:normal; font-weight:200;}
 hr{display:block; width:100%; height:1px; border:solid; border-width:1px 0 0 0;}
 
 .wrapper{display:block; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}

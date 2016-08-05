@@ -32,6 +32,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
 <script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
 
+<script src="https://use.typekit.net/alz5hva.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <style>
 
@@ -100,11 +102,18 @@ Licence URI: http://www.os-templates.com/template-terms
     .main section.page1 h1{
         font-size: 50px;
         font-color: "#888888";
-        font-family: "pingfang-light";
+        font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+        font-style: normal;
+        font-weight: 100;
         text-align: center;
     } 
     .main section.page1 .page_container{
       left:50%;
+    }
+    .main section.page1 p{
+      font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB","Microsoft Yahei",SimSun,sans-serif;
+      font-style: normal;
+      font-weight: 200;
     }
 
 
@@ -122,6 +131,9 @@ Licence URI: http://www.os-templates.com/template-terms
       position: relative;
       opacity: 0;
       left:-20px;
+      font-family: 'Helvetica',Arial, Helvetica ,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+      font-style: normal;
+      font-weight: 200;
     }
   
  
@@ -223,7 +235,7 @@ $(document).ready(function(){
             }
         },
         loop: true,
-        pagination: false
+        // pagination: false
       });
         });
    
@@ -234,6 +246,7 @@ $(document).ready(function(){
 </head>
 
 <body>
+
 <div class="row1">
   <header id="header" class="clear"> 
     <div id="logo" class="fl_left">

@@ -32,177 +32,22 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
 <script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
 
+<style type="text/css">
 
-<style>
-
-    
-    .wrapper {
-        height: 100% !important;
-        height: 100%;
-        margin: 0 auto; 
-        overflow: hidden;
+  .main section.page1 {
+      background:  url(../../images/introduction/alcala/1.jpg) no-repeat center  ;
+      background-size: cover;
     }
-    
-
-    .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-    }
-    
-    .row1{
-      z-index: 10;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.7);
-      -webkit-transition: all 500ms ease-in-out;
-      -moz-transition: all 500ms ease-in-out;
-      -o-transition: all 500ms ease-in-out;
-      transition: all 500ms ease-in-out;
-    }
-
-    .row1:hover{
-        background: rgba(255, 255, 255,0.95);
-    }
-
-
-    .main section .page_container {
-      position: relative;
-      top: 25%;
-      /*margin: 0 auto 0;*/
-      max-width: 600px;
-      z-index: 3;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-    }
-    .main section  {
-      overflow: hidden;
-    }
-    
-    .main section > img {
-      position: absolute;
-      max-width: 100%;
-      z-index: 1;
-    }
-
-
-    .main section.page1 {
-      background: #555557 url(../../images/introduction/alcala/1.jpg) no-repeat center  ;
+  .main section.page2 {
+      background:  url(../../images/introduction/alcala/2.jpg) no-repeat center ;
       background-size:cover;
-    }
-    .main section.page1 h1{
-        font-size: 50px;
-        font-color: "#888888";
-        font-family: "pingfang-light";
-        text-align: center;
-    } 
-    .main section.page1 .page_container{
-      left:50%;
-    }
-
-
-
-    .main section.page2 {
-      background: #555557 url(../../images/introduction/alcala/2.jpg) no-repeat center ;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/alcala/3.jpg) no-repeat center ;
       background-size:cover;
-    }
-    .main section.page2 .page_container {
-      left:7%;
-      top: 15%;
-      opacity: 0;
-    }
-    .main section.page2 p{
-      position: relative;
-      opacity: 0;
-      left:-20px;
-    }
+  }
   
- 
-     
-    .main section.page3 {
-      background: #555557 url(../../images/introduction/alcala/3.jpg) no-repeat center ;
-      background-size:cover;
-    }
-    .main section.page3 .page_container {
-      left:7%;
-      top: 10%;
-      width: 500px;
-      opacity: 0;
-    }
-    .main section.page3 p{
-      position: relative;
-      left:-20px;
-      margin:0;
-      opacity: 0;
-    }
-
-    .viewing-page-2 .row1{
-        top:-70px;
-      }
-    .viewing-page-3 .row1{
-        top:-70px;
-      }
-    .viewing-page-4 .row1{
-        top:-70px;
-      } 
-
-
-    
-    body.disabled-onepage-scroll .onepage-wrapper  section {
-      min-height: 100%;
-      height: auto;
-    }
-    
-    body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
-      padding: 20px;
-      margin-top: 150px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    
-    body.disabled-onepage-scroll  section .page_container h1{
-      text-align: center;
-      font-size: 50px;
-    }
-    body.disabled-onepage-scroll section .page_container h2, body.disabled-onepage-scroll section .page_container .credit, body.disabled-onepage-scroll section .page_container .btns{
-      text-align: center;
-      width: 100%;
-    }
-    
-    body.disabled-onepage-scroll .main section.page1 > img {
-      position: absolute;
-      width: 80%;
-      left: 10%;
-    }
-    
-    body.disabled-onepage-scroll .main section > img {
-      position: relative;
-      max-width: 80%;
-      bottom: 0;
-    }
-    body.disabled-onepage-scroll code {
-      width: 95%;
-      margin: 0 auto 25px;
-      float: none;
-      overflow: hidden;
-    }
-    
-    body.disabled-onepage-scroll .main section.page3 .page_container {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      right: 0;
-    }
 </style>
-
 
   <!-- JAVASCRIPTS -->
 
@@ -212,18 +57,24 @@ $(document).ready(function(){
         sectionContainer: "section",
         responsiveFallback: 600,
         afterMove: function(index) {
-            // if (index == 1) {
-            //     // do something
-            // }
+
             if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
                 $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
                 $(".page"+index+" .page_container p").each(function(i){
-                  $(this).delay(600+i*300).animate({opacity:1,left : "0px"},300);
+                  $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
                 });
             }
+
+            if($(".page"+index).hasClass("light_pagi")){
+              $(".onepage-pagination li a").css("color","#242424");
+
+            }
+            if($(".page"+index).hasClass("dark_pagi")){
+              $(".onepage-pagination li a").css("color","#96AFAA");
+            }
+
         },
         loop: true,
-        pagination: false
       });
         });
    
@@ -273,7 +124,7 @@ $(document).ready(function(){
 <div class="wrapper row3"> 
     <div class="main" id="intro"> 
 
-        <section class="page1">
+        <section class="page1 dark_pagi white_bg">
             <div class="page_container">
               <h1>阿尔卡拉大学</h1>
               <p>
@@ -285,7 +136,7 @@ $(document).ready(function(){
             </div>
         </section>
 
-        <section class="page2">
+        <section class="page2 dark_pagi dark_bg">
             <div class="page_container">
               <p>
                     阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
@@ -299,7 +150,7 @@ $(document).ready(function(){
             </div>
         </section>
 
-        <section class="page3">
+        <section class="page3 light_pagi white_bg">
           <div class="page_container">
              <p>
             * 建筑系 DEPARTAMENTO DE ARQUITECTURAO
@@ -336,8 +187,5 @@ $(document).ready(function(){
             </p>
           </div>
         </section>
-
-
-
 </body>
 </html>

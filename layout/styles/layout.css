@@ -11,7 +11,7 @@ File: Layout CSS
 @import url("fontawesome-4.3.0.min.css");
 @import url("custom.flexslider.css");
 @import url("framework.css");
-@import url("fonts.css");
+/*@import url("fonts.css");*/
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
@@ -24,10 +24,14 @@ File: Layout CSS
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header{font-family:"pingfang-light";font-size:20px;}
+#header{
+	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-weight: 200;
+	font-size:20px;
+}
 
 #header #logo{}
-#header #logo h1{margin:10px 0 0 0; padding:0; font-size:30px; text-transform:uppercase;font-family:"pingfang-light";}
+#header #logo h1{margin:10px 0 0 0; padding:0; font-size:27px; text-transform:uppercase;font-weight: 200;}
 
 
 /* Basic Slider
@@ -35,8 +39,15 @@ File: Layout CSS
 .txtoverlay{display:block; position:absolute; bottom:0; left:0; width:100%; height:100%; margin:0; padding:0; white-space:normal;cursor:pointer;}
 .centralise{display:block; max-width:978px; height:100%; margin:0 auto; padding:0;}
 .verticalwrap{display:table; width:100%; height:100%; border:none; text-align:center;}
-.txtoverlay article{font-family:"pingfang-light";font-size:25px;display:table-cell; padding:0; border:none; vertical-align:middle;}
-.txtoverlay .heading{font-family:"pingfang-light";font-size:45px; line-height:60px; margin-bottom:30px;}
+.txtoverlay article{
+	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-size:25px;
+	display:table-cell; 
+	padding:0; 
+	border:none; 
+	vertical-align:middle;}
+.txtoverlay h2,p{font-family: "Microsoft Yahei"; font-weight: 100;}
+.txtoverlay .heading{font-size:45px; line-height:60px; margin-bottom:30px;}
 .txtoverlay .btn{display:inline-block; padding:15px 30px; border-radius:8px; text-transform:uppercase; font-weight:bold;}
 .txtoverlay .pushright{margin-right:25px;}
 
@@ -162,7 +173,7 @@ File: Layout CSS
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;font-weight: 200;}
 
 /* Top Navigation */
 #mainav{}
