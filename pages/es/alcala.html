@@ -35,18 +35,23 @@ Licence URI: http://www.os-templates.com/template-terms
 <style type="text/css">
 
   .main section.page1 {
-      background:  url(../../images/introduction/alcala/5.jpg) no-repeat center  ;
+      background:  url(../../images/introduction/alcala/blur_1.jpg) no-repeat center  ;
       background-size: cover;
     }
   .main section.page2 {
-      background:  url(../../images/introduction/alcala/2.jpg) no-repeat center ;
+      background:  url(../../images/introduction/alcala/blur_2.jpg) no-repeat center ;
       background-size:cover;
     }  
   .main section.page3 {
-      background: url(../../images/introduction/alcala/3.jpg) no-repeat center ;
+      background: url(../../images/introduction/alcala/blur_3.jpg) no-repeat center ;
       background-size:cover;
   }
   
+  .main section.page3 .page_container {
+      top: 10%;
+      width: 500px;
+    }
+
 </style>
 
   <!-- JAVASCRIPTS -->
@@ -77,26 +82,28 @@ $(document).ready(function(){
     loop: true,
   });
 
-  var downloadimg1 = new Image();
+
+ 
+  var downloadimg1= new Image();
   downloadimg1.onload = function(){
     $(".page1").css("background","url("+this.src+") no-repeat center");
     $(".page1").css("background-size","cover");
   };
-  downloadimg1.src="../../images/introduction/alcala/backup.jpg";
+  downloadimg1.src="../../images/introduction/alcala/1.jpg";
   
   var downloadimg2 = new Image();
   downloadimg2.onload = function(){
     $(".page2").css("background","url("+this.src+") no-repeat center");
     $(".page2").css("background-size","cover");
   };
-  downloadimg2.src="../../images/introduction/alcala/backup.jpg";
+  downloadimg2.src="../../images/introduction/alcala/2.jpg";
 
   var downloadimg3 = new Image();
   downloadimg3.onload = function(){
     $(".page3").css("background","url("+this.src+") no-repeat center");
     $(".page3").css("background-size","cover");
   };
-  downloadimg3.src="../../images/introduction/alcala/backup.jpg";
+  downloadimg3.src="../../images/introduction/alcala/3.jpg";
 
 });
    
@@ -144,22 +151,21 @@ $(document).ready(function(){
   </header>
 </div>
 <div class="wrapper row3"> 
-    <div class="main" id="intro"> 
+    <div class="main"> 
 
         <section class="page1 dark_pagi white_bg">
-            <div class="page_container">
+            <div class="page_container page_left">
               <h1>阿尔卡拉大学</h1>
               <p>
-                    阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
-                generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，创办人是西班牙摄政王、红衣主教西斯内罗。该大学将当时最优秀的巴黎和塞拉曼加传统教育模式，与更具创新性的波隆那
-                和卢万等模式融合在一起。大学成立之后，在欧洲文艺复兴时期和西班牙人文主义思潮中扮演了先锋者的角色。红衣主教西斯内罗希望它能起到一个熔炉的作用，不仅为教会改革培养神职人员，同时也为西班牙王室
-                    输送迫切需要的优秀人才。这所高等学府所获得的成功，将贵族们纷纷吸引到阿尔卡接受高等教育，是之后西班牙走向黄金时代的重要推动力。在16世纪和17世纪期间，阿尔卡拉大学发展成为伟大卓越的学术研究中心。很多知名学者都曾在这里的课堂中学习或授课。
+                    阿尔卡拉大学成立于1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，创办人是西班牙摄政王、红衣主教西斯内罗。该大学将当时最优秀的巴黎和塞拉曼加传统教育模式，与更具创新性的波隆那和卢万等模式融合在一起。大学成立之后，在欧洲文艺复兴时期和西班牙人文主义思潮中扮演了先锋者的角色。红衣主教西斯内罗希望它能起到一个熔炉的作用，不仅为教会改革培养神职人员，同时也为西班牙王室输送迫切需要的优秀人才。这所高等学府所获得的成功，将贵族们纷纷吸引到阿尔卡接受高等教育，是之后西班牙走向黄金时代的重要推动力。在16世纪和17世纪期间，阿尔卡拉大学发展成为伟大卓越的学术研究中心。很多知名学者都曾在这里的课堂中学习或授课。
+              </p>
+              <p>学校现有28000多名学生、2100名教职员工和800名管理和办公服务人员，向学生提供35个正式学士学位课程，以及多领域的研究生和更高级别的教育。大学的教学品质一直广受赞誉，对重要研究领域起到发展推动作用；校园内处处可见蕴含艺术和历史价值的悠久建筑以及配套的全新模式教学设施。此外，大学还建立了深厚的国际关系，全面适应当今社会的就业市场需求，成为名副其实的公立大学领跑者。
               </p>
             </div>
         </section>
 
         <section class="page2 dark_pagi dark_bg">
-            <div class="page_container">
+            <div class="page_container page_right">
               <p>
                     阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
                 generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，
@@ -173,7 +179,7 @@ $(document).ready(function(){
         </section>
 
         <section class="page3 light_pagi white_bg">
-          <div class="page_container">
+          <div class="page_container page_right">
              <p>
             * 建筑系 DEPARTAMENTO DE ARQUITECTURAO
             </p>

@@ -306,10 +306,12 @@ td{border-width:0 1px;}
 
 /* Introduction
 --------------------------------------------------------------------------------------------------------------- */
-#intro p{
-	font-size:17px;
+/*#intro p{
+	font-size:16px;
 	text-indent: 2em;
-}
+	-webkit-margin-before: 7px;
+    -webkit-margin-after: 7px;
+}*/
 
 
 

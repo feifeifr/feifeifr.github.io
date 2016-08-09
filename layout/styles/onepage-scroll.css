@@ -181,7 +181,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 
     .main section .page_container {
       position: relative;
-      top: 25%;
+      top: 15%;
       /*margin: 0 auto 0;*/
       max-width: 600px;
       z-index: 3;
@@ -198,28 +198,35 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       z-index: 1;
     }
 
+
+    .main section p{
+      font-size:16px;
+      text-indent: 2em;
+      -webkit-margin-before: 7px;
+      -webkit-margin-after: 7px;
+    }
+
     .main section h1{
         font-size: 50px;
         text-align: center;
     } 
-    .main section.page1 .page_container{
-      left:49%;
-    }
-    .main section.page1{
+    
+    .main section.page1, .page2, .page3{
       -webkit-transition: all 500ms ease-in-out;
       -moz-transition: all 500ms ease-in-out;
       -o-transition: all 500ms ease-in-out;
       transition: all 500ms ease-in-out;
     }
 
-    /*.main section.page1:hover{
-      background:  url(../../images/introduction/alcala/5.jpg) no-repeat center  ;
-      background-size: cover;
-    }*/
+    .main section .page_left{
+      left:49%;
+    }
+    .main section .page_right{
+      left:7%;
+    }
+ 
 
     .main section.page2 .page_container {
-      left:7%;
-      top: 15%;
       opacity: 0;
     }
     .main section.page2 p{
@@ -230,9 +237,6 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   
 
     .main section.page3 .page_container {
-      left:7%;
-      top: 10%;
-      width: 500px;
       opacity: 0;
     }
     .main section.page3 p{
