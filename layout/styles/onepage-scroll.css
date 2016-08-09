@@ -205,6 +205,17 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     .main section.page1 .page_container{
       left:49%;
     }
+    .main section.page1{
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+    }
+
+    /*.main section.page1:hover{
+      background:  url(../../images/introduction/alcala/5.jpg) no-repeat center  ;
+      background-size: cover;
+    }*/
 
     .main section.page2 .page_container {
       left:7%;

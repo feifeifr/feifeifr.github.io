@@ -35,7 +35,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <style type="text/css">
 
   .main section.page1 {
-      background:  url(../../images/introduction/alcala/1.jpg) no-repeat center  ;
+      background:  url(../../images/introduction/alcala/5.jpg) no-repeat center  ;
       background-size: cover;
     }
   .main section.page2 {
@@ -53,30 +53,52 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <script type="text/javascript">
 $(document).ready(function(){
-      $(".main").onepage_scroll({
-        sectionContainer: "section",
-        responsiveFallback: 600,
-        afterMove: function(index) {
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
 
-            if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
-                $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
-                $(".page"+index+" .page_container p").each(function(i){
-                  $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
-                });
-            }
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
 
-            if($(".page"+index).hasClass("light_pagi")){
-              $(".onepage-pagination li a").css("color","#242424");
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
 
-            }
-            if($(".page"+index).hasClass("dark_pagi")){
-              $(".onepage-pagination li a").css("color","#96AFAA");
-            }
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
 
-        },
-        loop: true,
-      });
-        });
+    },
+    loop: true,
+  });
+
+  var downloadimg1 = new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/alcala/backup.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/alcala/backup.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/alcala/backup.jpg";
+
+});
    
 </script>
 <!-- ################################################################################################ -->
