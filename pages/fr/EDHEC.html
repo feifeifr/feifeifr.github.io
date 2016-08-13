@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,104 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/EDHEC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/EDHEC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/EDHEC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/EDHEC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/EDHEC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/EDHEC/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +125,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,226 +143,76 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="content" id="intro"> 
-      <!-- ################################################################################################ -->
-      <h1><font size=40 color="#888888" face="pingfang-light">北方高等商学院</font></h1>
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/EDHEC/1.jpg" alt="">
-        <p>
-    <strong>学校简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    法国北方高等商学院（音译：艾代克高等商学院）成立于1906年，是古老的法兰西精英教育系统“Grandes Ecoles”的一员，也是欧洲最著名的商学院之一。其金融硕士专业于2014被英国《金融时报》 (Financial Times) 排名为全球第三，管理学硕士项目（Master in
-Management）在2014年英国《金融时报》的全球管理学硕士排名中列16位，并在英国《经济学人》杂志（The Economist ）的2014全球商学院排名中排名全法第三，全球第62位。作为法国高等商学院体系的第一梯队五大商校之一，<strong>北方高商在欧洲享有业内认证的知名度和名望，是世界上极少数同时得到</strong><strong>EQUIS</strong><strong>、</strong><strong>AACSB</strong><strong>、</strong><strong>AMBA</strong>    <strong>三大最权威商学院认证的商学院，是名副其实的精英学校。</strong><strong></strong>
-</p>
-<p>
-    2009年被《LE POINT》观点杂志评为全法第1名，且该校与CFA 、CAIA 等国际认证机构是官方合作伙伴。该校的全球校友超过18000名，校友网络遍布全球超过100个国家，其MBA校友网络被《ECONOMIST》评为“Potential to network"
-    方面全球第2名。该校于2010年被《Challenges》评为法国最具活力的商学院，于2011年被《Le Monde》世界报和《l’Express/L’Etudiant》杂志俱评为法国前3的商学院，被《Le Point》观点杂志评为法国最好的金融类院校，在《Financial
-    Times》金融时报的2012年世界管理学硕士教育排名中名列第12位，其年轻的MBA项目也被《The Economist》经济学家评为世界前50强。2012年，该校金融学硕士专业（MSc in Finance）在 Financial Times的金融学硕士专业排名中名列全球第6；2013年Financial
-    Times排名中，该校金融市场学硕士专业（MSc in Financial
-    Markets）名列全球第4；EDHEC的国际学生比率约为35%，学生来自大约77个国家。40%的教师为国际教授。此外还与110所世界最顶尖商学院有着交流合作的关系，其中包括17个双学位项目。每年都有无数优秀的学生交换到另一个国家学习，或者取得另外一个商学院的双学位。这些学校包括剑桥大学，伦敦政治经济学院，斯坦福大学，不列颠哥伦比亚大学，香港科技大学，首尔大学等等。
-</p>
-<p>
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/EDHEC/2.jpg" alt="">
-    <strong>城市简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>尼斯：</strong>
-    尼斯所处的地中海海滨，向来被人称为阳光地带，是法国东南部地中海仅次于马赛的第二大城，而其与意大利毗邻区域叫做“蔚蓝海岸”。由于依山傍海，为风光秀丽的“蓝色海岸”一带最重要的城市，为旅游与度假的胜地。它是阿尔卑斯滨海省（APES-MARITIMES）的省会，人口35万。“尼斯老城”和海滩边的“英国人散步区”闻名全世界，每年一度的“尼斯狂欢节”起源于13世纪，至今久盛不衰。由于夏天炎热少雨，冬日温暖如春，所以一年四季游人如织。蒙特卡洛（蒙地卡罗）和戛纳分列尼斯城东西两侧仅10余公里处，助长了它的旅游优势，使它成为名副其实的欧洲旅游之都。
-</p>
-<p>
-    <strong>里尔：</strong>
-    法国北部城市，北部-加莱海峡大区（Région Nord Pas de
-Calais）的首府和诺尔省（Nord，59号省）的省会。里尔是法国北部最大的城市，法国第五大城。若算上整个里尔都会区，其总人口排名将上升至法国第四，仅次于巴黎、里昂和马赛。里尔历史悠久，中世纪早期已成为大都市，工业革命时期以后则成为法国最大的工业城市之一。里尔也是整个法国北部的经济、教育、交通和文化中心，拥有近百家家跨国企业、数十所高等教育机构、两个国际性的火车站，并于2004年获得了欧洲文化城市的称号。    <strong></strong>
-</p>
-<p>
-    <strong>硕士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>金融</strong>
-    ：教育和研究在法国常年排在第一，与HEC Paris齐名
-</p>
-<p>
-    <strong>管理学硕士</strong>
-    （法英）：大学校项目Grande Ecole Program，是EDHEC旗舰项目（FT世界排名第12）
-</p>
-<p>
-    <strong>Global MBA</strong>
-    ：被经济学人评为法国第3，世界第53
-</p>
-<p>
-    <strong>Master of Sicence</strong>
-    <strong>：</strong>
-    金融/银行、市场营销、管理学、创意商业、战略与咨询等
-</p>
-
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/EDHEC/3.jpg" alt="">
+        <section class="page1 dark_pagi white_bg">
+            <div class="page_container page_right">
+              <h1>北方高等商学院</h1>
+              
+              <p>
+                  法国北方高等商学院（音译：艾代克高等商学院）成立于1906年，是古老的法兰西精英教育系统“Grandes Ecoles”的一员，也是欧洲最著名的商学院之一。其金融硕士专业于2014被英国《金融时报》 (Financial Times) 排名为全球第三，管理学硕士项目（Master in
+              Management）在2014年英国《金融时报》的全球管理学硕士排名中列16位，并在英国《经济学人》杂志（The Economist ）的2014全球商学院排名中排名全法第三，全球第62位。作为法国高等商学院体系的第一梯队五大商校之一，北方高商在欧洲享有业内认证的知名度和名望，是世界上极少数同时得到EQUIS、AACSB、AMBA三大最权威商学院认证的商学院，是名副其实的精英学校。
+              </p>
+              <p>
+                2009年被《LE POINT》观点杂志评为全法第1名，且该校与CFA 、CAIA 等国际认证机构是官方合作伙伴。该校的全球校友超过18000名，校友网络遍布全球超过100个国家，其MBA校友网络被《ECONOMIST》评为“Potential to network"方面全球第2名。
+              </p>
 
 
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  该校于2010年被《Challenges》评为法国最具活力的商学院，于2011年被《Le Monde》世界报和《l’Express/L’Etudiant》杂志俱评为法国前3的商学院，被《Le Point》观点杂志评为法国最好的金融类院校，在《Financial
+                  Times》金融时报的2012年世界管理学硕士教育排名中名列第12位，其年轻的MBA项目也被《The Economist》经济学家评为世界前50强。2012年，该校金融学硕士专业（MSc in Finance）在 Financial Times的金融学硕士专业排名中名列全球第6；2013年Financial
+                  Times排名中，该校金融市场学硕士专业（MSc in Financial
+                  Markets）名列全球第4；EDHEC的国际学生比率约为35%，学生来自大约77个国家。40%的教师为国际教授。此外还与110所世界最顶尖商学院有着交流合作的关系，其中包括17个双学位项目。每年都有无数优秀的学生交换到另一个国家学习，或者取得另外一个商学院的双学位。这些学校包括剑桥大学，伦敦政治经济学院，斯坦福大学，不列颠哥伦比亚大学，香港科技大学，首尔大学等等。
+              </p>
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+              
+              <p>
+                  <strong>尼斯：</strong>
+                  尼斯所处的地中海海滨，向来被人称为阳光地带，是法国东南部地中海仅次于马赛的第二大城，而其与意大利毗邻区域叫做“蔚蓝海岸”。由于依山傍海，为风光秀丽的“蓝色海岸”一带最重要的城市，为旅游与度假的胜地。它是阿尔卑斯滨海省（APES-MARITIMES）的省会，人口35万。“尼斯老城”和海滩边的“英国人散步区”闻名全世界，每年一度的“尼斯狂欢节”起源于13世纪，至今久盛不衰。由于夏天炎热少雨，冬日温暖如春，所以一年四季游人如织。蒙特卡洛（蒙地卡罗）和戛纳分列尼斯城东西两侧仅10余公里处，助长了它的旅游优势，使它成为名副其实的欧洲旅游之都。
+              </p>
+              <p>
+                  <strong>里尔：</strong>
+                  法国北部城市，北部-加莱海峡大区（Région Nord Pas de
+              Calais）的首府和诺尔省（Nord，59号省）的省会。里尔是法国北部最大的城市，法国第五大城。若算上整个里尔都会区，其总人口排名将上升至法国第四，仅次于巴黎、里昂和马赛。里尔历史悠久，中世纪早期已成为大都市，工业革命时期以后则成为法国最大的工业城市之一。里尔也是整个法国北部的经济、教育、交通和文化中心，拥有近百家家跨国企业、数十所高等教育机构、两个国际性的火车站，并于2004年获得了欧洲文化城市的称号。    
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+                <p>
+                硕士优势专业推荐：
+                    
+                </p>
+                <p>
+                    金融
+                    ：教育和研究在法国常年排在第一，与HEC Paris齐名
+                </p>
+                <p>
+                    管理学硕士
+                    （法英）：大学校项目Grande Ecole Program，是EDHEC旗舰项目（FT世界排名第12）
+                </p>
+                <p>
+                    Global MBA
+                    ：被经济学人评为法国第3，世界第53
+                </p>
+                <p>
+                    Master of Sicence
+                    ：
+                    金融/银行、市场营销、管理学、创意商业、战略与咨询等
+                </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>

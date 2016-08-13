@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,112 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/INSEEC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/INSEEC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/INSEEC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/INSEEC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/INSEEC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/INSEEC/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +133,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,240 +151,85 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <div class="content" id="intro"> 
-      <h1><font size=40 color="#888888" face="pingfang-light">英赛克高等商学院</font></h1>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/INSEEC/1.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
-<p>
-    <strong>学校简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    INSEEC，英赛克高等商学院（也译作“法国高等经济与商业研究学院”)，是法国培养商业技术、经济和管理专业人才享有盛名的精英制高等商业学院之一，目前拥有法国本土巴黎、里昂、波尔多和尚贝里的四个校区以及摩纳哥、英国伦敦，美国芝加哥、旧金山（建设中）、瑞士日内瓦以及中国上海等全球10个城市、17所校区。学院颁发国家本科和硕士、博士文凭，是法国精英制商学院大学校联盟（Conférence
-    des Grandes Ecoles）的成员之一。拥有EQUIS、AMBAs、AACSB、EFMD、CVTRUST、UGEI国际认证，LE POINT《焦点杂志》全法精英院校毕业生起薪排名中名列第四。
-</p>
-<p>
-    法国高等商业经济研究学院拥有非常国际化的教学方法，规模庞大，资金雄厚，集团不断发展国外大学合作伙伴网络。从最初与5所美国大学（其中包括加州大学伯克利分校、洛杉矶加利福尼亚大学[UCLA]和奥斯汀大学）的合作，迄今已发展至与全世界与两百所著名大学建立了合作网络,提供多种双文凭课程（46项专业硕士课程或MBA课程），并开展了与美国、加拿大、墨西哥、澳大利亚、新西兰、德国、西班牙、印度和中国的学术交换项目。此外，集团接纳的外国留学生人数也在不断增长。BBA（工商管理学士），Euro
-    MBA（欧洲工商管理硕士）和AsianMBA（亚洲工商管理硕士）项目是用英语授课，针对外国高中毕业生，使他们能够较顺利地融入这些国际项目。对于讲法语的学生来说，有超20多个硕士项目作为未来职业方向可供选择。
-</p>
-<p>
-    INSEEC的毕业生如今遍布世界各地，并在商业，金融，保险等领域取得了不菲的佳绩。其师资力量强大，教师队伍由人类科学博士，哲学家，政治科学家，法国国家高层领导等组成。学校与多家企业与机构合作，为学生提供比其他商校更多的实践机会。INSEEC与多所国际知名学府的合作关系为其在校生提供了更多校际交流以及获得双学位的机会。其教学法既效法于高等商校，政治学院，又借鉴了心理学和人文科学领域倡导的个人平衡理念。是当今法国培养商业、经济、和管理专业人才的最知名的高等商业学院，同时也是是法国本土学生及海外学生最向往的商业名校之一。
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/INSEEC/2.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-<p>
-    <strong>城市简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>巴黎：</strong>
-    法国政治、经济和文化中心<strong></strong>
-</p>
-<p>
-    <strong>里昂：</strong>
-    法国第二大城市，同时也是最为著名的美食城，法国最好的餐厅大都集中于此
-</p>
-<p>
-    <strong>波尔多：</strong>
-    法国西南部城市，世界葡萄酒中心，波尔多盛大的国际酒展-Vinexpo每两年一度
-</p>
-<p>
-    <strong>尚贝里：</strong>
-    法国东南部城市，萨瓦省首府。在阿尔卑斯山脉的环抱中，古堡林立，气候宜人、风景优美<strong></strong>
-</p>
-<p>
-    <strong></strong>
-</p>
-<p>
-    <strong>学士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    BBA工商管理
-</p>
-<p>
-    <strong>硕士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    红酒与食品管理、奢侈品管理、操盘以及风险管理；企业财经；银行与保险；固定资产管理；企业管理的审计与控制；国际贸易；财政、商务法、企业顾问与管理；商务、经营、策略；人事资源与社会关系；对外联络与广告宣传；商业市场、交流与策略；多媒体；商务经营；国际贸易经营：酒类国际市场及其经营管理；市场金融与证券
-    ；金融与财务；银行保险；金融流通与经营管理；财务管理 税法、商事法与企业管理；人力资源管理与社会关系；公共关系学；战略营销（3个方向：商标管理、国际市场营销、电子商务）；国际经济管理 ；经济企业管理；经营战略管理；亚洲MBA；欧洲MBA；行政MBA等
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/INSEEC/3.jpg" alt="">
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>英赛克高等商学院</h1>
+              
+              <p>
+                  INSEEC，英赛克高等商学院（也译作“法国高等经济与商业研究学院”)，是法国培养商业技术、经济和管理专业人才享有盛名的精英制高等商业学院之一，目前拥有法国本土巴黎、里昂、波尔多和尚贝里的四个校区以及摩纳哥、英国伦敦，美国芝加哥、旧金山（建设中）、瑞士日内瓦以及中国上海等全球10个城市、17所校区。学院颁发国家本科和硕士、博士文凭，是法国精英制商学院大学校联盟（Conférence
+                  des Grandes Ecoles）的成员之一。拥有EQUIS、AMBAs、AACSB、EFMD、CVTRUST、UGEI国际认证，LE POINT《焦点杂志》全法精英院校毕业生起薪排名中名列第四。
+              </p>
+              <p>
+                  法国高等商业经济研究学院拥有非常国际化的教学方法，规模庞大，资金雄厚，集团不断发展国外大学合作伙伴网络。从最初与5所美国大学（其中包括加州大学伯克利分校、洛杉矶加利福尼亚大学[UCLA]和奥斯汀大学）的合作，迄今已发展至与全世界与两百所著名大学建立了合作网络,提供多种双文凭课程（46项专业硕士课程或MBA课程），并开展了与美国、加拿大、墨西哥、澳大利亚、新西兰、德国、西班牙、印度和中国的学术交换项目。
+                </p>
 
 
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+            </div>
+            <div class="page_container second_page">
+               <p>
+                  此外，集团接纳的外国留学生人数也在不断增长。BBA（工商管理学士），Euro
+                  MBA（欧洲工商管理硕士）和AsianMBA（亚洲工商管理硕士）项目是用英语授课，针对外国高中毕业生，使他们能够较顺利地融入这些国际项目。对于讲法语的学生来说，有超20多个硕士项目作为未来职业方向可供选择。
+              </p>
+              <p>
+                  INSEEC的毕业生如今遍布世界各地，并在商业，金融，保险等领域取得了不菲的佳绩。其师资力量强大，教师队伍由人类科学博士，哲学家，政治科学家，法国国家高层领导等组成。学校与多家企业与机构合作，为学生提供比其他商校更多的实践机会。INSEEC与多所国际知名学府的合作关系为其在校生提供了更多校际交流以及获得双学位的机会。其教学法既效法于高等商校，政治学院，又借鉴了心理学和人文科学领域倡导的个人平衡理念。是当今法国培养商业、经济、和管理专业人才的最知名的高等商业学院，同时也是是法国本土学生及海外学生最向往的商业名校之一。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴黎：
+                  法国政治、经济和文化中心
+              </p>
+              <p>
+                  里昂：
+                  法国第二大城市，同时也是最为著名的美食城，法国最好的餐厅大都集中于此
+              </p>
+              <p>
+                  波尔多：
+                  法国西南部城市，世界葡萄酒中心，波尔多盛大的国际酒展-Vinexpo每两年一度
+              </p>
+              <p>
+                  尚贝里：
+                  法国东南部城市，萨瓦省首府。在阿尔卑斯山脉的环抱中，古堡林立，气候宜人、风景优美
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                学士优势专业推荐：
+            </p>
+            <p>
+                BBA工商管理
+            </p>
+            <p>
+                硕士优势专业推荐：
+            <p>
+                红酒与食品管理、奢侈品管理、操盘以及风险管理；企业财经；银行与保险；固定资产管理；企业管理的审计与控制；国际贸易；财政、商务法、企业顾问与管理；商务、经营、策略；人事资源与社会关系；对外联络与广告宣传；商业市场、交流与策略；多媒体；商务经营；
+                </p>
+                <p>
+                国际贸易经营：酒类国际市场及其经营管理；市场金融与证券
+                ；金融与财务；银行保险；金融流通与经营管理；财务管理 税法、商事法与企业管理；人力资源管理与社会关系；公共关系学；
+                </p>
+                <p>
+                战略营销（3个方向：商标管理、国际市场营销、电子商务）；国际经济管理 ；经济企业管理；经营战略管理；亚洲MBA；欧洲MBA；行政MBA等
+            </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>

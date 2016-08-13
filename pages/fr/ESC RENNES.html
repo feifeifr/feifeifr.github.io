@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,112 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ESC RENNES/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ESC RENNES/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ESC RENNES/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  /*.main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESC RENNES/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESC RENNES/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESC RENNES/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +133,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,255 +151,96 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <div class="content" id="intro"> 
-      <h1><font size=40 color="#888888" face="pingfang-light">雷恩高等商学院</font></h1>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/ESC RENNES/1.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-<p>
-    <strong>学校简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    法国雷恩高等商学院（ESC RENNES）位于法国雷恩，获得AACSB认证，EQUIS认证，AMBA认证，三重权威认证使该校成为国际顶尖商校之一；学校的管理学硕士项目（Master in Management）在2014年Financial Times的全球管理学硕士排名中列23位。
-</p>
-<p>
-    自1990年建校以来，法国雷恩商学院坚持不断的进行国际化建设，并在过去的13年中取得了卓越的成绩。成为法国目前商学院中排名上升最快的商学院：2004年综合排名第27，教学质量排名第22；11年综合排名第17，教育质量第8；2012年专业排名MAIB
-    排名第一，MSc.GBM排名第四，MSc.IBN排名第五，Master Grande Ecole排名大学校项目第三（《LE MOCI》2012年1月） ；学校的管理学硕士项目（Master in Management）在2014年Financial Times的全球管理学硕士排名中列23位。
-</p>
-<p>
-    同时，雷恩商学院是法国为数不多的可颁发PhD学位的商学院之一。雷恩商学院教学方式的独特之处，在于给学生创造和提供机会，帮助他们迈出发展自我事业的第一步。这种实践与参与教学法（PEI）使每一个学生在教育培养的过程中成为一个主动的参与者。对于学生来说，通过各种协会工作，实习项目等活动，逐步熟悉公司的运作方式，这同时也列入学业考核的评估之中。基于这种教学方式，学生能够发觉自身潜力，提高自己的商业头脑，市场知识，管理技能以及处理人际关系的能力。毕业以后，可以成为能在公司中充分发挥自身潜力的综合人才。
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/ESC RENNES/2.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
-   <p>
-    <strong>城市简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    雷恩（法语 Rennes）是法国西北部第二大城市，是西部大区布列塔尼大区的首府，也是伊勒、维莱讷省（Ille-et-Vilaine，35号省）的首府，雷恩因其优异的城市生活质量而深受法国人喜爱，于2012年被法国杂志《L'Express》评为“全法最宜居的城市”。
-</p>
-<p>
-    <strong>本科</strong>
-    <strong>优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    国际商务管理（法&amp;英）
-</p>
-<p>
-    <strong>硕士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>管理学硕士</strong>
-    （法、英）：G.E.大学校项目<strong></strong>
-</p>
-<p>
-    国际谈判硕士 （英）
-</p>
-<p>
-    国际商务硕士 （英）
-</p>
-<p>
-    国际市场硕士 （英）
-</p>
-<p>
-    国际金融硕士 （英）
-</p>
-<p>
-    国际会计硕士 （英）
-</p>
-<p>
-    国际人力资源管理硕士 （英）
-</p>
-<p>
-    全球商务管理硕士 （英）
-</p>
-<p>
-    国际品牌与奢侈品管理硕士 （英）
-</p>
-<p>
-    国际公关与网络营销硕士 （英）
-</p>
-<p>
-    运动、娱乐和旅游管理硕士（英）
-</p>
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>雷恩高等商学院</h1>
+              
+              <p>
+                  法国雷恩高等商学院（ESC RENNES）位于法国雷恩，获得AACSB认证，EQUIS认证，AMBA认证，三重权威认证使该校成为国际顶尖商校之一；学校的管理学硕士项目（Master in Management）在2014年Financial Times的全球管理学硕士排名中列23位。
+              </p>
+              <p>
+                  自1990年建校以来，法国雷恩商学院坚持不断的进行国际化建设，并在过去的13年中取得了卓越的成绩。成为法国目前商学院中排名上升最快的商学院：2004年综合排名第27，教学质量排名第22；11年综合排名第17，教育质量第8；2012年专业排名MAIB
+                  排名第一，MSc.GBM排名第四，MSc.IBN排名第五，Master Grande Ecole排名大学校项目第三（《LE MOCI》2012年1月） ；学校的管理学硕士项目（Master in Management）在2014年Financial Times的全球管理学硕士排名中列23位。
+              </p>
+              
 
 
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/ESC RENNES/3.jpg" alt="">
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  同时，雷恩商学院是法国为数不多的可颁发PhD学位的商学院之一。雷恩商学院教学方式的独特之处，在于给学生创造和提供机会，帮助他们迈出发展自我事业的第一步。这种实践与参与教学法（PEI）使每一个学生在教育培养的过程中成为一个主动的参与者。对于学生来说，通过各种协会工作，实习项目等活动，逐步熟悉公司的运作方式，这同时也列入学业考核的评估之中。基于这种教学方式，学生能够发觉自身潜力，提高自己的商业头脑，市场知识，管理技能以及处理人际关系的能力。毕业以后，可以成为能在公司中充分发挥自身潜力的综合人才。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                雷恩（法语 Rennes）是法国西北部第二大城市，是西部大区布列塔尼大区的首府，也是伊勒、维莱讷省（Ille-et-Vilaine，35号省）的首府，雷恩因其优异的城市生活质量而深受法国人喜爱，于2012年被法国杂志《L'Express》评为“全法最宜居的城市”。
+            </p>
 
 
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                本科
+                优势专业推荐：
+                
+            </p>
+            <p>
+                国际商务管理（法&amp;英）
+            </p>
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                国际谈判硕士 （英）
+            </p>
+            <p>
+                国际商务硕士 （英）
+            </p>
+            <p>
+                国际市场硕士 （英）
+            </p>
+            <p>
+                国际金融硕士 （英）
+            </p>
+            <p>
+                国际会计硕士 （英）
+            </p>
+            <p>
+                国际人力资源管理硕士 （英）
+            </p>
+            <p>
+                全球商务管理硕士 （英）
+            </p>
+            <p>
+                国际品牌与奢侈品管理硕士 （英）
+            </p>
+            <p>
+                国际公关与网络营销硕士 （英）
+            </p>
+            <p>
+                运动、娱乐和旅游管理硕士（英）
+            </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>

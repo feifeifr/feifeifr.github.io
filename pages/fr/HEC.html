@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,114 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/HEC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/HEC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/HEC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page1 .page_container{
+    top:12%;
+  }
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      /*font-size: 20px;*/
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/HEC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/HEC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/HEC/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +135,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,260 +153,101 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <div class="content" id="intro"> 
-      <h1><font size=40 color="#888888" face="pingfang-light">巴黎高等商学院</font></h1>
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴黎高等商学院</h1>
+              
+              <p>
+                  巴黎高等商学院(HEC Paris), 简称“巴黎高商” 或“HEC商学院”，由巴黎工商会于1881年创立，是法国最负盛名的高等商业管理学院，也是欧洲最著名的商学院之一。HEC商学院国际排名领先，连续第8年被评为欧洲第一商学院（《金融时报》（Financial
+                  Times）2013年商学院排名）；MBA专业排名世界第4 （《经济学人》2014年MBA排名）；EMBA专业排名世界第1（《金融时报》2015年排名）；管理学硕士项目（Master in Management）全球排名第2（《金融时报》2014年全球管理学硕士排名）。HEC商学院设有管理学硕士(Grand
+                  Écoleé/MSc in Management)、工商管理硕士（MBA）、高级管理人员工商管理硕士(EMBA)和博士学位（PhD）等教学项目。在法国本土，巴黎HEC商学院是第一个获得“国际高等商学院联合会”、“欧洲质量发展认证体系”以及“英国工商管理硕士协会”三大权威国际认证的商学院。
+              </p>
+              <p>
+                  商学院排名：《观点》(Le Point)杂志及《费加罗》(Le Figaro)，稳居法国商学院排名第1
+              </p>
+              <p>
+                  工商管理硕士（MBA）排名： 《经济学人》（The Economist）世界排名第4（2014年）
+              </p>
+              
+             
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  管理学理学硕士(Grand Écoleé/MSc in Management)排名: 《金融时报》世界排名第2 (2014)
+              </p>
+              <p>
+                  金融硕士（Masters in Finance Pre-experience）排名：《金融时报》世界排名第1 (2014)
+              </p>
+                 <p>
+                  高级管理人员工商管理硕士(EMBA)排名：《金融时报》世界排名第1 (2014)
+              </p>
+              <p>
+                  高级经理培训（Executive Education - Customised）排名：《金融时报》世界排名第2
+              </p>
+              <p>
+                  开放式注册课程培训（Executive Education - Open）排名：《金融时报》世界排名第3
+              </p>
+              <p>
+                  巴黎高等商学院的管理学硕士项目以竞争极其激烈的入学考试（法语称作concours）著称。报考管理学硕士的学生，须学习2年的预备课程，然后通过统考方能入学。每年约有9500名学生报名参加入学考试，但最终仅有4%的学生得以录取。
+              </p>
+              <p>
+                  
+              </p>
+              <p>
+                  HEC商学院拥有诸多杰出校友，包含多位世界500强企业CEO及政界精英：Jean-Paul Agon （欧莱雅集团CEO), François-Henri Pinault（开云集团（Kering）创始人兼CEO），Henri Lachmann (施耐德CEO), Stéphane Richard
+                  (法国电信CEO), Henri de Castries (安盛CEO), Baudouin Prot (法国巴黎银行CEO), François Hollande（现任法国总统），Pascal Lamy（世界贸易组织（WTO）总干事）等。
+              </p>
+            </div>
+        </section>
 
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/HEC/1.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
-<p>
-    <strong>学校简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    巴黎高等商学院(HEC Paris), 简称“巴黎高商” 或“HEC商学院”，由巴黎工商会于1881年创立，是法国最负盛名的高等商业管理学院，也是欧洲最著名的商学院之一。HEC商学院国际排名领先，连续第8年被评为欧洲第一商学院（《金融时报》（Financial
-    Times）2013年商学院排名）；MBA专业排名世界第4 （《经济学人》2014年MBA排名）；EMBA专业排名世界第1（《金融时报》2015年排名）；管理学硕士项目（Master in Management）全球排名第2（《金融时报》2014年全球管理学硕士排名）。HEC商学院设有管理学硕士(Grand
-    Écoleé/MSc in Management)、工商管理硕士（MBA）、高级管理人员工商管理硕士(EMBA)和博士学位（PhD）等教学项目。在法国本土，巴黎HEC商学院是第一个获得“国际高等商学院联合会”、“欧洲质量发展认证体系”以及“英国工商管理硕士协会”三大权威国际认证的商学院。
-</p>
-<p>
-    商学院排名：《观点》(Le Point)杂志及《费加罗》(Le Figaro)，稳居法国商学院排名第1
-</p>
-<p>
-    工商管理硕士（MBA）排名： 《经济学人》（The Economist）世界排名第4（2014年）
-</p>
-<p>
-    管理学理学硕士(Grand Écoleé/MSc in Management)排名: 《金融时报》世界排名第2 (2014)
-</p>
-<p>
-    金融硕士（Masters in Finance Pre-experience）排名：《金融时报》世界排名第1 (2014)
-</p>
-<p>
-    高级管理人员工商管理硕士(EMBA)排名：《金融时报》世界排名第1 (2014)
-</p>
-<p>
-    高级经理培训（Executive Education - Customised）排名：《金融时报》世界排名第2
-</p>
-<p>
-    开放式注册课程培训（Executive Education - Open）排名：《金融时报》世界排名第3
-</p>
-<p>
-    巴黎高等商学院的管理学硕士项目以竞争极其激烈的入学考试（法语称作concours）著称。报考管理学硕士的学生，须学习2年的预备课程，然后通过统考方能入学。每年约有9500名学生报名参加入学考试，但最终仅有4%的学生得以录取。
-</p>
-<p>
-    <strong></strong>
-</p>
-<p>
-    HEC商学院拥有诸多杰出校友，包含多位世界500强企业CEO及政界精英：Jean-Paul Agon （欧莱雅集团CEO), François-Henri Pinault（开云集团（Kering）创始人兼CEO），Henri Lachmann (施耐德CEO), Stéphane Richard
-    (法国电信CEO), Henri de Castries (安盛CEO), Baudouin Prot (法国巴黎银行CEO), François Hollande（现任法国总统），Pascal Lamy（世界贸易组织（WTO）总干事）等。
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/HEC/2.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
-  <p>
-    <strong>城市简介：</strong>
-</p>
-<p>
-巴黎高等商学院位于巴黎南郊凡尔赛宫附近的Jouy-en-Josas市镇，距离巴黎市中心约20公里，搭乘市郊地铁(RER)C线仅需45分钟即可到达市区；学校提供每日定时班车往返市中心。巴黎高等商学院占地340亩，<strong>学校拥有湖区、树林与多个运动场，景色秀美。</strong>    <strong></strong>
-</p>
-<p>
-    <strong>硕士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>管理学硕士</strong>
-    （法、英）：G.E.大学校项目
-</p>
-<p>
-    <strong>管理学与商业法</strong>
-    （法、英）：G.E.大学校项目<strong></strong>
-</p>
-<p>
-    <strong>管理学与公共事务</strong>
-    （法、英）：G.E.大学校项目
-</p>
-<p>
-    <strong>一年制专业硕士课程：</strong>
-    <strong></strong>
-</p>
-<p>
-    英语授课：国际贸易、国际金融、管理与金融经济学、市场营销、战略管理、可持续发展与社会创新
-</p>
-<p>
-    法语授课：法律与国际管理、创业学、大项目管理、媒体艺术与创新
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/HEC/3.jpg" alt="">
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+              巴黎高等商学院位于巴黎南郊凡尔赛宫附近的Jouy-en-Josas市镇，距离巴黎市中心约20公里，搭乘市郊地铁(RER)C线仅需45分钟即可到达市区；学校提供每日定时班车往返市中心。巴黎高等商学院占地340亩，学校拥有湖区、树林与多个运动场，景色秀美。    
+              </p>
 
 
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                管理学硕士
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                管理学与商业法
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                管理学与公共事务
+                （法、英）：G.E.大学校项目
+            </p>
+            <p>
+                一年制专业硕士课程：
+                
+            </p>
+            <p>
+                英语授课：国际贸易、国际金融、管理与金融经济学、市场营销、战略管理、可持续发展与社会创新
+            </p>
+            <p>
+                法语授课：法律与国际管理、创业学、大项目管理、媒体艺术与创新
+            </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>

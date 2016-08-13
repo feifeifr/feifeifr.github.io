@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,113 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ECV/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ECV/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ECV/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ECV/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ECV/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ECV/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +134,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,253 +152,88 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <div class="content" id="intro"> 
-      <h1><font size=40 color="#888888" face="pingfang-light">法国高等视觉传达艺术设计学院</font></h1>
+        <section class="page1 dark_pagi white_bg">
+            <div class="page_container page_right">
+              <h1>法国高等视觉传达艺术设计学院</h1>
+              
+              <p>
+                  ECV学院建立于1984年，目前在法国有5大校区（巴黎，波尔多，南特，艾克斯·普罗旺斯，里尔），ECV校方致力于培养视觉传达和动画、数码游戏方设计的专业人才，与众多著名设计公司的紧密联系带给学生们大量、优质的的实习与工作机会，并为毕业学生颁发一级CNCP文凭，法国、中国教育部均被认可为硕士研究生文凭。
+                  ECV在国际艺术设计界亦享有盛誉，为CUMULUS（国际高等艺术设计院校联盟）成员之一，与400多所优质国际高等艺术学院有常年合作关系，学生可选择到国外进行交流或实习，另外每年有一定名额去美国纽约理工学院NYIT留学，且颁发国际双文凭。
+              </p>
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  ECV一直与市场需求相结合，并与国际各大4A及广告设计集团，及各界企业集团有着密切合作关系，如Publics Group阳狮集团、Fred &amp; Farid Group佛海佛瑞集团、Dreamworks梦工厂、Ubisoft育碧, Louis Vuitton 路易威登, HSBC汇丰银行,
+                  AIRFRANCE法航等等。ECV课程多由是国际4A级（最高级别）广告设计公司的艺术总监授课，因此学生能实时接收到最新设计理念和方法，并给予其在找实习或者工作上的极大优势及更多机会。
+              </p>
+              <p>
+                  在设计业界，网页设计、电视（Canal Plus)、电影、动画制作(Le Chat Potté）、游戏制作（Splinter Cell Conviction) 很多作品的都出去ECV学生之手，且获得多项大奖，如：Cannes Festival de la Pub, Prix Stratégie des
+                  jeunes Créatifs等)，可见该校的教学质量及国际影响。
+              </p>
 
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/ECV/1.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
+            </div>
+        </section>
 
-    <p>
-    <strong>学校简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    ECV学院建立于1984年，目前在法国有5大校区（巴黎，波尔多，南特，艾克斯·普罗旺斯，里尔），ECV校方致力于培养视觉传达和动画、数码游戏方设计的专业人才，与众多著名设计公司的紧密联系带给学生们大量、优质的的实习与工作机会，并为毕业学生颁发一级CNCP文凭，法国、中国教育部均被认可为硕士研究生文凭。
-    ECV在国际艺术设计界亦享有盛誉，为CUMULUS（国际高等艺术设计院校联盟）成员之一，与400多所优质国际高等艺术学院有常年合作关系，学生可选择到国外进行交流或实习，另外每年有一定名额去美国纽约理工学院NYIT留学，且颁发国际双文凭。
-</p>
-<p>
-    ECV一直与市场需求相结合，并与国际各大4A及广告设计集团，及各界企业集团有着密切合作关系，如Publics Group阳狮集团、Fred &amp; Farid Group佛海佛瑞集团、Dreamworks梦工厂、Ubisoft育碧, Louis Vuitton 路易威登, HSBC汇丰银行,
-    AIRFRANCE法航等等。ECV课程多由是国际4A级（最高级别）广告设计公司的艺术总监授课，因此学生能实时接收到最新设计理念和方法，并给予其在找实习或者工作上的极大优势及更多机会。
-</p>
-<p>
-    在设计业界，网页设计、电视（Canal Plus)、电影、动画制作(Le Chat Potté）、游戏制作（Splinter Cell Conviction) 很多作品的都出去ECV学生之手，且获得多项大奖，如：Cannes Festival de la Pub, Prix Stratégie des
-    jeunes Créatifs等)，可见该校的教学质量及国际影响。
-</p>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/ECV/2.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
-   <p>
-    <strong>城市简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>巴黎</strong>
-    ：世界四大国际化都市之一，法国政治、经济、文化、时尚艺术中心。
-</p>
-<p>
-    <strong>波尔多</strong>
-    ：法国西南部城市，世界葡萄酒中心，波尔多盛大的国际酒展-Vinexpo每两年一度
-</p>
-<p>
-    <strong>南特</strong>
-    ：法国西部最大的城市和法国第六大城市,时代杂志在2004年时将南特选为欧洲最适合居住的城市
-</p>
-<p>
-    <strong>艾克斯</strong>
-    <strong>·</strong>
-    <strong>普罗旺斯：</strong>
-    这座拥有林荫大道、喷泉、华宅的中世纪古城，是普罗旺斯最具有都会风情的地区
-</p>
-<p>
-    <strong>里尔</strong>
-    ：整个法国北部的经济、教育、交通和文化中心，拥有近百家家跨国企业、数十所高等教育机构
-</p>
-<p>
-    <strong>优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    视觉传达
-</p>
-<p>
-    广告设计
-</p>
-<p>
-    数码动画
-</p>
-<p>
-    包装设计
-</p>
-<p>
-    多媒体设计
-</p>
-<p>
-    3D制作
-</p>
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+              
+                  <p>
+                    巴黎
+                      ：世界四大国际化都市之一，法国政治、经济、文化、时尚艺术中心。
+                  </p>
+                  <p>
+                      波尔多
+                      ：法国西南部城市，世界葡萄酒中心，波尔多盛大的国际酒展-Vinexpo每两年一度
+                  </p>
+                  <p>
+                      南特
+                      ：法国西部最大的城市和法国第六大城市,时代杂志在2004年时将南特选为欧洲最适合居住的城市
+                  </p>
+                  <p>
+                      艾克斯
+                      ·
+                      普罗旺斯：
+                      这座拥有林荫大道、喷泉、华宅的中世纪古城，是普罗旺斯最具有都会风情的地区
+                  </p>
+                  <p>
+                      里尔
+                      ：整个法国北部的经济、教育、交通和文化中心，拥有近百家家跨国企业、数十所高等教育机构
+                  </p>
 
 
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/ECV/3.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                视觉传达
+            </p>
+            <p>
+                广告设计
+            </p>
+            <p>
+                数码动画
+            </p>
+            <p>
+                包装设计
+            </p>
+            <p>
+                多媒体设计
+            </p>
+            <p>
+                3D制作
+            </p>
 
 
-
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>

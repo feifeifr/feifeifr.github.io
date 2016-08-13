@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,112 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/IPAG/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/IPAG/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/IPAG/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/IPAG/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/IPAG/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/IPAG/3.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +133,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,251 +151,92 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <div class="content" id="intro"> 
-      <h1><font size=40 color="#888888" face="pingfang-light">IPAG高等商学院</font></h1>
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/IPAG/1.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-<p>
-    <strong>学校简介：</strong>
-</p>
-<p>
-    IPAG 是法国最古老的商学院之一，于1965年在巴黎创办，之前学校被称为巴黎社会科学和经济学院，是一所历史悠久、久负盛名的高等商学院。学校有着出色的教学管理模式，优秀的师资力量，紧密的校友网络，崇高的国际地位和卓越的教研团队。
-</p>
-<p>
-    IPAG
-    拥有巴黎和尼斯两个校区，巴黎校区位于圣日耳曼大道，学校周围环境优雅，文化气息浓厚，聚集世界顶级奢侈品店铺，给学生提供一个很好的学习氛围和深度品味时尚巴黎的机会；尼斯校区坐落于Carabacel大道，近邻著名的蔚蓝海岸，尼斯的学习生活环境优美，举世闻名，气候温和，全年阳光和煦，尼斯的住宿比巴黎便宜，美丽的海滩与学校只有几步之遥。
-</p>
-<p>
-    IPAG
-    致力于独立办学的高等商学院，创办以来学校一直为学生提供在管理模式和商业操作方面知识的高质量教学。学校的目标是让学生顺利地开始国际化职业生涯，毕业生最高学历为硕士，文凭被法国高等教育部认证超过40年。超过7700名的IPAG毕业生已经走上熠熠生辉的职业生涯道路：企业家、巴黎和伦敦的资产管理家、奢侈品和高端产品的管理者等等。IPAG
-    BS校友会聚集往届的优秀毕业生于一个网络圈，并致力于提高IPAG BS学生在企业、招聘机构以及大众心目中的优秀、有潜力的形象。长期聘用IPAG
-    BS毕业生的企业包括：法国巴黎银行，法国兴业银行，农业银行，法国电信，雷诺，安永会计师事务所，赛诺菲-安万特集团，法国大众银行，法国邮政总局，法国Natixis银行，布依格电信，欧尚，法雷奥，雅高集团，法国国民互助信贷银行，汉高集团，微软，标致，圣罗兰，欧莱雅，等等。
-</p>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <img class="imgl borderedbox inspace-5" src="../../images/introduction/IPAG/2.jpg" alt="">
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-
- <p>
-    <strong>城市简介：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>巴黎：</strong>
-    法国政治、经济和文化中心<strong></strong>
-</p>
-<p>
-    <strong>尼斯：</strong>
-    所处的地中海海滨，与意大利毗邻区域叫做“蔚蓝海岸”。为旅游与度假的胜地
-</p>
-<p>
-    <strong></strong>
-</p>
-<p>
-    <strong>学士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>英语授课：</strong>
-    工商管理、国际工商管理、人力资源管理、市场营销策略、国际供应链管理、会计学和金融学<strong></strong>
-</p>
-<p>
-    <strong>法语授课：</strong>
-    奢饰品管理、商业发展、市场营销和数字化策略、工商管理
-</p>
-<p>
-    <strong></strong>
-</p>
-<p>
-    <strong>硕士优势专业推荐：</strong>
-    <strong></strong>
-</p>
-<p>
-    <strong>英语授课：</strong>
-    <strong></strong>
-</p>
-<p>
-    国际商务管理、国际贸易、奢侈品品牌管理、食品贸易管理、能源和可持续发展管理、欧洲管理、市场营销、商务管理、人力资源管理、物流管理、国际市场营销、国际商务和企业管理、商务管理理学、欧洲国际管理
-</p>
-<p>
-    <strong>法语授课：</strong>
-    <strong></strong>
-</p>
-<p>
-    国际商务管理、项目管理、国际策略和谈判、时尚和艺术管理、信息和通讯新技术、文化活动管理、金融管理、旅游管理
-</p>
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>IPAG高等商学院</h1>
+              
+              <p>
+                  IPAG 是法国最古老的商学院之一，于1965年在巴黎创办，之前学校被称为巴黎社会科学和经济学院，是一所历史悠久、久负盛名的高等商学院。学校有着出色的教学管理模式，优秀的师资力量，紧密的校友网络，崇高的国际地位和卓越的教研团队。
+              </p>
+              <p>
+                  IPAG
+                  拥有巴黎和尼斯两个校区，巴黎校区位于圣日耳曼大道，学校周围环境优雅，文化气息浓厚，聚集世界顶级奢侈品店铺，给学生提供一个很好的学习氛围和深度品味时尚巴黎的机会；尼斯校区坐落于Carabacel大道，近邻著名的蔚蓝海岸，尼斯的学习生活环境优美，举世闻名，气候温和，全年阳光和煦，尼斯的住宿比巴黎便宜，美丽的海滩与学校只有几步之遥。
+              </p>
+              
 
 
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/IPAG/3.jpg" alt="">
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  IPAG
+                  致力于独立办学的高等商学院，创办以来学校一直为学生提供在管理模式和商业操作方面知识的高质量教学。学校的目标是让学生顺利地开始国际化职业生涯，毕业生最高学历为硕士，文凭被法国高等教育部认证超过40年。超过7700名的IPAG毕业生已经走上熠熠生辉的职业生涯道路：企业家、巴黎和伦敦的资产管理家、奢侈品和高端产品的管理者等等。IPAG
+                  BS校友会聚集往届的优秀毕业生于一个网络圈，并致力于提高IPAG BS学生在企业、招聘机构以及大众心目中的优秀、有潜力的形象。长期聘用IPAG
+                  BS毕业生的企业包括：法国巴黎银行，法国兴业银行，农业银行，法国电信，雷诺，安永会计师事务所，赛诺菲-安万特集团，法国大众银行，法国邮政总局，法国Natixis银行，布依格电信，欧尚，法雷奥，雅高集团，法国国民互助信贷银行，汉高集团，微软，标致，圣罗兰，欧莱雅，等等。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴黎：
+                  法国政治、经济和文化中心
+              </p>
+              <p>
+                  尼斯：
+                  所处的地中海海滨，与意大利毗邻区域叫做“蔚蓝海岸”。为旅游与度假的胜地
+              </p>
 
 
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+              
+                学士优势专业推荐：
+                
+            </p>
+            <p>
+                英语授课：
+                工商管理、国际工商管理、人力资源管理、市场营销策略、国际供应链管理、会计学和金融学
+            </p>
+            <p>
+                法语授课：
+                奢饰品管理、商业发展、市场营销和数字化策略、工商管理
+            </p>
+            <p>
+                
+            </p><br>
+            <p>
+                硕士优势专业推荐：
+                
+            </p>
+            <p>
+                英语授课：
+                
+            </p>
+            <p>
+                国际商务管理、国际贸易、奢侈品品牌管理、食品贸易管理、能源和可持续发展管理、欧洲管理、市场营销、商务管理、人力资源管理、物流管理、国际市场营销、国际商务和企业管理、商务管理理学、欧洲国际管理
+            </p>
+            <p>
+                法语授课：
+                
+            </p>
+            <p>
+                国际商务管理、项目管理、国际策略和谈判、时尚和艺术管理、信息和通讯新技术、文化活动管理、金融管理、旅游管理
+            </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-
+        </section>
 </body>
 </html>
