@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,132 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/upvlogo/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/upvlogo/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/upvlogo/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/upvlogo/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 550px;
+  }
+  .main section.page2 .page_container{
+    float: left;
+    width: 550px;
+    top:7%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/upvlogo/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/upvlogo/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/upvlogo/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/upvlogo/4.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +153,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,180 +171,192 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="content" id="intro"> 
-      <!-- ################################################################################################ -->
-      <h1><font size=40 color="#888888" face="pingfang-light">瓦伦西亚理工大学</font></h1>
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/upvlogo/1.jpg" alt="">
-        <p>&emsp;&emsp;瓦伦西亚理工大学(La Universidad politecnica de Valencia,简称UPV)是一所西班牙著名公立大学，提供切合社会需求、与时俱进的学位课程以及符合教育质量控制体系认证的官方研究生课程。并且在理工专业方面有着显著的研究成绩。<br>&emsp;&emsp;大学共有3个校区(Valencia、Alcoy 和 Gandía)，下设12个学院，共开设58个本科学位课程，44个硕士学位课程以及25个博士学位课程。学校拥有近4万名学生，2600名教学研究人员及1700名专业的行政管理、服务人员。学校拥有现代化的校舍，完善的设施，如图书馆、信息中心、健身中心、网球场、书店、咖啡厅等。<br>&emsp;&emsp;大学开设45个系科，为学生提供设计艺术、工程、植物、机电、生化、材料学、建筑、雕塑等完善的专业，专业人才理想的学习场所。同时在每天的6月都会举办瓦伦西亚最大的招聘会，全球的先进理工专业的公司都会聚集过来招收瓦理的毕业学生。<br>&emsp;&emsp;同时瓦伦西亚理工大学提供了语言课程，满足了学生在入学之前的系统西班牙语学习。语言教师团队有着多年的教学经验，了解中国学生的语言教学方法和中国人的语言习惯。&emsp;&emsp;<br><br>两季入学：9月入学<br>&emsp;&emsp;&emsp;&emsp;&emsp;2月入学<br><br>&emsp;&emsp;</p>
-
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/upvlogo/2.jpg" alt="">
-
-        <p>另外，在瓦伦西亚大区的瓦理工有着注册费上的极大优势，与马德里和巴塞罗那比，同为西班牙排名靠前的大学，瓦理工的性价比却是最好的。大学的院系介绍。<br><br>D. of Engineering Projects 工程规划<br>D. of Statistics and Operative Research 统计与实效研究<br>Dept. of Agrarian Mechanization and Technology 工地机械化与技术<br>Dept. of Agroforest Ecosystems 农林生态系统<br>Dept. of Animal Science 动物学<br>Dept. of Applied Mathematics 应用数学<br>Dept. of Applied Physics 应用物理学<br>Dept. of Applied Thermodynamics 应用热力学<br>Dept. of Architectural Composition 建筑结构<br>Dept. of Architectural Constructions 建筑构筑<br>Dept. of Architectural Projects 建筑工程<br>Dept. of Audiovisual Communication, Documentation and History of Art 视听教学通讯，文件证据和艺术史<br>Dept. of Biotechnology 生物工艺学<br>Dept. of Business Organization, Financial Economics and Accounting 工程制图类画建筑表现<br>Dept. of Graphic Expression in Engineering 工程绘画表现<br>Dept. of Hydraulic and Environmental Engineering 水力环境工程<br>Dept. of Land Engineering 土地工程<br>Dept. of Machines and Thermal Engines 机器，热力发动机<br>Dept. of Mechanical Engineering 机械工程<br>Dept. of Mechanics of Continuous Mediums and Theory of Structures 持续介质力学，结构理论<br>Dept. of Painting 绘画<br>Dept. of Plant Biology 植物生态学<br>Dept. of Plant Production 植物生产<br>Dept. of Rural Engineering and Agro-Food 田园工程，农作物<br>Dept. of Sculpture 雕塑<br>Dept. of Systems Engineering and Control 工程系统与控制<br>Dept. of Textile and Paper Engineering 纺织品，造纸工程<br>Dept. of Transport Infrastructure and Engineering 交通基础设施工程<br>Dept. of Urbanism 城市化
-        </p>
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>瓦伦西亚理工大学</h1>
+              
+              <p>
+                  瓦伦西亚理工大学(La Universidad politecnica de Valencia,简称UPV)是一所西班牙著名公立大学，提供切合社会需求、与时俱进的学位课程以及符合教育质量控制体系认证的官方研究生课程。并且在理工专业方面有着显著的研究成绩。
+              </p>
+              <p>
+                  大学共有3个校区(Valencia、Alcoy 和
+                  Gandía)，下设12个学院，共开设58个本科学位课程，44个硕士学位课程以及25个博士学位课程。学校拥有近4万名学生，2600名教学研究人员及1700名专业的行政管理、服务人员。学校拥有现代化的校舍，完善的设施，如图书馆、信息中心、健身中心、网球场、书店、咖啡厅等。
+              </p>
+              
 
 
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  大学开设45个系科，为学生提供设计艺术、工程、植物、机电、生化、材料学、建筑、雕塑等完善的专业，专业人才理想的学习场所。同时在每天的6月都会举办瓦伦西亚最大的招聘会，全球的先进理工专业的公司都会聚集过来招收瓦理的毕业学生。
+              </p>
+              <p>
+                  同时瓦伦西亚理工大学提供了语言课程，满足了学生在入学之前的系统西班牙语学习。语言教师团队有着多年的教学经验，了解中国学生的语言教学方法和中国人的语言习惯。
+              </p>
+              <p>
+                  另外，在瓦伦西亚大区的瓦理工有着注册费上的极大优势，与马德里和巴塞罗那比，同为西班牙排名靠前的大学，瓦理工的性价比却是最好的。
+              </p>
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  瓦伦西亚是西班牙第三大城市，第二大海港，号称是欧洲的“阳光之城”，位于西班牙东南部，东濒大海，背靠广阔的平原，四季常青，气候宜人，被誉为“地中海西岸的一颗明珠”。是港口和工业城市，瓦伦西亚是瓦伦西亚自治区和瓦伦西亚省的首府。瓦伦西亚在每年3月举行法亚火节。瓦伦西亚与马德里、巴塞罗那和萨拉戈萨等大城市有铁路及高速巴士相连。以野心勃勃的姿态将新与旧、古老与先锋、海洋与陆地完美混搭。在这座公元138年建立的古城里，既有15世纪哥特风格的拱顶与浮雕，也有令人惊叹的21世纪建筑杰作。
+              </p>
+              <p>
+                  由于濒临地中海，瓦伦西亚海产异常丰富，再加上这里土壤肥沃，终年呼吸着微咸空气的瓦伦西亚便当仁不让地成为了西班牙绝对的“美食天堂”。而其中这里最为著名一道菜肴的便是海鲜饭，它甚至都已经上升成为了西班牙的一种象征。不过，尽管叫做海鲜饭，但其实它起初与海鲜并无甚瓜葛。最初的海鲜饭并无名称，用料也极其普通。平常人家只要备齐大米、兔肉或鸡肉外加蔬菜，然后随便放在一口平底锅里来个大杂烩后即可入口。渐渐地，这道做法简单但又营养丰富的菜肴得到了越来越多人的喜爱，出于提高烹饪效率的需要，人们便新设计了一种专门用来做这道菜的平底锅，它更大也更结实，被人们叫做“Paella”。久而久之，菜名也就这样由此及彼了。同时，随着这道菜的发展，其原料也开始丰富多变起来。终于，在海鲜原料介入后，“Paella”也总算成为了名副其实的“海鲜饭”。
+              </p>
+              
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  瓦伦西亚也是著名旅游胜地之一，其美丽的海滩、充足的日照（每年300天），大量的名胜古迹及多彩的民间节日，吸引着无数国内外游客。
+              </p>
+              <p>
+                  <strong>瓦伦西亚大教堂（</strong>
+                  <strong>Catedral</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  建于3世纪时的清真寺旧址上，在长时间的不断改建和翻修中混合了多种建筑式样。教堂的三个入口就分别是新罗马式（正门）、巴洛克式（南侧宫门）和西哥特式（北侧使徒门）。圣杯礼拜堂中摆放着据说是耶稣在最后的晚餐中使用过的餐具。
+              </p>
+              <p>
+                  <strong>米伽勒塔（</strong>
+                  <strong>Torre del Miguelete</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  位于大教堂正面，建于14-15世纪，以圣米伽勒命名。登上塔顶可以尽览瓦伦西亚老城区。
+              </p>
+              <p>
+                  丝绸市场（Lonja de la Seda）：西哥特式建筑，15-19世纪一直作为丝绸等商品的交易所使用，目前是一座音乐厅。大厅中的螺旋柱造型优雅轻盈，非常有特色。1996年被选为世界文化遗产。
+              </p>
+              <p>
+                  <strong>火祭博物馆（</strong>
+                  <strong>Museo Fallero</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  每年3月中旬，瓦伦西亚场面壮观的火祭都会吸引来自世界各地的游客。火祭博物馆收藏1930年以来在历年
+              </p>
+              <p>
+                  中夺魁的火祭人偶，每年不同的主题是对当时社会热点的有趣记录。在馆内也可以买到相关的影片。
+              </p>
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                大学的院系介绍。
+            </p>
+            <p>
+                D. of Engineering Projects 工程规划系
+            </p>
+            <p>
+                D. of Statistics and Operative Research 统计与实效研究系
+            </p>
+            <p>
+                Dept. of Agrarian Mechanization and Technology 工地机械化与技术系
+            </p>
+            <p>
+                Dept. of Agroforest Ecosystems 农林生态系统系
+            </p>
+            <p>
+                Dept. of Animal Science 动物学系
+            </p>
+            <p>
+                Dept. of Applied Mathematics 应用数学系
+            </p>
+            <p>
+                Dept. of Applied Physics 应用物理学系
+            </p>
+            <p>
+                Dept. of Applied Thermodynamics 应用热力学系
+            </p>
+            <p>
+                Dept. of Architectural Composition 建筑结构系
+            </p>
+            <p>
+                Dept. of Architectural Constructions 建筑构筑系
+            </p>
+            <p>
+                Dept. of Architectural Projects 建筑工程系
+            </p>
+            <p>
+                Dept. of Audiovisual Communication, Documentation and History of Art 视听教学通讯，文件证据和艺术史系
+            </p>
+            <p>
+                Dept. of Biotechnology 生物工艺学系
+            </p>
+            <p>
+                Dept. of Business Organization, Financial Economics and Accounting 工程制图类
+            </p>
+            
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
+          <div class="page_container second_page">
 
+            <p>
+                画建筑表现系
+            </p>
+            <p>
+                Dept. of Graphic Expression in Engineering 工程绘画表现系
+            </p>
+            <p>
+                Dept. of Hydraulic and Environmental Engineering 水力环境工程系
+            </p>
+            <p>
+                Dept. of Land Engineering 土地工程系
+            </p>
+            <p>
+                Dept. of Machines and Thermal Engines 机器，热力发动机系
+            </p>
+            <p>
+                Dept. of Mechanical Engineering 机械工程系
+            </p>
+            <p>
+                Dept. of Mechanics of Continuous Mediums and Theory of Structures 持续介质力学，结构理论系
+            </p>
+            <p>
+                Dept. of Painting 绘画系
+            </p>
+            <p>
+                Dept. of Plant Biology 植物生态学系
+            </p>
+            <p>
+                Dept. of Plant Production 植物生产系
+            </p>
+            <p>
+                Dept. of Rural Engineering and Agro-Food 田园工程，农作物系
+            </p>
+            <p>
+                Dept. of Sculpture 雕塑系
+            </p>
+            <p>
+                Dept. of Systems Engineering and Control 工程系统与控制系
+            </p>
+            <p>
+                Dept. of Textile and Paper Engineering 纺织品，造纸工程系
+            </p>
+            <p>
+                Dept. of Transport Infrastructure and Engineering 交通基础设施工程系
+            </p>
+            <p>
+                Dept. of Urbanism 城市化
+            </p>
+            </div>
+        </section>
 </body>
 </html>

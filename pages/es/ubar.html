@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ubar/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ubar/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ubar/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/ubar/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 542px;
+    top:10%;
+  }
+  .main section.page1 p{
+    margin:0;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    top:5%;
+    width:550px;
+  }
+  .main section.page4 p{
+    font-size: 13px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ubar/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ubar/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ubar/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/ubar/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴塞罗那大学</h1>
+              
+              <p>
+                  巴塞罗那大学是加泰罗尼亚地区最重要的公立大学，其院系设置广泛且完善，学生人数在众多高校中遥遥领先。无论科研项目的数量还是科研成果的质量，巴塞罗那大学在西班牙均名列前茅，在欧洲也是佼佼者。同时，巴塞罗那大学在进入世界大学排名的西班牙大学中独占鳌头。
+              </p>
+              <p>
+                  巴塞罗那大学承载着巴塞罗那以及加泰罗尼亚地区深厚的历史底蕴，在秉承传统的同时，我们也一直力求创新，并且在教学领域保持领先。和巴塞罗那这个城市一样，巴塞罗那大学是一所城市化程度高、开放以及多元化的高校。
+              </p>
+              <p>
+                  1450年以前
+              </p>
+              <ul>
+                  <li>
+                      十三世纪：巴塞罗那已经拥有好几所世俗和教会学校
+                  </li>
+                  <li>
+                      1402年，人文学者马丁一世国王创立了医学和艺术专业前身学科。
+                  </li>
+                  <li>
+                      1450年： 阿丰索五世统一了所有的高等学府，建立了巴塞罗那综合大学
+                  </li>
+              </ul>
+              <p>
+                  1450-1717年
+              </p>
+              <ul>
+                  <li>
+                      1536年: 综合大学的新主楼在朗姆拉大街开始建设
+                  </li>
+                  <li>
+                      1559年：综合大学分成为各个系和专业。
+                  </li>
+                  <li>
+                      1714年：由于在王位战争中失败，大学迁至塞尔维拉市。
+                  </li>
+              </ul>
+             
+
+
+            </div>
+            <div class="page_container second_page">
+               <p>
+                  1717-1939年
+              </p>
+              <ul>
+                  <li>
+                      1842年: 大学最终回到巴塞罗那城。
+                  </li>
+                  <li>
+                      1871年: 在大学广场，建设了大学主楼，设计师名叫埃利亚斯•罗杰恩特。
+                  </li>
+                  <li>
+                      1933年: 大学自治章程获得通过。
+                  </li>
+              </ul>
+              <p>
+                  从1939年以后
+              </p>
+              <ul>
+                  <li>
+                      1939年: 独裁统治开始对大学采取高压政策
+                  </li>
+                  <li>
+                      1950年:大学内的新的建筑物开始建设
+                  </li>
+                  <li>
+                      1977年:.独裁统治结束后，大学开始正常化、现代化和民主化进程
+                  </li>
+                  <li>
+                      1985年: 重新恢复了大学的自治
+                  </li>
+                  <li>
+                      1939年: 独裁统治开始对大学采取高压政策
+                  </li>
+                  <li>
+                      1950年:大学内的新的建筑物开始建设
+                  </li>
+                  <li>
+                      1977年:.独裁统治结束后，大学开始正常化、现代化和民主化进程
+                  </li>
+                  <li>
+                      1985年: 重新恢复了大学的自治
+                  </li>
+              </ul>
+              <p>
+                  巴塞罗那大学地处城内，拥有几个小区，面积超过50万平方米，其院系网络包括：16个系、1个护理学院、8个学院以及好几个合作中心，藉此得以进行文化和知识的创新、传播和推广，弘扬批判精神以及自由和多元文化。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴塞罗那
+              （加泰罗尼亚语：Barcelona）是加泰罗尼亚自治区首都、以及巴塞罗那省省会，位于伊比利亚半岛的东北面，濒临地中海，全市人口约160万，都会区人口则约5百万。加泰罗尼亚自治区议会、行政机构、高等法院均设于此。
+              </p>
+              <p>
+              相传巴塞罗那由迦太基将领、汉尼拔的父亲哈米尔卡·巴卡所兴建，在其漫长的历史上还曾作为巴塞罗那伯爵领地和阿拉贡王国的都城。巴塞罗那因其众多历史建筑和文化景点成为众多旅游者的目的地，其中之代表是被列入>联合国
+                  世界遗产的安东尼·高第和路易·多门内克·蒙塔内的建筑作品。安东尼·高第一直在巴塞罗那生活和工作，在这里有他很多的作品，其中最著名的包括桂尔宫、桂尔公园和圣家堂。巴塞罗那尚有两个知名的足球俱乐部：巴塞罗那和西班牙人，其中巴塞罗那是世界最著名的足球俱乐部之一。
+              </p>
+              
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi dark_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科，大专，工程师类专业：
+            </p>
+            <p>
+                广告和公共关系、阿拉伯语和希伯来语研究、考古、艺术和创作视频游戏严肃游戏、艺术史、视听通信、生物化学、生物信息学、生物学、生物医学工程、生物医学科学、生物、术、工商管理学、加泰罗尼亚语言学、化学工程、化学、电影和视听媒体、古典学、通讯和文化产业、管理公司零售和分销、计算机工程、文化遗产保护，修复体、犯罪、烹饪美食科学、口腔、设计、财经、教育、电子工程与电信、工程地质、英语研究、环境科学、艺术品研究、食品科技、法语学习、地理、地质、历史、人类营养学及营养学、劳动关系、情报资料、交互式数字内容、国际贸易、法律、语言学、文艺理论与比较文学、海洋科学、材料工程、数学、中医药、现代文学和语言、护理、护理
+                - 圣约翰神、药学、哲学、体育和体力活动科学、物理、物理治疗、足部医学、政治和行政科学、心理学、公共管理和管理、浪漫语言与文学、安全、社会文化人类学、社会教育、社会工作、社会学、统计、幼儿教师教育、小学老师教育、旅游
+            </p>
+            <p>
+                双文凭：音像传播 - 信息和文档、经济学 - 统计、法律 - 工商管理学、法律 - 政治与行政学、法律 - 公共管理和行政、数学 - 工商管理学、数学 - 计算机工程、数学 - 物理、药房 - 人类营养和营养学、幼教及小学教师教育
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>研究生专业（部分专业两年招生一次）：</strong>
+            </p>
+            <p>
+                <strong>科学类：</strong>
+                会计及税务 *NEW、精算和金融科学、高级免疫学、高级法律研究、高等数学、先进的医疗技术、促进了微生物、高级护理临床实践、高级物理、天体物理，粒子物理和宇宙学、应用材料化学、数据科学中的基本原则、分子生物技术、海洋和海洋环境管理、有机化学、纯科学和应用逻辑、统计与运筹学
+            </p>
+            <p>
+                <strong>社会科学法律类：</strong>
+                先进的公共管理、高级研究社会排斥新、哲学分析、化学分析、人类学和人种学、商务法、商务研究、公民和人权：伦理学和政治学、公民身份和价值观教育、临床调查、认知科学和语言、矛盾调处、创建和管理创新为基础的技术型公司、犯罪学，刑事政策和刑事法社会学、文化遗产管理与博物馆学、文化管理、经济史、经济学、经济，监管和竞争公共服务领域、农村教育、教育心理学、心理学、一般健康心理学杂志、跨学科艺术教育、国际发展、国际关系、国际安全、国际化：经济，商业，法律和政治方面、法律实践、专业教学中心管理、营销和市场研究、组织团队管理和开发、政治分析和机构评估、公共管理、社会学：社会变革和创新、体育经营管理、运动性能：专业化和精英能力、战略安全和警察管理
+            </p>
+            <p>
+                <strong>生命科学类：</strong>
+                应用研究方法论护理、水产养殖、人工智能、生物多样性、生物健康计算、生物信息学和生物统计学新、生物信息学健康科学、生物人类学、生物医药、中成药、药物研究，开发和控制、生态学，环境管理和恢复、情感照顾住院儿童：孩子生活典范、环保农业生物、食品的研究，发展和创新、食品安全、遗传学和基因组、医疗保健和协作实践、创新与企业家精神的营养，慢性病和健康老龄化、设计创新对旅游业、综合生理学、简介心理健康研究、医学人类学和全球健康、医药，保健和医疗系统、神经系统科学、营养与代谢、职业安全及健康：预防职业危害、身体活动与健康、足部手术、保健和教育糖尿病患者原则
+                *NEW、行政职业服务、老年心理学、心理与教育、心理社会干预、转化医学
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>人文艺术：</strong>
+                高级研究艺术史、高级研究西班牙和拉美文学、古老的文化和语言、应用语言学及多语言环境中语言教学、高级研究加泰罗尼亚语文、当代历史和世界、当代思想和传承经典、当代艺术创造、数字内容管理、数字内容制作和创业、数字为媒介的学习环境、保护和修复项目、历史科学：科学，历史与社会、宾馆和酒店管理、拉丁美洲研究、领导与管理护理、图书馆和文物收藏、图书馆和信息服务管理
+                *NEW、中世纪文化、气象、矿产资源与地质灾害、音乐作为一个跨学科的艺术、身体活动与教育
+            *NEW、生产与艺术研究、研究与教育变革、在研究行为和认知、研语文教育的启示、学校图书馆和阅读推广、社会和教育行动、西班牙对外语言专业环境、中等义务教育和高中教育教师培训，职业培训和语言、义务教育及高等教育教师培训，职业培训和语言、理论文学与比较文学、旅游商贸管理、旅游管理创新、西班牙语作为第二外语培训教学、视觉艺术和教育：一种结构型方式、妇女，工作和公共政策、青年与社会    <strong></strong>
+            </p>
+            <p>
+                <strong>工程建筑类：</strong>
+                化学工程、生物医学工程、建设，文化标识、电化学，科学和技术、环境工程、光电学、光电工程，纳米光子学和生物光子学、纳米科学与技术、核物理、物理原子论和多尺度计算建模，化学和生物化学
+                *NEW、可再生和可持续能源、储藏地质及地球物理、科学和水的综合管理、土壤和水管理、空间规划和环境管理、专用通信、体育工程、理论化学与计算建模、城市设计：艺术，城市，社会、城市旅游新
+            </p>
+            </div>
+        </section>
+</body>
+</html>

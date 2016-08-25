@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ESIC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ESIC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ESIC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/ESIC/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESIC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESIC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESIC/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/ESIC/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>ESIC商学院</h1>
+              
+              <p>
+                  ESIC商业与营销学院是于1965年由圣心牧师的宗教机构成立，由于其专业化程度高，在国内和国际上有很好的声誉并得到广泛认可，成为目前西班牙市场上的领先商学院。
+              </p>
+              <p>
+                  ESIC结合公司需求和市场竞争，能够分析，反思并培养在各个层级和各个地理区域所需要的有竞争力专业人才。得益于学校的专业项目，在市场营销，企业管理，通信，人力资源，财务，数字环境，国际贸易，市场研究等方向都有很好的成就。
+              </p>
+              <p>
+                  在商业价值道德和理性传播的文化原则下，ESIC在不同领域开设的学术活动：本科，研究生和行政教育。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  ESIC在西班牙9个省设有10的校区（西班牙境内：MADRID，BARCELONA，ZARAGOZA，PAMPLONA，BILBAO，VALENCIA，MÁLAGA，GRANADA，SEVILLA），并与另两个合作伙伴有合作协议; 同时在巴西Paraná也有两个中心，一个在Curitiba
+                  ，另一个在Brusque。学校与各组织和国家和国际组织，学术界和机构，其中包括学生和教师，已签署了重要的交流合作协议。
+              </p>
+              <p>
+                  由于学校的高质量教学，在国际媒体和院校评估上也有很好的排名：
+              </p>
+              <p>
+                  2016年，在America Economía商业杂志上世界排名前20。
+              </p>
+              <p>
+                  2016年，在墨西哥编制的CNN Expansión上全球MBA项目中， ESIC的工商管理硕士专业被列为世界最好之一。
+              </p>
+              <p>
+                  2016年，在El Mundo的硕士专业排名中，国际贸易（MDCI）排名第一，传播和广告管理（MPC）排名第一，人力资源管理和组织发展（DRHO）排名第二。
+              </p>
+              <p>
+                  2016年，在Merco Espana的合作信誉最好公司排名中，ESIC排名第三。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                <strong>本科：</strong>
+            </p>
+            <p>
+                <strong>营销</strong>
+                ：市场营销和销售管理、营销（马德里）、管理与营销、营销+销售管理、销售和市场营销管理+营销管理、营销（萨拉戈萨）
+            </p>
+            <p>
+                <strong>数字商务：</strong>
+                数字域/数字业和管理、数字/数字业务+营销管理业务和管理领域管理
+            </p>
+            <p>
+                领导和管理：管理学（马德里）、工商管理硕士（瓦伦西亚）、ADE+市场营销和商业管理（马德里）、ADE+市场营销和商业管理（瓦伦西亚）、工商管理学、工商管理+市场营销和商业管理
+            </p>
+            <p>
+                <strong>国际商务：</strong>
+                国际商业、国际商务+市场营销和商业管理
+            </p>
+            <p>
+                <strong>通讯及广告：</strong>
+                广告与公共关系、通信与公共关系、广告+公共关系营销、通信+公共关系营销
+            </p>
+            <p>
+                <strong>MBA：</strong>
+                MBA、EMBA、IMBA
+            </p>
+            <p>
+                <strong>官方硕士：</strong>
+                商业管理、人员管理与组织发展（瓦伦西亚）、人事管理和组织发展（马德里）、通信和新技术、数字营销和管理
+            </p>
+            <p>
+                <strong>专业硕士：</strong>
+                营销方向、数字金融方向、领导管理方向、通讯和广告方向、人力资源方向、金融方向、物流方向
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+      
+</body>
+</html>

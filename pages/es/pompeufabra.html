@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/pompeufabra/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/pompeufabra/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/pompeufabra/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/pompeufabra/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+    top:7%;
+  }
+  .main section.page2 .page_container{
+    top:7%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/pompeufabra/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/pompeufabra/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/pompeufabra/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/pompeufabra/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>庞培法布拉大学</h1>
+              
+              <p>
+                  1990年创建于地中海滨城市巴塞罗那（西班牙）的庞培法布拉大学（UPF）是一所公立大学，致力于本科高等教育、研究生教育及科学研究。UPF因其现代化教学，卓越表现和优秀教育品质而享誉四方。出色的各项学术指标使之成为西班牙大学教育的典范。
+              </p>
+              <p>
+                  UPF现有15000名在校学生、1500名教师及600名员工。校区位于巴塞罗那市区中心。
+              </p>
+              <p>
+                  教学与研究
+              </p>
+              <p>
+                  
+              </p>
+              <ul>
+                  <li>
+                      实验科学及健康科学
+                  </li>
+                  <li>
+                      政治及社会科学
+                  </li>
+                  <li>
+                      法律
+                  </li>
+                  <li>
+                      经济和企业管理
+                  </li>
+                  <li>
+                      人文科学
+                  </li>
+                  <li>
+                      通讯
+                  </li>
+                  <li>
+                      信息及通信技术
+                  </li>
+                  <li>
+                      翻译及语言文学
+                  </li>
+              </ul>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  UPF设立广泛的本科及研究生（硕士、博士）课程，使用加泰罗尼亚文、西班牙文和/或英文教学。UPF采用欧洲高等教育标准模式，设置本科教学阶段（4年）、硕士教学阶段（1－2年）和博士阶段（1年＋3年博士论文撰写）。
+              </p>
+              <p>
+                  科研方面，UPF为企业和机构提供多学科研究服务团队，由上千名具备高级资质的研究人员组成。UPF领导2项重大科研计划：巴塞罗那生物医学研究园区UPF研究园区－社会及人文科学，均为生物医药、通讯及社会科学领域的大型培训、研究及生产基地。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  面向欧洲及世界
+                  
+              </p>
+              <p>
+                  UPF与世界各大著名高校间的学生交流，与全世界30多所高等学府的合作协议，国际一流师资与科研力量的加盟，以及在国际项目、网络和组织中的积极参与，体现了这所大学的国际视野。
+              </p>
+              <p>
+                  教学效率与就业
+                  
+              </p>
+              <p>
+                  UPF高质量的教学和高就业率在西班牙公立大学中首屈一指。
+              </p>
+              <p>
+                  科技创新
+                  
+              </p>
+              <p>
+                  采用新技术提高教学质量是庞培法布拉大学面临的一大课题。如今UPF在信息通讯、校园环境及学校管理中大力发展并使用新技术，在西班牙国内处于领先地位。
+              </p>
+              <p>
+                  多语化
+                  
+              </p>
+              <p>
+                  UPF是一所多语化大学。教学使用加泰罗尼亚文--UPF的正式教学语言，西班牙文--同样为正式教学语言，以及英文。这三种语言是大学内交流及学术活动的专用语言。
+              </p>
+              <p>
+                  留学生服务
+                  
+              </p>
+              <p>
+                  在UPF为留学生提供的个性化服务中，最为重要的是交流接待部。该部门为所有前来UPF求学的国外大学留学生提供学习、实习及法律等方面的支持。其他为留学生提供的服务项目有：大学住宿、免费加泰罗尼亚文和西班牙文培训课程、语言教学计划（英语、法语、德语、阿拉伯语、中文、日语等）、语言志愿者计划（对练）、西班牙语文化及欧洲文化研究计划。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                健康和生命安全:
+
+            </p>
+            <p>
+              人类生物学 ; 生物医学工程 ; 医药学
+                <br/>
+            </p>
+            <p>
+                政治和社会科学：
+            </p>
+            <p>
+                政治学与行政管理 ; 哲学，政治经济学（跨学科）
+            </p>
+            <p>
+                通讯和传媒：
+            </p>
+            <p>
+                视听传播 ; 新闻学 ; 广告和公共关系
+                <br/>
+            </p>
+            <p>
+                法律：
+            </p>
+            <p>
+                罪学和公共政策预防 ; 法律 ; 劳资关系 ; 犯罪学和预防公共政策与法律 ; 法律和工商管理和经济学
+                <br/>
+            </p>
+            <p>
+                经济和商业：
+            </p>
+            <p>
+                行政与公司管理 ; 商业管理科学 ; 经济学 ; 国际商业经济学 ; 法律和工商管理和经济学 ; 哲学，政治经济学（跨学科）
+                <br/>
+            </p>
+            <p>
+                人文：
+            </p>
+            <p>
+                人文学 ; 哲学，政治经济学（跨学科） ; 全球研究（跨学科）
+                <br/>
+            </p>
+            <p>
+                工程师：
+            </p>
+            <p>
+                视听系统工程 ; 电信网络工程 ; 信息工程 ; 生物医学工程
+                <br/>
+            </p>
+            <p>
+                翻译和语言科学：
+            </p>
+            <p>
+                应用语言 ; 翻译及口译 ; 翻译和语言应用
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 dark_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                <strong>生命和健康科学：</strong>
+            </p>
+            <p>
+                健康科学生物信息 ; 制药和生物技术 ; 生物医学研究 ; 临床实验室 ; 公共卫生 ; 大脑与认知 ; 计算生物医学工程 ; 遗传咨询 ; 生物医学与临床研究：研究行程中呼吸（巴塞罗那大学合作项目） ; 生物医学与临床研究：转化与应用肿瘤行程（巴塞罗那大学合作项目） ; 神经科学（巴塞罗那大学合作项目） ;
+                健康和工作安全：预防 ; 职业危害（加泰罗尼亚理工大学）
+                <br/>
+            </p>
+            <p>
+                <strong>经济和商业科学：</strong>
+            </p>
+            <p>
+                银行与金融 ; 数据科学（英文授课） ; 财务会计管理公司（管控方向） ; 财务会计管理公司（企业融资方向） ; 经济与金融 ; 创业与创新 ; 财务管理和审计公司 ; 经济学，金融与商务研究 ; 市场营销 ; 行政工商管理硕士（EMBA） ; 金融和银行科学（英文授课） ; 国际商业科学（英文授课） ;
+                管理学（英文授课） ; 金融市场国际贸易 ; 特殊经济分析（英文授课）
+                <br/>
+            </p>
+            <p>
+                <strong>政治和社会科学：</strong>
+            </p>
+            <p>
+                当代民主：民族主义，联邦制和多元文化 ; 政府（国际硕士）（校际交流）（英文授课） ; 政治哲学 ; 出入境管理 ; 政治学研究 ; 社会学与人口 ; 语料研究：通讯，社会与学习 ; 拉丁美洲政府和公共管理 ; 公共与社会政策 ; 国际发展 ; 国际关系 ; 国际安全 ; 公共管理（校际交流） ; 欧洲 -
+                地中海关系（校际交流）
+                <br/>
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>通讯和传媒：</strong>
+            </p>
+            <p>
+                社会交际 ; 当代电影和音像研究 ; 国际媒体，电源和多样性研究 ; 通信与公共关系战略管理（校际交流） ; 语料研究：通讯，社会与学习 ; 知系统和互动媒 ; 体设计与传播 ; 数字内容管理（校际交流） ; 青年与社会（校际交流）
+                <br/>
+            </p>
+            <p>
+                <strong>法律：</strong>
+            </p>
+            <p>
+                高级法律科学 ; 犯罪学与刑事执法 ; 欧洲和全球法（英文授课） ; 律师 ; 分析哲学（校际交流）
+                <br/>
+            </p>
+            <p>
+                <strong>教育：</strong>
+            </p>
+            <p>
+                教育学
+                <br/>
+            </p>
+            <p>
+                <strong>人文历史：</strong>
+            </p>
+            <p>
+                中国研究 ; 文学，艺术和思想比较研究 ; 政治哲学 ; 世界历史 ; 语料研究学会，交流和学习 ; 认知系统和互动媒体 ; 戏剧研究（校际交流）
+                <br/>
+            </p>
+            <p>
+                <strong>信息技术和通信：</strong>
+            </p>
+            <p>
+                大脑和认知 ; 移动通信 ; 计算生物医学工程 ; 认知系统和互动媒体 ; 互动智能系统 ; 声音和音乐技术 ; 计算机视觉
+                <br/>
+            </p>
+            <p>
+                <strong>翻译和语言科学：</strong>
+            </p>
+            <p>
+                语料研究：通讯，社会与学习 ; 翻译学 ; 理论与应用语言学 ; 大脑和认知 ; 多语言和国际环境的西班牙语教学和学习（交际交流） ; 认知科学和语言（交际交流） ; 西班牙语作为一门外语教师培训（交际交流）
+                <br/>
+            </p>
+            </div>
+        </section>
+</body>
+</html>

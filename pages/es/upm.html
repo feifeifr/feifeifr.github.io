@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/upm/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/upm/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/upm/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/upm/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 550px;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/upm/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/upm/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/upm/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/upm/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>马德里理工大学</h1>
+              
+              <p>
+                  马德里理工大学始建于1971年，是西班牙的一所公立大学。马德里理工大学下设有信息学系与体育活动科学系2个系；还设有高等建筑技术学院，高等航空技术学院，高等农业技术学院，高等土木工程学院，高等山脉学技术学院，高等航海技术学院，高等电信技术学院，建筑技术学院，航空技术学院，农业技术学院，森林技术学院，工业技术学院，高等矿物技术学院，工业技术学院，公共工程技术学院，高等大地测绘工程技术学院，信息学学院，电信技术学院等18个学院和一所研究院——教育科学研究院，同时也是西班牙理工类最好的大学之一。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  <strong>学院</strong>
+                  <strong></strong>
+              </p>
+              <p>
+                  马德里理工大学有三个学院是在17世纪成立的。最古老的是建筑设计学院，成立于1752年，海洋建筑工程师学院成立于1772年，矿学工程师学院则成立于1777年的。建筑工程师学院是第一个在19世纪成立的学院，成立于1802年，几乎在半个世纪以后，林业工程师学院也在1848年成立了，之后不久有在1850年成立的工业工程师学院和1855年成立的农业科学学院。其中，工业工程师学院里有：工业科技；化学；电科学和核能。电子通讯工程师学院是UPM在二十世纪（1913年）成立的第一个学院，航空航天工程学院成立于1928年，体育教学中心成立于1961年，还有就是1977年成立的计算机科学学院。UPM最后一个成立的学院是在2005年成立的地理研究学院，主要有大地测量和制图类专业。在已往的150多年里，西班牙建筑和工程学历史中相当大的一部分是由马德拉理工大学前身的各类学院书写的。
+              </p>
+              <p>
+                  几乎所有西班牙一流的理工科教师和研究者都出于该校，或曾是其学生，或曾是其教员，或两者兼而有之。
+              </p>
+              <p>
+                  共有四个校区，分别位于大学城Ciudad Universitaria、马德里大学城Madrid Ciudad、南校区Campus Sur和蒙特港瑟德校区Campus de Montegancedo。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  <strong>马德里</strong>
+                  （西班牙语：<strong>Madrid</strong>
+              ）是西班牙首都及最大都市，也是马德里自治区首府，其位置处于西班牙国土中部，曼萨纳雷斯河贯穿市区。市内人口约340万，都会区人口则约627.1万（2010年），均占西班牙首位。其建城于9世纪，是在摩尔人边贸站“马格立特”旧址上发展起来的城市；1561年，西班牙国王腓力二世将首都从托莱多迁入于此，由于其特殊的地位而得到迅速的发展，成为往后西班牙殖民帝国的运筹中心，现今则与巴塞罗那并列为西班牙的两大对外文化窗口。
+              </p>
+              <p>
+                  马德里是拥有452
+                  万人口的现代化都市，以文化艺术和古迹以及它独特的风韵，每年吸收成千上万的世界各地游客前来观光旅游。马德里红砖碧瓦有西班牙建筑风格的古建筑和广场、喷泉，雕塑、草坪到处可见，其凯旋门之多为世界之最，是西班牙几个世纪以来，到处出兵征战世界立下战功的标志。在宽阔的林阴大道上的街心花园和各式奇异的喷泉，两旁的高楼大厦和阿拉伯式的红砖白墙房屋，错落有致，其古色古香的风情和现代化色彩的都市相互辉映成趣。
+              </p>
+              <p>
+                  马德里大致可分为马德里古城区和波旁王朝的马德里区两部分，西侧的古城区开发较早，为建都当 时主要行政部门的活动中心。现在的马约尔大广场，太阳门和王宫都在此地。而在面对一侧的波旁王朝马德里区，其主要的观光景点，普拉多美术馆和众神之母广场。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>专业课程</strong>
+            </p>
+            <p>
+                马德里理工大学的航空航天工程专业、建筑学专业、建筑技术专业、农业技术专业、信息技术管理专业、电信工程专业、工业工程专业和信息工程专业均为西班牙众大学中最好。
+            </p>
+            <p>
+                本科热门专业有：航空航天、农业科学、农业技术、化学、电科学、林业科学、工业科技、机械科学、矿物、核能、地质学、信息技术管理、信息工程、电信工程、能源和海建工程、建筑学、建筑设计、工业工程、计算机科学、大地测量和制图、服装设计等。
+            </p>
+            <p>
+                硕士热门专业有：建筑文物遗产保存修复、航空航天工程、植物遗传能源、农林业生物科技、建筑结构、城市规划及发展、建筑系统和建筑材料研究、原子能科技科学、工业用电、自动化与机器人应用、激光技术、地震学、机械工程、电工工程、集体计划工程、运输工程学、大自然生存系统重建、通讯系统和科技、智能空间电子系统、远程医疗和生物工程、信息管理科技、计算机逻辑、人工智能研究、复杂软件系统开发、自然界危害的研究和评估、矿产资源的可持续利用等。
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>本科专业:<strong>
+            </p>
+            <p>
+                建筑技术，土木工程：建筑学、建筑学基础、土木工程、土木和规划工程、
+            </p>
+            <p>
+                农林业和环境技术：生物技术、农业工程、农业环境工程、食品工程、农艺工程与科学、林业、工程自然环境、环境科技工程、科技农业和食品工业
+            </p>
+            <p>
+                工业技术：工业设计和产品开发与机械工程（双学位）、 电气与电子工程工业工程与自动化（双学位）、造船、航天工程、工业设计和产品开发工程、电气工程、工业电子与自动化工程、能源工程、地质工程、海事工程、材料工程、机械工程、工业工程、化工、能源工程，燃料和炸药、工业技术工程、采矿工程技术
+            </p>
+            <p>
+                信息技术和通信：计算机工程与信息社会技术（双学位）、计算机工程与工商管理（双学位）、软件工程和信息社会技术（双学位）、生物医学工程、计算机工程、电子通信工程、地理信息与测绘工程、计算机工程、通信系统工程、软件工程、声音和图像工程、工程技术和电信服务、远程信息处理工程、数学和计算机、信息系统
+            </p>
+            <p>
+                体育：体育
+            </p>
+            <p>
+                设计和时装：时尚设计
+            </p>
+            </div>
+        </section>
+        <section class="page4 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>官方硕士：<strong>
+            </p>
+            <p>
+                体育科学： 体力活动和体育科学
+            </p>
+            <p>
+                物理，化学和地质科学：等离子，激光和表面技术
+            </p>
+            <p>
+                建筑和城市化： 建筑、建筑通信、保护和建筑遗产修复、施工技术历史建筑、设计工具、建筑结构、建筑与城市规划学高、大厦管理、建设中的技术创新、高级建筑项目、城市规划和领土 - 专业化城市研究、城市规划和领土 - 专业化城市规划
+            </p>
+            <p>
+                生物技术：植物培育、农林业生物技术
+            </p>
+            <p>
+                信息和通信技术：科学和计算机技术、数据科学（EIT数字）、太阳能光伏、工程系统和服务的信息社会、声学建筑工程与环境、网络工程和远程信息处理服务、电子系统工程、电信工程、软件工程、计算机工程、网络工程、人工智能、分布式软件系统和衣柜、软件和系统、信号理论和通信、计算统计信息处理
+            </p>
+            <p>
+                工程及相关教育： 应用开发及服务为移动设备、灾害管理、生物医学工程、材料工程、矿业工程、大地测量和制图工程、地质工程、海军和海洋工程、化工、工业数学、矿业可持续发展
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            
+            <p>
+                管理与组织：战略和技术发展：世界合作交流、经济与创新管理、生态旅游与可持续管理
+            </p>
+            <p>
+                农林业工程与环境：农业经济与农业工程，食品和自然资源、农业经济，粮食和自然资源、水在自然环境中。使用和管理、农业工程、农艺工程、食品工程应用健康、林业工程、园艺、家畜生产及卫生、生态系统恢复、扑灭山火技术、项目规划和管理农村可持续发展
+            </p>
+            <p>
+                土木工程，可持续发展与环境：能效建筑，工业，交通运输、环境工程、土木工程，通道和端口、地震工程与土动力学结构、模型研究和风险分析环境、规划和基础设施管理、土木工程系统、工程结构，地基与材料
+            </p>
+            <p>
+                工业工程：自动化和机器人、核科学与技术、工业电子、声学工程工业和交通运输、能源工程、工业工程、生产工程、电气工程、机电工程、工程在工业设计、工业工程、机械工程
+            </p>
+            </div>
+        </section>
+</body>
+</html>

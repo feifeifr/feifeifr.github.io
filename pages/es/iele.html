@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/iele/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/iele/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/iele/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/iele/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page2 .page_container{
+    top:10% ;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/iele/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/iele/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/iele/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/iele/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>IELE</h1>
+              
+              <p>
+                  IELE是位于西班牙塞维利亚的一个拥有超过18年教学经验的西班牙语言学校。在此期间，学校已经开发设计了以满足每个学生的需求的教学计划。经过长期的实践，证明其西班牙语教学方法是成功的，因为他们的教学是由超过一半IELE学习的学生提出的建议不断完善而成的。我们非常自豪这一统计。IELE为每一种文化开放，教室里充满了来自不同国家和信仰的学生。如果你想在温暖和熟悉的氛围，友好，专业人士的指导下学习西班牙语，IELE是适合您的学校。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  塞维利亚市是西班牙第四大城市，也是南部第一大城市，是西班牙南部的艺术，文化与金融中心，是经济、贸易、旅游文化重镇。
+              </p>
+              <p>
+                  古市区的建筑仍然保留着几个世纪前摩尔人统治过的痕迹。塞维利亚曾是一个重要的港口，西班牙的船队从新大陆运来大批黄金、白银，经过塞维利亚转运往欧洲各地。市中那座耸立在瓜达尔基维尔河畔的十二等边形黄金塔是于1221年建造的，古时外壁曾铺上金砖，显示当时塞维利亚的繁荣。塞维利亚举办过1992年的世界博览会。瓜达尔基维尔河上的一座圣地亚哥·卡拉特拉瓦设计的阿拉米略桥便是为此而建的。
+              </p>
+              <p>
+                  塞维利亚街道宽阔、美观、整洁，绿化较好。市内古迹颇多。 其中主要有：
+              </p>
+              <p>
+                  【大教堂】为塞城的象征。
+              </p>
+              <p>
+                  【王宫】伊斯兰文化遗产，具有重要的历史价值。
+              </p>
+              <p>
+                  【西班牙广场】整个建筑呈半圆形，外部用各种瓷砖镶嵌而成，代表原西班牙58个省。
+              </p>
+              <p>
+                  【美术馆】十六至十七世纪时，原为一修道院。从1838年起改为塞维利亚美术馆。
+              </p>
+              <p>
+                  【圣克鲁斯区】原为犹太人居住区，至今是塞维利亚市最具特色和最别致的住宅区。
+              </p>
+              <p>
+                  【黄金塔】阿拉伯风格的堡垒形建筑。曾是贮存黄金的金库
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi dark_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                为了让学生得到更多的优惠，学校的课程都是60分钟的，并且也为满足不同需求的学生设计的不同的课程。课程如下：
+            </p>
+            <p>
+                一般课程
+            </p>
+            <p>
+                强化课程
+            </p>
+            <p>
+                商务西班牙语课程
+            </p>
+            <p>
+                DELE课程
+            </p>
+            <p>
+                语法复习
+            </p>
+            <p>
+                会话与文化
+            </p>
+            <p>
+                西班牙语教师课程
+            </p>
+            <p>
+                家教课程
+            </p>
+            <p>
+                西班牙语＆弗拉门戈课程
+            </p>
+            <p>
+                私人课程
+            </p>
+            <p>
+                学校课程
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+</body>
+</html>

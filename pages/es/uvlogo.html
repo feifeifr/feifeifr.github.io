@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/uvlogo/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/uvlogo/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/uvlogo/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/uvlogo/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+  }
+  .main section.page2 .page_container{
+    float: left;
+    width: 550px;
+    top:7%;
+  }
+  .main section.page3 .page_container{
+    top:10%;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/uvlogo/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/uvlogo/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/uvlogo/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/uvlogo/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>瓦伦西亚大学</h1>
+              
+              <p>
+                  巴伦西亚大学
+                  （英文：University of Valencia）位于巴伦西亚市，该校成立于1499年，是西班牙历史最悠久及最大型的大学之一。现约有六万名学生。巴伦西亚又译瓦伦西亚。西语原文València。加泰罗尼亚文正式名称:Universitat de
+                  València。巴伦西亚大学即瓦伦西亚大学的又一音译。巴伦西亚大学人才资源丰富。拥有3256名教师和研究人员，1706名管理和服务人员。巴伦西亚大学的人员比例如下：平均每14.8名学生拥有一位老师，每28.3名学生拥有一位管理和服务人员。通过签订双边协议、参与国际计划和高校联盟，巴伦西亚大学与世界大学建立了联系。藉着国际交流，来自不同国籍和文化背景的学生汇聚于此。
+              </p>
+              <p>
+                  巴伦西亚大学经过500多年的历史发展，今天的瓦伦西亚大学以其深厚的知识和罕见的研究财富积累，跃升为西班牙最著名的高等学府之一。
+              </p>
+              <p>
+                  500多年来，巴伦西亚大学的发展始终与城市发展保持同步，已经成为城市历史中一个不可或缺的组成部分，为教育研究、科学和文化的发展以及知识传播打造发展空间。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  大学最初的研究领域主要是医学、人文学、神学和法律，在过去的20年中经历了史无前例的转型和发展。以此为推动力，瓦伦西亚大学成长为一所现代的国际性学府，成为新技术应用中的领军者，并与重要的国际科学和教学网络建立了密切的联系。
+              </p>
+              <p>
+                  大学所开展的教育和研究活动涵盖了广泛的知识领域（基础科学和工程学、卫生和教育科学、人文科学、社会学、经济学和法学），其对卓越性的孜孜以求，让它成为西班牙五大科学中心之一。
+              </p>
+              <p>
+                  作为巴伦西亚社会的优秀文化产业，大学的悠久历史值得传扬。西班牙巴伦西亚大学为三个不同学习阶段提供了丰富多彩的学位设置。大学以其完备的科研网络、完善的内部组织构成和与社会多种多样的合作关系而著称于世。巴伦西亚大学有三个校区。Burjassot校区设有生物学院、药剂学院、物理学院、化学院、数学院及工程学院。
+              </p>
+              <p>
+                  布拉斯克·伊巴涅斯校区和达龙切斯校区设有运动场地，布尔哈所特校区根据与巴伦西亚市政府签订的协议，使用市政府的运动场地。在以上场地可以开展如下体育运动：足球、室内足球、篮球、手球、排球、美式足球、柔道、拳术、跆拳道、剑道、网球、乒乓球、羽毛球、剑术、壁球、板网球、田径运动、三项全能等。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  瓦伦西亚是西班牙第三大城市，第二大海港，号称是欧洲的“阳光之城”，位于西班牙东南部，东濒大海，背靠广阔的平原，四季常青，气候宜人，被誉为“地中海西岸的一颗明珠”。是港口和工业城市，瓦伦西亚是瓦伦西亚自治区和瓦伦西亚省的首府。瓦伦西亚在每年3月举行法亚火节。瓦伦西亚与马德里、巴塞罗那和萨拉戈萨等大城市有铁路及高速巴士相连。以野心勃勃的姿态将新与旧、古老与先锋、海洋与陆地完美混搭。在这座公元138年建立的古城里，既有15世纪哥特风格的拱顶与浮雕，也有令人惊叹的21世纪建筑杰作。
+              </p>
+              <p>
+                  由于濒临地中海，瓦伦西亚海产异常丰富，再加上这里土壤肥沃，终年呼吸着微咸空气的瓦伦西亚便当仁不让地成为了西班牙绝对的“美食天堂”。而其中这里最为著名一道菜肴的便是海鲜饭，它甚至都已经上升成为了西班牙的一种象征。不过，尽管叫做海鲜饭，但其实它起初与海鲜并无甚瓜葛。最初的海鲜饭并无名称，用料也极其普通。平常人家只要备齐大米、兔肉或鸡肉外加蔬菜，然后随便放在一口平底锅里来个大杂烩后即可入口。渐渐地，这道做法简单但又营养丰富的菜肴得到了越来越多人的喜爱，出于提高烹饪效率的需要，人们便新设计了一种专门用来做这道菜的平底锅，它更大也更结实，被人们叫做“Paella”。久而久之，菜名也就这样由此及彼了。同时，随着这道菜的发展，其原料也开始丰富多变起来。终于，在海鲜原料介入后，“Paella”也总算成为了名副其实的“海鲜饭”。
+              </p>
+              
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  瓦伦西亚也是著名旅游胜地之一，其美丽的海滩、充足的日照（每年300天），大量的名胜古迹及多彩的民间节日，吸引着无数国内外游客。
+              </p>
+              <p>
+                  <strong>瓦伦西亚大教堂（</strong>
+                  <strong>Catedral</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  建于3世纪时的清真寺旧址上，在长时间的不断改建和翻修中混合了多种建筑式样。教堂的三个入口就分别是新罗马式（正门）、巴洛克式（南侧宫门）和西哥特式（北侧使徒门）。圣杯礼拜堂中摆放着据说是耶稣在最后的晚餐中使用过的餐具。
+              </p>
+              <p>
+                  <strong>米伽勒塔（</strong>
+                  <strong>Torre del Miguelete</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  位于大教堂正面，建于14-15世纪，以圣米伽勒命名。登上塔顶可以尽览瓦伦西亚老城区。
+              </p>
+              <p>
+                  丝绸市场（Lonja de la Seda）：西哥特式建筑，15-19世纪一直作为丝绸等商品的交易所使用，目前是一座音乐厅。大厅中的螺旋柱造型优雅轻盈，非常有特色。1996年被选为世界文化遗产。
+              </p>
+              <p>
+                  <strong>火祭博物馆（</strong>
+                  <strong>Museo Fallero</strong>
+                  <strong>）</strong>
+              </p>
+              <p>
+                  每年3月中旬，瓦伦西亚场面壮观的火祭都会吸引来自世界各地的游客。火祭博物馆收藏1930年以来在历年
+              </p>
+              <p>
+                  中夺魁的火祭人偶，每年不同的主题是对当时社会热点的有趣记录。在馆内也可以买到相关的影片。
+              </p>
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                <strong>建筑及工程师：</strong>
+                工业电子工程、电子通信工程、计算机工程、多媒体工程、化工、远程信息处理工程
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+                西班牙研究、英语学习、加泰罗尼亚语语言学、古典语言学、哲学、历史、艺术史、现代语言和文学、翻译和中介语言：英语，法语，德语
+            </p>
+            <p>
+                <strong>科学：</strong>
+                生物学、生物化学和生物医学科学、生物技术、环境科学、美食学、物理、数学、化学、
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+                科学与食品技术、看护、药店、理疗、言语治疗（心理）、医药、人类营养和营养学、牙科、光学和验光、足部医学、心理学
+            </p>
+            <p>
+                <strong>社会科学及法律：</strong>
+                行政和公司管理（ADE）、体力活动和体育科学、政治学与公共管理、视听传播、犯罪、法律、经济、社会教育、财会、地理与环境、信息和文件、国际业务、幼儿教育、小学教育、教育学、新闻学、劳资关系与人力资源、社会学、社会工作、旅游
+            </p>
+            <p>
+                <strong>双学位项目：</strong>
+                ADE（行政和公司管理）与法律 （双学位）、旅游与ADE（行政和公司管理） （双学位）、法律与犯罪 （双学位）、法学和政治学与公共管理 （双学位）、药剂业及人类营养和营养学 （双学位）、社会学和政治学与公共管理 （双学位）
+            </p>
+            <p>
+                <strong>国际双学位项目：</strong>
+                行政与管理 （国际双学位）、法律 （国际双学位）、经济 （国际双学位）、国际业务 （国际双学位）、化学 （国际双学位 ，瓦伦西亚大学-斯特拉斯堡大学）
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+                考古学、语言咨询和文学文化：应用巴伦西亚语、高级西班牙语学习：应用和研究、高级英语研究、道德与民主、文化管理、当代史、艺术史与视觉文化、科学与科学交流史、西方世界的形成史、西地中海历史和标识（十五-十九世纪）、研究语言与文学、文化遗产：识别，分析和管理、当代的哲学思考、创意与人文翻译
+            </p>
+            <p>
+                <strong>科学：</strong>
+                水产养殖、生物多样性：保护和进化、生物统计学、污染，毒理学和环境健康、高级物理、研究分子和细胞生物学和遗传学、在生物技术和生物医学研究和开发、数学研究、分子纳米科学和纳米技术、高级验光和视觉科学、古生物学的应用、化学、有机化学、可持续化学、化学实验技术
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+                分子生物学方法健康科学、生物信息学、协助人类生殖生物技术、食品质量与安全、牙科科学、热带寄生虫病、肿瘤护理、专业化言语治疗、欧洲地中海神经科学与生物技术、医学物理学、生理、理疗老化过程：社会健康战略、理疗功能恢复、生物医学研究、研究和合理用药、研究，治疗和药物成瘾相关病理、认知神经科学与教育的具体需求支持、基础研究和应用神经科学、个性化营养和社区、一般健康心理学、围产期和婴儿心理学与精神病理学、公共卫生和健康管理、老年心理（精神）学
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>工程及建筑：</strong>
+                数据科学、环境工程、生物医学工程、工程服务和Web应用程序、电信工程、电子工程、化工、遥感系统
+            </p>
+            <p>
+                <strong>社会科学及法律：</strong>
+                律师、社会和教育行动、社会健康监护病房、银行和计量金融、社会福利：家庭干预、精算学和金融、会计，审计和管理控制、视听内容与格式、发展合作、创造和创新的公司管理、犯罪与安全、行政法学与公共管理、国家法、法律，商业和司法、商业法，劳动和税务、法律和性别暴力、人权，民主和国际正义、人权，和平与可持续发展、开发机构和经济一体化、管理与人力资源管理、方向和体力活动和体育管理、旅游管理与规划、工商管理硕士（MBA）、经济、社会经济学（合作社和非营利实体）、特殊教育、经营战略、国际研究和欧盟、企业融资、社会
+                -
+                经济犯罪和刑事担保、性别与平等政策、质量管理、国际工商管理（IMBA）、水资源管理、跨文化交际和欧洲研究、经济全球化：国际贸易管理、社会领域的心理干预、在体力活动和体育科学的研究和干预、具体的教学法研究、市场营销和市场研究、调解，仲裁和冲突管理私法、规划和业务流程管理、经济政策与公共经济学、政治，行政和教育机构的管理、职业健康和安全、辅助教育、多元文化语境教育和人力发展心理学、教育心理学、环境和领土管理技术
+            </p>
+            </div>
+        </section>
+</body>
+</html>

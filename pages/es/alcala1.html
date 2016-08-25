@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/alcala1/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/alcala1/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/alcala1/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/alcala1/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/alcala1/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/alcala1/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/alcala1/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/alcala1/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>阿尔卡拉大学语言中心</h1>
+              
+              <p>
+                  Alcalingua 是阿尔卡拉大学专为外国学生开设的语言文化中心，以及培训西班牙语老师的语言中心。语言中心按周，月，季，年开设密集型语言课程，由低到高分为五个等级，囊括从初学到专业各种课程。每个班人数最多为 10几人。教材是由阿尔卡拉大学和 ANAYA 工作组合编的 SUEÑA
+                  ，具有针对性。可以参与全年语言课程。学生可以同时选修感兴趣的常规课程，如经济，商务，旅游，国际法律，历史，文学等。通过考试后，学生可获学校自颁语言证书。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  <strong>师资</strong>
+                  <br/>
+                  　　老师均具备西班牙语语言文学硕士或博士学位，同时有西班牙语对外教学学位。经验丰富精力充沛。学校对他们不定期进行最新教学方法的培训。注重经验教学，老师鼓励学生团队合作，互动交流，师生关系融洽，出现困难，老师可以提供私人帮助。
+              </p>
+              <p>
+                  <strong>优势</strong>
+                  <br/>
+                  　　·可以在塞万提斯的故乡学习纯正的西班牙语
+                  <br/>
+                  　　·在传统与现代融合的校园学习
+                  <br/>
+                  　　·生活在幽静和谐的小镇，距马德里市区仅有半个小时车程
+                  <br/>
+                  　　·西班牙 CEELE 认证（西班牙语外语教学质量认证）源自该大学
+                  <br/>
+                  　　·学校西班牙语教学已经赢得了世界关注，吸引了多国的公司，大使馆以及各国大学
+                  <br/>
+                  　　·ALCALINGUA 是西班牙语水平考试 DELE 的组织中心，并且有针对 DELE 的培训课程。还有学校自颁的西班牙语等级证书 CEUA。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+              阿尔卡拉位于西班牙中部的马德里大区，距离首都马德里仅35公里。小城的名字意为埃纳雷斯河畔的城堡，城市的历史可以追溯到史前时代。15世纪当马德里还仅仅是乡村的时候，这里已经是重要的宗教中心了。大量残留的文物古迹证明了它古老的起源，众多保存完好的学院建筑、教堂、修道院和古城墙，与这里浓厚的文化气息共同再现了一段辉煌的历史。 1998年，阿尔卡拉被评为世界文化遗产，并以独特的魅力吸引千万游客
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>年度语言课程</strong>
+                <strong></strong>
+            </p>
+            <p>
+                时间:
+                10月 到 第二年5月
+            </p>
+            <p>
+                学分:
+                45
+            </p>
+            <p>
+                学费:
+                3 500,00 € - 3 800,00 €（以最新咨询价格为准）
+            </p>
+            <p>
+                <strong>秋季语言课程</strong>
+            </p>
+            <p>
+                时间:
+                十月 到 十二月
+            </p>
+            <p>
+                学分:
+                15.00
+            </p>
+            <p>
+                学费:>
+                1 250,00 € - 1300, 00 €（以最新咨询价格为准）
+            </p>
+            <p>
+                <strong>冬季语言课程</strong>
+            </p>
+            <p>
+                时间:
+                一月 到 三月
+            </p>
+            <p>
+                学分:
+                15.00
+            </p>
+            <p>
+                学费:
+                1 250,00 € - 1300, 00 €（以最新咨询价格为准）
+            </p>
+            <p>
+                <strong>春季语言课程</strong>
+            </p>
+            <p>
+                时间:
+                三月 到 五月
+            </p>
+            <p>
+                学分:
+                15.00
+            </p>
+            <p>
+                学费：
+                1 250,00 € - 1300, 00 €（以最新咨询价格为准）
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                在Alcalingua中心的年度课程中，您拥有8个月时间感受真正的的西班牙。
+            </p>
+            <p>
+                在入学第一天参加等级考试之后，Alcalingua中心会根据学生的水平分班，以保证学生能够以最有效的方式提高他的西班牙语水平。
+            </p>
+            <p>
+                此外，由于整个年度课程涵盖了3个季度，所以学生在此期间可能会经历至多2次分班，以保证学生拥有一个充实而舒适的学习环境，使课堂更加多样化。
+            </p>
+            <p>
+                不论是上午班的课抑或是下午班的课，学生每天会有两节课（语言课和技能练习课，每节课各一个半小时）和一次短暂的休息。为了充分利用时间，两节课分别为两个不同内容，由两个老师分别授课
+            </p>
+            <p>
+                第一节课是“语言和沟通”课，以练习、小组合作和西班牙语语言分析，即语法为主。
+            </p>
+            <p>
+                第二节课是“口语表达和书面表达”技能练习课，从“听，说，读，写”四个方面，在课堂活动中加强西班牙语的使用。
+            </p>
+            <p>
+                当然，在八个月的学习过程中，学生同样可以享受几日假期。得益于阿尔卡拉及周边城市的旅游优势，假期时间无疑成为“出去走一走，看一看”的绝佳机会。
+            </p>
+            </div>
+        </section>
+</body>
+</html>

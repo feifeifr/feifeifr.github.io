@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -32,212 +25,103 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
 <script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
 
-<script src="https://use.typekit.net/alz5hva.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<style type="text/css">
 
-<style>
-
-    
-    .wrapper {
-        height: 100% !important;
-        height: 100%;
-        margin: 0 auto; 
-        overflow: hidden;
+  .main section.page1 {
+      background:  url(../../images/introduction/ucamp1/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
     }
-    
-
-    .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-    }
-    
-    .row1{
-      z-index: 10;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.7);
-      -webkit-transition: all 500ms ease-in-out;
-      -moz-transition: all 500ms ease-in-out;
-      -o-transition: all 500ms ease-in-out;
-      transition: all 500ms ease-in-out;
-    }
-
-    .row1:hover{
-        background: rgba(255, 255, 255,0.95);
-    }
-
-
-    .main section .page_container {
-      position: relative;
-      top: 25%;
-      /*margin: 0 auto 0;*/
-      max-width: 600px;
-      z-index: 3;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-    }
-    .main section  {
-      overflow: hidden;
-    }
-    
-    .main section > img {
-      position: absolute;
-      max-width: 100%;
-      z-index: 1;
-    }
-
-
-    .main section.page1 {
-      background: #555557 url(http://ww3.sinaimg.cn/large/a901310bgw1f6ldj6wg3oj218g0xcqja.jpg) no-repeat center  ;
+  .main section.page2 {
+      background:  url(../../images/introduction/ucamp1/blur_2.jpg) no-repeat center ;
       background-size:cover;
-    }
-    .main section.page1 h1{
-        font-size: 50px;
-        font-color: "#888888";
-        font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
-        font-style: normal;
-        font-weight: 100;
-        text-align: center;
-    } 
-    .main section.page1 .page_container{
-      left:50%;
-    }
-    .main section.page1 p{
-      font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB","Microsoft Yahei",SimSun,sans-serif;
-      font-style: normal;
-      font-weight: 200;
-    }
-
-
-
-    .main section.page2 {
-      background: #555557 url(http://ww4.sinaimg.cn/large/a901310bgw1f6h8kscryuj20sf0j1wjb.jpg) no-repeat center ;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ucamp1/blur_3.jpg) no-repeat center ;
       background-size:cover;
-    }
-    .main section.page2 .page_container {
-      left:7%;
-      top: 15%;
-      opacity: 0;
-    }
-    .main section.page2 p{
-      position: relative;
-      opacity: 0;
-      left:-20px;
-      font-family: 'Helvetica',Arial, Helvetica ,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
-      font-style: normal;
-      font-weight: 200;
-    }
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/ucamp1/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
   
- 
-     
-    .main section.page3 {
-      background: #555557 url(http://ww4.sinaimg.cn/large/a901310bgw1f6h8kv0u2sj20sg0hete3.jpg) no-repeat center ;
-      background-size:cover;
-    }
-    .main section.page3 .page_container {
-      left:7%;
-      top: 10%;
-      width: 500px;
-      opacity: 0;
-    }
-    .main section.page3 p{
-      position: relative;
-      left:-20px;
-      margin:0;
-      opacity: 0;
-    }
-
-    .viewing-page-2 .row1{
-        top:-70px;
-      }
-    .viewing-page-3 .row1{
-        top:-70px;
-      }
-    .viewing-page-4 .row1{
-        top:-70px;
-      } 
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }
 
 
-    
-    body.disabled-onepage-scroll .onepage-wrapper  section {
-      min-height: 100%;
-      height: auto;
-    }
-    
-    body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
-      padding: 20px;
-      margin-top: 150px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    
-    body.disabled-onepage-scroll  section .page_container h1{
-      text-align: center;
-      font-size: 50px;
-    }
-    body.disabled-onepage-scroll section .page_container h2, body.disabled-onepage-scroll section .page_container .credit, body.disabled-onepage-scroll section .page_container .btns{
-      text-align: center;
-      width: 100%;
-    }
-    
-    body.disabled-onepage-scroll .main section.page1 > img {
-      position: absolute;
-      width: 80%;
-      left: 10%;
-    }
-    
-    body.disabled-onepage-scroll .main section > img {
-      position: relative;
-      max-width: 80%;
-      bottom: 0;
-    }
-    body.disabled-onepage-scroll code {
-      width: 95%;
-      margin: 0 auto 25px;
-      float: none;
-      overflow: hidden;
-    }
-    
-    body.disabled-onepage-scroll .main section.page3 .page_container {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      right: 0;
-    }
 </style>
-
 
   <!-- JAVASCRIPTS -->
 
 <script type="text/javascript">
 $(document).ready(function(){
-      $(".main").onepage_scroll({
-        sectionContainer: "section",
-        responsiveFallback: 600,
-        afterMove: function(index) {
-            // if (index == 1) {
-            //     // do something
-            // }
-            if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
-                $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
-                $(".page"+index+" .page_container p").each(function(i){
-                  $(this).delay(600+i*300).animate({opacity:1,left : "0px"},300);
-                });
-            }
-        },
-        loop: true,
-        // pagination: false
-      });
-        });
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ucamp1/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ucamp1/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ucamp1/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/ucamp1/4.jpg";
+
+});
    
 </script>
 <!-- ################################################################################################ -->
@@ -246,7 +130,6 @@ $(document).ready(function(){
 </head>
 
 <body>
-
 <div class="row1">
   <header id="header" class="clear"> 
     <div id="logo" class="fl_left">
@@ -256,7 +139,7 @@ $(document).ready(function(){
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -265,7 +148,7 @@ $(document).ready(function(){
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -284,73 +167,227 @@ $(document).ready(function(){
   </header>
 </div>
 <div class="wrapper row3"> 
-    <div class="main" id="intro"> 
+    <div class="main"> 
 
-        <section class="page1">
-            <div class="page_container">
-              <h1>阿尔卡拉大学</h1>
-              <p>
-                    阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
-                generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，创办人是西班牙摄政王、红衣主教西斯内罗。该大学将当时最优秀的巴黎和塞拉曼加传统教育模式，与更具创新性的波隆那
-                和卢万等模式融合在一起。大学成立之后，在欧洲文艺复兴时期和西班牙人文主义思潮中扮演了先锋者的角色。红衣主教西斯内罗希望它能起到一个熔炉的作用，不仅为教会改革培养神职人员，同时也为西班牙王室
-                    输送迫切需要的优秀人才。这所高等学府所获得的成功，将贵族们纷纷吸引到阿尔卡接受高等教育，是之后西班牙走向黄金时代的重要推动力。在16世纪和17世纪期间，阿尔卡拉大学发展成为伟大卓越的学术研究中心。很多知名学者都曾在这里的课堂中学习或授课。
-              </p>
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>康普顿斯西班牙语教学中心</h1>
+              
+              <ul type="disc">
+              <li>
+                  对外西班牙语课程
+              </li>
+              <ul type="circle">
+                  <li>
+                      《欧洲共同语言参考标准》中涉及第二语言教学的所有级别
+                  </li>
+                  <li>
+                      各种语言能力的实践
+                  </li>
+                  <li>
+                      面向劳动力市场的课程：商务西班牙语
+                  </li>
+              </ul>
+              <li>
+                  为DELE（《外语西班牙语证书》）考试中心
+              </li>
+              <li>
+                  设置单人辅导答疑
+              </li>
+              <li>
+                  包含教学心理咨询支持
+              </li>
+              <li>
+                  提供教师专业培训课程：
+              </li>
+              <ul type="circle">
+                  <li>
+                      历史、艺术、文学及文化课程
+                  </li>
+                  <li>
+                      由知名教师授课的“文化高级课程”
+                  </li>
+              </ul>
+              
+              
+         
+
+
+            </div>
+            <div class="page_container second_page">
+              <li>
+                  组织相关活动，帮助外国学生深入了解西班牙文化知识
+              </li>
+              <ul type="circle">
+                  <li>
+                      含向导引领的旅游路线
+                  </li>
+                  <li>
+                      参观博物馆及其他设施
+                  </li>
+              </ul>
+              <li>
+                  与外国大学签订协议，接待外来学生
+              </li>
+          </ul>
+               <p>
+              师资力量雄厚，授课人均为康普顿斯大学文学系的知名教师。
+          </p>
+          <p>
+              康普顿斯大学拥有“国际优秀校园”称号，自1928年起，该校文学系即设立对外西班牙语课程。康普顿斯西班牙语教学中心（CCEE）的所有学员均可享受到本校其他学生所享有的服务，并可同等使用学校设施。
+          </p>
+          <ul type="disc">
+              <li>
+                  可进入图书馆及语言实验室
+              </li>
+              <li>
+                  计算机室及免费WIFI
+              </li>
+              <li>
+                  体育设施及校游泳池
+              </li>
+              <li>
+                  校园食堂
+              </li>
+          </ul>
             </div>
         </section>
 
-        <section class="page2">
-            <div class="page_container">
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
               <p>
-                    阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
-                generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，
+                  <strong>马德里</strong>
+                  （西班牙语：<strong>Madrid</strong>
+              ）是西班牙首都及最大都市，也是马德里自治区首府，其位置处于西班牙国土中部，曼萨纳雷斯河贯穿市区。市内人口约340万，都会区人口则约627.1万（2010年），均占西班牙首位。其建城于9世纪，是在摩尔人边贸站“马格立特”旧址上发展起来的城市；1561年，西班牙国王腓力二世将首都从托莱多迁入于此，由于其特殊的地位而得到迅速的发展，成为往后西班牙殖民帝国的运筹中心，现今则与巴塞罗那并列为西班牙的两大对外文化</a>窗口。
               </p>
-              <p>创办人是西班牙摄政王、红衣主教西斯内罗。该大学将当时最优秀的巴黎和塞拉曼加传统教育模式，与更具创新性的波隆那
-                和卢万等模式融合在一起。大学成立之后，在欧洲文艺复兴时期和西班牙人文主义思潮中扮演了先锋者的角色。红衣主教西斯内罗希望它能起到一个熔炉的作用，不仅为教会改革培养神职人员，同时也为西班牙王室
+              <p>
+                  马德里是拥有452
+                  万人口的现代化都市，以文化艺术和古迹以及它独特的风韵，每年吸收成千上万的世界各地游客前来观光旅游。马德里红砖碧瓦有西班牙建筑风格的古建筑和广场、喷泉，雕塑、草坪到处可见，其凯旋门之多为世界之最，是西班牙几个世纪以来，到处出兵征战世界立下战功的标志。在宽阔的林阴大道上的街心花园和各式奇异的喷泉，两旁的高楼大厦和阿拉伯式的红砖白墙房屋，错落有致，其古色古香的风情和现代化色彩的都市相互辉映成趣。
               </p>
-              <p>输送迫切需要的优秀人才。这所高等学府所获得的成功，将贵族们纷纷吸引到阿尔卡接受高等教育，是之后西班牙走向黄金时代的重要推动力。在16世纪和17世纪期间，阿尔卡拉大学发展成为伟大卓越的学术研究中心。很多知名学者都曾在这里的课堂中学习或授课。
+              <p>
+                  马德里大致可分为马德里古城区和波旁王朝的马德里区两部分，西侧的古城区开发较早，为建都当 时主要行政部门的活动中心。现在的马约尔大广场，太阳门和王宫都在此地。而在面对一侧的波旁王朝马德里区，其主要的观光景点，普拉多美术馆和众神之母广场。
               </p>
+
+
             </div>
         </section>
 
-        <section class="page3">
-          <div class="page_container">
-             <p>
-            * 建筑系 DEPARTAMENTO DE ARQUITECTURAO
-            </p>
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_right">
+          
             <p>
-                * 动物生物学系 DEPARTAMENTO DE BIOLOGIA ANIMAL
+                供选课程
             </p>
-            <p>
-                * 细胞生物学与遗传学系 DEPARTAMENTO DE BIOLOGIA CELULAR Y GENETICA
-            </p>
-            <p>
-                * 植物生物学系 DEPARTAMENTO DE BIOLOGIA VEGETALF
-            </p>
-            <p>
-                * 生化与分子生物学系 DEPARTAMENTO DE BIOQUIMICA Y BIOLOGIA MOLECULARCN
-            </p>
-            <p>
-                * 计算机科学系 DEPARTAMENTO DE CIENCIAS DE LA COMPUTACION
-            </p>
-            <p>
-                * 企业管理学系 DEPARTAMENTO DE CIENCIAS EMPRESARIALES
-            </p>
-            <p>
-                * 生理形态与外科学系 DEPARTAMENTO DE CIENCIAS MORFOLOGICAS Y CIRUGIA
-            </p>
-            <p>
-                * 卫生与社会保健学系 DEPARTAMENTO DE CIENCIAS SANITARIAS Y MEDICOSOCIALES
-            </p>
-            <p>
-                * 私法学系 DEPARTAMENTO DE DERECHO PRIVADO
-            </p>
-            <p>
-                * 公法学系 DEPARTAMENTO DE DERECHO PUBLICO
-            </p>
+            <ul type="disc">
+                <li>
+                    年度课程（2016年10月3日－2017年6月23日）
+                </li>
+            </ul>
+            <ul type="disc">
+                <li>
+                    季度课程
+                </li>
+                <ul type="circle">
+                    <li>
+                        秋季班（2016年10月3日－2016年12月16日）
+                    </li>
+                    <li>
+                        冬季班（2017年1月10日－3月22日）
+                    </li>
+                    <li>
+                        春季班（2017年3月29日－6月23日）
+                    </li>
+                </ul>
+            </ul>
+            <ul type="disc">
+                <li>
+                    文化高级课程
+                </li>
+                <ul type="circle">
+                    <li>
+                        学年班（2016年10月3日－2017年6月23日）
+                    </li>
+                    <li>
+                        高级课程（第一季度）：2016年10月3日－12月16日
+                    </li>
+                    <li>
+                        高级课程（第二季度）：2017年1月10日－3月22日
+                    </li>
+                    <li>
+                        高级课程（第三季度）：2017年3月29日－6月23日
+                    </li>
+                </ul>
+            </ul>
+            <ul type="disc">
+                <li>
+                    浸入式课程
+                </li>
+                <ul type="circle">
+                    <li>
+                        800学时：2016年10月3日－2017年7月14日
+                    </li>
+                    <li>
+                        700学时：2016年10月3日－2017年6月6日
+                    </li>
+                    <li>
+                        600学时：2016年10月3日－2017年5月8日
+                    </li>
+                    <li>
+                        600学时：2017年1月10日－2017年7月28日
+                    </li>
+                </ul>
+            </ul>
+           
+
+
           </div>
+          <div class="page_container second_page">
+             <ul type="disc">
+                <li>
+                    欧洲交换生密集课程（40学时）二月及九月
+                </li>
+            </ul>
+            <ul type="disc">
+                <li>
+                    康普顿斯大学（UCM）外国学生密集课程
+                </li>
+                <ul type="circle">
+                    <li>
+                        秋季密集班（2016年10月13日－12月1日）
+                    </li>
+                    <li>
+                        春季密集班（2017年3月2日－4月25日）
+                    </li>
+                </ul>
+            </ul>
+            <ul type="disc">
+                <li>
+                    暑期班
+                </li>
+                <ul type="circle">
+                    <li>
+                        七月普通班（2017年7月3日－28日）
+                    </li>
+                    <li>
+                        七月密集班I（2017年7月3日－14日）
+                    </li>
+                    <li>
+                        七月密集班II（2017年7月10日－28日）
+                    </li>
+                    <li>
+                        九月班（2017年9月4日－29日）
+                    </li>
+                </ul>
+            </ul>
+            <ul type="disc">
+                <li>
+                    特定专业班
+                </li>
+            </ul>
+            </div>
         </section>
-
-
-
 </body>
 </html>

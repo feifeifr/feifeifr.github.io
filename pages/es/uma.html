@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Colossus
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
 <html>
 <head>
 <title>FE留学网</title>
@@ -26,26 +19,131 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-  <!-- JAVASCRIPTS -->
-<script src="../../layout/scripts/jquery.min.js"></script>
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="../../layout/scripts/jquery.backtotop.js"></script>
 <script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/uma/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/uma/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/uma/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/uma/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+    top:10%;
+  }
+  .main section.page1 p{
+    font-size: 13px;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/uma/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/uma/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/uma/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/uma/4.jpg";
+
+});
+   
+</script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row1">
+</head>
+
+<body>
+<div class="row1">
   <header id="header" class="clear"> 
-    <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><img src="../../images/logo.jpg"style="width:40px;height:40px;" ><a href="../../index.html">FE留学</a></h1>
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="../../index.html">首页</a></li>
-        <li><a href="../fr_main.html">法国留学指南</a>
+        <li><a href="../fr_main.html">法国院校指南</a>
           <!-- <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
             <li><a href="pages/full-width.html">Full Width</a></li>
@@ -54,7 +152,7 @@ Licence URI: http://www.os-templates.com/template-terms
             <li><a href="pages/basic-grid.html">Basic Grid</a></li>
           </ul> -->
         </li>
-        <li><a href="../es_main.html">西班牙留学指南</a>
+        <li><a href="../es_main.html">西班牙院校指南</a>
           <!-- <ul>
             <li><a href="#">Level 2</a></li>
             <li><a class="drop" href="#">Level 2 + Drop</a>
@@ -72,496 +170,158 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </header>
 </div>
+<div class="wrapper row3"> 
+    <div class="main"> 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="content" id="intro"> 
-      <!-- ################################################################################################ -->
-      <h1><font size=40 color="#888888" face="pingfang-light">阿尔卡拉大学</font></h1>
-      <img class="imgr borderedbox inspace-5" src="../../images/introduction/alcala/1.jpg" alt="">
-        <p>
-            阿尔卡拉大1293年，桑乔四世国王批准将阿尔卡拉市作为一个Studium
-        generale（学习场所）。但阿尔卡拉大学真正成立的时间是1499年，创办人是西班牙摄政王、红衣主教西斯内罗。该大学将当时最优秀的巴黎和塞拉曼加传统教育模式，与更具创新性的波隆那
-        和卢万等模式融合在一起。大学成立之后，在欧洲文艺复兴时期和西班牙人文主义思潮中扮演了先锋者的角色。红衣主教西斯内罗希望它能起到一个熔炉的作用，不仅为教会改革培养神职人员，同时也为西班牙王室
-            输送迫切需要的优秀人才。这所高等学府所获得的成功，将贵族们纷纷吸引到阿尔卡接受高等教育，是之后西班牙走向黄金时代的重要推动力。在16世纪和17世纪期间，阿尔卡拉大学发展成为伟大卓越的学术研究中心。很多知名学者都曾在这里的课堂中学习或授课。
-        </p>
-
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/alcala/2.jpg" alt="">
-
-        
-        <p>
-            学校现有28000多名学生、2100名教职员工和800名管理和办公服务人员，向学生提供35个正式学士学位课程，以及多领域的研究生和更高级别的教育。大学的教学品质一直广受赞誉，对重要研究领域起到发展推动作用；校园内处处可见蕴含艺术和历史价值的悠久建筑以及配套的全新模式教学设施。此外，大学还建立了深厚的国际关系，全面适应当今社会的就业市场需求，成为名副其实的公立大学领跑者。
-        </p>
-        <p>
-            1. 大学由三个主要组成部分：Alcalá校区，历史上的城市中心，主要是文科的院系Guadalajara大学校区 和 Alcalingua 校区。
-        </p>
-        <p>
-            2．阿里卡拉大学的专业非常齐全，拥有40个院系专业。大学中主要的学科如下：
-        </p>
-        <p>
-            * 机械自动化系 DEPARTAMENTO DE AUTOMATICA
-        </p>
-        <p>
-            * 建筑系 DEPARTAMENTO DE ARQUITECTURAO
-        </p>
-        <p>
-            * 动物生物学系 DEPARTAMENTO DE BIOLOGIA ANIMAL
-        </p>
-        <p>
-            * 细胞生物学与遗传学系 DEPARTAMENTO DE BIOLOGIA CELULAR Y GENETICA
-        </p>
-        <p>
-            * 植物生物学系 DEPARTAMENTO DE BIOLOGIA VEGETALF
-        </p>
-        <p>
-            * 生化与分子生物学系 DEPARTAMENTO DE BIOQUIMICA Y BIOLOGIA MOLECULARCN
-        </p>
-        <p>
-            * 计算机科学系 DEPARTAMENTO DE CIENCIAS DE LA COMPUTACION
-        </p>
-        <p>
-            * 企业管理学系 DEPARTAMENTO DE CIENCIAS EMPRESARIALES
-        </p>
-        <p>
-            * 生理形态与外科学系 DEPARTAMENTO DE CIENCIAS MORFOLOGICAS Y CIRUGIA
-        </p>
-        <p>
-            * 卫生与社会保健学系 DEPARTAMENTO DE CIENCIAS SANITARIAS Y MEDICOSOCIALES
-        </p>
-        <p>
-            * 私法学系 DEPARTAMENTO DE DERECHO PRIVADO
-        </p>
-        <p>
-            * 公法学系 DEPARTAMENTO DE DERECHO PUBLICO
-        </p>
-        <p>
-            * 生态学系 DEPARTAMENTO DE ECOLOGIA
-        </p>
-        <p>
-            * 应用经济学系 DEPARTAMENTO DE ECONOMIA APLICADA
-        </p>
-        <p>
-            * 教育学系 DEPARTAMENTO DE EDUCACION
-        </p>
-        <p>
-            * 电子学系 DEPARTAMENTO DE ELECTRONICALW
-        </p>
-        <p>
-            * 临床与理疗学系 DEPARTAMENTO DE ENFERMERIA Y FISIOTERAPIANL
-        </p>
-        <p>
-            * 医学系 DEPARTAMENTO DE ESPECIALIDADES MEDICASZ
-        </p>
-        <p>
-            * 统计，经济体制与国际经济组织学系DEPARTAMENTO DE ESTADISTICA, ESTRUCTURA ECONOMICA Y ORGANIZACION ECONOMICA INTERNACIONAL
-        </p>
-        <p>
-            * 制药与药科技术系 DEPARTAMENTO DE FARMACIA Y TECNOLOGIA FARMACEUTICA
-        </p>
-        <p>
-            * 药理学系 DEPARTAMENTO DE FARMACOLOGIA
-        </p>
-        <p>
-            * 文献学系 DEPARTAMENTO DE FILOLOGIA
-        </p>
-        <p>
-            * 现代文献学系 DEPARTAMENTO DE FILOLOGIA MODERNA
-        </p>
-        <p>
-            * 物理学系 DEPARTAMENTO DE FISICA
-        </p>
-        <p>
-            * 生理学系 DEPARTAMENTO DE FISIOLOGIA
-        </p>
-        <p>
-            * 经济理论与经济史学系 DEPARTAMENTO DE FUNDAMENTOS DE ECONOMIA E HISTORIA ECONOMICA
-        </p>
-        <p>
-            * 法理与刑法学系 DEPARTAMENTO DE FUNDAMENTOS DEL DERECHO Y DERECHO PENAL
-        </p>
-        <p>
-            * 地理学系 DEPARTAMENTO DE GEOGRAFIA
-        </p>
-        <p>
-            * 地质学系 DEPARTAMENTO DE GEOLOGIAGJ
-        </p>
-        <p>
-            * 历史Ⅰ与哲学系 DEPARTAMENTO DE HISTORIA I Y FILOSOFIA
-        </p>
-        <p>
-            * 历史Ⅱ学系 DEPARTAMENTO DE HISTORIA
-        </p>
-        <p>
-            * 数学系 DEPARTAMENTO DE MATEMATICASMF
-        </p>
-        <p>
-            * 药理学系 DEPARTAMENTO DE MEDICINA
-        </p>
-        <p>
-            * 微生物与寄生物研究学系 DEPARTAMENTO DE MICROBIOLOGIA Y PARASITOLOGIA
-        </p>
-        <p>
-            * 营养与毒理学系 DEPARTAMENTO DE NUTRICION, BROMATOLOGIA Y TOXICOLOGIAAW
-        </p>
-        <p>
-            * 分析化学与化学工程学系 DEPARTAMENTO DE QUIMICA ANALITICA E INGENIERIA QUIMICAAKG
-        </p>
-        <p>
-            * 物理化学系 DEPARTAMENTO DE QUIMICA FISICA
-        </p>
-        <p>
-            * 无机化学系 DEPARTAMENTO DE QUIMICA INORGANICA
-        </p>
-        <p>
-            * 有机化学系 DEPARTAMENTO DE QUIMICA ORGANICA
-        </p>
-        <p>
-            * 信号与通信学系 DEPARTAMENTO DE TEORIA DE LA SEAL Y COMUNICACIONES
-        </p>
-        <p>
-            研究生项目：研究生院的职责是：
-        </p>
-        <ul>
-            <li>
-                规划、协调并组织研究生的各专业课程班、自颁学位课程班和阿尔卡拉大学继续教育课程班，目的是使教学形成架构，以适应欧洲和国际的教学环境。
-            </li>
-            <li>
-                从行政和经济方面支持科研人员，目的是提高阿尔卡拉大学的科研能力。
-            </li>
-            <li>
-                为阿尔卡拉大学研究生的各专业课程班、自颁学位及继续教育课程班的优质教学、高质量的科研，以及发展大学各研究所自主业务方面出谋划策。
-            </li>
-            <li>
-                继续进行研究生、自颁学位及继续教育课程班的教学、行政及财务管理，完成大学自主开发研究项目的现代化进程。
-            </li>
-        </ul>
-        <p>
-            官方硕士专业：
-        </p>
-        <p>
-            拉丁美洲和欧洲联盟：战略合作
-        </p>
-        <p>
-            半岛内部考古和遗产管理（AGEPIPE）
-        </p>
-        <p>
-            跨文化交际，在公共服务口译和笔译（中文 - 西班牙语，英语 - 西班牙语）
-        </p>
-        <p>
-            美国研究 *新
-        </p>
-        <p>
-            古典语言学
-        </p>
-        <p>
-            文学和戏剧研究
-        </p>
-        <p>
-            古代地中海
-        </p>
-        <p>
-            药物研发
-        </p>
-        <p>
-            药剂业及制药技术
-        </p>
-        <p>
-            护理与自我保健知识管理及应用
-        </p>
-        <p>
-            研究视觉科学
-        </p>
-        <p>
-            公共卫生
-        </p>
-        <p>
-            建筑
-        </p>
-        <p>
-            太空科学技术
-        </p>
-        <p>
-            IT项目管理
-        </p>
-        <p>
-            积分物业管理和服务建筑遗产
-        </p>
-        <p>
-            工业工程
-        </p>
-        <p>
-            工程 *新
-        </p>
-        <p>
-            电信工程
-        </p>
-        <p>
-            软件工程的Web
-        </p>
-        <p>
-            建筑与城市先进工程
-        </p>
-        <p>
-            先进的电子系统，智能系统
-        </p>
-        <p>
-            地理信息技术
-        </p>
-        <p>
-            职业律师
-        </p>
-        <p>
-            应用经济分析
-        </p>
-        <p>
-            审计
-        </p>
-        <p>
-            银行及金融/金融和银行
-        </p>
-        <p>
-            精算学和金融
-        </p>
-        <p>
-            会计审计及其对资本市场的影响（MACAM）
-        </p>
-        <p>
-            体力活动和体育组织与设施的管理
-        </p>
-        <p>
-            文档，档案馆和图书馆
-        </p>
-        <p>
-            区域一体化：欧盟 - 拉美 *新
-        </p>
-        <p>
-            国际工商管理硕士（MBA）
-        </p>
-        <p>
-            管理和变更管理
-        </p>
-        <p>
-            科学媒体网络和Web/数字网络媒体和网络科技
-        </p>
-        <p>
-            国际人权保护
-        </p>
-        <p>
-            体质人类学：人类进化和生物多样性
-        </p>
-        <p>
-            太空科学技术
-        </p>
-        <p>
-            警察科学
-        </p>
-        <p>
-            人类的进化
-        </p>
-        <p>
-            遗传学与细胞生物学
-        </p>
-        <p>
-            水文和水资源管理（课堂学习）
-        </p>
-        <p>
-            水文和水资源管理（混合式学习）
-        </p>
-        <p>
-            科学研究
-        </p>
-        <p>
-            高级古生物
-        </p>
-        <p>
-            生态系统恢复
-        </p>
-        <p>
-            多样化和教育支架
-        </p>
-        <p>
-            大学教学
-        </p>
-        <p>
-            中小学教师西班牙语言文化教学
-        </p>
-        <p>
-            英语作为外语的教学
-        </p>
-        <p>
-            西班牙语教师培训
-        </p>
-        <p>
-            教师培训ESO，学士，职业培训和语言教学
-        </p>
-        <p>
-            教育报告及检讨
-        </p>
-        <p>
-            社会教育学
-        </p>
-        <img class="imgl borderedbox inspace-5" src="../../images/introduction/alcala/3.jpg" alt="">
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>马拉加大学</h1>
+              
+              <p>
+                  西班牙马拉加大学是西班牙著名国立综合性大学，坐落于西班牙风景秀丽著名的南部海滨城市，也就是西班牙第五大的城市马拉加市。马拉加亦是西班牙经济最发达、发展最迅速的地区之一。经济位置和地理位置分别类似于中国的深圳和三亚。交通业和运输业十分发达，有着西班牙数一数二的机场和各大港口。同时马拉加的艺术地位在西班牙也是非常重要的。
+              </p>
+              <p>
+                  马拉加大学还是一所较新的大学，大学创建于1968年，并于1972年8月18号被法律正式承认。现有40000名学生和2000位科研人员。总资产近2.7亿欧元。 大学虽然历史很长，但大学就像年轻的马拉加一样，富有活力、朝气、生命力。
+              </p>
+              <p>
+                  学校分三大校区，马拉加市校区（málaga capital），安特克拉校区（centro de antequera），龙达校区（ronta），其中马拉加市校区分为两座大学城 "El ejido" ，"El teatino" 。 位于市中心的“El
+                  ejido”所在的区域包括了学校行政办公室，经济系等院系；而从1985年至今仍在扩建的位于市区西面的"El teatino"新建大学城包括了大学大多数院系，这里环境优美，远离市区喧嚣，是学习，科研的好地方。马拉加市政府为大学专门规划的地铁线路将在不久的将来开通，它连接两座大学城和中间的闹市区，
+                  而在teatino校区规划了5个地铁站，届时人们能够享受到更加便捷的交通环境。
+              </p>
+              <p>
+                  2007年至今学校与安达卢西亚科技园以及毕加索超级计算机项目组有密切的合作。
+              </p>
+              
 
 
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  2008年大学联合安达卢西亚自治区的另一所名校塞维利亚大学一同发起了“安达卢西亚科技”（Andalucía
+                  TECH）校园发展项目，旨在提升两所大学的“教学能力”、“科研能力”、“创新能力”、“国际影响力”、“吸引人才能力”、“可持续发展能力”六大能力。学校因此项目荣获2010年由西班牙教育部颁发的“卓越国际校园”称号。
+              </p>
+              <p>
+                  2012年，本校举办了盛大的庆祝本校成立40周年的庆典。因为支持马拉加市的21世纪的技术发展研究，大学已经成为城市的文化中心。大学致力于对未来的发展，对学生提供高质量的教育。大学治学严谨，学风淳朴。图书馆、实验室、计算机房这些地方每天都充斥着莘莘学子们的身影。
+              </p>
+              <p>
+                  马拉加大学现有21大学院，79个系，100多个专业，有博士、研究生和本科课程。系科设置为：代数、几何和拓扑学、应用数学、建筑学，土木工程、结构和材料、通讯、机械工程
+                  、自动化系统、电子工程、电力工程、化学工程、计算机程序设计
+              、汽车工程、医学工程、微生物学、个体医学、医学史、计算机结构、动物生物学、分子生物学、生物化学、植物生物学、结构化学、政治科学、历史学、广告媒体科学、生殖健康学、财务管理、金融学、政治经济学、社会学、新闻学、美学、公法、私法、音乐学、语言文学、社会和实验数学、组织学、地理和环境、应用经济学、宏观经济学、微观经济学、数学经济学、管理经济学、电子系、护理学、运筹学、药学、图像学、西班牙哲学、文学理论、阿拉伯
+                  研究、英语、法语和德语研究、拉美研究、哲学史、财务会计、市场营销、企业管理、应用物理学、物理教育学、地理、疾病史、现代史、教育学、心理学、社会心理学、基础心理学、心理方法学、应用化学、化学、矿物学、放射学、电子技术、教育史、教育经验学。
+              </p>
+            </div>
+        </section>
 
-      <!-- <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
-        <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  马拉加（西班牙语：'Málaga）是位于西班牙南部安达卢西亚、地中海太阳海岸的一个城市，也是西班牙的第二大港口。据2015年估算，它拥有人口572,947人。而整个马拉加都市圈人口约为1,074,074，是西班牙五大都市圈之一。马拉加被群山和两条注入地中海的河流所环抱，其主要收入来源于农业和旅游观光业。与伊比利亚的其他城市一样，融入了伊斯兰和基督的文化。
+              </p>
+              <p>
+                  画家巴勃罗·毕加索、19世纪政治家安东尼奥·卡诺瓦斯·德尔卡斯蒂略和演员安东尼奥·班德拉斯均出生在马拉加。
+              </p>
+              <p>
+                  马拉加是著名的旅游胜地，每年会接待大量的游客。有各种非常便宜的包机往返于马拉加和阿姆斯特丹及伦敦之间。许多游客到马拉加来享受好天气和美丽的太阳海岸。
+              </p>
+              <p>
+                  除了农作物以外，还盛产番红花和辰砂、珊瑚等。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                <strong>艺术系：</strong>
+                艺术设计
+            </p>
+            <p>
+                <strong>哲学和文学系：</strong>
+                英语、古典语言学、语言学、哲学、历史、艺术史、笔译和口译
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+                视听传播、新闻学、广告与公共关系、儿童教育、小学教育、社会教育、教育学、行政和企业管理及企业法、行政和企业管理、经济学、财会、经济与工商管理、公共行政与管理、市场营销和市场研究、公司法和行政管理 （双学位）、犯罪学、法律、东方亚洲学
+                （萨维利亚大学和马拉加大学）、劳资关系与人力资源、社会劳动、地理和土地管理、旅游学
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+                病理学、理疗学、足部医疗、职业护理、药学、语言疗法、心理学
+            </p>
+            <p>
+                <strong>科学：</strong>
+                生物、环境科学、化工、数学、化学
+            </p>
+            <p>
+                <strong>工程和建筑：</strong>
+                电气工程、工业电子工程、工业设计和产品开发工程、器械工程、电气工程和机械工程、电气工程与电子工程、机械工程和工业设计及产品开发、建筑学、电信工程、电子系统工程、声音和图像工程、电信工程技术、远程信息处理工程、计算机工程、健康工程
+                （塞维利亚大学和马拉加大学）、软件工程、信息工程、能源工程（塞维利亚大学和马拉加大学）、电子工程，机器人及机电一体化（塞维利亚大学和马拉加大学）
+            </p>
+
+
           </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="text" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input name="submit" type="submit" value="Submit Form">
-            &nbsp;
-            <input name="reset" type="reset" value="Reset Form">
-          </div>
-        </form>
-      </div> -->
-      <!-- ################################################################################################ -->
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="clear"> 
-    <div class="one_quarter first">
-      <h6 class="title">联系我们</h6>
-      <address class="btmspace-15">
-      FE留学<br>
-      </address>
-      <ul class="faico clear">
-        <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
-        <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
-        <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                研究生专业：
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+                艺术文化社会发展、英语学习与跨文化交际和多语种、西班牙语高级研究 *新 、哲学，科学和公民权、西班牙文学和语言遗产管理、古代跨学科艺术生产的历史和文学遗产、翻译，世界编辑方向
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+                法律、经济和商业分析、企业法律咨询、社会变迁与职业教育、精算学和金融、国际合作与发展政策、视听创作和表演艺术 *新 、犯罪学和儿童社会干预、和平，冲突和人权教育的文化、刑法和刑事政策 *新、管理和业务管理 *MBA、战略管理与创新 *新<strong>、</strong>
+                方向和数字化营销管理、旅游管理与规划、环境教育 *新 、财政，金融和保险、研究和社会干预和社区、欧洲媒体研究，听证会和实践 *新、中介服务 *新、政策与教育创新的实践、经济和领土条例（专业化规划，城市规划和环境）、应用社会学、E-旅游：应用技术在旅游管理和销售：适用于旅游管理和市场营销/ E-旅游科技
+            </p>
+            <p>
+                <strong>生命科学：</strong>
+                卫生经济学，卫生管理与合理用药、研究体力活动和体育、新趋势研究健康科学、健康心理学、国际健康
+            </p>
+            
 
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>科学：</strong>
+                环境分析与管理、细胞与分子生物学、进化生物学、先进的生物、生物多样性和环境 *WEB、数学、化学 *WEB、水资源与环境、化工、技术系统太阳能光伏
+            </p>
+            <p>
+                <strong>工程和建筑：</strong>
+                环境水力学、声学工程、工业工程、计算机工程、软件工程和人工智能、机电工程 *新、化学工程 *WEB、电信工程、建筑设计环境设计和新技术、表示和设计工程与建筑、智能环境的电子系统、在能源与交通智能系统、远程信息处理和电信网络
+            </p>
+            <p>
+                <strong>跨学科专业：</strong>
+                平等和性别、职业健康和安全、中学教育，文凭，职业培训和语言教学的教师
+            </p>
+            <p>
+                <strong>双学位项目：</strong>
+                数学的中学教育，文凭，职业培训和语言教学的教师/硕士 - 工程数学、
+            </p>
+            <p>
+                英语学习，多语种和中学教育，文凭，职业培训和语言教学的跨文化交际/培训 - 英外语、
+            </p>
+            <p>
+                管理文学和语言遗产西班牙/硕士中学教育，文凭，职业培训和语言教学的教师 - 工程语言与文学，拉丁语和希腊语、
+            </p>
+            <p>
+                哲学，科学和中学教育，文凭，职业培训和语言教学的教师公民/硕士 - 主机社会科学地理，历史和哲学、工业工程环境/液压主、机电/工程硕士工业工程
+            </p>
+            </div>
+        </section>
 </body>
 </html>

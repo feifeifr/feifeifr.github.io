@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/hispania/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/hispania/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/hispania/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/hispania/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+  .main section.page3 .page_container{
+    top:7%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/hispania/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/hispania/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/hispania/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/hispania/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>Hispania西班牙语学校</h1>
+              
+              <p>
+                  Hispania西班牙语学校成立于2002年，学校致力于高质量的语言教学，提供优质的人文环境。
+              </p>
+              <p>
+                  从2002年成立之初开始，学校经过稳步增长，现已成为瓦伦西亚最受欢迎的语言学校。
+              </p>
+              <p>
+                  走进学校大门，Hispania像一个汇集了来自世界各国留学生的大家庭。
+              </p>
+              <p>
+                  在这里，学生们既可以学习西班牙语，了解西班牙文化，又能体会和来自不同国家留学生在一起度过的异域生活。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  学校坐落在一所独立的别墅里，在这里，你可以享受教授西语知识的课堂，埋首阅读于学校的图书馆，在闲暇时光，也可以在学校的露天平台上休息。教师会尽可能帮助解决学生所遇到的任何问题。让学生更好地了解西班牙文化，融入当地风俗人情，进入西班牙社会，使学生们得到一次无与伦比的学习和生活体验。
+              </p>
+              <p>
+                  Hispana还提供一门定制课，老师会根据学生具体要求来设计西班牙语课堂。这门课能很好地帮助那些想在最短的时间内收获最大的学生。这门课以一对一或者以小组的方式进行授课。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi dark_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                学校独特教学法的优势
+                
+            </p>
+            <table border="0" cellspacing="0" cellpadding="0" width="589">
+                <thead>
+                    <tr>
+                        <td>
+                                最优质
+                        </td>
+                        <td>
+                                塞万提斯学院及EAQUALS认证
+                        </td>
+                        <td>
+                                DELE考试90%过级率
+                        </td>
+                        <td>
+                                以往学生大力推荐
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                                最灵活
+                        </td>
+                        <td>
+                                允许改变每周出勤
+                        </td>
+                        <td>
+                                允许改变每日课时
+                        </td>
+                        <td>
+                                允许取消课程并在日后恢复课时
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                课程类型
+              </p>
+            <table border="0" cellspacing="0" cellpadding="0" width="590">
+                <thead>
+                    <tr>
+                        <td align="center">
+                                课程
+                        </td>
+                        <td align="center">
+                                周课时
+                        </td>
+                        <td align="center">
+                                周出勤
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">
+                                松散课程
+                        </td>
+                        <td>
+                          <p>
+                                4
+                              </p>
+                        </td>
+                        <td align="center">
+                                每周2天
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                                非紧凑课程
+                        </td>
+                        <td>
+                            <p>
+                                6
+                            </p>
+                        </td>
+                        <td align="center">
+                                每周3天
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                                紧凑课程
+                        </td>
+                        <td>
+                            <p>
+                                10
+                            </p>
+                        </td>
+                        <td align="center">
+                                每周5天(周一至周五)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                                超紧凑课程
+                        </td>
+                        <td>
+                            <p>
+                                20
+                            </p>
+                        </td>
+                        <td align="center">
+                                每周5天 (每天两节课)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                课程特色
+                
+            </p>
+            <table border="1" cellspacing="0" cellpadding="0" width="589">
+                <tbody>
+                    <tr>
+                        
+                        <td>
+                                学生人数:
+                        </td>
+                        <td>
+                                最多人数: 10
+                                <br/>
+                                平均人数: 6
+                        </td>
+                        <td>
+                                课程持续时间:
+                        </td>
+                        <td>
+                                最少: 1周
+                                <br/>
+                                最多: 学生自定
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                课程级别:
+                        </td>
+                        <td>
+                                A1 到 C2
+                        </td>
+                        <td>
+                                开课时间:
+                        </td>
+                        <td>
+                                周一到周五任意日
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+
+</body>
+</html>

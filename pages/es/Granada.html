@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/Granada/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/Granada/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/Granada/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/Granada/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page3 .page_container{
+    top:10%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/Granada/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/Granada/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/Granada/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/Granada/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>格拉纳达大学</h1>
+              
+              <p>
+                  西班牙格拉纳达大学(Universidad de Granada) ，是一座公立大学。格拉纳达大学建于1531年，由国卡洛斯五世创办，是西班牙最古老的大学之一。格拉纳达大学隶属于科英布拉集团(The Coimbra Group of
+                  Univerisities)，该团体是最为历史悠久、享有盛誉的欧洲大学所组成的联盟，声名显赫的牛津大学、剑桥大学、Lovaina大学、Bolonia大学等都是其成员。在学术理论、教育、研究和出版领域，格拉纳达大学居西班牙52所大学的前5位，与巴塞罗那大学齐名。
+              </p>
+              <p>
+                  学校门口的铭文是：“世界的支柱，只有四根：哲人的学问，伟人的公道，善人的祈祷，勇士的汗马功劳”。课程包括《古兰经》注释、圣训学、教义学、教法学、哲学、阿拉伯语、诗学、历史学、地理学、医学、化学、天文学和数学等。主要培养宗教学者、法官、政府官员和自然科学家。学校附设有清真寺、大型图书馆、学术会堂等，经常举行公共集会、学术报告等。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  <strong>格拉纳达</strong>
+                  （<strong>Granada</strong>）是西班牙安达卢西亚自治区内格拉纳达省的省会，位于内华达山山麓，达若河和赫尼尔河汇合处，海拔738米。根据2003年人口统计，市内人口为237,663人，整个市区人口450,439，在西班牙王国排名第13位。大约3.3%的人口没有西班牙国籍，其中31%来自南美洲。格拉纳达的市徽中有一只石榴，因为西班牙语中，石榴就叫“格拉纳达”。
+              </p>
+              <p>
+                  著名的摩尔人皇宫阿尔罕布拉宫就在格拉纳达。这座融汇着穆斯林、犹太教和基督教风格的著名历史古迹，使格拉纳达市成为西班牙一个文化和旅游热点。
+              </p>
+              <p>
+                  格拉纳达具有鲜明的阿拉伯特色。它的饮食、艺术品和城市规划都受到了其光辉历史的影响。喷泉、瞭望台和花园别墅――富有格拉纳达城市特色的被花园环绕的住宅，创造出了一个个令人难以忘怀的角落。作为格拉纳达古老的社区之一，阿尔拜辛区（el Albaicín）与阿兰布拉宫（La Alhambra）及夏宫别墅（el
+                  Generalife）中选人类文化遗产绝对不虚此名。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+            </p>
+            <p>
+                考古学 ; 艺术 ; 文化遗产保存和修复 ; 小学教育和法语研究 ; 小学教育和英语研究 ; 阿拉伯和伊斯兰研究 ; 法语研究 ; 英语研究 ; 古典语言学 ; 西班牙语言学 ; 哲学 ; 历史 ; 艺术史 ; 音乐历史和科学 ; 现在语言学和文学 ; 比较文学 ; 翻译和口译
+                <br/>
+            </p>
+            <p>
+                <strong>科学：</strong>
+            </p>
+            <p>
+                生物学 ; 生化 ; 生物技术 ; 食品科学和技术 ; 环境科学 ; 统计 ; 物理 ; 物理和数学 ; 地理 ; 信息工程和数学 ; 数学 ; 化学 ; 验光
+                <br/>
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+            </p>
+            <p>
+                护理 ; 制药 ; 理疗 ; 语言治疗 ; 医药 ; 人类营养和营养学 ; 牙科 ; 心理学 ; 职业疗法
+                <br/>
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+            </p>
+            <p>
+                行政和公司管理 ; 行政和公司管理+法律 ; 社会人类学和文化 ; 体力活动和体育科学 ; 政治学与行政 ; 视听传播 ; 犯罪学 ; 法律 ; 政治学与行政法学 ; 经济 ; 幼教 ; 小学教育 ; 小学教育（英语/法语） ; 小学教育和体力活动和体育科学 ; 社会教育 ; 财会 ; 地理和土地管理 ;
+                公共行政与管理 ; 信息和文件 ; 市场营销和市场研究 ; 教育学 ; 劳资关系与人力资源 ; 社会学 ; 社会工作 ; 旅游
+                <br/>
+            </p>
+            <p>
+                <strong>工程和建筑：</strong>
+            </p>
+            <p>
+                建筑 ; 土木工程 ; 电信工程技术 ; 工业电子工程 ; 计算机工程 ; 工程和数学 ; 化工
+                <br/>
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        
+</body>
+</html>

@@ -211,7 +211,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         text-align: center;
     } 
     
-    .main section.page1, .page2, .page3{
+    .main section.page1, .page2, .page3, .page4{
       -webkit-transition: all 500ms ease-in-out;
       -moz-transition: all 500ms ease-in-out;
       -o-transition: all 500ms ease-in-out;
@@ -245,6 +245,18 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       margin-left: -30px;
     }
     .main section.page3 p{
+      position: relative;
+      left:-20px;
+      margin:0;
+      opacity: 0;
+    }
+
+
+    .main section.page4 .page_container {
+      opacity: 0;
+      margin-left: -30px;
+    }
+    .main section.page4 p{
       position: relative;
       left:-20px;
       margin:0;

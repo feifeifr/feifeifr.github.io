@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ucamp/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ucamp/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ucamp/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/ucamp/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+    top:7%;
+  }
+  .main section.page4 p{
+    font-size: 14px;
+  }
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ucamp/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ucamp/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ucamp/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/ucamp/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>康普顿斯大学</h1>
+              
+              <p>
+                  马德里康普顿斯大学是西班牙最大的国立自治综合大学。建于1293年，校址在马德里，历史最早可追溯到中世纪，当时的国王Sancho Ⅳ of Castile在1293年5月20日创立了Studium
+                  Generale。马德里大学的科系完整，课程由古典文学到尖端科技均有开办。用西班牙语教学。马德里大学的历史可以上溯到1293年。现有学生13万，居世界第3位。那年5月20日，西班牙国王桑丘四世签发御旨，下令在阿尔卡拉·德·埃尔纳内斯（古时叫做贡布鲁登塞）建立一所综合学校，教授希伯来语、数学、音乐，后来又增设伦理、物理、神学、教义、圣经、修辞等课程。这所综合学校便是马德里大学的起源。
+              </p>
+              <p>
+                  1499年，Alexander Ⅵ 教皇应之前一个叫Cardinal Cisneros学生的要求将Studium Generale转成大学，后由Papal Bull重命名为Universitas Complutensis，这是是拉丁文对该大学最初所在地Alcala de
+                  Henares的称呼。UCM大学兴盛于16世纪，特别是在Cisneros的恩泽之下，Cisneros当时是Toledo大主教，给与UCM巨大的资助，为了创造大学辉煌。
+                </p>
+
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>1836年，UCM搬迁至马德里，并更名为马德里中心大学（Universidad Central de Madrid），位于市中心的San
+                  Bernardo大街，其中有些建筑还在为各种政府部分使用。19世纪，学校在国王Alfonso十三世的帮助下，得以大规模扩张。1939年战争结束时，超过40%的大学校园被夷为平地。经过多年之后，最终得以重建。并于1970年再次使用原名。后来有人要在这些古老的校园建筑中建立新学校时，他们被迫使用Universidad
+                  de Alcalá de Henares作为校名，以便与Complutense University相区分。
+              </p>
+              <p>
+                  学校的国际交流项目众多，同时友好学校也遍布世界。毕业学生也不乏成为各行业著名人物，如西班牙第一共和国总统。
+              </p>
+              <p>
+                  <strong>院系：</strong>
+                  医学、农林类、工程技术、美术、音乐、生物学、会计学、工商管理、金融学、管理信息系统、市场营销学、计算机和信息技术、教育学、英语、外国语言和文学、健康学、护理学、数学、历史学、心理学、宗教学、物理学、化学、哲学、社会学等。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  <strong>马德里</strong>
+                  （西班牙语：<strong>Madrid</strong>
+              ）是西班牙首都及最大都市，也是马德里自治区首府，其位置处于西班牙国土中部，曼萨纳雷斯河贯穿市区。市内人口约340万，都会区人口则约627.1万（2010年），均占西班牙首位。其建城于9世纪，是在摩尔人边贸站“马格立特”旧址上发展起来的城市；1561年，西班牙国王腓力二世将首都从托莱多迁入于此，由于其特殊的地位而得到迅速的发展，成为往后西班牙殖民帝国的运筹中心，现今则与巴塞罗那并列为西班牙的两大对外文化</a>窗口。
+              </p>
+              <p>
+                  马德里是拥有452
+                  万人口的现代化都市，以文化艺术和古迹以及它独特的风韵，每年吸收成千上万的世界各地游客前来观光旅游。马德里红砖碧瓦有西班牙建筑风格的古建筑和广场、喷泉，雕塑、草坪到处可见，其凯旋门之多为世界之最，是西班牙几个世纪以来，到处出兵征战世界立下战功的标志。在宽阔的林阴大道上的街心花园和各式奇异的喷泉，两旁的高楼大厦和阿拉伯式的红砖白墙房屋，错落有致，其古色古香的风情和现代化色彩的都市相互辉映成趣。
+              </p>
+              <p>
+                  马德里大致可分为马德里古城区和波旁王朝的马德里区两部分，西侧的古城区开发较早，为建都当 时主要行政部门的活动中心。现在的马约尔大广场，太阳门和王宫都在此地。而在面对一侧的波旁王朝马德里区，其主要的观光景点，普拉多美术馆和众神之母广场。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                考古学、艺术、文化遗产保护的修复、设计、西班牙：语言与文学、西班牙- 德国研究、英语研究、犹太人和伊斯兰研究、古典语言学、哲学、历史、艺术史、现代语言和文学、语言学及应用语言学、一般和比较文学、音乐学、笔译和口译、生物学、生物化学、科学与食品技术、物理、地质学、数学、数学与统计、化学、行政与管理
+                （开设英文授课）、社会文化人类学、政治学、贸易、视听传播、犯罪、法律、经济 （开设英文授课）、社会教育、应用统计、财政，金融和保险、地理科学与规划、公共行政与管理、信息和文件、幼儿教师、小学教育教师
+                （开设英文授课）、教育学、新闻学、广告与公共关系、国际关系、劳资关系与人力资源、社会学、社会工作、旅游、护理学、药店、理疗、言语治疗、医药、人类营养和营养学、牙科、光学和验光、足病诊疗、心理学 （开设英文授课）、职业疗法、兽医、游戏开发、计算机工程、材料工程、软件工程、电子通信工程、地质工程、信息工程
+                （开设英文授课）、数学工程、化工、政治学 - 哲学、法律 - 经营与管理、法律 - 政治学、法律 - 劳动关系与人力资源、法律与哲学、经济 - 数学与统计、历史 - 古典语言学、计算机工程 - 数学、数学 - 物理、心理学和言语治疗、社会学 - 国际关系与发展专家、旅游与贸易
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                <strong>生命科学：</strong>
+                健康分析、牙科科学、药物研发、药剂业及制药技术、心理健康手册研究、言语治疗、视觉科学研究、保健研究、免疫学研究、行为科学和健康的方法、微生物学与寄生虫学研究与发展、应用人类营养和营养学、验光和视觉、卫生专业技术、家畜生产及卫生、精神药理学和药物滥用、老年心理、一般健康心理学、健康与残疾整合、猪健康与生产、病毒学
+            </p>
+            <p>
+                <strong>科学：</strong>
+                人类学体质：人类进化和生物多样性、天体物理学、生物统计学、保护生物学、进化生物学、应用植物生物学、生物化学，分子生物学及生物医学、工业生物技术和环境、化工科技、生态、动力、官方统计数据和经济指标、生物物理学、核物理、理论物理学、遗传学与细胞生物学、环境地质学、灾害管理、高级数学、气象和地球物理、微生物学与寄生虫学研究与发展、纳米物理和先进材料、神经科学、新技术的电子和光子、高级古生物、地质资源、有机化学、生态系统恢复、光学技术和图像、动物学
+            </p>
+            <p>
+                <strong>工程及建筑：</strong>
+                系统工程与控制、地质工程、计算机工程、数学工程、化学工程、计算、计信息处理
+            </p>
+            <p>
+                <strong>人文及艺术：</strong>
+                地中海古代经典考古、史前考古学、宗教学、文化遗产保护、当代文化：文学，艺术和文化机构的交流、设计、艺术教育的社会和文化机构、文化遗产在二十一世纪：管理与研究、创意写作、西班牙语作为第二语言、博物馆和历史和艺术遗产高级研究、哲学高级研究、史西班牙语艺术高级研究、女性主义研究、欧洲跨文化研究、文学研究、中世纪研究、古典语言学、当代史、
+              </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            
+              <p>君主制历史、当代艺术与视觉文化的历史、历史和美国人类学、历史和古代的科学、研究艺术与创作、西班牙语语言研究、数字字母：电子文本高级研究、英语语言学：新的应用和国际交流、西班牙文学、美国文学、西班牙
+                - 法语法语应用、西班牙和拉丁美洲音乐、书面遗产、西班牙和拉美思想、精神分析与文化理论、剧场和表演艺术、文学翻译、
+            </p>
+            <p>
+                <strong>社会科学及法律：</strong>
+                法律界人士、行政与管理、法律的经济分析、政治分析、知识和交流的社会文化分析、早期的护理：预防，发现和干预发育障碍及学习、审计和会计、银行和计量金融、精算学和金融、电子商务、音像传播：数字时代、传播组织、社会交往、消费和贸易、银行及资本市场与金融机构、当代西班牙比较法、国际法、议会法律，选举和立法研究、管理及酒店管理公司、经济、国际经济与发展、经济与创新管理、特殊教育、官方统计数据和经济指标、战略和技术发展：世界合作、税法高级研究、社会和文化人类高级研究、政治传播高级研究、劳动法和劳动过程高级研究、社会教育高级研究、劳动就业高级研究、欧盟和地中海：历史，文化，政治，经济和社会基础、财务公司、中高等教育，职业培训和语言教育教师、管理文档，图书馆和档案馆、政府和公共管理、金融机构和市场、科研管理，市场营销和会计、研究教育、新闻学研究：语音通信、民主党领导与沟通策略、物流与经济防卫管理、拉丁美洲当代研究
+                、环境：人类和社会经济方面、创新与应用：在社会科学研究方法论、数据挖掘与商业智能、妇女与健康、音像遗产：历史，恢复和管理、专业多媒体新闻、规划和旅游目的地的管理、防务政策与国际安全、国际政治：扇形面积研究、职业健康和安全。专业人体工程学和应用心理学、教育心理学、工业与组织心理学和人力资源管理、社会心理学、心理教育学、应用社会学：社会问题、地理信息技术、社区社会工作，管理和评价社会服务
+            </p>
+            </div>
+        </section>
+</body>
+</html>

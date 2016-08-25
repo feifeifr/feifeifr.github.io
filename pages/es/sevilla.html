@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/sevilla/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/sevilla/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/sevilla/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+
+  .main section.page3 p{
+      font-size: 14px;
+      /*margin-bottom: 5px;*/
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page3 .page_container{
+    top:5%;
+    float: left;
+    width: 550px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/sevilla/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/sevilla/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/sevilla/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>塞维利亚大学</h1>
+              
+              <p>
+                  塞维利亚大学始建于1551年，是一所有着数百年历史的公立大学。该校还设有高等建筑技术学院，高等信息工程技术学院，高等工程技术学院，建筑技术学院，健康科学学院，企业研究学院，农业技术工程学院，理工学院等8个学院。
+              </p>
+              <p>
+                  塞维亚大学诞生于十六世纪初，1508年，胡里奥二世手谕批准在安达鲁西亚这一城市建立一所大学，和一个可以教授“艺术，逻辑，哲学，神学，教会和市民律法”的学院。1516年，学生们开始进入被称为“耶稣圣母玛利亚学院”的机构进行学习。1551年，该市委员会批准了一个综合学院，因此该大学也得以成立。1621年，大学章程承认了4个系科：神学系，律法与准则系，医药学系，和艺术系。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  几个世纪之后，建立在“平等，自由，公正和多元化”原则基础上的塞维亚大学成为了今天全国高等院校中最重要的大学之一。对科学，文化，社会活动发展的支持;对大学发展动力的强调;成为发展模式创新者和科学文化的传播者的意图;对培训专业人士的关心——这些都构成了该大学重要的特点。
+              </p>
+              <p>
+                  大学的其它院系分布在塞维利亚的各个地区：La Macarena的保健科学学院，Nervion的商学院，La Cartuja的工程学院和传播学院，以及Reina Mercedes的科学学院。
+              </p>
+              <p>
+                  塞维利亚大学在USNEWS首次公布的2015世界大学排名中名列489位。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  塞维利亚市是西班牙第四大城市，也是南部第一大城市，是西班牙南部的艺术，文化与金融中心，是经济、贸易、旅游文化重镇。
+              </p>
+              <p>
+                  古市区的建筑仍然保留着几个世纪前摩尔人统治过的痕迹。塞维利亚曾是一个重要的港口，西班牙的船队从新大陆运来大批黄金、白银，经过塞维利亚转运往欧洲各地。市中那座耸立在瓜达尔基维尔河畔的十二等边形黄金塔是于1221年建造的，古时外壁曾铺上金砖，显示当时塞维利亚的繁荣。塞维利亚举办过1992年的世界博览会。瓜达尔基维尔河上的一座圣地亚哥·卡拉特拉瓦设计的阿拉米略桥便是为此而建的。
+              </p>
+              <p>
+                  塞维利亚街道宽阔、美观、整洁，绿化较好。市内古迹颇多。 其中主要有：
+                  <br/>
+                  　　【大教堂】为塞城的象征。
+                  <br/>
+                  　　【王宫】伊斯兰文化遗产，具有重要的历史价值。
+                  <br/>
+                  　　【西班牙广场】整个建筑呈半圆形，外部用各种瓷砖镶嵌而成，代表原西班牙58个省。
+                  <br/>
+                  　　【美术馆】十六至十七世纪时，原为一修道院。从1838年起改为塞维利亚美术馆。
+                  <br/>
+                  　　【圣克鲁斯区】原为犹太人居住区，至今是塞维利亚市最具特色和最别致的住宅区。
+                  <br/>
+                  　　【黄金塔】阿拉伯风格的堡垒形建筑。曾是贮存黄金的金库。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>本科专业：</strong>
+            </p>
+            <p>
+                行政和公司管理及相关法律 （双学位）、经济及法律 （双学位）、法律及财务会计 （双学位）、法律及公共行政管理 （双学位）、法语研究和小学教育 （双学位）、药剂业及验光 （双学位）、古典文献学和语言学 （双学位）、财务会计与劳动关系与人力资源 （双学位）、物理与材料工程 （双学位）、物理与数学
+                （双学位）、地理、土地管理及历史 （双学位）、工业设计，机械设计及产品发展 （双学位）、德国语言文学，小学教育 （双学位）、数学与统计 （双学位）、新闻与传播视听 （双学位）、化学与材料工程 （双学位）
+            </p>
+            <p>
+                行政和公司管理、社会人类学与文化、考古、建筑、艺术、基础生物医药及实验、生物医学、建筑科学及技术、体力活动和体育科学、视听传播、文化遗产保存和修复、犯罪学、法律、经济、幼教、小学教育、病理学、统计、阿拉伯和伊斯兰研究、东方研究、法语语言学、英文语言学、制药、古典语言学、西班牙语言学、哲学、财会、物理、理疗、建筑基础、地理和土地管理、行政与公共管理、历史、艺术史、航天工程、农业工程、土木工程、能源工程、健康工程、通信科技工程、材料工程、工业组织工程、工业技术工程、电气工程、工业电子工程、电子工程，机器人及机电一体化
+                （UMA-US）、工业设计工程和产品开发、计算机工程、计算机工程，软件工程、机械工程、化工、工业工程化学、德语语言文学、市场营销及市场调查、数学、医学、牙科、验光、教育学、新闻学、广告与公共关系、化学、劳资关系与人力资源、旅游学
+            </p>
+            <p>
+                <strong>官方硕士专业：</strong>
+            </p>
+            <p>
+                法律和服务，商业，税务和劳动咨询 （双学位）、法律和公法 （双学位）、法律和私人关系 （双学位）、高级西班牙语研究及中等义务教育教师和高级教育，职业教育教师和语言教学 （双学位）、哲学与现在文化及中等义务教育教师和高级教育，职业教育教师和语言教学 （双学位）
+            </p>
+            
+          </div>
+          <div class="page_container second_page">
+              <p>
+                法律、成人和老年的体力活动和生活质量、人类学：文化多样性，传承和发展管理、考古、建筑、建筑和历史遗产、艺术：理念与生产、艺术：现场艺术、法律和商业咨询，税收和就业、高级审计和会计、自动化，机器人和远程信息处理、高级生物学研究与应用、新科技材料、科学工作、牙科科学、可持续城市与建筑、体制机构和政治、传播与文化、经济咨询和应用分析、劳动咨询、国家法、公共法、旅游管理与规划、管理，质量评估和培训机构、先进的设计机械工程、文件和书籍。档案馆和图书馆、经济与发展、电子技术，信号处理和通信、西班牙语作为外语及现代语言的教学、创意写作、特殊职业药学、美国研究、大脑与行为高级研究、公司管理高级研究、化学高级研究、性别与专业发展研究、欧洲研究、高级西班牙语、历史高级研究、语言，文学和文化研究、哲学与现代文化、核物理
+                （交换项目）、生理学和神经科学、职业培训和就业指导、分子遗传学和生物技术、信息技术和通信管理、战略管理和国际商务、整体施工管理、管理与人力资源开发、剧本，叙事和视听创意、航空工程、农艺工程、环境工程、土木工程，通道和端口、计算机工程与网络、电信工程、工业工程、计算机工程、化工、软件工程与技术、创新体系结构：技术与设计、设施和产品设计、家庭干预与调解、生物医学研究、医学研究：临床与实验、逻辑，计算和人工智能、数学、微电子：设计和微应用/纳米系统、国际移民，卫生与健康：模型和干预策略、特殊教育需要，并注意学校多样性、救济新趋势健康科学、规划和属地管理和地方发展、产业组织与管理、安达卢西亚艺术遗产和伊比利亚美洲项目、建筑检查与修理、中学义务教育，本科及职业培训教师和语言教学、教育心理学。进展心理干预和特殊教育、社会和社区干预的心理学、组织心理学及劳工、一般健康心理学、社会教育学、法律，私人关系、综合楼宇安全、全面的安全性在行业和职业健康与安全、电力系统、热能系统、在能源与交通智能系统、技术和食品工业、翻译与跨文化、城市规划，规划及城市设计
+            </p>
+          </div>
+        </section>
+</body>
+</html>

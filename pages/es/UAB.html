@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/UAB/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/UAB/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/UAB/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/UAB/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/UAB/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/UAB/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/UAB/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/UAB/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴塞罗那自治大学</h1>
+              
+              <p>
+              巴塞罗那自治大学(Universitat Autònoma de Barcelona)简称UAB，始建于1968年，是一所年轻现代化的大学，共有30个学院，53个系，9个图书馆，现设有78个本科课程，88个博士生项目与183个官方硕士和334个校际硕士课程。世界大学200强，位于西班牙加泰罗尼亚自治区的巴塞罗那省。UAB，更被公认为欧洲最优秀的大学之一。
+              </p>
+              <p>
+                  巴塞罗那自治大学一共拥有三个校区：Bellaterra校区，最大的一个校区，也是该校科技园驻地，位于巴塞罗那Cerdanyola del Vallès地区；Sabadell校区，启用于2004到2005学年；SantPau 校区是医学院专用校区。
+              </p>
+              <p>
+                  在众多的学科中，以经济企管类为最著名，排名全国第一。此外，文学，外文，翻译类，
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  也是全国最顶尖的院校，医药和卫生类，法学，环境科学，生物科技，电子工程均占全国鳌头。
+              </p>
+              <p>
+                  2016年Times时报世界大学排名146，西班牙国内排名第一
+              </p>
+              <p>
+                  美国新闻与世界报道2016世界大学排名 165， 西班牙国内排名第二
+              </p>
+              <p>
+                  巴塞罗那自治大学参与了多项与欧洲、拉丁美洲和亚洲的学生交流项目，这些项目可以使该校学生了解其他大学的情况，外国学生也得以在巴塞罗那自治大学完成学业。
+              </p>
+              <p>
+                  巴塞罗那自治大学的国际关系办公室负责协调学生和教师参加此类交流项目，并与全世界的大学与研究中心保持合作关系。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  巴塞罗那的气候属于地中海式气候，冬季温暖潮湿而夏季炎热干燥。
+              </p>
+              <p>
+                  巴塞罗那海岸线总长4.5公里，分为7块海滩，其中圣塞巴斯蒂亚滩和巴萨罗内塔滩是最大、最著名、游客最多的两个，均约长1.1公里。其余5个海滩（分别是诺瓦·伊萨里亚滩、博加特尔滩、玛·贝拉滩、诺瓦·玛·贝拉滩和莱万特滩，长度在400米到640米之间）和两个大海滩被奥林匹克港隔开。
+              </p>
+              <p>
+                  巴塞罗那具有悠久的商业传统，相比之下其作为欧洲大陆最早工业化的地区之一反而不为人知。根据默瑟尔人力资源咨询公司的统计，巴塞罗那是西班牙生活成本第二高的城市，仅次于马德里，在全世界也排在第31位。
+              </p>
+              <p>
+                  在2000多年的历史中巴塞罗那形成了自己独特的文化，与加泰罗尼亚大区其他地区加泰罗尼亚语占统治地位不同，巴塞罗那有两种官方语言：西班牙语和加泰罗尼亚语，而且两种语言都得到广泛使用。自从20世纪70年代西班牙实现民主后，在独裁时期受压制的加泰罗尼亚本地文化蓬勃发展，旧有的艺术形式恢复了活力，新的艺术形式也不断涌现，全球化与世界级城市研究小组与网络（Globalization
+                  and World Cities Study Group and Network，GaWC）将巴塞罗那列为第三类全球城市。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                <strong>本科专业：</strong>
+            </p>
+            <p>
+                健康科学：
+                <br/>
+            </p>
+            <p>
+                食品科学和技术 ; 生药科学 ; 护理 ; 理疗 ; 语言治疗 ; 医药 ; 心理学 ; 职业治疗 ; 兽医
+                <br/>
+            </p>
+            <p>
+                科学：
+                <br/>
+            </p>
+            <p>
+                环境科学 ; 环境科学+地质学 ; 应用统计+社会学 ; 应用统计 ; 物理 ; 物理+数学 ; 物理+化学 ; 地质学 ; 数学 ; 纳米科学和纳米技术 ; 化学
+                <br/>
+            </p>
+            <p>
+                生物科学：
+                <br/>
+            </p>
+            <p>
+                生物学 ; 环境生物学 ; 生化 ; 生物技术 ; 生药科学 ; 遗传学 ; 微生物学
+                <br/>
+            </p>
+            <p>
+                艺术人文：
+                <br/>
+            </p>
+            <p>
+                考古学 ; 艺术设计 ; 古典研究 ; 东方研究 ; 加泰罗尼亚语和西班牙语研究 ; 英文和加泰罗尼亚语研究 ; 英文和古典研究 ; 英文和西班牙语研究 ; 英文和法语研究 ; 法语研究 ; 英语研究 ; 哲学 ; 历史 ; 艺术史 ; 人文学 ; 加泰罗尼亚语言和文学 ; 西班牙语语言和文学 ;
+                西班牙语语言和文学 ; 翻译和口译
+                <br/>
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                社会科学和法律：
+                <br/>
+            </p>
+            <p>
+                行政与管理 ; 行政与管理+法律 ; 社会人类学和文化 ; 政治学与公共管理 ; 政治学与公共管理+法律 ; 视听传播 ; 会计与金融 ; 犯罪学 ; 犯罪学+法律 ; 法律 ; 法律+所有权 ; 法律+劳务关系 ; 酒店管理 ; 经济 ; 幼教 ; 幼教+小学教育 ; 小学教育 ; 社会教育 ; 商业与技术
+                ; 应用统计+社会学 ; 地理科学与规划 ; 航空管理 ; 教育学 ; 新闻学 ; 预防和全面的安全性 ; 广告和公共关系 ; 劳务关系 ; 社会学 ; 旅游
+                <br/>
+            </p>
+            <p>
+                工程学：
+            </p>
+            <p>
+                航空管理 ; 计算机和服务 ; 通信系统工程 ; 电气工程 ; 电子通信工程 ; 自动化和工业电子工程 ; 产业组织工程 ; 工业电子与自动化工程+机械工程 ; 计算机工程 ; 计算机科学与工程+电信系统 ; 计算机科学与工程+电子电信 ; 机械工程 ; 化工
+                <br/>
+            </p>
+            <p>
+                英文授课：
+            </p>
+            <p>
+                行政与管理 ; 经济 ; 小学教育 ; 英文研究 ; 旅游
+                <br/>
+            </p>
+            </div>
+        </section>
+        <section class="page4 dark_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方硕士专业：
+            </p>
+            <p>
+                经济系
+            </p>
+            <p>
+                经济分析 ; 专业经济分析 ; 数据科学 ; 高级会计与审计 ; 经济学与工商管理 ; 管理学，企业组织与商业经济 ; 经济学史 ; 欧洲一体化 ; 市场营销 ; 数量经济学的模型与方法论 ; 经济贸易应用研究
+                <br/>
+            </p>
+            <p>
+                语言文学翻译系
+            </p>
+            <p>
+                高级英语 ; 比较文学：文学与文化研究 ; 西班牙语，西班牙语文学与外语西班牙语 ; 翻译与跨文化研究 ; 中欧经济文化研究
+            </p>
+            <p>
+                旅游业及旅馆业
+            </p>
+            <p>
+                酒店管理 ; 事件旅游组织与管理
+                <br/>
+            </p>
+            <p>
+                新闻与传媒系
+            </p>
+            <p>
+                广告与视听传播 ; 媒体，传播学与文化 ; 广告与公共关系战略规划 ; 新闻学与传播学研究
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                科学与环境科学
+            </p>
+            <p>
+                光子学 ; 土壤与水资源管理 ; 环境、经济与社会可持续发展跨学科研究 ; 计算机视觉 ; 矿产资源与地质灾害 ; 光子学工程、纳米光子学与生物光子学 ; 工业化学与化学研究导论 ; 高能物理、天体物理和宇宙学 ; 环境研究-城市可持续发展 ; 理论、数字、应用的数学模型与工程
+                <br/>
+            </p>
+            <p>
+                英文授课
+            </p>
+            <p>
+                经济分析 ; 专业经济分析 ; 生物信息学 ; 数据科学 ; 政治科学 ; 经济与企业管理 ; 动物源食品生产EMFOL ; 理论、数字、应用的数学模型与工程 ; 高级英语 ; 光子学工程、纳米光子学与生物光子学 ; 药物警戒规范和药物流行学 ; 高能物理、天体物理和宇宙学 ; 光子学 ; 高级遗传学 ;
+                商业经济学、组织与管理 ; 全球发展教育政策 ; 环境研究-城市可持续发展 ; 物流与供应链管理 ; 电信工程 ; 计算机工程 ; 经济贸易应用研究 ; 输血医学与先进细胞疗法 ; 科学与工程建模 ; 公共政策学 ; 高级纳米科学与纳米技术 ; 数量经济学的模型与方法论
+                <br/>
+            </p>
+            </div>
+        </section>
+</body>
+</html>

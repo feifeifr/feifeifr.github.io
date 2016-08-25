@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/Jaen/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/Jaen/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/Jaen/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/Jaen/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/Jaen/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/Jaen/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>哈恩大学</h1>
+              
+              <p>
+                  哈恩大学早在 16 世纪就已经成立了，但是在当时叫做 Pontifical 大学。 16-19 世纪该大学与 Baeza 大学联合办学。 Baeza 大学是安达卢西亚的一所国际大学。 1993
+                  年，大学以“哈恩大学”正式命名成立。学校的计算机、电子学和橄榄种植等专业课程在西班牙排名前列。学生完成所有课程，由西班牙教育部授予相应学位。
+                  <br/>
+                  　　哈恩大学的主校园 Las Lagunillas 坐落于哈恩大学的东北部 , 位于 Torrequebradilla 和 Nacional 323 号大路并邻近 Carretera de Madrid 。 校园门口有许多公交车到达市中心。哈恩大学是欧洲学分互转系统的成员，参加了苏格拉底－伊拉兹马斯计划。
+                  <br/>
+                  　　哈恩市拥有 15 万人口的居民，哈恩大学位于城市中心，当地盛产橄榄油。拥有西班牙最大的天然公园。安达卢西亚的哈恩市是 21 世纪集艺术、文化、教育为一体的一个现代化城市。
+              </p>
+              <p>
+                  该大学开设有专科、本科、硕士和博士专业（包括双学位），比如统计学，物理疗法，公共管理，法律与工商管理双学位，统计与信息管理技术工程学双学位（系大专阶段），信息工程，大地测量与绘图工程，工业流程控制，全球化以前的企业管理等等。在2007年“因特网实验室”
+                  的大学排行榜上，哈恩大学在100所参评大学中名列第53位。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  哈恩
+                  （Jaén）是位于西班牙中南部的城市。哈恩是安达卢西亚自治区哈恩省的省会。2006年，哈恩有人口约117,540人，约占全省人口的六分之一。是省内重要的工业都市。哈恩有“橄榄油之都”之称。
+              </p>
+              <p>
+                  首府哈恩。莫雷纳山脉盘亘北境；南有帕拉潘达、卢塞纳和卡索拉等山脉；东有塞格马等山脉；西部为平原，有瓜达尔基维尔河谷地，建有多处灌溉水坝和水电站。有汽车、农机、化工等工业。盛产油橄榄、葡萄等。开采铅、铁、铜、盐、铀矿。西班牙南部城市，哈恩省首府。在哈瓦莱乌斯山北侧。罗马和摩尔人统治时期，经济已颇繁荣。1246年属卡斯蒂利亚王国。有汽车、农机、橄榄油、化工、陶瓷、冶金等工业。古迹有十二世纪的阿拉伯清真寺和1540年的天主教堂。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi white_bg">
+          <!-- <div class="page_container page_left"> -->
+          <div class="page_container page_right">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                工商管理和法律学位双学位、行政与管理、考古学、生物学、环境科学、法律、幼儿教育、小学教育、社会教育、护理学、统计与企业、英语学习、语言学、财会、理疗、地理和历史、公共行政与管理、艺术史、土木工程、工业工程组织、能源资源工程、电信工程技术、矿业工程技术、电气工程、工业电子工程、地理信息与测绘工程、计算机工程、机械工程、工业工程化学、远程信息处理工程、心理学、化学、劳资关系与人力资源、社会工作、旅游
+            </p>
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                艺术与人文
+                <br/>
+            </p>
+            <p>
+                高级研究文化遗产：历史，艺术和地域 ; 西班牙语语言文学的研究与专业应用 ; 西班牙语作为一门外语应用语言学教学
+            </p>
+            <p>
+                科学
+                <br/>
+            </p>
+            <p>
+                分析，管理和物理环境恢复 ; 生物技术和生物医学 ; 自然环境中生物资源管理 ; 橄榄和橄榄油 ; 化工（学校交流项目）
+            </p>
+            <p>
+                健康科学
+                <br/>
+            </p>
+            <p>
+                高级食品安全 ; 重症监护护理，急救和应急 ; 老年医学：长寿，健康和质量 ; 动物辅助介入治疗 ; 研究健康科学 ; 一般健康心理学（学校交流）
+                <br/>
+            </p>
+          </div>
+          <div class="page_container second_page">
+          
+            <p>
+                社会科学及法律
+                <br/>
+            </p>
+            <p>
+                市场营销和消费者行为（校际） ; 律师 ; 工商管理硕士（MBA） ; 工商管理硕士（MBA） ; 性别不平等和综合干预家庭暴力的批判性分析 ; 中高等教育，职业培训和语言教学教师 ; 依赖与平等的个人自主权 ; 依赖与平等的个人自主权 ; 依赖与平等的个人自主权 ; 依赖与平等的个人自主权 ;
+                经济与国土开发（校际） ; 旅游目的地可持续战略管理（校际） ; 体力活动和健康的科学研究与教学 ; 研究与审美教育：艺术，音乐和设计 ; 刑事司法和监狱系统
+                <br/>
+            </p>
+            <p>
+                工程与建筑
+                <br/>
+            </p>
+            <p>
+                可再生能源 ; 卫星大地测量与地球物理工程和应用地质学 ; 材料工程与可持续建设 ; 电信工程 ; 陆路交通工程与物流 ; 工业工程 ; 计算机工程 ; 建筑和工业可持续发展和能源效率 ; 太阳能光伏技术系统 ; 智能土地管理地理空间技术
+                <br/>
+            </p>
+
+          </div>
+        </section>
+</body>
+</html>

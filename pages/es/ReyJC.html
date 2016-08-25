@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ReyJC/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ReyJC/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ReyJC/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/ReyJC/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 530px;
+  }
+  .main section.page3 .page_container{
+    float: left;
+    width: 550px;
+    top:10%;
+  }
+  .main section.page4 .page_container{
+    float: left;
+    width: 550px;
+    /*top:10%;*/
+  }
+
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ReyJC/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ReyJC/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ReyJC/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/ReyJC/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>胡安卡洛斯国王大学</h1>
+              
+              <p>
+                  胡安卡洛斯国王大学（Universidad Rey Juan Carlos URJC），是马德里自治大区六所 公立大学中最年轻，最现代化的一所。学校成立于 1996 年 7 月 8 日，得到现任 国王胡安·卡洛斯的大力支持。并且于 2012 和其他多所西班牙大学一起入选了西 班牙国际优秀校园项目。
+                  学校的座右铭是：继承传统，革新方式（non nova, sed nove） 学校的口号是：公立的， 为你而准备。
+              </p>
+              <p>
+                  学校提供医学，理工，传媒电信，法学以及社会人文等各个专业的本科，官方硕 士，博士等学位以及各种校级硕士和继续教育。 目前，学校所有新开设的专业将适应欧洲高等教育一体化（博洛尼亚计划），所 有本科为新四年制本科学位，其中除了普通本科，还包含双学位，全英语授课和 网络教学。
+                  在这短短的十几年中，胡安卡洛斯国王大学已经发展成一个校区分布广泛，学科 众多，设施齐全而现代化，充满朝气的大学。
+                </p>
+
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>自建校以来，在我校就读的学生数 量不断增加，据统计，2014 至 2015 学年常规注册学生已达 40000 余人。国际学 生为 3600 余人（来自 100
+                  个不同的国家地区），中国留学生总人数已经到达 681 人，跃居外国学生数量第一位。
+              </p>
+              <p>
+                  学校拥有五个校区，交通便捷，地铁 (metro) 以及城市铁路(cercanía) 均可直达 每个校区。 Móstoles 校区：设有校长办公楼，高等科学技术学院 (ESCET) ，高等信息工程 学院 (ETSII) 及其技术支持中心（CAT）。 在公路另一边有科技发展中心以及西班牙 Repsol—YPF
+                  能源中心，与本校有密切 合作联系。 Alcorcón 校区: 设有医学院 (FCS) 。 Fuenlabrada 校区: 设有新闻传媒学院 (FCCOM) ， 电信工程高等学院 (ETSIT) ， 旅游管理学院, Alicia Alonso 高等舞蹈学院 (ESDAA) 。
+                  设有法律，管理及信息科学等学科的教学中心，承担部分相关学位授课。 Aranjuez 校区：设有社科与法律学院，传媒学院。 Madrid（Vicálvaro）校区: 设有法学院，经济管理学院，人文学院。 设有新闻传媒，旅游，信息科学等学科的教学中心，承担相关学位授课。
+                  以及语言教学中心，马德里经济研究中心，欧盟文件研究中心，社科研究中心等。 每个校区设施齐全，各自有独立的图书馆，行政管理大楼，教研室，会议中心， 学生服务中心，学生就业指导信息中心，活动中心，操场等。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  <strong>马德里</strong>
+                  （西班牙语：<strong>Madrid</strong>
+              ）是西班牙首都及最大都市，也是马德里自治区首府，其位置处于西班牙国土中部，曼萨纳雷斯河贯穿市区。市内人口约340万，都会区人口则约627.1万（2010年），均占西班牙首位。其建城于9世纪，是在摩尔人边贸站“马格立特”旧址上发展起来的城市；1561年，西班牙国王腓力二世将首都从托莱多迁入于此，由于其特殊的地位而得到迅速的发展，成为往后西班牙殖民帝国的运筹中心，现今则与巴塞罗那并列为西班牙的两大对外文化窗口。
+              </p>
+              <p>
+                  马德里是拥有452
+                  万人口的现代化都市，以文化艺术和古迹以及它独特的风韵，每年吸收成千上万的世界各地游客前来观光旅游。马德里红砖碧瓦有西班牙建筑风格的古建筑和广场、喷泉，雕塑、草坪到处可见，其凯旋门之多为世界之最，是西班牙几个世纪以来，到处出兵征战世界立下战功的标志。在宽阔的林阴大道上的街心花园和各式奇异的喷泉，两旁的高楼大厦和阿拉伯式的红砖白墙房屋，错落有致，其古色古香的风情和现代化色彩的都市相互辉映成趣。
+              </p>
+              <p>
+                  马德里大致可分为马德里古城区和波旁王朝的马德里区两部分，西侧的古城区开发较早，为建都当 时主要行政部门的活动中心。现在的马约尔大广场，太阳门和王宫都在此地。而在面对一侧的波旁王朝马德里区，其主要的观光景点，普拉多美术馆和众神之母广场。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+            </p>
+            <p>
+                行政与管理 ; 科学，管理与工程服务 ; 政治学与公共管理 ; 视听传播 ; 会计与金融 ; 犯罪 ; 法律 ; 金融经济学与精算 ; 经济（有英文授课） ; 幼儿教育（有英文授课） ; 小学教育（有英文授课） ; 西班牙手语及聋人社区 ; 营销（有英文授课） ; 新闻学 ;
+                活动协议和组织及企业传播（有英文授课） ; 广告与公共关系 ; 国际关系（有英文授课） ; 劳资关系与人力资源 ; 旅游（有英文授课） ; 社会工作 ; 工商管理（英文授课） ; 管理学+法律 ; 管理学+科学，管理与工程服务 ; 美术+旅游 ; 行政和管理事务+科学，管理与工程服务 ;
+                科学，管理与工程服务+市场/旅游/工程产业组织 ; 政治学与公共管理+法律/经济学/新闻学 ; 音像传播+行政与管理 ; 会计与财务+劳动关系与人力资源/法律 ; 犯罪学+法/计算机工程/心理学/社会工作 ; 法律+新闻/劳动关系和人力资源/国际关系 ; 经济+历史/金融经济学与精算/新闻 ;
+                精算和金融经济+工商管理 ; 小学教育+幼教/数学/历史/西班牙手语及聋哑人沟通 ; 国际关系+政治学与公共管理/经济/新闻学/活动协议，组织及企业传讯 ; 旅游+商业管理/营销 ; 公共关系+营销/行政与公司管理 ; 新闻+音像传播
+                <br/>
+            </p>
+            <p>
+                <strong>科学：</strong>
+            </p>
+            <p>
+                生物学 ; 科学与食品技术 ; 环境科学 ; 实验科学 ; 数学
+                <br/>
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>健康科学：</strong>
+            </p>
+            <p>
+                护理学 ; 理疗 ; 医药 ; 牙科 ; 心理学 ; 职业疗法 ; 职业治疗+社会工作
+                <br/>
+            </p>
+            <p>
+                <strong>工程与建筑：</strong>
+            </p>
+            <p>
+                设计和游戏开发 ; 建筑基础 ; 空中导航航天工程 ; 环境工程 ; 生物医学工程 ; 计算机工程 ; 材料工程 ; 工业技术工程 ; 软件工程 ; 能源工程 ; 产业组织工程 ; 工程视听系统和多媒体 ; 通信系统工程 ; 工程通信科技 ; 远程信息处理工程 ; 化工 ; 设计和游戏开发+计算机工程 ;
+                建筑+整体设计和图像管理基础 ; 建筑+景观的基础 ; 计算机工程+工商管理 ; 环境工程+工程产业组织 ; 能源工程+工程产业组织 ; 能源工程与环境工程 ; 工程材料+能源工程 ; 材料工程+工程产业组织 ; 软件工程+数学 ; 通信系统工程+工商管理 ; 计算机工程+软件工程 ; 计算机工程+数学 ;
+                化学工程+环境工程 ; 化工+能源工程 ; 化学工程+产业组织 ; 工程通信科技+空中导航航天工程
+                <br/>
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+            </p>
+            <p>
+                视觉艺术和舞蹈 ; 艺术 ; 整体设计和图像管理 ; 设计与时尚管理 ; 历史 ; 西班牙语语言文学 ; 园林绿化 ; 教育学和舞蹈视觉艺术 ; 笔译和口译 ; 美术+设计和管理整体形象 ; 美术+设计和时尚管理 ; 设计与时尚+设计管理和综合图像管理 ; 哲学+政治+经济科学 ; 历史+旅游 ;
+                历史+政治学与公共管理 ; 历史+新闻 ; 西班牙语语言文学+新闻 ; 劳资关系及人力资源+社会工作
+            </p>
+            </div>
+        </section>
+        <section class="page4 dark_pagi dark_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+            </p>
+            <p>
+                律师 ; 高管 ; 国际经济分析 ; 现代经济分析 ; 防恐怖主义分析与预防 ; N.I.I.F.金融和税法 ; 法律咨询及劳工 ; 咨询和财务规划 ; 高级审计和会计 ; 电影，电视和互动媒体 ; 通讯，文化和数字公民 ; 通信和社会问题 ; 经济刑法 ; 新全球经济和政治秩序的人权 ; 供应链管理 ;
+                企业组织神经认知技术开发：神经管理学 ; 教育中心管理 ; 通信和新技术管理 ; 公安战略管理 ; 人事管理和组织发展 ; 人力资源和人才管理 ; 管理和项目管理 ; 纪录片和新广告格式 ; 企业家 ; 双语小学教育和英语侵入式教育 ; 税务与会计 ; 中高等教育，职业培训和语言教育教师 ; 商业管理 ;
+                管理和业务传播研究 ; 安全管理，危机与应急 ; 应用传播研究 ; 机制框架与经济增长 ; 企业组织 ; 法医刑事威胁概况 ; 文化新闻和新趋势 ; 经济新闻 ; 战略业务规划，分析和决策 ; 政策保护儿童和青少年 ; 侵权责任 ; 活动协议、传播和组织 ; 法院检察长 ; 企业组织（英文授课） ;
+                国际经济关系(英文授课） ; 国际旅游管理(英文授课） ; 律师+经济刑法
+                <br/>
+            </p>
+            
+
+
+          </div>
+          <div class="page_container second_page">
+            <p>
+                <strong>科学：</strong>
+            </p>
+            <p>
+                技术生物多样性保护与生态; 地理信息技术（校际合作） ; 水文与水资源管理（校际合作） ; 生态系统恢复（校际合作）
+                <br/>
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+            </p>
+            <p>
+                生命伦理学 ; 危重病 ; 流行病学和公共卫生 ; 热带医学和发展合作 ; 运动神经控制 ; 一般健康心理学
+                <br/>
+            </p>
+            <p>
+                <strong>工程与建筑：</strong>
+            </p>
+            <p>
+                建筑 ; 计算机图形，游戏和虚拟现实 ; 工业工程 ; 计算机工程 ; 电信工程 ; 化学工程 ; 结构材料新技术 ; 信息技术和通信生物医学工程 ; 防护技术安全和防御系统 ; 低排放二氧化碳能源技术 ; 材料加工技术 ; 机器视觉
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+            </p>
+            <p>
+                戏剧，电影和电视表演表演艺术 ; 创作与音乐表演 ; 艺术摄影和摄影叙事纪录片 ; 领导和管理文化项目
+                <br/>
+            </p>
+            </div>
+        </section>
+</body>
+</html>

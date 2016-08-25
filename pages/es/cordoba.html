@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/cordoba/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/cordoba/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/cordoba/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/cordoba/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page4 .page_container{
+    float: left;
+    width: 500px;
+    top:10%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/cordoba/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/cordoba/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/cordoba/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/cordoba/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>科尔多瓦大学</h1>
+              
+              <p>
+                  科尔多瓦大学位于西班牙科尔多瓦市。该校大约建于1972年，是一所比较年轻的大学。该大学设有兽医系、科学系、哲学与文学系、法律与企业经济系、教育科学系、工作科学系、经济与企业科学系及医学系等八个系；还设有高级农业与山脉工程技术学院、高级理工学院、贝尔梅丝（Belmez）理工学院、神圣之心教师学院以及护理学院等五个学院。该大学开设有本科、硕士和博士专业，比如兽医学、心理教育学、医学、农艺工程、山脉工程、酿酒术、语言学（西班牙语、英语）、历史、艺术史、人文学、翻译学（笔译与口译）、生物学、化学、企业对外贸易与国际化、工业流程控制、环境水力学、绿色化学等等。另为高级行政管理人员开设EMBA课程。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+              科尔多巴是一个位于西班牙南部安达卢西亚大区的城市，是一个拥有无数文化遗产和古迹的城市。在莫雷纳山麓，瓜达尔基维尔河畔。人口28.4万（1981）。原为腓尼基人和迦太基人古城，公元前二世纪为罗马人
+              殖民地，公元六世纪西哥特人侵入，破坏甚烈。公元八至十一世纪曾为科尔多瓦哈里发的都城，城市繁荣。十二世纪起是西班牙王国的重要军事基地。铁路枢纽。附近产铜和铝。有食品、化学、电子等工业。多罗马和摩尔人遗迹，有八世纪时建造的清真寺（现为天主教堂），还有横跨瓜达尔基维尔河上的摩尔桥。市郊10公里处，有珍贵的阿拉伯白金建筑遗址。
+              </p>
+              <p>
+                  科尔多瓦与格拉纳达、塞维利亚鼎足而立，是南部安达路西亚地区的三颗珍珠。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi dark_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+            </p>
+            <p>
+                英语语言学 ; 西班牙语教学 ; 文化管理 ; 历史 ; 艺术史 ; 翻译和口译 ; 历史+艺术史（新） ; 翻译口译+英语语言学（新） ; 小学教育（双语）+英语语言学（新） ; 旅游+翻译及口译（新）
+                <br/>
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+            </p>
+            <p>
+                兽医学 ; 护理学 ; 理疗 ; 医药学
+                <br/>
+            </p>
+            <p>
+                <strong>工程师和建筑：</strong>
+            </p>
+            <p>
+                农业工程和农村工程（4技术） ; 林业 ; 酿酒+农业工程和农村工程 ; 计算机工程（3技术） ; 电气工程 ; 工业电子工程 ; 机械工程 ; 土木工程（2技术） ; 能源工程及矿业工程（2技术） ; 土木工程+能源工程及矿业工程
+                <br/>
+            </p>
+            <p>
+                <strong>科学：</strong>
+            </p>
+            <p>
+                食品科学和技术 ; 生物 ; 生化 ; 环境科学 ; 物理 ; 化学
+                <br/>
+            </p>
+            <p>
+                <strong>社会科学和法律：</strong>
+            </p>
+            <p>
+                法律 ; 行政和公司管理 ; 法律+行政和公司管理 ; 幼教/幼教（双语）（新） ; 小学教育/小学教育（双语） ; 社会教育 ; 小学教育（双语）+英语语言学（新） ; 劳资关系与人力资源 ; 旅游 ; 旅游+翻译及口译（新）
+                <br/>
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                官方研究生专业：
+            </p>
+            <p>
+                <strong>艺术和人文：</strong>
+            </p>
+            <p>
+                摄影（有英语授课） ; 高级英语研究（认知语言学/文学）和双语教育 ; 专业翻译（英语/法语/德语 - 西班牙语）（有英语授课）
+                <br/>
+            </p>
+            <p>
+                <strong>健康科学：</strong>
+            </p>
+            <p>
+                转化生物医学研究（有英语授课） ; 医学，健康学和动物完善 ; 人类营养 ; 一般健康心理学（有英语授课）
+                <br/>
+            </p>
+            <p>
+                <strong>工程师和建筑：</strong>
+            </p>
+            <p>
+                分布式可再生能源（有英文授课） ; 农村与领土发展策略 ; 森林管理测绘，遥感和空间模型（有英文授课） ; 环境水力学（有英文授课） ; 荒地火灾科学与综合管理（交际交流） ; 农艺工程 ; 林业工程 ; 工业工程 ; 信息工程 ; 橄榄种植和石油技术（有英文授课） ; 职业风险防范（有英文授课） ;
+                植物生产，保护和改善（有英文授课） ; 工程与建筑表示和设计（有英文授课）
+                <br/>
+            </p>
+            <p>
+                <strong>科学：</strong>
+            </p>
+            <p>
+                粮食和农业（校际交流）（有英文授课） ; 生物技术（有英文授课） ; 全球变化：自然资源和可持续发展（有英文授课） ; 电化学：科学和技术（有英文授课） ; 高级物理 ; 等离子，激光和表面技术（有英语授课） ; 化学（校际交流）（有英文授课）
+                <br/>
+            </p>
+
+
+          </div>
+          <div class="page_container second_page">
+
+            <p>
+                <strong>社会科学和法律：</strong>
+            </p>
+            <p>
+                法律（有英文授课） ; 生态农业：农村可持续性道路（有英文授课） ; 对外贸易和国际业务（有英语授课） ; 和平文化，冲突，教育和人权（有英文授课） ; 全纳教育 ; 地区文化管理（有英文授课） ; 中高级义务教育，职业教育几语言教学教育 ; 应用教育心理学和社会福利
+                <br/>
+            </p>
+            <p>
+                <strong>双文凭项目：</strong>
+            </p>
+            <p>
+                农艺与环境水利工程（流域综合管理的专业知识） ; 农村地区和发展的农艺工程与策略 ; 农艺工程和生产，植物保护和改善 ; 农业工程及表示和设计工程与建筑 ; 林业工程和环境水力学（专业流域综合治理） ; 森林工程与森林火灾管理科学与积分（校际交流） ; 林业工程和农村发展与土地策略 ;
+                林业工程和代表性，设计建筑与环境工程 ; 中高级义务教育，职业教育几语言教学教育及高级英语 ; 中高级义务教育，职业教育几语言教学教育及高级物理 ; 中高级义务教育，职业教育几语言教学教育及高级化学
+                <br/>
+            </p>
+            <p>
+                <strong>国际双文凭项目：</strong>
+            </p>
+            <p>
+                生物技术（意大利） ; 对外贸易和企业国际化经营（有英语授课）（法国） ; 对外贸易和企业国际化经营（有英语授课）（德国） ; 市政府遗产管理（有英语授课）（摩洛哥）
+                <br/>
+            </p>
+            </div>
+        </section>
+</body>
+</html>

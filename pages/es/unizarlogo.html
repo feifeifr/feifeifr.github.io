@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll with four pages.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/unizarlogo/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/unizarlogo/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/unizarlogo/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  .main section.page4 {
+      background: url(../../images/introduction/unizarlogo/blur_4.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+ /* .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  /*.main section.page3 .page_container{
+    float: left;
+    width: 500px;
+  }*/
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/unizarlogo/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/unizarlogo/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/unizarlogo/3.jpg";
+
+  var downloadimg4 = new Image();
+  downloadimg4.onload = function(){
+    $(".page4").css("background","url("+this.src+") no-repeat center");
+    $(".page4").css("background-size","cover");
+  };
+  downloadimg4.src="../../images/introduction/unizarlogo/4.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>萨拉戈萨大学</h1>
+              
+              <p>
+                  萨拉戈萨大学是一所结合了近五个世纪的历史文明和现代教育更新的公立大学。学校主要任务是全面培育人才，传播知识。是一个致力于成为发展经济和文化的高质量，团结并开放的大学。学校从各自不同的地理位置发展一个活跃的教学和研究活动。我们根据国际需求提供广泛，全面的和有吸引力适应欧洲高等教育的本科，硕士和博士课程。
+              </p>
+              <p>
+                  自2010年成为Excelencia Internacional del Valle del Ebro (CAMPUS
+                  IBERUS)的一员之后，萨拉戈萨大学与纳瓦拉，里奥哈和莱里达地区的大学一起形成了一个突破了地域限制和行政边界的联合。在可持续能源技术，为健康，饮食和营养的服务技术，文化遗产保护和科学挑战上做出了突破。同年，学校获得了生活质量的材料和技术的INNOCAMPUS项目。这种情况让我们将大学定位于有国际竞争力，实现全面素质的培养，卓越的科学基础和应用研究，吸引学生和研究人员，以及战略合作协议的国际性大学。使它在国内和国际范围内有一定的声望和地位。
+              </p>
+              <p>
+                  萨拉戈萨大学在世界最好的大学排名之列。在上海交通大学的世界教育排名当中，萨拉戈萨大学位于422所大学中的第十位。也就是说，我们在3%的世界知名学校之列。
+              </p>
+
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 light_pagi white_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  萨拉戈萨是西班牙第五大城市，也是阿拉贡自治区和萨拉戈萨省的首府，位于伊比利半岛东北部。其以古迹及民俗文化著称，现今为一工业地带，亦为2008年世界博览会的主办城市。在交通上有重要位置。
+              </p>
+              <p>
+                  萨拉戈萨距离马德里、巴塞罗那、瓦伦西亚和毕尔巴鄂等城市均约300公里，该城优越的地理位置使其能够方便地与西班牙其他地方和全世界沟通，她拥有便利的机场——配有欧洲最长的跑道，具有巨大的客运和货运潜力。
+              </p>
+              <p>
+                  萨拉戈萨位于西班牙北部公路网络的中心地带，将卡塔卢尼亚和巴斯克乡村与里凡特地区和卡斯蒂利亚高原连结起来。另外，萨拉戈萨还是铁路网络的主要枢纽之一，其功能更因AVE(高速列车)和作为汇集地的蒂里西亚斯车站的加盟而得到增强。
+              </p>
+              <p>
+                  该城还有一个将萨拉戈萨与欧洲的伦敦、米兰和法兰克福以及其他西班牙主要城市联结起来的国际机场。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 light_pagi dark_bg">
+          <div class="page_container page_left">
+          
+            <p>
+                本科专业：
+            </p>
+            <p>
+                行政与管理、技术架构、艺术学、生物技术、科学与食品技术、环境科学、体力活动和体育科学、法律、经济、护理、古典研究、建筑学研究、英语研究、语言学、哲学、财会、物理、理疗、地理科学与规划、地质学、公共行政与管理、历史、艺术史、信息和文件、农业食品工程和农村、土木工程、工业组织工程师
+                （*国防部方向*公司方向）、工业技术工程、工程技术和电信服务、电气工程、电子工程与自动化、工程在工业设计和产品开发、计算机工程、机械工程、机电工程、化工、现代语言、幼儿教育教学、小学教育教学、市场营销和市场研究、数学、药理学、人类营养和营养学、牙科、光学和验光、法律/学位工商管理学、新闻学、心理学、化学、劳资关系与人力资源、职业护理、社会服务、旅游学、兽医
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+        <section class="page4 light_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+              官方硕士：
+            </p>
+            <p>
+                法律、多文化语境研究（濒临灭绝）、 生活文化研究：初级研究 * 新、 建筑、审计、分子和细胞生物学、 质量，安全和食品技术、 古代科学（濒临绝种）、生长发育遗传，营养和环境因素、 咨询信息和数字通信 *新、 会计与金融、 旅游管理与规划、 管理，战略和市场营销、 经济、 可再生能源和能源效率、
+                专业化和研究法（濒临绝种）、 文学和电影中的英语语言学高级研究、 艺术史高级研究、 语言，交流和病理学高级研究、 西班牙研究：语言与文学（濒临绝种）、 英文文本和文化研究（濒临绝种）、 健康评估和健康体育设备、 物理和物理技术、 地质：技术与应用、社会老年学、行政管理 *新、文化遗产管理、 当代史、 经济史、
+                农艺工程、 生物医学工程、 工程产品设计、 电信工程、 电子工程、 工业工程、 计算机工程、 机械工程、 化工学、 病理科学入门研究、 医学入门研究、 农业与环境科学研究、 化学研究、科研和高级研究历史、西班牙文学和西班牙语语言：传统与标识、纳米材料的纳米技术应用、
+                建模和数学，统计学和计算技术的研究、旧世界和考古遗产、 环境纳米技术、 动物营养、 空间规划和环境、职业风险评估、一般健康心理学、 工业化学、 分子化学与金属络合催化、 两性关系、公共卫生、猪健康与生产、 公共及社会政策的社会学、地理信息技术规划：地理信息系统和遥感、 特殊文本翻译、 欧洲联盟、
+                中高学教师，职业教师，语言，艺术和体育教学
+            </p>
+
+
+          </div>
+          <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+</body>
+</html>
