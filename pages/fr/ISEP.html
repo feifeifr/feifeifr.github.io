@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ISEP/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ISEP/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ISEP/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ISEP/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ISEP/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ISEP/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>巴黎高等电子学院</h1>
+              
+              <p>
+                  ISEP (Institut Supérieur d'Electronique de Paris) 巴黎高等电子学院, 位于巴黎市中心，具有得天独厚的地理环境。成立于1955年夏天，
+                  校址即为1890年巴黎天主教学院物理教授，法国科学院院士，世界无线电报之父爱德华·布兰里发现金属屑检波器并带动无线电报发明的地方。位于天主教大学大门外的墙上还挂有IEEE
+                  Milestone（国际电子电器工程师协会里程碑认证）的牌匾，以示这个实验室为世界科技史做出的贡献。除了现有的实验室，教室大楼外，巴黎高等电子学院还拥有著名的布兰里博物馆，以纪念这位在法国乃至世界名声卓著的科学家。学校的新的教学、行政办公楼坐落于离实验室200米的地方，建立于1988年。该校在法国的IT咨询和电信领域很有名气，毕业生非常受欢迎，与Telecom
+                  ParisTech之类的电信院校在教育资源上有很多共享。经过多年的发展，学校已经建立起一套完善的教育体系。ISEP的文凭获法国国家工程师证书委员会批准，是政府承认的私立高等工程师精英学院成员。学生毕业后可获得法国工程师硕士文凭，受法国政府承认，同时也受中国国家教育部的承认。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  巴黎高等电子学院内设电子学、信息技术学、电子通信和计算机网络科学，具有很强的教学、科研实力，在法国高等工程教育领域名声卓越，不断为法国电信行业输送工程师和行业管理人才。学校五十多年的历史上共培养出5000余名工程师，遍布世界70多个国家和地区。ISEP的工程师文凭于1960年获法国国家工程师证书委员会认证，于1971年被政府认证为私立高等工程师精英学院。1969年，ISEP与其他19所（现在为27所）天主教私立学校组成了一个名为FESIC（高等工程师和管理学校联盟）的协会，协会中还包括ESSEC、EDHEC、ISEN、ISIT等法国知名顶级商校与工程师学院。2008年法国权威Palmares
+                  Presse评选，ISEP在全法优秀工程师学校排名第3位。
+              </p>
+              <p>
+                  ISEP和世界各地多所知名大学有着密切合作，包括德国达姆斯特理工大学，英国伦敦大学、克兰菲尔德大学，加拿大麦克马斯特大学，美国加州大学戴维斯分校，新加坡南洋理工学院，以及台湾国立交通大学、华中科技大学、香港科技大学等遍布20个国家的50所大学，可以推荐学生到其他学校交换甚至获取双学位。另外，ISEP与美国斯坦福大学有着密切关系，斯坦福大学的巴黎校址即坐落于ISEP，每年会有数十名学生来ISEP交换学习，ISEP的优秀学生同样可以获得推荐前去斯坦福大学进行交流与实习。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                巴黎，法国最大城市，欧洲第二大城市，法国的政治、经济、文化、商业中心，是世界四大国际化都市之一。巴黎位于法国北部巴黎盆地的中央，横跨塞纳河两岸。巴黎建都已有1400多年的历史，它不仅是法国，也是西欧的一个政治、经济和文化中心，巴黎香水有“梦幻工业”之称。巴黎是历史之城、美食之都和创作重镇。巴黎是著名的世界艺术之都，印象派美术发源地，芭蕾舞的诞生地，欧洲启蒙思想运动中心，电影的故乡，现代奥林匹克运动会创始地。巴黎又是世界公认的文化之都，大量的科学机构、研究院、图书馆、博物馆、电影院、剧院、音乐厅分布于全市的各个角落。
+            </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            <p>
+                软件工程
+            </p>
+            <p>
+                信号与图像处理
+            </p>
+            <p>
+                电子
+            </p>
+            <p>
+                无线通信与网络
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

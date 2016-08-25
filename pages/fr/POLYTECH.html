@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/POLYTECH/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/POLYTECH/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/POLYTECH/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page2 .page_container{
+    float: left;
+    width: 550px;
+    top:10%;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/POLYTECH/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/POLYTECH/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/POLYTECH/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>法国13所综合理工学院集团</h1>
+              <p>
+              Polytech Group 是一个由13个法国优秀的理工类大学的工程师学院组成的网络联盟。学制：三年（1年Mundus法语及专业引导课程+2年专业）MUNDUS预科是POLYTECH GROUP综合理工学院集团专门为外国学生单独设计的一个语言加专业知识的预科课程MUNDUS桥梁项目在学院六个学院开设：蒙彼利埃，格勒诺布尔，马赛，尼斯-索菲亚，奥尔良与图尔。通过三年的学习，学生可以获得法国工程师文凭（相当于工程学硕士学位
+            </p>
+
+            </div>
+            <!-- <div class="page_container second_page">
+            </div> -->
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_right">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  <strong>蒙彼利埃：</strong>
+                  法国南部重要的工商业中心。蒙彼利埃属于典型的地中海气候，全年温暖且日照充足，几乎没有冰雪天气，是法国的避寒圣地，被称为“阳光之城”。蒙彼利埃还是法国著名的大学城。1956年建于该市的玛科纳原子能发电站，在法国久负盛名。二十世纪末，美国IBM电子计算机公司在该市投资建厂，成为了蒙彼利埃提供职位数量最多的私营企业，也使得蒙彼利埃的现代化工业进一步发展。
+              </p>
+              <p>
+                  <strong>格勒诺布尔：</strong>
+                  法罗纳--阿尔卑斯大区伊泽尔省省会，法国著名的科学城，享有法国、乃至欧洲"硅谷"之称。全市二万多科技人员辛勤耕耘在各高科技领域，八千余名科研人员在各实验室、研究所工作。最著名的科研单位有：核能研究中心、信息技术和电子研究所；国际性高科技研究机构：法、德、英合作的中子反应堆
+                  (已有20年历史)，欧洲十国合作的同步加速器，德法合作的天文观测研究中心，法德合作的强磁场研究所等。
+              </p>
+              <p>
+                  <strong>马赛：</strong>
+                  法国的第二大城市和最大海港，城市人口约163万。该市三面被石灰岩山丘所环抱，景色秀丽，气候宜人。马赛东南濒地中海，水深港阔，无急流险滩，万吨级轮可畅通无阻；西部有罗纳河及平坦河谷与北欧联系，地理位置得天独厚。全港由马赛、拉韦拉、福斯和罗纳圣路易四大港区组成，年货运量1亿吨，为法国对外贸易最大门户。马赛每年接待游客达三百万人次以上，是法国接待游客人数最多的城市之一。
+              </p>
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  <strong>尼斯</strong>
+                  <strong>-</strong>
+                  <strong>索菲亚：</strong>
+                  位于普罗旺斯-阿尔卑斯-蓝色海岸大区，为滨海阿尔卑斯省行政中心，法国第二大空港。尼斯地处马赛和意大利热那亚之间，为主要旅游中心和蔚蓝海岸地区的首选度假地。每年从尼斯-索菲亚综合理工学院毕业的工程师大约有200人。学校提供工程师培训的目的，是为确保所有学生都有一个很强烈和日益增长的就业能力。
+              </p>
+              <p>
+                  <strong>奥尔良：</strong>
+                  奥尔良是法国新兴工业城市，中央大区的首府，是法国主要的农业和高新科技发展区。距离巴黎以南大约120公里，属于巴黎一小时经济圈范围。同时奥尔良也是一座历史悠久的城市，其所处的卢瓦尔河谷乃法兰西皇室之源，墨洛温王朝时奥尔良曾一度成为法兰西首都。奥尔良是法国历史文化名城和重要的旅游城市。
+              </p>
+              <p>
+                  <strong>图尔：</strong>
+                  被誉为“法国的花园”（Le Jardin de la France），艺术与历史之城，以大大小小的城堡和花园而闻名于世。城堡是这座城市的代表性建筑，也是法兰西历史上皇室精髓之所在。卢瓦尔河谷已于2000年被列入世界文化遗产。图尔是法国西部最大的铁路枢纽。
+              </p>
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                生物技术，化学工程，食品科学，健康工程
+            </p>
+            <p>
+                环境科学，土木工程，可持续发展
+            </p>
+            <p>
+                电气和计算机工程
+            </p>
+            <p>
+                机械工程，材料科学，能源
+            </p>
+            <p>
+                计算机科学，应用数学
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>

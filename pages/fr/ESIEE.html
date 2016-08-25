@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/ESIEE/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/ESIEE/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/ESIEE/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  .main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/ESIEE/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/ESIEE/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/ESIEE/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="#">留学论坛</a></li>
+        <li><a href="#">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 dark_pagi white_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>亚眠高等电子与电工技术工程师学院</h1>
+              
+              <p>
+                  法国亚眠高等电子与电工技术工程师学院坐落于风景秀丽的亚眠市，是法国著名高等工程师学校之一，其学科主要集中在计算机，电信，网络，生产工程和电子工程等。并获得亚眠工商会，当地政府机构及全球多达75家合作公司的鼎力支持，也是一所教学和科研等各方面都具有国际影响的院校。学校着力提供高品质的教学体系和优秀的学习环境，资历丰富的教职人员和先进实用的课程计划，以及进入航空，汽车，电子，计算机，新能源，电信，机械，食品工程等领域内的知名公司实习的宝贵机会。工程师教育学制五年，专业涵盖理工科的所有领域，所授予的工程师文凭为法国国家文凭，相当于新制硕士学位（
+                  MASTER ）。 
+                </p>
+                  
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>在五年的学习中，学院采取三年基础教育和两年深入教育的模式，更高效的打造个体化教育，致力于培养技术多样，能力丰富，适应力超群，可胜任各种环境下工作的毕业生。国内本科毕业的学生，只需攻读两年课程，就能获得硕士文凭及工程师文凭。 文凭颁发受全国工程师职衔委员会（ CTI
+                  ）的监督。该文凭我国教育部认证为硕士学位。
+              </p>
+              <p>
+                  工程师学院在法国自拿破仑时期成立，具有与大学同等的教学和科研实力，具有培养本科生、硕士研究生、博士研究生的能力，同时因工程师学院具有的专业针对性强等特点，其实力更被法国乃至欧洲所认可。亚眠高等电子与电工技术工程师学院的教学宗旨就是为工商企业培养优秀的专业技术和管理人才。学校除去为在校学生提供攻读硕士及博士学位的课程以外，还为企业出谋划策，帮助企业解决问题，及对企业各个阶层的成员进行专业素质培训，因此具有良好的企业网络及企业经验。
+              </p>
+            </div>
+        </section>
+
+        <section class="page2 dark_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  亚眠（Amiens）是法国北部的一个重要城市，是皮卡第（Picardie）大区首府和索姆省（Somme）省会，位于索姆河畔，距离首都巴黎116公里，1小时车程。人口约15万，是世界闻名的大学城，这里是重要的战略中心，交通枢纽，工业中心。亚眠是个风景优美、历史悠久的文化古城。至今依然保留着以前保护巴黎来自北方攻击时代留下的要塞，依旧存在的堡垒，还可以让我们想象中世纪欧洲的战火硝烟。它拥有法国最宏伟的十三世纪哥特式大教堂，比巴黎圣母院要大两倍。并在1981年就被联合国教科文组织注册为世界文化遗产，在年末和夏季的一些日子，还可以看到被修复后教堂门前的原始彩绘的美丽景色。穿城而过的索姆河在这里分成了十一条支流，在十九世纪，亚眠被称为“小威尼斯”。著名的科幻小说家儒勒•凡尔纳在这里渡过了他后半生的35年，亚眠城也因为凡尔纳而闻名于世。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：            
+              </p>
+            <p>
+                计算机网络科学和通讯工程
+            </p>
+            <p>
+                电气工程及可持续发展
+            </p>
+            <p>
+                生产系统工程及自动化
+            </p>
+            <p>
+                商业管理与国际贸易
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>
