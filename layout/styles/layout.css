@@ -56,6 +56,7 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #services{padding:50px 0;}
 
+.group h6{font-size: 20px;}
 
 /* CTA - Call To Action
 --------------------------------------------------------------------------------------------------------------- */
@@ -343,6 +344,7 @@ label span{color:#FF0000; background-color:inherit;}
 .icon{color:#FFFFFF; background-color:#000000;}
 .icon.nobg{color:inherit; background-color:inherit; border-color:#D7D7D7;}
 .red{background-color:#DC8B8A;}
+.redfont{color:#DC8B8A;}
 .orange{background-color:#EC9700;}
 .green{background-color:#A7DFC4;}
 .flexslider .heading, .flexslider .btn{color:#FFFFFF;}
