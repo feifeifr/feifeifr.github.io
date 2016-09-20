@@ -125,7 +125,9 @@ File: Layout CSS
 #comments form{display:block; width:100%;}
 #comments input, #comments textarea{width:100%; padding:10px; border:1px solid;}
 #comments textarea{overflow:auto;}
-#comments div{margin-bottom:15px;}
+#comments div{margin-bottom:0;}
+#comments h4{margin-bottom: 0;}
+#comments .answer{display: none;}
 #comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}
 
 /* Sidebar */
@@ -410,6 +412,7 @@ tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
 
+#comments div:hover h4{color:#96AFAA; background-color:inherit;cursor:pointer;}
 
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */

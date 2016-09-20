@@ -29,7 +29,19 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="theme-color" content="#ffffff">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".question").click(function(){
+    $(this).siblings(".answer").show(450);
+    $(this).parent().siblings().children(".answer").hide(450);
+    // $(".answer").parent.show(450);
+  });
+});
+</script>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -84,49 +96,101 @@ Licence URI: http://www.os-templates.com/template-terms
       
       
       <div id="comments">
-        <h2>FE论坛</h2>
+        <h2>留学论坛</h2>
         <ul>
           <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
+            <div class="question">
+              <h4>学习 ▪ 没有法语基础可以申请法国留学么？</h4>
+            </div>
+            <div class="answer">
+              <p>
+                Q: 没有法语基础可以申请法国留学么？
+              </p>
+              <p>
+                A: 答案是肯定的，没有法语基础可以申请法国留学。主要分为两种：
+                  1.法语零基础，可以选择申请先读一年语言再入专业。
+                  2.不想深入学习法语，可以申请全英文授课院校/专业。
+                  根据个人不同情况，详情咨询：QQ：1572143575 微信：
+              </p>
+            </div>
           </li>
           <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
+            <div class="question">
+              <h4>生活 ▪ 法国留学生可否移民？</h4>
+            </div>
+            <div class="answer">
+              <p>
+                Q:在法国留学，是否可以申请移民？
+              </p>
+              <p>
+                A:法国目前针对中国留学生还是非移民国家。但是拿到法国本科以上毕业文凭可以申请其他国家移民，比较热门的选择是移民加拿大。不能移民毕业后同样有留在法国的机会，比如工作、结婚等等情况，都不会影响正常的生活。
+              </p>
+            </div>
           </li>
           <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
+            <div class="question">
+              <h4>旅行 ▪ 初到法国，我眼中的Paris...</h4>
+            </div>
+            <div class="answer">
+              <p>
+                本文由FE留学网编原创整理，如需转载，请注明出处。欢迎投稿：feliuxue@sina.com
+              </p>
+              <p>
+                Paris-巴黎，世界四大国际化都市之一，欧洲第二大城市，法国的经济金融中心，在政治、科技、文化、教育、时尚、艺术、娱乐、传媒等领域对世界都有重要影响力......类似这些程序化的评价，是世人眼中的巴黎，可能也是当初吸引我决定选择留学法国的理由，当然还少不了对“法国是世界上最浪漫的国家，法语是世界上最美丽的语言”这样莫名的好感与期待。
+              </p>
+              <p>
+                Si vous avez de la chance de vivre à Paris quand vous êtes jeune, alors n'importe où vous irez après, Paris sera toujours avec vous, car Paris est un festin mobile. 假如你有幸年轻时在巴黎生活过，那么你此后一生中不论去到哪里她都与你同在，因为巴黎是一席流动的盛宴。——海明威
+              </p>
+              <img src="images\demo\comments\1.jpg">
+              <p>
+                初到巴黎，感觉既熟悉又陌生，那些曾无数次在各种画面中看过的铁塔、凯旋门、凡尔赛宫、圣母院、香街......当真真切切看得到摸得着时依然会感受到这么近，那么远的震撼。我以为一切都很熟悉，其实只是似曾相识。
+              </p>
+              <img src="images\demo\comments\2.jpg">
+              <p>
+                传说中巴黎人身上都或多或少有一种傲气，可能是因为巴黎的生活与法国其他城市相比，节奏多少会快一些，每天各种信息量更大一些。法国原本是一个多民族国家，在这个国际化大都市里，每天在人群中擦肩而过的能有多少是真正的巴黎人还真不好说。总的感觉就是那些看起来像巴黎人的法国人都还好，偶尔的交流从他们的神情中还是能够看到善意跟包容。如果你偶尔会有想家的情结，不用担心，这里太多的中国人，中国店，中国餐馆等随时能解思乡之苦。
+              </p>
+              <p>
+                每个人心中都有一条塞纳河，它把我们的一颗心分作两边，左岸柔软，右岸冷硬；左岸感性，右岸理性；左岸住着我们的欲望，祈盼，挣扎和所有的爱恨嗔怒，右岸住着这个世界的规则在我们心里打下的烙印--左岸是梦境，右岸是生活。——辛夷坞
+              </p>
+              <img src="images\demo\comments\3.jpg">
+              <p>
+                在法国，左岸，是一个特别小资的词。好像提起左岸，就提到了这样一些气氛或背景：诗歌、哲学、贵族化、咖啡馆、艺术、清谈……当然，还有文化。相对来说，右岸则理性、中庸、强硬得多。巍峨的各大银行、金融集团、保险公司、股票交易所；一丝不苟、严肃刻板、衣着考究的过往行人；奢华、繁荣、熙熙攘攘的商业街；变化无常的金融风云。“左岸偏左，右岸偏右”，左岸右岸相辅相成。这实实在在的差别，只有身临其境的时候，慢慢逛、慢慢感受才能体会。
+              </p>
+              <img src="images\demo\comments\4.jpg">
+              <p>
+                初到法国，第一次开始离家自己生活，一切都是新的。初到巴黎，了解一个城市需要时间，需要衣食住行慢慢磨合。可以肯定的是，我喜欢这里，在法国生活学习几年，当我毕业以后，我相信我能够讲得更多。
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>学习 ▪ 法语不是小语种，为什么？</h4>
+            </div>
+            <div class="answer">
+              <p>
+                Q：法语不是小语种么？
+              </p>
+              <p>
+                A：法语不是小语种。法语是联合国（UN）及下属国际组织，欧盟（EU）及下属机构，国际奥委会（IOC），法语国家国际组织（FIO），世贸组织（WTO），国际红十字会（IRC），北约组织（NATO），国际足联（FIFA），国际奥委会（Olympic）等国际组织的官方语言或官方语言之一。因为其用法的严谨, 所以像法律条文这种严谨的重要文件在国际上都是用法语书写, 联合国将英语定为第一发言语言, 法语为第一书写语言.法语作为联合国6种工作语言之一, 被广泛应用在国际性社交和外交活动中,它不仅是法国的官方语言,而且还是遍布五大洲的40多个国家和地区的官方语言或通用语言。
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>生活 ▪ 法国留学费用知多少，学姐帮你做预算。</h4>
+            </div>
+            <div class="answer">
+              <p>
+                Q：法国留学费用，平均一年大约需要多少钱？
+              </p>
+              <p>
+                A：法国留学性价比很高的。一般按照学费+生活费（基本衣食住行）计算。
+               学费：全法公立大学专业免学费，每年注册费100欧元左右=750元人民币左右
+                     排名前30的高等商学院，学费8000欧元左右起=5.5万人民币左右起/年
+                     高等工程师学院、艺术、设计等院校，学费平均7000欧元左右起=5万人民币左右起/年
+               生活费（基本衣食住行）：巴黎地区平均7000欧元=5万人民币左右/年；非巴黎地区平均5000欧元=4万人民币左右/年
+              </p>
+            </div>
           </li>
         </ul>
         <h2>留个言</h2>
