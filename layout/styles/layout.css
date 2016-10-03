@@ -25,7 +25,7 @@ File: Layout CSS
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
 #header{
-	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-family:'Helvetica Neue', 'Segoe UI',Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
 	font-weight: 200;
 	font-size:20px;
 }
@@ -40,15 +40,15 @@ File: Layout CSS
 .centralise{display:block; max-width:978px; height:100%; margin:0 auto; padding:0;}
 .verticalwrap{display:table; width:100%; height:100%; border:none; text-align:center;}
 .txtoverlay article{
-	font-family:Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+	font-family:'Helvetica Neue', 'Segoe UI',Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif;
 	font-size:25px;
 	display:table-cell; 
 	padding:0; 
 	border:none; 
 	vertical-align:middle;}
-.txtoverlay h2,p{font-family: "Microsoft Yahei"; font-weight: 100;}
+.txtoverlay h2,p{font-family: 'Helvetica Neue', 'Segoe UI',Helvetica,Tahoma,Arial,"Hiragino Sans GB",STXihei,"Microsoft Yahei","微软雅黑",SimSun,sans-serif; font-weight: 100;}
 .txtoverlay .heading{font-size:45px; line-height:60px; margin-bottom:30px;}
-.txtoverlay .btn{display:inline-block; padding:15px 30px; border-radius:8px; text-transform:uppercase; font-weight:bold;}
+.txtoverlay .btn{display:inline-block; padding:15px 30px; border-radius:8px; text-transform:uppercase; font-weight:100;}
 .txtoverlay .pushright{margin-right:25px;}
 
 
@@ -56,7 +56,73 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #services{padding:50px 0;}
 
-.group h6{font-size: 20px;}
+.row3 .group h6{font-size: 17px;}
+
+.row3 .group .titles li{
+	text-decoration: none;
+    border-bottom: 2px solid transparent;  
+    width: 0px;
+    transition: 0.5s ease-in-out;
+    white-space: nowrap;
+    height: 24px;
+}
+
+.row3 .group .titles li:hover{
+	cursor:pointer;
+	border-bottom: 2px solid #DC8B8A;
+    width: 200px;
+}
+.row3 .group .details{
+	margin-top: 50px;
+	display: none;
+	opacity: 0;
+	border: 1px solid #c5c5c5;
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	   -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+			box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: white;
+	position: relative;
+	/*transition: 0.5s ease-in-out;*/
+}
+.row3 .group .insideDetails {
+	margin:20px 20px;
+}
+.row3 .group .details p{
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+.row3 .group .details ul{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+/********************   ARROW*************/
+.row3 .group .details:after, .row3 .group .details:before {
+	right: 100%;
+	top: 30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.row3 .group .details:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.row3 .group .details:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: rgba(68,68,68,0.6);
+	border-width: 16px;
+	margin-top: -16px;
+}
 
 /* CTA - Call To Action
 --------------------------------------------------------------------------------------------------------------- */
@@ -346,7 +412,6 @@ label span{color:#FF0000; background-color:inherit;}
 .icon{color:#FFFFFF; background-color:#000000;}
 .icon.nobg{color:inherit; background-color:inherit; border-color:#D7D7D7;}
 .red{background-color:#DC8B8A;}
-.redfont{color:#DC8B8A;}
 .orange{background-color:#EC9700;}
 .green{background-color:#A7DFC4;}
 .flexslider .heading, .flexslider .btn{color:#FFFFFF;}
@@ -401,6 +466,11 @@ h1, h2, h3, h4, h5, h6, .heading{color:#242424; border-color:inherit;}
 .sort a, .sort strong{border-color:#D7D7D7;color:inherit;}
 .sort a:hover{color:#FFFFFF; background-color:#96AFAA;}
 .sort .current{color:#FFFFFF; background-color:#96AFAA;}
+
+.row3 .group .titles li{color:#888888;}
+.row3 .group .titles li:hover{color:#DC8B8A;}
+.row3 .group .titles .active{color:#DC8B8A;}
+.row3 .group .titles .heading{color:inherit;}
 
 #backtotop{color:#FFFFFF; background-color:#96AFAA;}
 

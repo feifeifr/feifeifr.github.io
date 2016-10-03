@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 Template Name: Colossus
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -30,6 +30,37 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(".row3 .group .three_fifth #DAP").show().css({'right': '-30px','opacity': '1'});
+    $(".row3 .group .titles li").click(function(){
+      var theID=$(this).attr("id");
+      var activeID=$("div .titles").find(".active").attr("id");
+      $(".row3 .group .three_fifth #"+activeID).animate({
+        'opacity': '0', 'right': '0'
+      },200, function(){
+        $(this).hide(0,function(){
+          $(".row3 .group .three_fifth #"+theID).show().animate({
+            'opacity': '1','right': '-30'
+          },200)
+        });
+      });
+      // $(".row3 .group .three_fifth #"+$(this).attr("id")).siblings().hide(400);
+      $(this).siblings().removeClass("active");
+
+      $(this).addClass("active");
+    });
+  });
+
+</script>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -195,7 +226,7 @@ Licence URI: http://www.os-templates.com/template-terms
         </figure>
         <figcaption class="inspace-30 center">
             <p class="bold uppercase">择校评估</p>
-            <p><a href="workflow.html">点击此处 &raquo;</a></p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
           </figcaption>
       </li>
       <li>
@@ -204,7 +235,7 @@ Licence URI: http://www.os-templates.com/template-terms
         </figure>
         <figcaption class="inspace-30 center">
             <p class="bold uppercase">材料准备</p>
-            <p><a href="workflow.html">点击此处 &raquo;</a></p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
           </figcaption>
       </li>
       <li>
@@ -212,7 +243,7 @@ Licence URI: http://www.os-templates.com/template-terms
         </figure>
           <figcaption class="inspace-30 center">
             <p class="bold uppercase">申请专业</p>
-            <p><a href="workflow.html">点击此处 &raquo;</a></p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
           </figcaption>
       </li>
       <li>
@@ -220,7 +251,7 @@ Licence URI: http://www.os-templates.com/template-terms
         </figure>
           <figcaption class="inspace-30 center">
             <p class="bold uppercase">签证辅导</p>
-            <p><a href="workflow.html">点击此处 &raquo;</a></p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
           </figcaption>
       </li>
       <li>
@@ -228,7 +259,7 @@ Licence URI: http://www.os-templates.com/template-terms
         </figure>
           <figcaption class="inspace-30 center">
             <p class="bold uppercase">境外服务</p>
-            <p><a href="workflow.html">点击此处 &raquo;</a></p>
+            <p><a href="workflow.html">了解更多 &raquo;</a></p>
           </figcaption>
       </li>
     </ul>
@@ -243,36 +274,112 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="group">
-      <div class="one_half first ">
+      <div class="two_fifth first titles">
         <h2 class="heading btmspace-30">热门项目</h2>
         <ul class="nospace group">
-          <li class="btmspace-30">
-              <h6 class="heading"><a  href="#"><img src="images/franceflag.png"> DAP et HORS-DAP 公立大学专业直录项目</a></h6>
+          <li class="btmspace-15 hot active" id="DAP">
+            <h6 class="heading"><img src="images/franceflag.png"> DAP et HORS-DAP 公立大学专业直录项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a href="#"><img src="images/franceflag.png">  SAI 五大高商联合招生项目</a></h6>
+          <li class="btmspace-15 hot" id="SAI">
+            <h6 class="heading"><img src="images/franceflag.png">  SAI 五大高商联合招生项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a class="redfont" href="#"><img src="images/spainflag.png">  瓦伦西亚理工大学预科项目</a></h6>
+          <li class="btmspace-15 hot" id="WAL">
+            <h6 class="heading"><img src="images/spainflag.png">  瓦伦西亚理工大学预科项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a href="#"><img src="images/franceflag.png">  Password 商学院联盟项目</a></h6>
+          <li class="btmspace-15 hot" id="PAS">
+              <h6 class="heading"><img src="images/franceflag.png">  Password 商学院联盟项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a href="#"><img src="images/franceflag.png">  N+I 工程师联合招生项目</a></h6>
+          <li class="btmspace-15 hot" id="NPI">
+              <h6 class="heading"><img src="images/franceflag.png">  N+I 工程师联合招生项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a class="redfont" href="#"><img src="images/spainflag.png">  卡斯蒂利亚拉曼恰大学预科项目</a></h6>
+          <li class="btmspace-15 hot" id="KAS">
+              <h6 class="heading"><img src="images/spainflag.png">  卡斯蒂利亚拉曼恰大学预科项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a href="#"><img src="images/franceflag.png">  Polytech 综合理工院校联盟项目</a></h6>
+          <li class="btmspace-15 hot" id="POL">
+              <h6 class="heading"><img src="images/franceflag.png">  Polytech 综合理工院校联盟项目</h6>
           </li>
-          <li class="btmspace-30">
-              <h6 class="heading"><a href="#"><img src="images/franceflag.png"> CELA免面签项目</a></h6>
+          <li class="btmspace-15 hot" id="CEL">
+              <h6 class="heading"><img src="images/franceflag.png"> CELA免面签项目</h6>
           </li>
         </ul>
       </div>
-      <div class="one_half"><a href="#"><img src="images/mainpage_vertical.jpg" alt=""></a></div>
+      <div class="three_fifth btmspace-30">
+        <div class="details inspace-15" id="DAP">
+          <h1>DAP et HORS-DAP 公立大学专业直录项目</h1>
+          <p>DAP（la Demande d'Admission Pr&eacute;alable）</p>
+          <p>DAP面向已经很好地掌握了法语的学生，以便在法国能够直接参加法语授课的课程，而不进行语言阶段的学习。申请大学第一阶段的预注册证明。</p>
+          <p>HORS-DAP</p>
+          <p>非DAP程序面向已经具备一定法语水平，无需参加前期语言学习可直接进入专业学习的学生，申请学士二、三年级，硕士一、二年级。</p>
+        </div>
+        <div class="details inspace-15" id="SAI">
+          <h1>SAI 五大高商联合招生项目</h1>
+          <p>SAI（Service des Admissions Internationales）</p>
+          <p>通过SAI项目递材料与面试，学生可同时申请项目内的全部五所学校，被录取后，直接进入学校专业学习。</p>
+          <p>SAI项目下的五所高商分别是：</p>
+          <ul>
+          <li>HEC Paris（巴黎高等商学院）</li>
+          <li>ESCP Europe（欧洲高等商学院）</li>
+          <li>EMLYON Business School（里昂商学院）</li>
+          <li>AUDENCIA Nantes（南特经济管理学院）</li>
+          <li>SKEMA Business School（尼斯-里尔商学院）</li>
+          </ul>
+          <p><strong>HEC</strong><strong>高等商学院</strong>国际排名领先，连续第8年被评为欧洲第一商学院。MBA 专业排名世界第4 ；管理学硕士项目（Master in Management）全球排名第2，全法排名第1。</p>
+          <p><strong>ESCP</strong><strong>欧洲管理学院</strong>是世界上的第一所商学院，全法排名第三位。其管理硕士专业 Master in Management，2015年被金融时报评为全球第3位，金融硕士专业 Master in Finance，2015年被金融时报评为全球第3。 全法排名2-3（与ESSEC基本不相上下）。</p>
+          <p><strong>EMLYON </strong><strong>里昂商学院</strong>是欧洲十大名牌商学院，全法排名第四。金融专业和生产管理专业在法国排名前3。除此之外，它还有法国排名第一的管理信息系统专业。</p>
+          <p><strong>SKEMA</strong><strong>商学院</strong>是法国目前规模最大的商学院之一，全法排名8-10。全球共有六大校区，法国巴黎、里尔、索菲亚 &middot;安提波利斯，美国罗利、中国苏州和巴西贝洛。它的金融硕士排名全球第6位,管理学硕士排名全球第25位。</p>
+          <p><strong>Audencia</strong><strong>南特经济管理学校院</strong>是一家致力于高等教育及研究的机构，全法排名6-8。Audencia是第一家签署联合国全球契约的法国管理学院。它的管理学硕士项目（Master in Management）在Financial Times的全球管理学硕士排名中列第27位。</p>
+        </div>
+        <div class="details inspace-15" id="WAL">
+          <h1>瓦伦西亚理工大学预科项目</h1>
+        </div>
+        <div class="details inspace-15" id="PAS">
+          <h1>Password 商学院联盟项目</h1>
+          <p>申请该项目的学生可以同时申请参加以下高等商学院的选拔考试：</p>
+          <ul>
+          <li>第戎-勃艮第高等商业学校（ESC-Dijon）</li>
+          <li>格勒诺布尔高等商业学院（Grenoble Ecole de Management）</li>
+          <li>诺曼底高等商校（EM Normandie）</li>
+          <li>斯特拉斯堡高等商业学校（EM Strasbourg）</li>
+          <li>巴黎诺凡西亚高等商学院（Novancia Paris）</li>
+          <li>法国国立电信管理学院（Telecom Ecole de Management）</li>
+          <li>波城高等商学院（ESC Pau）</li>
+          </ul>
+          <p>专业方向：</p>
+          <ul>
+          <li>商务管理</li>
+          <li>国际金融</li>
+          <li>物流与运输</li>
+          <li>商业发展</li>
+          <li>市场学</li>
+          <li>人力资源</li>
+          <li>信息系统与公关</li>
+          </ul>
+        </div>
+        <div class="details inspace-15" id="NPI">
+          <h1>N+I 工程师联合招生项目</h1>
+          <p>N+I Networld 法国工程师学院联盟，n+I 工程师学院项目是由70多所法国工程师学校组成的联盟，项目涵盖所有科学和工程领域的200多个专业，其中包括农学、农产食品加工、生物科技、化学、物理、机械、电子、信息、航空、环境、土木、数学等领域。遍布法国40多个城市，如巴黎、图卢兹、南特、波尔多、里尔、马赛、里昂、蒙彼利埃、斯特拉斯堡、拉罗谢尔、雷恩、圣埃蒂安、利莫日、南希、梅兹、克莱蒙-费朗等城市。N 代表national, I 代表international。</p>
+          <p>N+I项目是工程师学院提供两年的硕士项目，通过博洛尼亚体系认证，全世界都予以认可。一般情况下，若选择"master N+" 项目的，毕业后可获得工程师文凭。若选择"master i"项目的，毕业后可获得硕士文凭。项目由2年来完成，其中一年半为授课阶段，半年为实习阶段。让你既能学习到理论知识，同时又可以在企业里进行实习。</p>
+        </div>
+        <div class="details inspace-15" id="KAS">
+          <h1>卡斯蒂利亚拉曼恰大学预科项目</h1>
+        </div>
+        <div class="details inspace-15" id="POL">
+          <h1>Polytech 综合理工院校联盟项目</h1>
+          <p>Polytech Group 是一个由13个法国优秀的理工类大学的工程师学院组成的网络联盟。学制：三年（1年Mundus法语及专业引导课程+2年专业）MUNDUS预科是POLYTECH GROUP综合理工学院集团专门为外国学生单独设计的一个语言加专业知识的预科课程MUNDUS桥梁项目在学院六个学院开设：蒙彼利埃，格勒诺布尔，马赛，尼斯-索菲亚，奥尔良与图尔。通过三年的学习，学生可以获得法国工程师文凭（相当于工程学硕士学位）</p>
+          <p><strong>专业推荐：</strong></p>
+          <p>生物技术，化学工程，食品科学，健康工程</p>
+          <p>环境科学，土木工程，可持续发展</p>
+          <p>电气和计算机工程</p>
+          <p>机械工程，材料科学，能源</p>
+          <p>计算机科学，应用数学</p>
+        </div>
+        <div class="details inspace-15" id="CEL">
+          <h1>CELA免面签项目</h1>
+          <p>为了简化赴法留学签证程序，法国高等教育署增加了免面签项目，但免面签不代表保签，免面签的含义是指申请签证的同学可以免除法国高等教育署的预签证面试，但其他流程还是要按要求进行，例如法语考试、材料递交和审核，更重要的是，免面签并不能省去最后的签证环节。免面签项目大部分每年都会有一些变数，这里就不一一列举了。对&lsquo;免面签&rsquo;项目感兴趣的同学，可以直接联系我们进一步了解。</p>
+          <p>QQ：1572143575</p>
+          <p>微信：158088188</p>
+        </div>
+      </div>
     </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
@@ -354,10 +461,6 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
-<!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script src="layout/scripts/jquery.flexslider-min.js"></script>
+
 </body>
 </html>
