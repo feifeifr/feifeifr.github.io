@@ -21,6 +21,9 @@ Licence URI: http://www.os-templates.com/template-terms
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+
+
+
 <link rel="manifest" href="images/icon/manifest.json">
 <meta name="google-site-verification" content="DlxkGHd7X1kyaQFce34if6ToUyx8ytcpQF4vuEhbmH8" />
 <title>FE留学网</title>
@@ -30,15 +33,25 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="layout/styles/owl.theme.css">
+<link rel="stylesheet" href="layout/styles/owl.carousel.css">
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script src="layout/scripts/jquery.flexslider-min.js"></script>
+<script src="layout/scripts/owl.carousel.min.js"></script>
 
 <script type="text/javascript">
 
   $(document).ready(function(){
+
+    $("#response").owlCarousel({
+      autoPlay: 4000,
+      items : 1,
+    });
+
+
     $(".row3 .group .three_fifth #DAP").show().css({'right': '-30px','opacity': '1'});
     $(".row3 .group .titles li").click(function(){
       var theID=$(this).attr("id");
@@ -52,7 +65,6 @@ Licence URI: http://www.os-templates.com/template-terms
           },200)
         });
       });
-      // $(".row3 .group .three_fifth #"+$(this).attr("id")).siblings().hide(400);
       $(this).siblings().removeClass("active");
 
       $(this).addClass("active");
@@ -170,7 +182,7 @@ Licence URI: http://www.os-templates.com/template-terms
             -联合国第一书写语言<br>
             -双语/多语人才优势
           </p>
-          <p><a href="pages/fr_main.html">院校推荐 &raquo;</a></p>
+          <p><a href="pages/fr_main.html?type=public">院校推荐 &raquo;</a></p>
         </article>
       </div>
       <div class="one_third">
@@ -192,7 +204,7 @@ Licence URI: http://www.os-templates.com/template-terms
               -雅思、托福的性价比选择<br>
               -文凭国际认证
             </p>
-          <p><a href="pages/fr_main.html">法国院校推荐 &raquo;</a></p>
+          <p><a href="pages/fr_main.html?type=business">法国院校推荐 &raquo;</a></p>
           <p><a href="pages/es_main.html">西班牙院校推荐 &raquo;</a></p>
         </article>
       </div>
@@ -201,21 +213,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="clear"></div>
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- <div class="wrapper row6">
-  <section id="cta" class="clear"> 
-    <div class="three_quarter first">
-      <h2 class="heading">Fusce quis feugiat urna dui leo egestas augue</h2>
-      <p>Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet pulvinar dapibus.</p>
-    </div>
-    <div class="one_quarter"><a class="btn" href="#">Get it now <span class="fa fa-arrow-right"></span></a></div>
-  </section>
-</div> -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
 <div class="wrapper row2">
   <div class="latest"> 
     <!-- ################################################################################################ -->
@@ -269,11 +267,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="container nospace clear"> 
+<div class="wrapper row3 ">
+  <main class="container nospace clear "> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="group">
+    <div class="group btmspace-50">
       <div class="two_fifth first titles">
         <h2 class="heading btmspace-30">热门项目</h2>
         <ul class="nospace group">
@@ -381,33 +379,55 @@ Licence URI: http://www.os-templates.com/template-terms
         </div>
       </div>
     </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
   </main>
 </div>
+
+<div class="wrapper row4 ">
+  <div class="bg_img">
+    <div id="response" class="owl-carousel">
+      <div class="item btmspace-50">
+        <h1>都是学长们给我们的建议，真的很实用</h1>
+        <p>—— 微博留言 臭学渣</p>
+      </div>
+      <div class="item btmspace-50">
+        <h1>我们全家都在用</h1>
+        <p>—— 微信留言 小明</p>
+      </div>
+      <div class="item btmspace-50" >
+        <h1>咨询过之后腰不酸了背不疼了，走路也有劲了</h1>
+        <p>—— 网站留言 老李头</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row4">
+<!-- <div class="wrapper row4">
   <footer id="footer" class="clear"> 
-    <!-- ################################################################################################ -->
+    
     <div class="one_quarter first">
       <h6 class="title">联系我们</h6>
       <address class="btmspace-15">
       FE留学<br>
-      <!-- Street Name &amp; Number<br>
+      Street Name &amp; Number<br>
       Town<br>
-      Postcode/Zip -->
+      Postcode/Zip
       </address>
       <ul class="faico clear">
-       <!--  <li class="btmspace-10"><span class="fa fa-phone"></span> +00 (123) 456 7890</li> -->
         <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
         <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
         <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
       </ul>
     </div>
-    <!-- <div class="one_quarter">
+     <div class="one_quarter">
       <h6 class="title">Quick Links</h6>
       <ul class="nospace linklist">
         <li><a href="#">Home Page</a></li>
@@ -442,24 +462,42 @@ Licence URI: http://www.os-templates.com/template-terms
         <li><a class="faicon-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
         <li><a class="faicon-tumblr" href="#"><i class="fa fa-tumblr"></i></a></li>
       </ul>
-    </div>-->
-    <!-- ################################################################################################ -->
+    </div>
   </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+</div> -->
+
+
+
+
+
 <div class="wrapper row5">
-  <div id="copyright" class="clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">FeiFeiFR.github.io</a></p>
-    <!-- <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p> -->
-    <!-- ################################################################################################ -->
+  <div id="copyright" class="clear "> 
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - </p><a href="#">FEliuxue.com</a>
+    <div class="icons">
+      <div>
+        <a href="#"><i class="fa fa-qq"></i></a>
+        <span class="tooltip_qq">1572143575<br>415100117</span>
+      </div>
+      <div>
+        <a href="#"><i class="fa fa-weibo"></i></a>
+        <span class="tooltip_mail">微博</span>
+      </div>
+      <div>
+        <a href="#"><i class="fa fa-weixin"></i></a>
+        <span class="tooltip_mail">微信</span>
+      </div>
+      <div>
+        <a href="#"><i class="fa fa-envelope-o"></i></a>
+        <span class="tooltip_mail">feliuxue@sina.com</span>
+      </div>
+    </div>
+    <!-- <ul class="faico clear">
+      <li><a class="faicon-qq" href="#"><i class="fa fa-qq"></i></a> 1572143575 ; 415100117<br></li>
+      <li>微博 <a class="faicon-weibo" href="http://weibo.com/u/5977923337" target="_blank"><i class="fa fa-weibo"></i></a></li><br>
+      <li><span class="fa fa-envelope-o"></span> feliuxue@sina.com</li>
+    </ul> -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
 
 </body>

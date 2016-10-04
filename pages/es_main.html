@@ -35,6 +35,30 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
 <script src="../layout/scripts/jquery.mixitup.min.js"></script>
 <script type="text/javascript">
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+  };
+
+  var filter_init='all';
+  var chosen=getUrlParameter("type");
+  if(chosen!=undefined){
+    if(chosen=="public"){filter_init='.1';}
+    else if(chosen=="language"){filter_init='.2';}
+    else {filter_init='.3';}
+  }
+
+
   $(function () {
     
     var filterList = {
@@ -49,7 +73,7 @@ Licence URI: http://www.os-templates.com/template-terms
             filter: '.filter' 
           },
           load: {
-            filter: '.1,.2,.3'  
+            filter: filter_init  
           }     
         });               
       
@@ -128,7 +152,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <br>
       <label>学校类型 :</label>
         <ul id="type">
-          <li  id="t_total"><a class="filter active"  data-filter=".1, .2, .3">全部</a></li>
+          <li  id="t_total"><a class="filter active"  data-filter="all">全部</a></li>
           <li   id="public"><a class="filter"  data-filter=".1">公立大学</a></li>  
           <li   id="business"><a class="filter"  data-filter=".3">高等商学院</a></li>
           <li  id="language"><a  class="filter"  data-filter=".2">语言学校</a></li>
@@ -184,7 +208,7 @@ Licence URI: http://www.os-templates.com/template-terms
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////    show sort results    ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  function display(purpose,type){
+  function display(){
     var html="";
     html+="<figure>\r\n<ul class=\"nospace clear\">\r\n";
 
@@ -231,7 +255,7 @@ Licence URI: http://www.os-templates.com/template-terms
   }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  window.onload = display("p_total","t_total");
+  window.onload = display();
 </script>
 
 
