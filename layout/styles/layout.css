@@ -162,7 +162,6 @@ File: Layout CSS
 }
 
 
-
 /* CTA - Call To Action
 --------------------------------------------------------------------------------------------------------------- */
 #cta{padding:30px 0;}
@@ -263,43 +262,95 @@ File: Layout CSS
 #copyright{padding:30px 0;}
 #copyright *{margin:0; padding:0; float: left;position: relative;}
 #copyright .icons{
-	left: 50%;
+	left: 35%;
 	display:inline-block; 
 
 }
-#copyright .icons a{
-	margin-left: 30px;
+
+#copyright .icons .tooltip{
+	height:30px;
+	width: 30px;
+	margin-left: 60px;
+}
+
+
+
+
+
+#copyright .icons .fa_icon{
+	margin: auto;
 	display:inline-block; 
-	width:30px; 
+/*	width:30px; 
 	height:30px; 
-	line-height:30px; 
+*/	line-height:30px; 
 	border-radius:5px; 
 	font-size:30px; 
 	text-align:center;
 	transition:all .4s ease-in-out;
 	color:inherit;
-	background-color:#EBEBEB;
 	}
 
 #copyright .icons span{
+	display: block;
+	visibility: hidden;
 	opacity: 0;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,1);
     color: #888888;
     text-align: center;
     border: 1px solid #c5c5c5;
     border-radius: 4px;
-    padding: 10px;
-    font-size: 18px;
-    
+    font-size: 16px;
+    left: -60px;
+
     position: absolute;
     z-index: 1;
     bottom: 15px;
-    left: -5px;
     transition:all .5s ease;
 }
 
-#copyright .icons div:hover{color:#3F729B;}
+
+
+
+#copyright .tooltip div{
+	margin:10px;
+	float: left;
+	width: 130px;
+	text-align: center;
+	background-color: white;
+}
+
+#copyright .tooltip div a{
+
+	width: 100%;
+	margin: auto;
+	color:#888888;
+	background-color: inherit;
+}
+#copyright .tooltip div p{
+	font-size: 13px;
+	width: 100%;
+	margin: auto;
+	color:#888888;
+	background-color: inherit;
+}
+
+
+#copyright #tooltip_qq span{
+	width: 302px;
+	left: -138px;
+}
+
+
+#copyright .copybutton{
+	cursor: pointer;
+}
+
+
+
+#copyright .tooltip div a:hover{color:#3F729B;}
+#copyright .icons div:hover .fa_icon{color:#3F729B;}
 #copyright .icons div:hover span{
+	visibility: visible;
 	opacity: 1;
 	bottom: 35px;
 }
