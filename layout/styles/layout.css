@@ -694,8 +694,9 @@ table a, #comments a{background-color:inherit;}
 	.latest ul li figure figcaption{padding:15px 30px;}
 }
 
+#thanks{height: 77vh;}
 
-#fof{display:block; width:100%; padding:100px 0; line-height:1.6em; text-align:center;}
+#fof{display:block; width:100%; padding:100px 0; line-height:1.6em;text-align:center;}
 #fof p{margin:0; padding:0; font-size:16px;}
 #fof .positioned{margin-bottom:25px;}
 #fof .positioned .hgroup{margin-bottom:50px;}
@@ -706,3 +707,4 @@ table a, #comments a{background-color:inherit;}
 #fof p.clear{padding:10px; border:1px solid #CCCCCC;}
 #fof p.clear a.go-back{float:left;}
 #fof p.clear a.go-home{float:right;}
+#thanks_positioned{float:none;display:block; width:100%; margin:auto; padding:0;font-size:50px;margin-bottom: 50px;}
