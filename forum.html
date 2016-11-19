@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 Template Name: Colossus
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -32,6 +32,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   $(".question").click(function(){
@@ -40,6 +45,39 @@ $(document).ready(function(){
     // $(".answer").parent.show(450);
   });
 });
+
+
+
+
+function checkemailaddress(){
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var keepgoing=1;
+  if($("#comments #name").val()==""){
+    $("#comments #name").attr("placeholder","请填写您的名字");
+    keepgoing=0;
+  }
+  if($("#comments #email").val()==""){
+    $("#comments #email").attr("placeholder","请填写您的邮箱地址");
+    keepgoing=0;
+  }
+  else if(!(regex.test($("#comments #email").val()))){
+    $("#comments #email").val("");
+    $("#comments #email").attr("placeholder","请填写正确邮箱地址");
+    keepgoing=0;
+  }
+  if($("#comments #comment").val()==""){
+    $("#comments #comment").attr("placeholder","请填写您的留言内容");
+    keepgoing=0;
+  }
+  if (keepgoing) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
 </script>
 
 </head>
@@ -135,28 +173,29 @@ $(document).ready(function(){
               <p>
                 本文由FE留学网编原创整理，如需转载，请注明出处。欢迎投稿：feliuxue@sina.com
               </p>
+              <img  src="images\demo\comments\1.jpg">
               <p>
                 Paris-巴黎，世界四大国际化都市之一，欧洲第二大城市，法国的经济金融中心，在政治、科技、文化、教育、时尚、艺术、娱乐、传媒等领域对世界都有重要影响力......类似这些程序化的评价，是世人眼中的巴黎，可能也是当初吸引我决定选择留学法国的理由，当然还少不了对“法国是世界上最浪漫的国家，法语是世界上最美丽的语言”这样莫名的好感与期待。
               </p>
               <p>
                 Si vous avez de la chance de vivre à Paris quand vous êtes jeune, alors n'importe où vous irez après, Paris sera toujours avec vous, car Paris est un festin mobile. 假如你有幸年轻时在巴黎生活过，那么你此后一生中不论去到哪里她都与你同在，因为巴黎是一席流动的盛宴。——海明威
               </p>
-              <img src="images\demo\comments\1.jpg">
+              
               <p>
                 初到巴黎，感觉既熟悉又陌生，那些曾无数次在各种画面中看过的铁塔、凯旋门、凡尔赛宫、圣母院、香街......当真真切切看得到摸得着时依然会感受到这么近，那么远的震撼。我以为一切都很熟悉，其实只是似曾相识。
               </p>
-              <img src="images\demo\comments\2.jpg">
+              <img  src="images\demo\comments\2.jpg">
               <p>
                 传说中巴黎人身上都或多或少有一种傲气，可能是因为巴黎的生活与法国其他城市相比，节奏多少会快一些，每天各种信息量更大一些。法国原本是一个多民族国家，在这个国际化大都市里，每天在人群中擦肩而过的能有多少是真正的巴黎人还真不好说。总的感觉就是那些看起来像巴黎人的法国人都还好，偶尔的交流从他们的神情中还是能够看到善意跟包容。如果你偶尔会有想家的情结，不用担心，这里太多的中国人，中国店，中国餐馆等随时能解思乡之苦。
               </p>
               <p>
                 每个人心中都有一条塞纳河，它把我们的一颗心分作两边，左岸柔软，右岸冷硬；左岸感性，右岸理性；左岸住着我们的欲望，祈盼，挣扎和所有的爱恨嗔怒，右岸住着这个世界的规则在我们心里打下的烙印--左岸是梦境，右岸是生活。——辛夷坞
               </p>
-              <img src="images\demo\comments\3.jpg">
+              <img  src="images\demo\comments\3.jpg">
               <p>
                 在法国，左岸，是一个特别小资的词。好像提起左岸，就提到了这样一些气氛或背景：诗歌、哲学、贵族化、咖啡馆、艺术、清谈……当然，还有文化。相对来说，右岸则理性、中庸、强硬得多。巍峨的各大银行、金融集团、保险公司、股票交易所；一丝不苟、严肃刻板、衣着考究的过往行人；奢华、繁荣、熙熙攘攘的商业街；变化无常的金融风云。“左岸偏左，右岸偏右”，左岸右岸相辅相成。这实实在在的差别，只有身临其境的时候，慢慢逛、慢慢感受才能体会。
               </p>
-              <img src="images\demo\comments\4.jpg">
+              <img  src="images\demo\comments\4.jpg">
               <p>
                 初到法国，第一次开始离家自己生活，一切都是新的。初到巴黎，了解一个城市需要时间，需要衣食住行慢慢磨合。可以肯定的是，我喜欢这里，在法国生活学习几年，当我毕业以后，我相信我能够讲得更多。
               </p>
@@ -192,24 +231,204 @@ $(document).ready(function(){
               </p>
             </div>
           </li>
+          <li>
+            <div class="question">
+              <h4>旅行 ▪ 拨开恐袭的阴霾，尼斯蓝色海岸蔚蓝依旧。</h4>
+            </div>
+            <div class="answer">
+              <p>本文由FE留学网编原创整理，如需转载，请注明出处。欢迎投稿：feliuxue@sina.com</p>
+              <img  src="images\demo\comments\5.jpg">
+              <p>尼斯位于法国东南部地中海沿岸，海岸线曲折复杂，大致为东北&mdash;西南走向，城镇沿海岸线呈带状分部。尼斯属于典型的地中海气候带，终年温暖，蔚蓝的地中海与巍峨的阿尔卑斯山是这座城市永恒的地标。尼斯城市圈的人口数量在法国排名第五，是仅次于巴黎的法国第二大旅游城市，也是欧洲乃至全世界最具魅力的海滨度假圣地之一，每年到访尼斯市区的旅客数量超过了400万，是这座城市本身人口数量的近10倍，神圣的古罗马历史文化、普罗旺斯薰衣草田散发出的浪漫的芬芳，以及带有异域风情的地中海美食。无论从任何一个角度，尼斯都是法国人心中绝对的度假天堂。</p>
+              <img  src="images\demo\comments\6.jpg">
+              <p>留学安全问题，是很多学生家长更关心的问题之一，作为留学过来人想跟各位家长说的是，正常情况下很多留学主流国家的安全问题大体都不会那么让人担心，家长们除了要针对想留学的国家做出预判外，更重要的是学生自己要学会如何规避安全风险，比如：避免深夜独自游走在大街上，尽量要跟陌生人保持一定距离，在酒吧等公共场所不要随便喝陌生人递到手里的东西，等等。其实这些风险不是选择留学才存在，懂得规避风险，在哪里学习生活都会更安全。至于恐袭，之所以被称作恐袭，主要是因为它的不确定性及破坏程度，正因为此，如果是恐袭，哪里也不会保证绝对安全。被恐袭过的城市是无辜的，住在那里的人们也要很长一段时间调整惶恐不安的心情，但是生活还得继续，一切也都会随着时间的流逝归于平常。</p>
+              <img  src="images\demo\comments\7.jpg">
+              <p>喜欢大海的人，有的阳光，有的忧郁。有时间的时候在海边走走，或者坐坐，吹吹海风，听听海浪的声音，闻着海水混杂着大自然的香气，真的会令人心旷神怡。再好的镜头也比不上眼睛，眼见为实。拨开阴霾看本质，尼斯是一个值得花时间生活的地方，去过的人都喜欢。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>学习 ▪ 法国高商性价比</h4>
+            </div>
+            <div class="answer">
+                <p>Q：法国高商怎么样？</p>
+
+                <p>A：法国高等精英商学院(Grandes Ecoles)，简称高商，是由法国教育部 文化部及大型企业共同控股的办校模式，是法国教育机制的一大特色。法国高商以培养世界高级商业精英而闻名于世。因为其毕业生往往有很好的前途与"钱途"，成为许多法国与海外求学者梦寐以求的理想院校。英国《泰晤士报》《金融时报》(Financial Times)每年的欧洲顶级商学院排行榜也证明了这一点。法国高商系统的教学质量和招生标准在这些排行榜上得到充分彰显。据英国《金融时报》(Financial Times)的排名，全世界管理专业的商校排名前50名中，有18所是法国商校，并且这个排行榜的前10名里法国的高商占了7席，其中 HEC 已经连续四年名列榜首。欧洲管理发展基金会(EFMD)负责人埃里克&middot;科尼埃尔(Eric Cornuel)曾表示，&ldquo;法国高等商学院的预算虽然比美国低4至5倍，但是美国商校的教学质量却往往比法国低很多。&rdquo;法国名牌商校的学生筛选标准严格，毕业后往往会得到薪酬高，适应企业环境能力强，擅长外语，在就业市场上非常抢手的高回报。</p>
+                            
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>生活 ▪ 留学生在法国可享受与法国学生一样的福利待遇。</h4>
+            </div>
+            <div class="answer">
+                <p>Q：法国留学比较明显的优势是什么？</p>
+                <p>A：留学生在法国可享受与法国学生一样的福利待遇，这一点与欧洲其他国家相比，算是比较明显的优势之一。法国在世界上属于高福利的国家，比如医疗，社保，不仅仅对于本国的学生，外国留学生一样可以享受种种社会福利。住房补贴，补贴金额可达房租的近50%；还有交通补助；餐补等等。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                旅行 ▪ 爱上滑雪，阿尔卑斯不只是一块糖。
+              </h4>
+            </div>
+            <div class="answer">
+                <p>本文由FE留学网编原创整理，如需转载，请注明出处。欢迎投稿：feliuxue@sina.com</p>
+                <img  src="images\demo\comments\8.jpg">
+                <p>滑雪运动起源并发展于斯堪的纳维亚国家。回转（SLALOM）也是一个挪威词，意思是在倾斜的路面上滑行。国际滑雪联合会成立于1924年。北欧滑雪项目列入了1924年在法国沙莫尼举行的第一届冬季奥运会。在世界滑雪运动中居领先地位的国家有斯堪的纳维亚各国，如挪威、瑞典、芬兰，还有西欧的阿尔卑斯山脉周围的国家：法国、意大利、奥地利、德国和瑞典，以及美国、俄罗斯等，一般说来，斯堪的纳维亚国家在北欧滑雪项目上占优势，阿尔卑斯山脉国家在高山滑雪项目上占优势。</p>
+                <p>旅游滑雪是出于娱乐、健身的目的，受人为因素制约程度很轻，男女老幼均可在雪场上轻松、愉快地滑行，饱享滑雪运动的无穷乐趣。由于高山滑雪具有惊险、优美、自如、动感强、魅力大、可参与面广的特点，故高山滑雪被人们视为滑雪运动的精华和象征，更是旅游滑雪的首选和主体项目。通常情况下，评估人们滑雪技术水平的高低，多以高山滑雪为尺度。旅游滑雪项目有单板滑雪、超短板滑雪、越野滑雪等。其中越野滑雪是在低山丘岭地带（平地、下坡、上坡各约占1/3）长距离滑行，虽然远不如高山滑雪的乐趣和魅力，但从安全和健身角度而言，更具有广泛的参与性。超短板滑雪、单板滑雪（双脚同踏一只宽大的雪板）比高山滑雪更具有刺激性，技术更灵活。</p>
+                <img  src="images\demo\comments\9.jpg">
+                <p>现代滑雪运动大致可分为三种类别：阿尔卑斯山式（Alpine Skiing）、北欧式（Nordic Skiing）和自由式。阿尔卑斯山式滑雪是指沿雪坡滑降的滑雪运动，其名称是由滑降运动源于阿尔卑斯山而得，包括了各式技巧和动作，其中三种最基本的动作：直降、横渡和转弯。</p>
+                <p>为什么在法国阿尔卑斯地区爱上滑雪？</p>
+                <img  src="images\demo\comments\10.jpg">
+                <p>法国公认最适合，也最受欢迎的滑雪地点就在阿尔卑斯山脉，大部分滑雪场都集中在这里。其他地区的滑雪场，无论从数量和质量上，都难以和南北阿尔卑斯地区相比，不论从专业程度上，还是滑雪场的规划建设，还有最关键的雪况和滑行体验来看，法国阿尔卑斯地区的滑雪场都是最好的选择。除了名气，在法国滑雪还是性价比非常高的。法国滑雪价格相较瑞士，奥地利等地便宜30%-50%左右；法国的滑雪场地拥有现代和高级滑雪设施，滑雪场地以广阔的滑雪空间的特点享誉全世界。最大滑雪场总面积高达600公里和拥有200部滑雪缆车，从山脚下直达滑道；从雪具出租，住宿，美食，娱乐，教学每一样都十分专业，可选择性也非常高；除了滑雪运动本身之外，阿尔卑斯山脉壮丽的景色也会令你印象深刻，除了滑雪，还有很多人是专门来看风景的，滑雪之余，还可以观光、品尝美食。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                学习 ▪ 法国留学先读预科和先读语言的区别在哪儿？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：法国留学先读预科和先读语言的区别在哪儿？</p>
+                <p>A：很多选择法语授课的学生，由于国内法语基础达不到直入专业的水平，到法国要先读一年语言合格后再入专业。但是有些院校却要求学生先读一年预科合格后再入专业。简单的说，语言就是纯法语学习，而预科是除了学习纯语言外，还需要学习一部分专业背景课。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                生活 ▪ 法国人的浪漫，让我欢喜让我忧。
+              </h4>
+            </div>
+            <div class="answer">
+                <p>到没到过法国的人都知道，法国是一个传说中很浪漫的国家，在法国学习生活了几年后，渐渐明白，他们的浪漫资本是银行账户里鲜有存款，攒钱这件事对于大多数法国人来说，没有意义也不可理解，赚钱是为了享受生活。花出去的才是钱这个道理在法国人身上体现的比较淋漓尽致。说到底还是国情的差异。如果我是法国人，我可能也不会攒钱。但是... 建议准备去法国留学的小伙伴们，假如你准备毕业后离开法国，记得要时不时的提醒自己，浪漫固然是一件美好的事情，但是不要让钱包过于浪漫哦~~</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                旅行 ▪ 说走就走的旅行不仅为追求美景，还有美食。
+              </h4>
+            </div>
+            <div class="answer">
+                <p>本文由FE留学网编原创整理，如需转载，请注明出处。欢迎投稿：<a href="mailto:feliuxue@sina.com">feliuxue@sina.com</a></p>
+                <img  src="images\demo\comments\11.jpg">
+                <p>法国菜是西餐中最有地位的菜肴，是西方文化的一颗明珠。法国美食在整体上包括面包、糕点、冷食、熟食、肉制品、奶酪和酒这几个方面。其中，最让法国人引以为荣的除了有葡萄酒外，还有面包和奶酪等等。除了法国大餐外，日常生活中的很多法国菜一样使人垂涎。今天先给大家上几道比较有特色的开开胃~</p>
+                <img  src="images\demo\comments\12.jpg">
+                <p>鸭肝：Foie gras de canard。法国饭店一般多以鸭肝代替鹅肝，鸭肝味道浓郁讨巧，鹅肝细腻棉滑入口即化。价格上大众也普遍能接受。</p>
+                <img  src="images\demo\comments\13.jpg">
+                <p>蜗牛：用黄油、大蒜、欧芹烤出的蜗牛绝对是世间美味之一。</p>
+                <p>奶酪火锅：&ldquo;fondue savoyarde&rdquo;萨瓦火锅。萨瓦是法国东部盛产奶酪的一个省。</p>
+                <img  src="images\demo\comments\14.jpg">
+                <p>马赛鱼汤：马赛鱼汤的历史已超过2,500年，如今已列入国际美食之列。</p>
+                <p>法国是西方的美食大国，当然不止上述几种菜肴，卖个关子留些悬念，更多的美食饕餮，还有待你自己去发现。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                生活 ▪ 西班牙是否是可移民国家？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：西班牙是否是可移民国家？</p> 
+                <p>A：西班牙作为欧洲一个风景秀美，风情独特，热情洋溢且费用低廉的国家，深受国内学生家长青睐。更让人兴奋的是，西班牙的移民政策相对其他欧美国家，是非常开放滴。可以通过工作及投资完成移民。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                生活 ▪ 西班牙留学生可否打工？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：西班牙留学生可否打工？</p> 
+                <p>A：西班牙允许学生合法每周打工20小时。但为了保证学（老）生（板）权（交）益（税）需要申请合法的学生打工许可证（Autorizacion de trabajo al tiempo parcial de estudiante extranjero）。</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                生活 ▪ 我想学业结束以后留在西班牙工作，什么时候能换工作签证呢？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：我想学业结束以后留在西班牙工作，什么时候能换工作签证呢？</p>
+                <p>A：学生在西班牙学习时长满3年以后，找到工作并签订合同以后，就可以申请西班牙工作签证咯。如果是不会西班牙语的同学，过来学一年语言，加个专业课，轻松满3年。老生常谈，大家一定要好好学习呦，不是姐姐吓你，西班牙的大学很严格的！</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                旅行 ▪ 一说到欧洲留学，不能不到处去转一下，西班牙留学生在这方面有没有福利呢？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：一说到欧洲留学，不能不到处去转一下，西班牙留学生在这方面有没有福利呢？</p>
+                <p>A: 一说到旅行，学姐我真是有说不完的话，因为本身也是一个爱玩儿不爱学习的主，嘿嘿。首先西班牙的居留是申根签证，你想去欧洲哪里玩儿都比较方便，机票也是便宜的可以，比较著名的廉价航空有两个，伏林航空和瑞安航空，往返飞个阿姆斯特丹也就100来欧。
+                  <img  src="images\demo\comments\15.jpg">
+                  <p>其次，就单单只说西班牙，就有玩儿不玩的地方。我所在的城市是瓦伦西亚大区，身为一个很多城市在海岸线的大区，不得不玩儿的浮潜，帆船，冲浪，跟妹砸出海看着日出！</p>
+                  <img  src="images\demo\comments\16.jpg">
+                  <p>坐高铁去巴塞罗那不过两个小时，顺便去趟安道尔滑个雪，不得不提醒，先去免税店买个gopro！
+                  </p>
+                  <img  src="images\demo\comments\19.jpg">
+                  <p>前两天刚去了趟安达卢西亚，往返的机票不过就70欧，去毕加索的老家看看能不能也来点儿灵感留点儿作品给还不知道在哪儿的我的后代们，万一百年之后也成名了呢！
+                    </p>
+                    <img  src="images\demo\comments\17.jpg">
+                    <p>哈哈。再加上欧洲的留学生组织Erasmus是不是的组织个小旅游，便宜又安全，小日子过得还是挺滋润滴。啥也不说了，贴几张图感受一下呗。可以加我的Instagram呦~</p>
+                    <img  src="images\demo\comments\18.jpg">
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                学习 ▪ 为什么要去西班牙语留学？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：为什么要去西班牙语留学？</p>
+                <p>A：为啥要来西班牙？ 先不说蓝天白云地中海小帅哥个大美妞儿！先聊聊西班牙语到底有多重要：
+                  </p>
+                <ol>
+                <li>西班牙语是世界第二大语言，仅次于中文，并且是国际交流中使用第二广泛的语言。</li>
+                <li>截至2030年，世界人口的7.5%将以西班牙语作为母语，人数达到约5.35亿人次。</li>
+                <li>约18,000,000人次的学生将西班牙语作为外语来学习。</li>
+                <li>西班牙语是世界上大约4.26亿人口的母语，并且是21个国家的官方语言（墨西哥：1.12亿，哥伦比亚：4600万，西班牙：4600万，阿根廷 ：4000万，秘鲁2800万，委内瑞拉：2700万&hellip;&hellip;）</li>
+                <li>在许多其他国家，西班牙语也被作为母语广泛使用，包括：美国3700万，加拿大：90.9 万，巴西：46万，菲律宾：43.9万&hellip;&hellip;</li>
+                </ol>
+                <p>其次，西班牙大学的教学质量非常严格，学校设施完善，同时消费相对比较低。无论文科，理科还是艺术类的同学，都能在西班牙的各大学校找到自己合适的专业！还有最重要的就是欧洲完美生活体验！去哪儿都不排队，小区配备游泳池，跟外国帅哥一起在健身房练肌肉&hellip;&hellip;</p>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <h4>
+                学习 ▪ 我的高考成绩发挥的不是很好，能申请到什么学校呢？
+              </h4>
+            </div>
+            <div class="answer">
+                <p>Q：我的高考成绩发挥的不是很好，能申请到什么学校呢？</p>
+                <p>A：因为西班牙已经取消了高考制度，所以西班牙的大学已经逐渐的开始由高考成绩申请学校转化成由高中毕业证和高中会考成绩等来申请学校了。所以弟弟妹妹们，高考失利算什么，来我们西班牙的大学好好学习，从新做一条好汉！</p>
+            </div>
+          </li>
+          
         </ul>
         <h2>留个言</h2>
-        <form action="http://formspree.io/feliuxue@sina.com" method="post">
+        <form onsubmit="return checkemailaddress();" action="http://formspree.io/feliuxue@sina.com"method="post">
           <input type="hidden" name="_next" value="http://feliuxue.com/Thanks.html" />
           <div class="one_third first">
             <label for="name">名字 <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22">
+            <input type="text" name="名字" id="name" value="" size="22">
           </div>
           <div class="one_third">
             <label for="email">邮箱 <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="22">
+            <input type="text" name="邮箱地址" id="email" value="" size="22">
           </div>
           <div class="block clear">
             <label for="comment">留言内容</label>
-            <textarea name="message" id="comment" cols="25" rows="10"></textarea>
+            <textarea name="留言内容" id="comment" cols="25" rows="10"></textarea>
           </div>
           <div>
-            <input name="submit" type="submit" value="提交">
+            <input  type="submit" >
             &nbsp;
             <input name="reset" type="reset" value="重置">
           </div>
@@ -280,9 +499,6 @@ $(document).ready(function(){
 </div>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script src="layout/scripts/jquery.flexslider-min.js"></script>
+
 </body>
 </html>

@@ -228,11 +228,45 @@ File: Layout CSS
 
 #comments form{display:block; width:100%;}
 #comments input, #comments textarea{width:100%; padding:10px; border:1px solid;}
-#comments textarea{overflow:auto;}
+
+
+#comments input[type="text"]:focus{
+	outline: none;
+    border-color: #96AFAA;
+    box-shadow: 0 0 10px #96AFAA;
+}
+#comments textarea:focus{
+	outline: none;
+    border-color: #96AFAA;
+    box-shadow: 0 0 10px #96AFAA;
+}
+#comments textarea{overflow:auto;margin-bottom: 10px;}
 #comments div{margin-bottom:0;}
 #comments h4{margin-bottom: 0;}
 #comments .answer{display: none;}
 #comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}
+#comments input[type="submit"]:hover{color:#FFFFFF; background-color:#96AFAA;}
+#comments input[type="reset"]:hover{color:#FFFFFF; background-color:#96AFAA;}
+
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+
+
 
 /* Sidebar */
 .container .sidebar{}
