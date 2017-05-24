@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FE留学网</title>
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../../images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../images/icon/favicon-16x16.png">
+<link rel="manifest" href="../../images/icon/manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../layout/styles/onepage-scroll.css" rel="stylesheet" type="text/css" media="all">  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="../../layout/scripts/jquery.backtotop.js"></script>
+<script src="../../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="../../layout/scripts/jquery.onepage-scroll.js"></script>
+
+<style type="text/css">
+
+  .main section.page1 {
+      background:  url(../../images/introduction/IMT/blur_1.jpg) no-repeat center  ;
+      background-size: cover;
+    }
+  .main section.page2 {
+      background:  url(../../images/introduction/IMT/blur_2.jpg) no-repeat center ;
+      background-size:cover;
+    }  
+  .main section.page3 {
+      background: url(../../images/introduction/IMT/blur_3.jpg) no-repeat center ;
+      background-size:cover;
+  }
+  
+  /*.main section.page3 .page_container {
+      width: 300px;
+  }
+  .main section.page3 p{
+      font-size: 20px;
+      margin-bottom: 5px;
+  }*/
+  .main section.page1 .page_container{
+    float: left;
+    width: 500px;
+  }
+
+
+</style>
+
+  <!-- JAVASCRIPTS -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    afterMove: function(index) {
+
+        if (index != 1 && $(".page"+index+" .page_container").css('opacity') == 0) {
+            $(".page"+index+" .page_container").animate({opacity:1,left:"+=30px"},600);
+            $(".page"+index+" .page_container p").each(function(i){
+              $(this).delay(400+i*100).animate({opacity:1,left : "0px"},400);
+            });
+        }
+
+        if($(".page"+index).hasClass("light_pagi")){
+          $(".onepage-pagination li a").css("color","#242424");
+
+        }
+        if($(".page"+index).hasClass("dark_pagi")){
+          $(".onepage-pagination li a").css("color","#96AFAA");
+        }
+
+    },
+    loop: true,
+  });
+
+
+ 
+  var downloadimg1= new Image();
+  downloadimg1.onload = function(){
+    $(".page1").css("background","url("+this.src+") no-repeat center");
+    $(".page1").css("background-size","cover");
+  };
+  downloadimg1.src="../../images/introduction/IMT/1.jpg";
+  
+  var downloadimg2 = new Image();
+  downloadimg2.onload = function(){
+    $(".page2").css("background","url("+this.src+") no-repeat center");
+    $(".page2").css("background-size","cover");
+  };
+  downloadimg2.src="../../images/introduction/IMT/2.jpg";
+
+  var downloadimg3 = new Image();
+  downloadimg3.onload = function(){
+    $(".page3").css("background","url("+this.src+") no-repeat center");
+    $(".page3").css("background-size","cover");
+  };
+  downloadimg3.src="../../images/introduction/IMT/3.jpg";
+
+});
+   
+</script>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+</head>
+
+<body>
+<div class="row1">
+  <header id="header" class="clear"> 
+    <div id="logo" class="fl_left">
+      <h1><a href="../../index.html"><img src="../../images/logo_modified.jpg"style="width:40px;height:40px;background:inherit;">FE留学</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="../../index.html">首页</a></li>
+        <li><a href="../fr_main.html">法国院校指南</a>
+          <!-- <ul>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/full-width.html">Full Width</a></li>
+            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+          </ul> -->
+        </li>
+        <li><a href="../es_main.html">西班牙院校指南</a>
+          <!-- <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
+        <li><a href="../../forum.html">留学论坛</a></li>
+        <li><a href="../../contact.html">关于我们</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row3"> 
+    <div class="main"> 
+
+        <section class="page1 light_pagi dark_bg">
+            <!-- <div class="page_container page_left"> -->
+            <div class="page_container page_right">
+              <h1>南特国立高等工程师学院</h1>
+              
+              <p>
+                  法国南特国立高等工程师学院MINES-NANTES是法国著名高等工程师学校之一，于2017年1月起，与TELECOM Bretagne合并后正式更名为IMT Atlantique。作为矿业学院集团的成员，法国南特国立高等工程师学院是一所为工业发展服务的教育与研究机构。学院致力于培养工业系统工程领域的全科工程师。
+              </p>
+              <p>
+                  法国南特国立高等工程师学院提供高水平的科学与技术教学及扎实的工业与国际从业训练。学院与国外著名高校签有60项合作协议，其中与部分院校还签有双学位协议。学院教学方法不断创新，注重学生管理技能培养，协助学生建立个人计划及技能拓展，并鼓励学生进行企业创业。国内本科毕业的学生，只需攻读1-2年，就能获得硕士文凭。
+                </p>
+
+              
+
+
+            </div>
+            <div class="page_container second_page">
+              <p>
+                  工程师学院在法国自拿破仑时期成立，具有与大学同等的教学和科研实力，具有培养本科生、硕士研究生、博士研究生的能力，同时因工程师学院具有的专业针对性强等特点，其实力更被法国乃至欧洲所认可。法国南特国立高等工程师学院与国家大型研究机构进行研究合作，如：国家计算机与自动化技术研究院（INRIA）、国家科研中心（CNRS）等。学院在众多的科研领域中，重点集中于两大领域的研究：信息技术与传播、能源与环境。
+                </p>
+            </div>
+        </section>
+
+        <section class="page2 light_pagi dark_bg">
+            <div class="page_container page_left">
+            <!-- <div class="page_container page_right"> -->
+              
+              <p>
+                  南特是一座依水而建的城市，蜿蜒而过的几条小河一度让整个城市充满了魅力。也是法国内陆水域面积最大城市之一，被称为西部威尼斯。且多次被评为欧洲最宜居城市之一。只有漫步在城市中、或骑着自行车穿梭于大街小巷，才能深度了解这座城市、看到这座城市的美。位于卢瓦尔河畔的南特曾是布列塔尼公爵的封地，这里总是能够新意不断，给人惊喜。南特是法国第六大城市，西部最大工商业中心。TGV至巴黎2小时。
+              </p>
+
+
+            </div>
+        </section>
+
+        <section class="page3 dark_pagi white_bg">
+          <div class="page_container page_right">
+          
+            <p>
+                优势专业推荐：
+            </p>
+            <p>
+                英语授课：学制1-2年
+            </p>
+            <p>
+                环境与能源
+            </p>
+            <p>
+                物流与供应链
+            </p>
+            <p>
+                核能
+            </p>
+            <p>
+                法语授课：学制2年
+            </p>
+            <p>
+                计算机
+            </p>
+            <p>
+                自动化与工业信息生产自动化
+            </p>
+            <p>
+                能源系统与环境
+            </p>
+            <p>
+                核能工程
+            </p>
+
+
+          </div>
+        </section>
+</body>
+</html>
